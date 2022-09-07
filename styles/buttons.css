@@ -1,0 +1,36 @@
+/* Classes built in */
+/* corner radius */
+/* rounded-lg (8px), rounded-full */
+
+/* SIZE */
+.btn-xs {
+  @apply flex justify-center text-base py-1.5 px-3 rounded-xl;
+}
+
+.btn-xs .btn-hug-wide {
+  @apply px-5 font-medium;
+}
+
+.btn-sm {
+  @apply flex justify-center text-lg py-2 px-4 rounded-xl;
+}
+
+.btn-sm .btn-hug-wide {
+  @apply px-7 font-medium;
+}
+
+.btn-md {
+  @apply flex justify-center text-2xl py-2.5 px-5 rounded-xl;
+}
+
+.btn-md .btn-hug-wide {
+  @apply px-10 font-medium;
+}
+
+.btn-lg {
+  @apply flex justify-center text-3xl py-3 px-7 rounded-xl;
+}
+
+.btn-lg .btn-hug-wide {
+  @apply px-12 font-medium;
+}
