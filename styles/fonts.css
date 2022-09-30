@@ -112,12 +112,3 @@
     /* Safari, Android, iOS */
       url("../fonts/inter/inter-v12-latin-700.svg#Inter") format("svg"); /* Legacy iOS */
 }
-
-body {
-  font-family: "Inter";
-}
-
-.vellandi {
-  font-family: "Dancing Script", "Franklin Gothic Medium", "Arial Narrow", Arial,
-    sans-serif;
-}

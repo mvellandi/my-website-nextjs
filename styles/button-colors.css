@@ -1,0 +1,27 @@
+.btn-primary {
+  @apply bg-purple-400 border-purple-900 text-white;
+  &:hover {
+    @apply bg-purple-300 border-purple-700;
+  }
+  &:active {
+    @apply border-purple-200 bg-purple-1000;
+  }
+}
+
+.btn-primary-selected {
+  @apply bg-purple-700 border-purple-1000 text-white;
+}
+
+.btn-bright-border {
+  @apply border-purple-25;
+}
+
+.btn-secondary {
+  @apply text-purple-900 border-purple-900 bg-white;
+  &:hover {
+    @apply bg-purple-300 border-purple-700 text-white;
+  }
+  &:active {
+    @apply border-purple-200 bg-purple-1000 text-white;
+  }
+}

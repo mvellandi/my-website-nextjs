@@ -2,10 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url(./fonts.css);
-/* @import url(./colors.css); */
-@import url(./buttons.css);
+@layer base {
+  @import url(./fonts.css);
+}
 
-.bright {
-  @apply border-purple-25;
+@layer components {
+  @import url(./button-sizes.css);
+  @import url(./button-colors.css);
 }
