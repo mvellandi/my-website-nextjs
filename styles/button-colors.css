@@ -12,7 +12,7 @@
   @apply bg-purple-700 border-purple-1000 text-white;
 }
 
-.btn-bright-border {
+.btn-primary-bright {
   @apply border-purple-25;
 }
 

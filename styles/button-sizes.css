@@ -7,8 +7,8 @@
 /* SIZE */
 .btn-xs,
 .btn-xs-wide {
-  @apply px-2.5 py-1 text-xs border-2 rounded-md tracking-wide;
-  line-height: 1.125rem;
+  @apply px-2.5 py-1 text-sm border-2 rounded-md tracking-wide;
+  line-height: 1.19;
 }
 
 .btn-xs-wide {
@@ -18,7 +18,7 @@
 .btn-sm,
 .btn-sm-wide {
   @apply px-3.5 py-1.5 text-base rounded-lg border-3;
-  line-height: 1.5rem;
+  line-height: 1.22;
 }
 
 .btn-sm-wide {
@@ -27,8 +27,8 @@
 
 .btn-md,
 .btn-md-wide {
-  @apply text-lg border-4 px-5 py-2 rounded-lg;
-  line-height: 1.625rem;
+  @apply text-xl border-4 px-5 py-2 rounded-lg;
+  line-height: 1.21;
 }
 
 .btn-md-wide {
@@ -37,18 +37,20 @@
 
 .btn-lg,
 .btn-lg-wide {
-  @apply px-6 py-2.5 text-xl border-5 rounded-xl;
-  line-height: 1.75rem;
+  @apply px-6 py-2.5 text-2xl border-5 rounded-xl;
+  line-height: 1.2;
 }
 
 .btn-lg-wide {
   @apply px-10;
 }
 
+/* UNTESTED */
 .btn-xl,
 .btn-xl-wide {
-  @apply text-2xl border-5 px-7 py-3 rounded-xl;
-  line-height: 1.875rem;
+  @apply text-3xl border-5 px-7 py-3 rounded-xl;
+  /* assuming a Figma line-height of 44 for a 36px text */
+  line-height: 1.22;
 }
 
 .btn-xl-wide {
