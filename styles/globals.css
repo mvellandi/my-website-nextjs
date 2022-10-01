@@ -1,15 +1,13 @@
+/* BASE */
+@import url(./fonts.css);
+
+/* COMPONENTS */
+@import url(./button-sizes.css);
+@import url(./button-colors.css);
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-@layer base {
-  @import url(./fonts.css);
-}
-
-@layer components {
-  @import url(./button-sizes.css);
-  @import url(./button-colors.css);
-}
 
 body {
   background-color: #d3314c;

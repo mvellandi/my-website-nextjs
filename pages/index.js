@@ -12,7 +12,7 @@ export default function Home() {
       <Hero />
       <nav className="flex justify-center py-4 lg:py-5 border-b border-gray-400 bg-gray-25 lg:border-b-2 w-full">
         <div className="flex justify-center gap-4 lg:gap-7 w-full max-w-screen-lg">
-          <button className="btn btn-xs btn-primary-selected cursor-default rounded-full lg:btn-sm-wide">
+          <button className="rounded-full btn btn-xs lg:btn-sm-wide btn-primary-selected cursor-default">
             Projects
           </button>
           <button className="btn btn-xs lg:btn-sm-wide btn-secondary rounded-full">
