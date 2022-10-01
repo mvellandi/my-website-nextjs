@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Hero from "/components/Hero";
 
 export default function Home() {
   return (
@@ -8,26 +9,21 @@ export default function Home() {
         <meta name="description" content="meta content description" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
-      <main className="p-4">
-        <button className="btn btn-primary btn-xs">menu</button>
-        <button className="btn btn-xs btn-primary">menu</button>
-        <button className="btn btn-secondary btn-xs">menu</button>
-        <div className="flex space-x-2 items-center">
-          <button className="btn btn-primary btn-xs">menu</button>
-          <button className="btn btn-primary btn-xs">menu</button>
-          <button className="btn btn-primary btn-xs-wide">menu</button>
-          <button className="btn btn-primary btn-sm">menu</button>
-          <button className="btn btn-primary btn-sm">menu</button>
-          <button className="btn btn-primary btn-sm-wide">menu</button>
-          <button className="btn btn-primary btn-md">menu</button>
-          <button className="btn btn-primary btn-md">menu</button>
-          <button className="btn btn-primary btn-md-wide">menu</button>
+      <Hero />
+      <nav className="flex justify-center py-4 lg:py-5 border-b border-gray-400 bg-gray-25 lg:border-b-2 w-full">
+        <div className="flex justify-center gap-4 lg:gap-7 w-full max-w-screen-lg">
+          <button className="btn btn-xs btn-primary-selected cursor-default rounded-full lg:btn-sm-wide">
+            Projects
+          </button>
+          <button className="btn btn-xs lg:btn-sm-wide btn-secondary rounded-full">
+            Writing
+          </button>
+          <button className="btn btn-xs lg:btn-sm-wide btn-secondary rounded-full">
+            Play
+          </button>
         </div>
-        <button className="border-purple-700 border-4 p-4 rounded-2xl">
-          Hola
-        </button>
-      </main>
+      </nav>
+      <section className="py-4">Hola</section>
     </>
   );
 }
