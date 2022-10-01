@@ -10,3 +10,12 @@
   @import url(./button-sizes.css);
   @import url(./button-colors.css);
 }
+
+body {
+  background-color: #d3314c;
+}
+
+.about-mario {
+  text-decoration: solid underline #ffb54d 3px;
+  text-underline-offset: 6px;
+}
