@@ -6,6 +6,7 @@ module.exports = {
   content: [
     "./pages/**/*.{js,ts,jsx,tsx}",
     "./components/**/*.{js,ts,jsx,tsx}",
+    "./styles/**/*.css",
   ],
   theme: {
     colors: {
@@ -21,20 +22,31 @@ module.exports = {
         900: "#6d148a",
         1000: "#590e72",
       },
-      fontSize: {
-        xs: ["14px", "20px"],
-        sm: ["16px", "24px"],
-        base: ["18px", "28px"],
-        lg: ["20px", "28px"],
-        xl: ["24px", "32px"],
-        "2xl": ["30px", "36px"],
-        "3xl": ["36px", "40px"],
-        "4xl": ["48px", "1"],
-        "5xl": ["60px", "1"],
-        "6xl": ["72px", "1"],
-        "7xl": ["96px", "1"],
-        "8xl": ["128px", "1"],
+      gray: {
+        25: "#EDEFF2",
+        400: "#78819B",
       },
+    },
+    fontSize: {
+      xs: ["0.875rem", "1.43"],
+      // 16px
+      sm: ["1rem", "1.5"],
+      // 18px
+      base: ["1.125rem", "1.56"],
+      // 20px
+      lg: ["1.25rem", "1.4"],
+      // 24px
+      xl: ["1.5rem", "1.33"],
+      // 30px
+      "2xl": ["1.875rem", "1.2"],
+      // 36px
+      "3xl": ["2.25rem", "1.11"],
+      // 48px
+      "4xl": ["3rem", "1"],
+      "5xl": ["60px", "1"],
+      "6xl": ["72px", "1"],
+      "7xl": ["96px", "1"],
+      "8xl": ["128px", "1"],
     },
     extend: {
       borderWidth: {
