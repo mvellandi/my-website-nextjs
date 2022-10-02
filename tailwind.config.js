@@ -59,10 +59,3 @@ module.exports = {
     },
   },
 };
-
-// extend: {
-//   spacing: {
-//     1.5: "6px",
-//     2.5: "10px",
-//   },
-// },
