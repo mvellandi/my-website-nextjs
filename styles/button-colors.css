@@ -10,7 +10,7 @@
   }
 
   .btn-primary-selected {
-    @apply bg-purple-700 border-purple-1000 text-white;
+    @apply bg-purple-700 border-purple-1000 text-white cursor-default;
   }
 
   .btn-primary-bright {
