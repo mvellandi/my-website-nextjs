@@ -1,13 +1,13 @@
 /* COMMON */
 @layer components {
   .btn {
-    @apply inline-flex flex-wrap items-center justify-center font-medium;
+    @apply inline-flex flex-wrap items-center justify-center font-medium rounded-lg select-none;
   }
 
   /* SIZE */
   .btn-xs,
   .btn-xs-wide {
-    @apply px-2.5 py-1 text-sm border-2 rounded-md tracking-wide;
+    @apply px-2.5 py-1 text-sm border-2 tracking-wide;
     line-height: 1.19;
   }
 
@@ -17,7 +17,7 @@
 
   .btn-sm,
   .btn-sm-wide {
-    @apply px-3.5 py-1.5 text-base rounded-lg border-3;
+    @apply px-3.5 py-1.5 text-base border-3;
     line-height: 1.22;
   }
 
@@ -27,7 +27,7 @@
 
   .btn-md,
   .btn-md-wide {
-    @apply text-xl border-4 px-5 py-2 rounded-lg;
+    @apply text-xl border-4 px-5 py-2;
     line-height: 1.21;
   }
 
@@ -37,7 +37,7 @@
 
   .btn-lg,
   .btn-lg-wide {
-    @apply px-6 py-2.5 text-2xl border-5 rounded-xl;
+    @apply px-6 py-2.5 text-2xl border-5;
     line-height: 1.2;
   }
 
@@ -48,7 +48,7 @@
   /* UNTESTED */
   .btn-xl,
   .btn-xl-wide {
-    @apply text-3xl border-5 px-7 py-3 rounded-xl;
+    @apply text-3xl border-5 px-7 py-3;
     /* assuming a Figma line-height of 44 for a 36px text */
     line-height: 1.22;
   }
