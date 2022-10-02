@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Hero from "/components/Hero";
+import SectionNav from "/components/SectionNav";
 
 export default function Home() {
   return (
@@ -10,20 +11,9 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Hero />
-      <nav className="flex justify-center py-4 lg:py-5 border-b border-gray-400 bg-gray-25 lg:border-b-2 w-full">
-        <div className="flex justify-center gap-4 lg:gap-7 w-full max-w-screen-lg">
-          <button className="rounded-full btn btn-xs lg:btn-sm-wide btn-primary-selected cursor-default">
-            Projects
-          </button>
-          <button className="btn btn-xs lg:btn-sm-wide btn-secondary rounded-full">
-            Writing
-          </button>
-          <button className="btn btn-xs lg:btn-sm-wide btn-secondary rounded-full">
-            Play
-          </button>
-        </div>
-      </nav>
-      <section className="py-4">Hola</section>
+      {/* Nav component with props indicating active button */}
+      <SectionNav active="Projects" />
+      <section className="py-4">Hola Hola</section>
     </>
   );
 }
