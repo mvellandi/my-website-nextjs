@@ -14,6 +14,9 @@ body {
 }
 
 .about-mario {
-  text-decoration: solid underline #ffb54d 3px;
+  text-decoration: solid underline #ffb54d;
+  -webkit-text-decoration: solid underline #ffb54d;
+  text-decoration-thickness: 3px;
+  -webkit-text-decoration-thickness: 3px;
   text-underline-offset: 6px;
 }
