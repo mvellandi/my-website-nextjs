@@ -11,7 +11,7 @@ const Header = () => {
             menu
           </button>
           {/* Nav links  */}
-          <ul className="hidden space-x-8 text-lg md:space-x-12 sm:flex lg:text-xl lg:pt-4">
+          <ul className="hidden space-x-8 text-lg sm:flex md:space-x-12 lg:text-xl lg:pt-4">
             <li>Projects</li>
             <li>Writing</li>
             <li>Play</li>
