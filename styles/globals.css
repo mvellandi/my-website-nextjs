@@ -4,19 +4,41 @@
 /* COMPONENTS */
 @import url(./button-sizes.css);
 @import url(./button-colors.css);
+@import url(./card.css);
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+/* COLOR */
 body {
-  background-color: #d3314c;
+  @apply text-gray-800 bg-red;
+}
+
+*:focus {
+  outline: none;
+  @apply ring-4 ring-offset-2;
+}
+
+.text-link {
+  color: #2563eb;
+}
+
+/* FOR JS-GENERATED ORDER CLASSES AFTER 2 (TW BUG?) */
+.order-3 {
+  order: 3;
 }
 
 .about-mario {
   text-decoration: solid underline #ffb54d;
-  -webkit-text-decoration: solid underline #ffb54d;
   text-decoration-thickness: 3px;
+  -webkit-text-decoration-line: underline;
+  -webkit-text-decoration-color: #ffb54d !important;
+  -webkit-text-decoration-style: solid;
   -webkit-text-decoration-thickness: 3px;
   text-underline-offset: 6px;
+}
+
+.bord-blue {
+  border: 1px solid blue;
 }
