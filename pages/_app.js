@@ -1,10 +1,11 @@
-import Header from "../components/Header";
-import "../styles/globals.css";
+import SiteHeader from "/components/site/Header";
+import "/styles/globals.css";
 
 function MyApp({ Component, pageProps }) {
   return (
+    // Column centered wrapper
     <div className="flex flex-col items-center bg-white">
-      <Header />
+      <SiteHeader />
       <Component {...pageProps} />
     </div>
   );
