@@ -10,7 +10,6 @@ const Nav = ({ active, as }) => {
   activeSection.isActive = true;
   sections.splice(activeIdx, 1);
   sections.push(activeSection);
-  console.log("sections:\n", sections);
 
   return (
     // NAV BACKGROUND + CONTENT ROW: h-centered child at full-width
