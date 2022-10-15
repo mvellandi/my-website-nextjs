@@ -9,7 +9,10 @@ module.exports = {
   ],
   theme: {
     colors: {
-      white: "#fff",
+      current: "currentColor",
+      transparent: "transparent",
+      black: "black",
+      white: "white",
       red: "#d3314c",
       "red-shade": "#b51c36",
       purple: {
@@ -22,8 +25,11 @@ module.exports = {
         1000: "#590e72",
       },
       gray: {
+        1: "#fafbfc",
         25: "#EDEFF2",
         400: "#78819B",
+        800: "#1f2937",
+        900: "#111827",
       },
     },
     fontSize: {
