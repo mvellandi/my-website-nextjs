@@ -24,7 +24,7 @@ body {
   color: #2563eb;
 }
 
-/* FOR JS-GENERATED ORDER CLASSES AFTER 2 (TW BUG?) */
+/* FOR JS-GENERATED ORDER CLASSES */
 .order-3 {
   order: 3;
 }
