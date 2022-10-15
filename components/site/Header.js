@@ -5,9 +5,9 @@ const Header = () => {
       {/* HEADER CONTENT ROW: full width until large screen, h-centered children (logo and nav), space-between  */}
       <div className="flex justify-between items-center w-full max-w-screen-lg px-5 py-1 lg:py-2">
         {/* LOGO */}
-        <h1 className="inline text-3xl lg:text-4xl font-brand text-white drop-shadow">
+        <span className="inline text-3xl lg:text-4xl font-brand text-white drop-shadow">
           Vellandi
-        </h1>
+        </span>
         {/* NAV GROUP */}
         <nav className="text-white">
           {/* MOBILE NAV BTN */}
