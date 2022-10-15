@@ -15,7 +15,7 @@ const Hero = ({ as }) => {
       {/* TEXT COLUMN */}
       <div className="flex flex-col justify-center gap-6 md:w-[380px] lg:gap-12">
         <h1 className="text-sm md:text-md lg:text-xl text-white order-2">
-          ->{" "}
+          {"\u2192"}{" "}
           <span className="about-mario">
             <a href="/about">about Mario Vellandi</a>
           </span>
