@@ -11,6 +11,7 @@
   "dependencies": {
     "@tailwindcss/nesting": "^0.0.0-insiders.565cd3e",
     "next": "^12.3.0",
+    "next-sanity": "^1.0.0",
     "react": "18.2.0",
     "react-dom": "18.2.0"
   },
