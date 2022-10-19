@@ -1,10 +1,10 @@
 import Image from "next/future/image";
 import imageSample from "/public/mario-portrait-fall-200.jpg";
 
-const Card = ({ data: { image, imageAlt, heading, subheading }, key, as }) => {
+const Card = ({ data: { image, imageAlt, heading, subheading }, as }) => {
   const Component = as || "div";
   return (
-    <Component key={key} className="card bord-blue">
+    <Component className="card bord-blue">
       {/* Reordered to semantically prioritize headings, though image will visually appear first */}
       <div className="flex flex-col gap-[5px] order-2 grow">
         <h2 className="text-gray-900 font-bold tracking-[-0.2px] leading-[1.22] lg:text-lg lg:leading-[1.2]">
