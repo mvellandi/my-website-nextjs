@@ -3,6 +3,7 @@ import Hero from "/components/main/Hero";
 import MainNav from "/components/main/Nav";
 import MainItems from "/components/main/Items";
 import { itemList, articleList } from "/data/listItems";
+import { createClient } from "next-sanity";
 
 export default function Home() {
   return (
