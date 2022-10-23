@@ -1,11 +1,12 @@
 import Head from "next/head";
 import MainLayout from "/components/main/Layout";
-import { getAllProjectCards } from "/lib/project";
+import { getAllArticleCards } from "/lib/article";
 
 export default function Home({ data, preview }) {
   return (
     <>
       <MainLayout preview={preview} data={data}>
+        {/* Meta content as related to articles */}
         <Head>
           <title>Media and Content Design by Mario Vellandi</title>
           <meta name="description" content="meta content description" />
@@ -17,7 +18,7 @@ export default function Home({ data, preview }) {
 }
 
 export async function getStaticProps({ preview = false }) {
-  const data = await getAllProjectCards({ preview });
+  const data = await getAllArticleCards({ preview });
   return {
     props: {
       data,

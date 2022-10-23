@@ -5,7 +5,7 @@
     @apply hover:bg-gray-1;
   }
 
-  .card-primary-action::before {
+  .card-title a::before {
     /* @apply after:absolute after:top-0 after:right-0 after:bottom-0 after:left-0 */
     content: "";
     position: absolute;
@@ -13,6 +13,20 @@
     left: 0;
     right: 0;
     bottom: 0;
+    z-index: 1;
+  }
+
+  .card-title a {
     cursor: pointer;
+  }
+
+  .card-title a:focus {
+    outline: none;
+    @apply ring-0 ring-offset-0;
+  }
+
+  .card-title a:hover::before,
+  .card-title a:focus::before {
+    @apply ring-4 ring-offset-2;
   }
 }
