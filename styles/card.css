@@ -1,7 +1,7 @@
 @layer components {
   .card {
     @apply relative flex gap-4;
-    @apply hover:scale-[1.02] hover:ease-in ease-out duration-100;
+    /* @apply hover:scale-[1.02] hover:ease-in ease-out duration-300; */
     @apply hover:bg-gray-1;
   }
 
@@ -25,7 +25,7 @@
     @apply ring-0 ring-offset-0;
   }
 
-  .card-title a:hover::before,
+  /* .card-title a:hover::before, */
   .card-title a:focus::before {
     @apply ring-4 ring-offset-2;
   }

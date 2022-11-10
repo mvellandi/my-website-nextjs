@@ -1,7 +1,7 @@
 import API from "/lib/api";
 import Link from "next/link";
 
-const Nav = ({ active, as }) => {
+export default function Nav({ active, as }) {
   const Component = as || "div";
 
   // Get all sections from API
@@ -59,6 +59,4 @@ const Nav = ({ active, as }) => {
       </div>
     </Component>
   );
-};
-
-export default Nav;
+}

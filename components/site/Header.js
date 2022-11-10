@@ -1,7 +1,8 @@
-const Header = () => {
+export default function Header({ as }) {
+  const Component = as || "div";
   return (
     // HEADER BACKGROUND ROW: full width, h-centered child
-    <header className="flex justify-center w-full bg-red">
+    <Component className="flex justify-center w-full bg-red">
       {/* HEADER CONTENT ROW: full width until large screen, h-centered children (logo and nav), space-between  */}
       <div className="flex justify-between items-center w-full max-w-screen-lg px-5 py-1 lg:py-2">
         {/* LOGO */}
@@ -28,8 +29,6 @@ const Header = () => {
           </ul>
         </nav>
       </div>
-    </header>
+    </Component>
   );
-};
-
-export default Header;
+}

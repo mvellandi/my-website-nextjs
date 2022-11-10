@@ -1,18 +1,12 @@
-import Head from "next/head";
+import Meta from "/components/site/Meta";
 import MainLayout from "/components/main/Layout";
 import { getAllArticleCards } from "/lib/article";
 
-export default function Home({ data, preview }) {
+export default function Articles({ data, preview }) {
   return (
     <>
-      <MainLayout preview={preview} data={data}>
-        {/* Meta content as related to articles */}
-        <Head>
-          <title>Media and Content Design by Mario Vellandi</title>
-          <meta name="description" content="meta content description" />
-          <link rel="icon" href="/favicon.ico" />
-        </Head>
-      </MainLayout>
+      <Meta data={null} />
+      <MainLayout preview={preview} data={data} />
     </>
   );
 }

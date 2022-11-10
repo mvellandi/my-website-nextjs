@@ -7,7 +7,7 @@ const imageStyle = {
   filter: "drop-Shadow(0 5px 12px rgba(62, 17, 17, 0.4)",
 };
 
-const Hero = ({ as }) => {
+export default function Hero({ as }) {
   const Component = as || "div";
   return (
     // SECTION BACKGROUND + CONTENT ROW: full-width, h-centered children
@@ -20,7 +20,7 @@ const Hero = ({ as }) => {
             <a href="/about">about Mario Vellandi</a>
           </span>
         </h1>
-        <h2 className="text-2xl tracking-[-0.6px] lg:text-3xl lg:leading-[1.22] font-light drop-shadow order-1">
+        <h2 className="text-2xl tracking-[-0.06rem] lg:text-3xl lg:leading-[1.22] font-light drop-shadow order-1">
           I research and produce digital media
         </h2>
       </div>
@@ -31,6 +31,4 @@ const Hero = ({ as }) => {
       </div>
     </Component>
   );
-};
-
-export default Hero;
+}
