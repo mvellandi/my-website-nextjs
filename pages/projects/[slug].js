@@ -1,37 +1,31 @@
-import {
-  getProjectAndPrevNextProjectSlugs,
-  getAllProjectsWithSlug,
-} from "/lib/project";
+import { getProjectAndNavData, getAllProjectsWithSlug } from "/lib/project";
 import SectionLayout from "/components/section/Layout";
-import SectionNav from "/components/section/Nav";
 import ProjectItem from "/components/project/Item";
 
-export default function Project({ data, preview }) {
+export default function Project({ nav, project, preview }) {
   return (
     <>
-      <SectionLayout>
-        <SectionNav
-          as="nav"
-          place="top"
-          sectionTitle={data.sectionTitle}
-          route={data.route}
-          prev={data.previousItemSlug}
-          next={data.nextItemSlug}
-        />
-        <ProjectItem data={data.item} />
+      <SectionLayout nav={nav}>
+        <ProjectItem data={project} />
       </SectionLayout>
     </>
   );
 }
 
 export async function getStaticProps({ params, preview = false }) {
-  const data = await getProjectAndPrevNextProjectSlugs({
+  const data = await getProjectAndNavData({
     slug: params.slug,
     preview,
   });
   return {
     props: {
-      data,
+      nav: {
+        title: data.sectionTitle,
+        route: data.route,
+        next: data.nextItemSlug,
+        prev: data.previousItemSlug,
+      },
+      project: data.item,
       preview,
     },
     revalidate: 1,
