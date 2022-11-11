@@ -19,13 +19,8 @@ export async function getStaticProps({ params, preview = false }) {
   });
   return {
     props: {
-      nav: {
-        title: data.sectionTitle,
-        route: data.route,
-        next: data.nextItemSlug,
-        prev: data.previousItemSlug,
-      },
-      project: data.item,
+      nav: data.nav,
+      project: data.project,
       preview,
     },
     revalidate: 1,

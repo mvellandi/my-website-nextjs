@@ -12,8 +12,8 @@ export default function Layout({ nav, children }) {
           <SectionNav
             as="nav"
             place="top"
-            sectionTitle={nav.title}
-            route={nav.route}
+            title={nav.title}
+            path={nav.path}
             prev={nav.prev}
             next={nav.next}
           />
