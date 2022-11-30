@@ -1,13 +1,15 @@
+import Link from "next/link";
+
 export default function Header({ as }) {
   const Component = as || "div";
   return (
     // HEADER BACKGROUND ROW: full width, h-centered child
-    <Component className="flex justify-center w-full bg-red">
+    <Component className="flex justify-center w-full bg-red py-1 sm:pt-6 lg:pb-2 fixed z-10 h-[48px] sm:h-[68px] lg:h-[80px]">
       {/* HEADER CONTENT ROW: full width until large screen, h-centered children (logo and nav), space-between  */}
-      <div className="flex justify-between items-center w-full max-w-screen-lg px-5 py-1 lg:py-2">
+      <div className="flex justify-between items-center w-full max-w-screen-lg px-5">
         {/* LOGO */}
         <span className="inline text-3xl lg:text-4xl font-brand text-white drop-shadow">
-          Vellandi
+          <Link href="/">Vellandi</Link>
         </span>
         {/* NAV GROUP */}
         <nav className="text-white">
@@ -32,3 +34,4 @@ export default function Header({ as }) {
     </Component>
   );
 }
+// h-[48px] sm:h-[68px] lg:h-[80px]
