@@ -6,7 +6,7 @@ export default function Project({ nav, project, preview }) {
   return (
     <>
       <SectionLayout nav={nav}>
-        <ProjectItem data={project} />
+        <ProjectItem as="article" data={project} />
       </SectionLayout>
     </>
   );
