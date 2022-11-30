@@ -11,7 +11,7 @@ export default function Hero({ as }) {
   const Component = as || "div";
   return (
     // SECTION BACKGROUND + CONTENT ROW: full-width, h-centered children
-    <Component className="flex justify-center w-full gap-5 lg:gap-12 px-5 py-6 lg:py-8 bg-red text-white border-b-8 border-red-shade">
+    <Component className="position-adjust flex justify-center w-full gap-5 lg:gap-12 px-5 pt-4 pb-6 lg:py-8 bg-red text-white border-b-8 border-red-shade">
       {/* TEXT COLUMN */}
       <div className="flex flex-col justify-center gap-6 md:w-[380px] lg:gap-12">
         <h1 className="text-sm md:text-md lg:text-xl text-white order-2">
@@ -20,7 +20,7 @@ export default function Hero({ as }) {
             <a href="/about">about Mario Vellandi</a>
           </span>
         </h1>
-        <h2 className="text-2xl tracking-[-0.06rem] lg:text-3xl lg:leading-[1.22] font-light drop-shadow order-1">
+        <h2 className="text-2xl -tracking-3 lg:text-3xl lg:leading-[1.22] font-light drop-shadow order-1">
           I research and produce digital media
         </h2>
       </div>
