@@ -2,13 +2,14 @@
 import Container from "/components/site/Container";
 import SiteHeader from "/components/site/Header";
 import SectionNav from "/components/section/Nav";
+import Footer from "/components/site/Footer";
 
 export default function Layout({ nav, children }) {
   return (
     <>
       <Container>
         <SiteHeader as="header" />
-        <main className="flex flex-col justify-center w-full">
+        <main className="position-adjust flex flex-col justify-center w-full">
           <SectionNav
             as="nav"
             place="top"
@@ -18,8 +19,16 @@ export default function Layout({ nav, children }) {
             next={nav.next}
           />
           {children}
+          <SectionNav
+            as="nav"
+            place="bottom"
+            title={nav.title}
+            path={nav.path}
+            prev={nav.prev}
+            next={nav.next}
+          />
         </main>
-        {/* <Footer /> */}
+        <Footer />
       </Container>
     </>
   );
