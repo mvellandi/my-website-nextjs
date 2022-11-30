@@ -15,6 +15,7 @@ module.exports = {
       white: "white",
       red: "#d3314c",
       "red-shade": "#b51c36",
+      orange: "#E58600",
       purple: {
         25: "#fbf8fc",
         200: "#c692d8",
@@ -28,6 +29,7 @@ module.exports = {
         1: "#fafbfc",
         25: "#EDEFF2",
         400: "#78819B",
+        700: "#454D63",
         800: "#1f2937",
         900: "#111827",
       },
@@ -53,6 +55,12 @@ module.exports = {
       "7xl": ["96px", "1"],
       "8xl": ["128px", "1"],
     },
+    letterSpacing: {
+      1: "0.02rem",
+      2: "0.04rem",
+      3: "0.06rem",
+      4: "0.08rem",
+    },
     extend: {
       borderWidth: {
         3: "3px",
@@ -64,4 +72,5 @@ module.exports = {
       },
     },
   },
+  plugins: [require("@tailwindcss/typography")],
 };
