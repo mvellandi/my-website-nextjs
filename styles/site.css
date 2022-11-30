@@ -1,0 +1,23 @@
+@layer base {
+  html {
+    overscroll-behavior: none;
+  }
+  /* TEXT AND COLOR */
+  body {
+    @apply text-gray-800 text-base bg-red;
+  }
+
+  .text-link {
+    color: #2563eb;
+  }
+
+  /* CONTENT POSITION ADJUSTMENT FOR STICKY HEADER */
+  .position-adjust {
+    @apply mt-[48px] sm:mt-[68px] lg:mt-[80px];
+  }
+  /* OUTLINE */
+  *:focus {
+    outline: none;
+    @apply ring-4 ring-offset-2;
+  }
+}

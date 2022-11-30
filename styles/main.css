@@ -1,0 +1,12 @@
+@layer components {
+  /* MAIN */
+  .about-mario {
+    text-decoration: solid underline #ffb54d;
+    text-decoration-thickness: 3px;
+    -webkit-text-decoration-line: underline;
+    -webkit-text-decoration-color: #ffb54d !important;
+    -webkit-text-decoration-style: solid;
+    -webkit-text-decoration-thickness: 3px;
+    text-underline-offset: 6px;
+  }
+}

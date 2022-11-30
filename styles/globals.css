@@ -1,44 +1,26 @@
-/* BASE */
+/* SITE */
+@import url(./site.css);
 @import url(./fonts.css);
-
-/* COMPONENTS */
 @import url(./button-sizes.css);
 @import url(./button-colors.css);
-@import url(./card.css);
 
+/* MAIN */
+@import url(./card.css);
+@import url(./main.css);
+
+@import url(./section.css);
+
+/* TAILWIND */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-/* COLOR */
-body {
-  @apply text-gray-800 bg-red;
-}
-
-*:focus {
-  outline: none;
-  @apply ring-4 ring-offset-2;
-}
-
-.text-link {
-  color: #2563eb;
-}
 
 /* FOR JS-GENERATED ORDER CLASSES */
 .order-3 {
   order: 3;
 }
 
-.about-mario {
-  text-decoration: solid underline #ffb54d;
-  text-decoration-thickness: 3px;
-  -webkit-text-decoration-line: underline;
-  -webkit-text-decoration-color: #ffb54d !important;
-  -webkit-text-decoration-style: solid;
-  -webkit-text-decoration-thickness: 3px;
-  text-underline-offset: 6px;
-}
-
+/* DEV UTILS */
 .bord-blue {
   border: 1px solid blue;
 }
