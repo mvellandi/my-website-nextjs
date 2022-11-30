@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function SectionNav({ place, as, title, prev, next, path }) {
   const Component = as || "div";
-  let navAttributes = "flex justify-between w-full max-w-screen-lg px-5";
+  let navAttributes = "flex justify-between w-full max-w-[870px] px-5";
   switch (place) {
     case "top":
       navAttributes = cn(navAttributes, "py-4 lg:pt-11");
@@ -13,26 +13,29 @@ export default function SectionNav({ place, as, title, prev, next, path }) {
     default:
       break;
   }
-  // console.log("navAttributes", navAttributes);
+  // Set homepage as index for projects
+  const sectionHomeRoute = path === "/projects" ? "/" : path;
   return (
     // NAV BACKGROUND
     <Component className="flex justify-center w-full border-b border-gray-400 bg-gray-25 lg:border-b-2">
-      <div className={navAttributes}>
-        <Link href="">
-          <a className="text-lg font-medium lg:text-xl">{title}</a>
-        </Link>
-        <div className="flex gap-4 font-semibold text-base lg:text-lg">
-          {prev && (
-            <Link href={`${path}/${prev}`}>
-              <a className="text-link">previous</a>
-            </Link>
-          )}
-          {prev && next && <span className="font-normal">|</span>}
-          {next && (
-            <Link href={`${path}/${next}`}>
-              <a className="text-link">next</a>
-            </Link>
-          )}
+      <div className="w-full max-w-screen-lg">
+        <div className={navAttributes}>
+          <Link href={sectionHomeRoute}>
+            <a className="text-lg font-medium lg:text-xl">{title}</a>
+          </Link>
+          <div className="flex gap-4 font-semibold text-base lg:text-lg">
+            {prev && (
+              <Link href={`${path}/${prev}`}>
+                <a className="text-link">previous</a>
+              </Link>
+            )}
+            {prev && next && <span className="font-normal">|</span>}
+            {next && (
+              <Link href={`${path}/${next}`}>
+                <a className="text-link">next</a>
+              </Link>
+            )}
+          </div>
         </div>
       </div>
     </Component>
