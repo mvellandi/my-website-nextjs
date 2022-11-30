@@ -13,7 +13,7 @@
 
   /* CONTENT POSITION ADJUSTMENT FOR STICKY HEADER */
   .position-adjust {
-    @apply mt-[48px] sm:mt-[68px] lg:mt-[80px];
+    @apply mt-[56px] sm:mt-[72px] lg:mt-[80px];
   }
   /* OUTLINE */
   *:focus {
