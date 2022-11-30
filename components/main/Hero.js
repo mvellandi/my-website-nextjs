@@ -20,12 +20,12 @@ export default function Hero({ as }) {
             <a href="/about">about Mario Vellandi</a>
           </span>
         </h1>
-        <h2 className="text-2xl -tracking-3 lg:text-3xl lg:leading-[1.22] font-light drop-shadow order-1">
+        <h2 className="text-xl pmd:text-2xl -tracking-3 lg:text-3xl lg:leading-[1.22] font-light drop-shadow order-1">
           I research and produce digital media
         </h2>
       </div>
       {/* PHOTO */}
-      <div className="min-w-[140px] min-h-[140px] md:w-[200px] md:h-[200px]">
+      <div className="min-w-[126px] pmd:min-w-[140px] md:w-[200px]">
         {/* <div sty> */}
         <Image src={portrait} style={imageStyle} alt="photo: mario vellandi" />
       </div>
