@@ -7,7 +7,7 @@
   /* SIZE */
   .btn-xs,
   .btn-xs-wide {
-    @apply px-2.5 py-1 text-sm border-2 tracking-wide;
+    @apply px-2.5 py-1 text-sm border-2 tracking-1;
     line-height: 1.19;
   }
 
