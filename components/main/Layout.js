@@ -4,6 +4,7 @@ import SiteHeader from "/components/site/Header";
 import Hero from "/components/main/Hero";
 import Nav from "/components/main/Nav";
 import Items from "/components/main/Items";
+import Footer from "/components/site/Footer";
 
 export default function Layout({ preview, data }) {
   return (
@@ -15,7 +16,7 @@ export default function Layout({ preview, data }) {
           <Nav active={data.name} />
           <Items data={data} />
         </main>
-        {/* <Footer /> */}
+        <Footer />
       </Container>
     </>
   );
