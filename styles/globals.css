@@ -21,6 +21,9 @@
 }
 
 /* DEV UTILS */
-.bord-blue {
+.bord-blue div,
+.bord-blue article,
+.bord-blue li,
+.bord-blue section {
   border: 1px solid blue;
 }
