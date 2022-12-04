@@ -11,6 +11,11 @@
     color: #2563eb;
   }
 
+  /* PADDING X */
+  .site-padding-x {
+    @apply px-5 sm:px-8 md:px-10 xl:px-10 2xl:px-0;
+  }
+
   /* CONTENT POSITION ADJUSTMENT FOR STICKY HEADER */
   .position-adjust {
     @apply mt-[56px] sm:mt-[72px] lg:mt-[80px];
