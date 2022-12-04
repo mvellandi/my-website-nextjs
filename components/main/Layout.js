@@ -10,7 +10,7 @@ export default function Layout({ preview, data }) {
   return (
     <>
       <Container>
-        <SiteHeader as="header" />
+        <SiteHeader as="header" layout="main" />
         <Hero as="section" />
         <main className="flex flex-col justify-center w-full">
           <Nav active={data.name} />
@@ -21,3 +21,5 @@ export default function Layout({ preview, data }) {
     </>
   );
 }
+
+// px-5 sm:px-8 md:px-10 xl:px-0
