@@ -8,7 +8,7 @@ export default function Layout({ nav, children }) {
   return (
     <>
       <Container>
-        <SiteHeader as="header" />
+        <SiteHeader as="header" layout="item" />
         <main className="position-adjust flex flex-col justify-center w-full">
           <SectionNav
             as="nav"
