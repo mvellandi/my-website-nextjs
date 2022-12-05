@@ -4,11 +4,9 @@ import ProjectItem from "/components/project/Item";
 
 export default function Project({ nav, project, preview }) {
   return (
-    <>
-      <SectionLayout nav={nav}>
-        <ProjectItem as="article" data={project} />
-      </SectionLayout>
-    </>
+    <SectionLayout nav={nav}>
+      <ProjectItem as="article" data={project} />
+    </SectionLayout>
   );
 }
 
