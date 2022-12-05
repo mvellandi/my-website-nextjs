@@ -2,7 +2,6 @@
 import { urlForImage } from "/lib/sanity";
 import Link from "next/link";
 import { PortableText } from "@portabletext/react";
-import { useState } from "react";
 
 export default function Item({ data, as }) {
   const Component = as || "div";
@@ -17,6 +16,7 @@ export default function Item({ data, as }) {
     links,
     media,
   } = data;
+
   return (
     <div className="flex flex-col items-center bg-white site-padding-x">
       <div className="flex w-full max-w-[870px] xl:max-w-screen-xl">
@@ -115,6 +115,7 @@ export default function Item({ data, as }) {
                       case "richText":
                         return (
                           <PortableText
+                            key={_key}
                             value={rest.body}
                             onMissingComponent={false}
                           />
@@ -124,6 +125,7 @@ export default function Item({ data, as }) {
                           <>
                             <h4 className="font-bold">{rest.heading}</h4>
                             <PortableText
+                              key={_key}
                               value={rest.body}
                               onMissingComponent={false}
                             />
