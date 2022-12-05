@@ -2,6 +2,7 @@
 import { urlForImage } from "/lib/sanity";
 import Link from "next/link";
 import { PortableText } from "@portabletext/react";
+import { Fragment } from "react";
 
 export default function Item({ data, as }) {
   const Component = as || "div";
@@ -122,14 +123,14 @@ export default function Item({ data, as }) {
                         );
                       case "headingRichText":
                         return (
-                          <>
+                          <Fragment key={_key}>
                             <h4 className="font-bold">{rest.heading}</h4>
                             <PortableText
                               key={_key}
                               value={rest.body}
                               onMissingComponent={false}
                             />
-                          </>
+                          </Fragment>
                         );
                     }
                   })}
