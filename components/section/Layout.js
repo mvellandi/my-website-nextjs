@@ -5,8 +5,8 @@ import SectionNav from "/components/section/Nav";
 import Footer from "/components/site/Footer";
 
 export default function Layout({ nav, children }) {
+  console.log("nav", nav);
   return (
-    <>
       <Container>
         <SiteHeader as="header" layout="item" />
         <main className="position-adjust flex flex-col justify-center w-full">
@@ -30,6 +30,5 @@ export default function Layout({ nav, children }) {
         </main>
         <Footer />
       </Container>
-    </>
   );
 }
