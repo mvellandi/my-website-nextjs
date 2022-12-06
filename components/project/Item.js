@@ -2,7 +2,7 @@
 import { urlForImage } from "/lib/sanity";
 import Link from "next/link";
 import { PortableText } from "@portabletext/react";
-import { Fragment } from "react";
+import { useLayoutEffect, Fragment } from "react";
 
 export default function Item({ data, as }) {
   const Component = as || "div";
@@ -17,6 +17,16 @@ export default function Item({ data, as }) {
     links,
     media,
   } = data;
+
+  useLayoutEffect(() => {
+    const innerWidth = window.innerWidth;
+    const scrollHeight = document.getElementsByTagName("body")[0].scrollHeight;
+    const button = document.querySelector("#backtotop");
+    console.log("iw:", innerWidth, "sh:", scrollHeight);
+    if ((innerWidth < 1200 && scrollHeight > 1000) || scrollHeight > 768) {
+      button.style.display = "block";
+    }
+  }, []);
 
   return (
     <div className="flex flex-col items-center bg-white site-padding-x">
@@ -163,12 +173,14 @@ export default function Item({ data, as }) {
               </div>
             </section>
           )}
-          <div className="flex justify-center mt-2">
-            <div
-              className="btn btn-secondary btn-sm rounded-full"
-              onClick={() => window.scrollTo(0, 0)}
-            >
-              <span className="text-xl inline-block">↑</span>&nbsp;Back to Top
+          <div id="backtotop" style={{ display: "none" }}>
+            <div className="flex justify-center mt-2">
+              <div
+                className="btn btn-secondary btn-sm rounded-full"
+                onClick={() => window.scrollTo(0, 0)}
+              >
+                <span className="text-xl inline-block">↑</span>&nbsp;Back to Top
+              </div>
             </div>
           </div>
         </Component>
