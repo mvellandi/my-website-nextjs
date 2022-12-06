@@ -2,7 +2,7 @@ import { getProjectAndNavData, getAllProjectsWithSlug } from "/lib/project";
 import SectionLayout from "/components/section/Layout";
 import ProjectItem from "/components/project/Item";
 
-export default function Project({ nav, project, preview }) {
+export default function Project({ nav, project, preview = false }) {
   return (
     <SectionLayout nav={nav}>
       <ProjectItem as="article" data={project} />
@@ -35,6 +35,6 @@ export async function getStaticPaths() {
           slug: project.slug,
         },
       })) || [],
-    fallback: true,
+    fallback: false,
   };
 }
