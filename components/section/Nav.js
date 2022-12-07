@@ -1,5 +1,6 @@
 import cn from "classnames";
 import Link from "next/link";
+import { RiArrowLeftSLine } from "react-icons/ri";
 
 export default function SectionNav({ place, as, title, prev, next, path }) {
   const Component = as || "div";
@@ -22,7 +23,10 @@ export default function SectionNav({ place, as, title, prev, next, path }) {
       <div className="w-full max-w-[870px] xl:max-w-screen-xl">
         <div className={navAttributes}>
           <Link href={sectionHomeRoute}>
-            <a className="text-lg font-medium lg:text-xl">{title}</a>
+            <a className="text-lg font-medium lg:text-xl">
+              <RiArrowLeftSLine className="inline mb-1" />
+              {title}
+            </a>
           </Link>
           <div className="flex gap-4 font-semibold text-base lg:text-lg">
             {prev && (
