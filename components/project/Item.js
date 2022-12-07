@@ -77,49 +77,51 @@ export default function Item({ data, as }) {
                     </div>
                   </section>
                 )}
-                <div className="flex flex-col gap-10 md:grid md:grid-cols-2 md:gap-5 xl:flex xl:flex-col xl:gap-14">
-                  {structure && (
-                    <section className="pr-5 xl:pr-0">
-                      <h3 className="text-xl text-orange font-bold mb-2">
-                        Tech / Design
-                      </h3>
-                      <div className="flex flex-col lg:text-lg space-y-2">
-                        {structure.map(({ aspect, values }) => (
-                          <div
-                            key={aspect}
-                            className="grid grid-cols-[100px_1fr]"
-                          >
-                            <h4 className="inline">{aspect}:</h4>
-                            <ul className="inline-flex">
-                              {values.map((name, idx) => (
-                                <li key={name}>
-                                  {name}
-                                  {idx < values.length - 1 && (
-                                    <span>,&nbsp;</span>
-                                  )}
-                                </li>
-                              ))}
-                            </ul>
-                          </div>
-                        ))}
-                      </div>
-                    </section>
-                  )}
-                  {links && (
-                    <section>
-                      <h3 className="text-xl text-orange font-bold mb-2">
-                        Project Links
-                      </h3>
-                      <ul className="space-y-2 lg:text-lg">
-                        {links.map(({ _key, text, url }) => (
-                          <li key={_key} className="text-link">
-                            <Link href={url}>{text}</Link>
-                          </li>
-                        ))}
-                      </ul>
-                    </section>
-                  )}
-                </div>
+                {(structure || links) && (
+                  <div className="flex flex-col gap-10 md:grid md:grid-cols-2 md:gap-5 xl:flex xl:flex-col xl:gap-14">
+                    {structure && (
+                      <section className="pr-5 xl:pr-0">
+                        <h3 className="text-xl text-orange font-bold mb-2">
+                          Tech / Design
+                        </h3>
+                        <div className="flex flex-col lg:text-lg space-y-2">
+                          {structure.map(({ aspect, values }) => (
+                            <div
+                              key={aspect}
+                              className="grid grid-cols-[100px_1fr]"
+                            >
+                              <h4 className="inline">{aspect}:</h4>
+                              <ul className="inline-flex">
+                                {values.map((name, idx) => (
+                                  <li key={name}>
+                                    {name}
+                                    {idx < values.length - 1 && (
+                                      <span>,&nbsp;</span>
+                                    )}
+                                  </li>
+                                ))}
+                              </ul>
+                            </div>
+                          ))}
+                        </div>
+                      </section>
+                    )}
+                    {links && (
+                      <section>
+                        <h3 className="text-xl text-orange font-bold mb-2">
+                          Project Links
+                        </h3>
+                        <ul className="space-y-2 lg:text-lg">
+                          {links.map(({ _key, text, url }) => (
+                            <li key={_key} className="text-link">
+                              <Link href={url}>{text}</Link>
+                            </li>
+                          ))}
+                        </ul>
+                      </section>
+                    )}
+                  </div>
+                )}
               </div>
             )}
             {process && (
