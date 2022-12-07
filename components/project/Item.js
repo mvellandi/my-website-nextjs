@@ -19,11 +19,11 @@ export default function Item({ data, as }) {
   } = data;
 
   useLayoutEffect(() => {
-    const innerWidth = window.innerWidth;
-    const scrollHeight = document.getElementsByTagName("body")[0].scrollHeight;
+    const iw = window.innerWidth;
+    const sh = document.getElementsByTagName("body")[0].scrollHeight;
     const button = document.querySelector("#backtotop");
-    console.log("iw:", innerWidth, "sh:", scrollHeight);
-    if ((innerWidth < 1200 && scrollHeight > 1000) || scrollHeight > 768) {
+    console.log("iw:", iw, "sh:", sh);
+    if (iw < 1200 && sh > 900) {
       button.style.display = "block";
     }
   }, []);
@@ -31,7 +31,7 @@ export default function Item({ data, as }) {
   return (
     <div className="flex flex-col items-center bg-white site-padding-x">
       <div className="flex w-full max-w-[870px] xl:max-w-screen-xl">
-        <Component className="flex flex-col gap-10 md:gap-14 bg-white w-full max-w-[870px] xl:max-w-screen-xl xl:flex-none pt-[50px] lg:pt-[80px] pb-10 lg:pb-[100px]">
+        <Component className="flex flex-col gap-10 md:gap-14 bg-white w-full max-w-[870px] xl:max-w-screen-xl xl:flex-none pt-[50px] lg:pt-[80px] pb-[60px] lg:pb-[100px]">
           <div className="w-full flex justify-between sm:justify-start sm:gap-9">
             <div className="flex flex-col gap-2 sm:order-2">
               <h1 className="text-3xl text-black font-light -tracking-1 leading-tight">
@@ -62,61 +62,66 @@ export default function Item({ data, as }) {
                 </section>
               )}
             </div>
-            <div className="row-span-2 flex flex-col gap-10 md:gap-14">
-              {features && (
-                <section>
-                  <h3 className="text-xl text-orange font-bold mb-2">
-                    Features
-                  </h3>
-                  <div className="prose-lg lg:prose-xl">
-                    <PortableText value={features} onMissingComponent={false} />
-                  </div>
-                </section>
-              )}
-              <div className="flex flex-col gap-10 md:grid md:grid-cols-2 md:gap-5 xl:flex xl:flex-col xl:gap-14">
-                {structure && (
-                  <section className="pr-5 xl:pr-0">
+            {(features || structure || links) && (
+              <div className="row-span-2 flex flex-col gap-10 md:gap-14">
+                {features && (
+                  <section>
                     <h3 className="text-xl text-orange font-bold mb-2">
-                      Tech / Design
+                      Features
                     </h3>
-                    <div className="flex flex-col lg:text-lg space-y-2">
-                      {structure.map(({ aspect, values }) => (
-                        <div
-                          key={aspect}
-                          className="grid grid-cols-[100px_1fr]"
-                        >
-                          <h4 className="inline">{aspect}:</h4>
-                          <ul className="inline-flex">
-                            {values.map((name, idx) => (
-                              <li key={name}>
-                                {name}
-                                {idx < values.length - 1 && (
-                                  <span>,&nbsp;</span>
-                                )}
-                              </li>
-                            ))}
-                          </ul>
-                        </div>
-                      ))}
+                    <div className="prose-lg lg:prose-xl">
+                      <PortableText
+                        value={features}
+                        onMissingComponent={false}
+                      />
                     </div>
                   </section>
                 )}
-                {links && (
-                  <section>
-                    <h3 className="text-xl text-orange font-bold mb-2">
-                      Project Links
-                    </h3>
-                    <ul className="space-y-2 lg:text-lg">
-                      {links.map(({ _key, text, url }) => (
-                        <li key={_key} className="text-link">
-                          <Link href={url}>{text}</Link>
-                        </li>
-                      ))}
-                    </ul>
-                  </section>
-                )}
+                <div className="flex flex-col gap-10 md:grid md:grid-cols-2 md:gap-5 xl:flex xl:flex-col xl:gap-14">
+                  {structure && (
+                    <section className="pr-5 xl:pr-0">
+                      <h3 className="text-xl text-orange font-bold mb-2">
+                        Tech / Design
+                      </h3>
+                      <div className="flex flex-col lg:text-lg space-y-2">
+                        {structure.map(({ aspect, values }) => (
+                          <div
+                            key={aspect}
+                            className="grid grid-cols-[100px_1fr]"
+                          >
+                            <h4 className="inline">{aspect}:</h4>
+                            <ul className="inline-flex">
+                              {values.map((name, idx) => (
+                                <li key={name}>
+                                  {name}
+                                  {idx < values.length - 1 && (
+                                    <span>,&nbsp;</span>
+                                  )}
+                                </li>
+                              ))}
+                            </ul>
+                          </div>
+                        ))}
+                      </div>
+                    </section>
+                  )}
+                  {links && (
+                    <section>
+                      <h3 className="text-xl text-orange font-bold mb-2">
+                        Project Links
+                      </h3>
+                      <ul className="space-y-2 lg:text-lg">
+                        {links.map(({ _key, text, url }) => (
+                          <li key={_key} className="text-link">
+                            <Link href={url}>{text}</Link>
+                          </li>
+                        ))}
+                      </ul>
+                    </section>
+                  )}
+                </div>
               </div>
-            </div>
+            )}
             {process && (
               <section className="max-w-[780px] xl:col-span-2">
                 <h3 className="text-xl text-orange font-bold mb-2">Process</h3>
