@@ -24,13 +24,16 @@ module.exports = {
 
       "2xl": "1536px",
       // => @media (min-width: 1536px) { ... }
+
+      "3xl": "1920px",
+      // => @media (min-width: 1920px) { ... }
     },
     colors: {
       current: "currentColor",
       transparent: "transparent",
       black: "black",
       white: "white",
-      red: "#d3314c",
+      red: "#c93b53",
       "red-shade": "#b51c36",
       orange: "#E58600",
       purple: {
