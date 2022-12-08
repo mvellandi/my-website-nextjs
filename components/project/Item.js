@@ -22,7 +22,7 @@ export default function Item({ data, as }) {
     const iw = window.innerWidth;
     const sh = document.getElementsByTagName("body")[0].scrollHeight;
     const button = document.querySelector("#backtotop");
-    console.log("iw:", iw, "sh:", sh);
+    // console.log("iw:", iw, "sh:", sh);
     if (iw < 1200 && sh > 900) {
       button.style.display = "block";
     }
