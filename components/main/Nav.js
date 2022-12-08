@@ -32,7 +32,7 @@ export default function Nav({ active, as }) {
   return (
     // NAV BACKGROUND + CONTENT ROW: h-centered child at full-width
     <Component className="flex justify-center w-full border-b border-gray-400 bg-gray-25 lg:border-b-2">
-      <div className="flex justify-center gap-4 lg:gap-7 w-full max-w-screen-lg py-4 lg:py-5">
+      <div className="flex justify-center gap-4 sm:gap-6 lg:gap-7 w-full max-w-screen-lg py-4 lg:py-5">
         {sections.map(({ title, route, navOrder, isActive }) => {
           let Element;
           let style = {
