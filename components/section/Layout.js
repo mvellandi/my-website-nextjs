@@ -12,6 +12,7 @@ export default function Layout({ nav, children }) {
         <SectionNav
           as="nav"
           place="top"
+          type={nav.type}
           title={nav.title}
           path={nav.path}
           prev={nav.prev}
@@ -21,6 +22,7 @@ export default function Layout({ nav, children }) {
         <SectionNav
           as="nav"
           place="bottom"
+          type={nav.type}
           title={nav.title}
           path={nav.path}
           prev={nav.prev}

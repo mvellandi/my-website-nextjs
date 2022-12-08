@@ -2,19 +2,28 @@ import cn from "classnames";
 import Link from "next/link";
 import { RiArrowLeftSLine } from "react-icons/ri";
 
-export default function SectionNav({ place, as, title, prev, next, path }) {
+export default function SectionNav({
+  place,
+  as,
+  title,
+  type,
+  prev,
+  next,
+  path,
+}) {
   const Component = as || "div";
   let navAttributes =
-    "flex justify-between w-full max-w-[870px] xl:max-w-screen-xl";
+    "flex justify-between w-full max-w-[870px] xl:max-w-screen-xl py-4";
   switch (place) {
     case "top":
-      navAttributes = cn(navAttributes, "py-4 lg:pt-11");
+      navAttributes = cn(navAttributes, "lg:pt-11");
       break;
     case "bottom":
-      navAttributes = cn(navAttributes, "py-4 lg:pb-11");
+      navAttributes = cn(navAttributes, "lg:pb-11");
     default:
       break;
   }
+  console.log("type", type);
   // Set homepage as index for projects
   const sectionHomeRoute = path === "/projects" ? "/" : path;
   return (
@@ -33,7 +42,7 @@ export default function SectionNav({ place, as, title, prev, next, path }) {
               <Link href={`${path}/${prev}`}>
                 <a className="text-link">
                   previous
-                  <span className="hidden md:inline">&nbsp;project</span>
+                  <span className="hidden md:inline">&nbsp;{type}</span>
                 </a>
               </Link>
             )}
@@ -41,7 +50,7 @@ export default function SectionNav({ place, as, title, prev, next, path }) {
             {next && (
               <Link href={`${path}/${next}`}>
                 <a className="text-link">
-                  next<span className="hidden md:inline">&nbsp;project</span>
+                  next<span className="hidden md:inline">&nbsp;{type}</span>
                 </a>
               </Link>
             )}
