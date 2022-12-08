@@ -11,7 +11,7 @@ export default function Hero({ as }) {
   const Component = as || "div";
   return (
     // SECTION BACKGROUND + CONTENT ROW: full-width, h-centered children
-    <Component className="position-adjust flex justify-center w-full gap-4 sm:gap-12 site-padding-x pt-4 pb-6 lg:py-8 bg-red text-white border-b-8 border-red-shade">
+    <Component className="position-adjust flex justify-center w-full gap-4 sm:gap-12 site-padding-x pt-4 md:pt-0 pb-6 bg-red text-white border-b-8 border-red-shade">
       {/* TEXT COLUMN */}
       <div className="flex flex-col justify-center gap-6 md:w-[380px] lg:gap-12">
         <h1 className="text-sm sm:text-md md:text-lg lg:text-xl text-white order-2">
