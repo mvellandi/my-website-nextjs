@@ -6,7 +6,7 @@ import { useLayoutEffect, Fragment } from "react";
 
 export default function Item({ data, as }) {
   const Component = as || "div";
-  let {
+  const {
     name,
     sector,
     coverImage,
