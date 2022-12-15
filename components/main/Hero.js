@@ -25,7 +25,7 @@ export default function Hero({ as }) {
         </h2>
       </div>
       {/* PHOTO */}
-      <div className="min-w-[112px] pmd:min-w-[140px] md:w-[200px]">
+      <div className="min-w-[112px] pmd:min-w-[140px] md:w-[200px] xl:w-[180px]">
         {/* <div sty> */}
         <Image src={portrait} style={imageStyle} alt="photo: mario vellandi" />
       </div>
