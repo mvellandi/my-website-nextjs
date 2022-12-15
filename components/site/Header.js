@@ -29,13 +29,13 @@ export default function Header({ as, layout }) {
             menu
           </button>
           {/* NAV LINKS  */}
-          <ul className="hidden space-x-8 text-lg sm:flex md:space-x-12 lg:text-xl lg:pt-4">
+          <ul className="hidden space-x-8 sm:flex md:space-x-12 lg:pt-4">
             {/* <li>Projects</li> */}
             {/* <li>Writing</li> */}
             {/* <li>Play</li> */}
             {/* <li>About</li> */}
-            <li>
-              <a href="/contact" className="">
+            <li className="btn btn-md lg:btn-lg btn-link">
+              <a href="/contact">
                 Contact
               </a>
             </li>
