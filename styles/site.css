@@ -11,6 +11,10 @@
     color: #2563eb;
   }
 
+  .btn-link {
+    border: none;
+  }
+
   /* PADDING X */
   .site-padding-x {
     @apply px-5 sm:px-8 md:px-10 xl:px-10 2xl:px-0;
