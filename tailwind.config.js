@@ -26,7 +26,12 @@ module.exports = {
       // => @media (min-width: 1536px) { ... }
 
       "3xl": "1920px",
-      // => @media (min-width: 1920px) { ... }
+      // => @media (min-width: 1920px) { ... },
+      
+      "2k": "2000px",
+      // => @media (min-width: 2000px) { ... },
+      
+
     },
     colors: {
       current: "currentColor",
