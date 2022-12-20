@@ -10,7 +10,7 @@ export default function Layout({ preview, data }) {
   return (
     <>
       <Container>
-        <SiteHeader as="header" layout="main" />
+        <SiteHeader as="header" type="main" />
         <Hero as="section" />
         <main className="flex flex-col justify-center w-full">
           <Nav active={data.name} />

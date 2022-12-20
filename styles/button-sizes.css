@@ -37,7 +37,7 @@
 
   .btn-lg,
   .btn-lg-wide {
-    @apply text-xl border-4 px-[14px] py-2;
+    @apply text-xl border-4 px-[14px] py-[7px];
     line-height: 1.2;
   }
 
@@ -47,7 +47,7 @@
 
   .btn-xl,
   .btn-xl-wide {
-    @apply text-2xl border-5 px-[18px] py-[10px];
+    @apply text-2xl border-5 px-[18px] py-[9px];
     line-height: 1.22;
   }
 
@@ -67,7 +67,7 @@
 
   .btn-3xl,
   .btn-3xl-wide {
-    @apply text-[44px] border-6 px-[27px] py-[15px];
+    @apply text-[44px] border-6 px-[27px] py-[14px];
     line-height: 1.22;
   }
 

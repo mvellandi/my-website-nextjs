@@ -21,8 +21,12 @@
   }
 
   /* CONTENT POSITION ADJUSTMENT FOR STICKY HEADER */
-  .position-adjust {
-    @apply mt-[56px] sm:mt-[72px] lg:mt-[80px];
+  .main-content-y {
+    @apply mt-[56px] sm:mt-[72px] 2k:mt-[90px] 2k3:mt-[120px];
+  }
+
+  .item-content-y {
+    @apply mt-[56px] sm:mt-[72px] md:mt-[110px] 2k3:mt-[120px];
   }
   /* OUTLINE */
   *:focus {

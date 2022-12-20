@@ -19,6 +19,8 @@ module.exports = {
       lg: "1024px",
       // => @media (min-width: 1024px) { ... }
 
+      "lgtall": {'raw': '(orientation: portrait) and (min-width: 1024px)'},
+
       xl: "1280px",
       // => @media (min-width: 1280px) { ... }
 
@@ -30,6 +32,9 @@ module.exports = {
       
       "2k": "2000px",
       // => @media (min-width: 2000px) { ... },
+
+      "2k3": "2300px",
+      // => @media (min-width: 2300px) { ... },
       
 
     },
@@ -54,6 +59,8 @@ module.exports = {
         1: "#fafbfc",
         25: "#EDEFF2",
         400: "#78819B",
+        500: "#6a7182",
+        600: "#585f73",
         700: "#454D63",
         800: "#1f2937",
         900: "#111827",

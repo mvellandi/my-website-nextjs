@@ -4,7 +4,7 @@ import ArticleItem from "/components/article/Item";
 
 export default function Article({ nav, article, preview = false }) {
   return (
-    <SectionLayout nav={nav}>
+    <SectionLayout type="article" nav={nav}>
       <ArticleItem as="article" data={article} />
     </SectionLayout>
   );

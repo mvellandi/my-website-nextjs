@@ -32,11 +32,11 @@ export default function Nav({ active, as }) {
   return (
     // NAV BACKGROUND + CONTENT ROW: h-centered child at full-width
     <Component className="flex justify-center w-full border-b border-gray-400 bg-gray-25 lg:border-b-2">
-      <div className="flex justify-center py-4 gap-4 w-full max-w-screen-lg sm:gap-6 md:gap-7 lg:gap-8 lg:py-5">
+      <div className="flex justify-center py-4 gap-4 w-full max-w-screen-lg sm:gap-6 md:gap-7 md:py-5 lg:gap-8 xl:py-[18px] xl:gap-10 2k:py-6">
         {sections.map(({ title, route, navOrder, isActive }) => {
           let Element;
           let style = {
-            className: `btn btn-xs sm:btn-md  md:btn-md-wide lg:btn-lg-wide rounded-full ${
+            className: `btn btn-xs sm:btn-md md:btn-md-wide lg:btn-lg-wide rounded-full ${
               isActive ? "btn-primary-selected" : "btn-secondary"
             }`,
           };
