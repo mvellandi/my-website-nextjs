@@ -12,13 +12,13 @@ export default function SectionNav({
   path,
 }) {
   const Component = as || "div";
-  let navAttributes = "flex justify-between items-center w-full max-w-[870px] py-3";
+  let navAttributes = "flex justify-between items-center w-full max-w-[870px] py-12";
   switch (place) {
     case "top":
-      navAttributes = cn(navAttributes, "lg:pt-11");
+      navAttributes = cn(navAttributes, "lg:pt-44");
       break;
     case "bottom":
-      navAttributes = cn(navAttributes, "lg:pb-11");
+      navAttributes = cn(navAttributes, "lg:pb-44");
     default:
       break;
   }
@@ -40,12 +40,12 @@ export default function SectionNav({
           }`}
         >
           <Link href={sectionHomeRoute}>
-            <a className="-ml-2 text-[22px] text-[#293a6b] lg:text-2xl">
-              <RiArrowLeftSLine className="inline mb-1 -mr-[2px]" />
+            <a className="-ml-8 text-[22px] text-[#293a6b] lg:text-2xl">
+              <RiArrowLeftSLine className="inline mb-4 -mr-[2px]" />
               {title}
             </a>
           </Link>
-          <div className="flex gap-4 font-semibold text-base mr-4 sm:mr-0 lg:text-lg">
+          <div className="flex gap-16 font-semibold text-base mr-16 sm:mr-0 lg:text-lg">
             {prev && (
               <Link href={`${path}/${prev}`}>
                 <a className="text-link">

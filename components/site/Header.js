@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function Header({ as, layout, type }) {
   const Component = as || "div";
-  let rootStyle = "flex justify-center w-full bg-red site-padding-x pt-4 pb-2.5 sm:pt-6 fixed z-10 h-[56px] sm:h-[72px]";
+  let rootStyle = "flex justify-center w-full bg-red site-padding-x pt-16 pb-10 sm:pt-24 fixed z-10 h-56 sm:h-[72px]";
   let headStyle = "flex justify-between items-end w-full h-full";
   switch (type) {
     case "main":
@@ -79,4 +79,3 @@ export default function Header({ as, layout, type }) {
     </Component>
   );
 }
-// h-[48px] sm:h-[68px] lg:h-[80px]

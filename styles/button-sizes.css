@@ -7,72 +7,72 @@
   /* SIZE */
   .btn-xs,
   .btn-xs-wide {
-    @apply text-sm border-2 tracking-1 px-2.5 py-1;
+    @apply text-sm border-2 tracking-1 px-10 py-4;
     line-height: 1.19;
   }
 
   .btn-xs-wide {
-    @apply px-4;
+    @apply px-16;
   }
 
   .btn-sm,
   .btn-sm-wide {
-    @apply text-base border-3 px-3 py-1.5;
+    @apply text-base border-3 px-12 py-6;
     line-height: 1.22;
   }
 
   .btn-sm-wide {
-    @apply px-6;
+    @apply px-24;
   }
 
   .btn-md,
   .btn-md-wide {
-    @apply text-lg border-4 px-3 py-[7px];
+    @apply text-lg border-4 px-12 py-[7px];
     line-height: 1.21;
   }
 
   .btn-md-wide {
-    @apply px-7;
+    @apply px-28;
   }
 
   .btn-lg,
   .btn-lg-wide {
-    @apply text-xl border-4 px-[14px] py-[7px];
+    @apply text-xl border-4 px-14 py-[7px];
     line-height: 1.2;
   }
 
   .btn-lg-wide {
-    @apply px-[32px];
+    @apply px-32;
   }
 
   .btn-xl,
   .btn-xl-wide {
-    @apply text-2xl border-5 px-[18px] py-[9px];
+    @apply text-2xl border-5 px-18 py-[9px];
     line-height: 1.22;
   }
 
   .btn-xl-wide {
-    @apply px-[40px];
+    @apply px-40;
   }
 
   .btn-2xl,
   .btn-2xl-wide {
-    @apply text-3xl border-5 px-[22px] py-[12px];
+    @apply text-3xl border-5 px-[22px] py-12;
     line-height: 1.22;
   }
 
   .btn-2xl-wide {
-    @apply px-[48px];
+    @apply px-48;
   }
 
   .btn-3xl,
   .btn-3xl-wide {
-    @apply text-[44px] border-6 px-[27px] py-[14px];
+    @apply text-[44px] border-6 px-[27px] py-14;
     line-height: 1.22;
   }
 
   .btn-3xl-wide {
-    @apply px-[60px];
+    @apply px-60;
   }
 
   .btn-4xl,

@@ -10,7 +10,7 @@ export default function Item({ data, as }) {
   return (
     <div className="flex flex-col items-center bg-white site-padding-x">
       <div className="flex w-full max-w-[870px]">
-        <Component className="flex flex-col gap-10 md:gap-14 bg-white w-full max-w-[870px] pt-[50px] lg:pt-[80px] pb-[60px] lg:pb-[100px]">
+        <Component className="flex flex-col gap-40 md:gap-56 bg-white w-full max-w-[870px] pt-[50px] lg:pt-[80px] pb-[60px] lg:pb-[100px]">
           <h1 className="text-3xl text-black font-light -tracking-1 leading-tight">
             {headline}
           </h1>

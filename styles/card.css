@@ -1,6 +1,6 @@
 @layer components {
   .card {
-    @apply relative flex gap-4 xl:gap-5 2k:gap-6;
+    @apply relative flex gap-16 xl:gap-20 2k:gap-24;
     /* @apply hover:scale-[1.02] hover:ease-in ease-out duration-300; */
     @apply hover:bg-gray-1;
   }

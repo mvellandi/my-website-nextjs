@@ -11,32 +11,14 @@ module.exports = {
     screens: {
       pmd: "375px",
       sm: "600px",
-      // => @media (min-width: 600px) { ... }
-
       md: "768px",
-      // => @media (min-width: 768px) { ... }
-
       lg: "1024px",
-      // => @media (min-width: 1024px) { ... }
-
       "lgtall": {'raw': '(orientation: portrait) and (min-width: 1024px)'},
-
       xl: "1280px",
-      // => @media (min-width: 1280px) { ... }
-
       "2xl": "1536px",
-      // => @media (min-width: 1536px) { ... }
-
       "3xl": "1920px",
-      // => @media (min-width: 1920px) { ... },
-      
       "2k": "2000px",
-      // => @media (min-width: 2000px) { ... },
-
       "2k3": "2300px",
-      // => @media (min-width: 2300px) { ... },
-      
-
     },
     colors: {
       current: "currentColor",
@@ -67,31 +49,49 @@ module.exports = {
       },
     },
     fontSize: {
-      xs: ["0.875rem", "1.43"],
-      // 16px
-      sm: ["1rem", "1.5"],
-      // 18px
-      base: ["1.125rem", "1.56"],
-      // 20px
-      lg: ["1.25rem", "1.4"],
-      // 24px
-      xl: ["1.5rem", "1.33"],
-      // 30px
-      "2xl": ["1.875rem", "1.2"],
-      // 36px
-      "3xl": ["2.25rem", "1.11"],
-      // 48px
-      "4xl": ["3rem", "1"],
-      "5xl": ["60px", "1"],
-      "6xl": ["72px", "1"],
-      "7xl": ["96px", "1"],
-      "8xl": ["128px", "1"],
+      xs: ["1.4rem", "1.43"],
+      sm: ["1.6rem", "1.5"],
+      base: ["1.8rem", "1.56"],
+      lg: ["2rem", "1.4"],
+      xl: ["2.4rem", "1.33"],
+      "2xl": ["3rem", "1.2"],
+      "3xl": ["3.6rem", "1.11"],
+      "4xl": ["4.8rem", "1"],
+      "5xl": ["6rem", "1"],
+      "6xl": ["7.2rem", "1"],
     },
     letterSpacing: {
       1: "0.02rem",
       2: "0.04rem",
       3: "0.06rem",
       4: "0.08rem",
+    },
+    spacing: {
+      0: "0",
+      1: "1px",
+      2: "2px",
+      4: "4px",
+      6: "6px",
+      8: "8px",
+      10: "10px",
+      12: "12px",
+      14: "14px",
+      16: "16px",
+      20: "20px",
+      24: "24px",
+      28: "28px",
+      32: "32px",
+      36: "36px",
+      40: "40px",
+      44: "44px",
+      48: "48px",
+      52: "52px",
+      56: "56px",
+      60: "60px",
+      64: "64px",
+      72: "72px",
+      80: "80px",
+      96: "96px",
     },
     extend: {
       borderWidth: {

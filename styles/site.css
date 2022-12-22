@@ -21,16 +21,16 @@
 
   /* PADDING X */
   .site-padding-x {
-    @apply px-5 sm:px-8 md:px-10 xl:px-10 2xl:px-0;
+    @apply px-20 sm:px-32 md:px-10 2xl:px-0;
   }
 
   /* CONTENT POSITION ADJUSTMENT FOR STICKY HEADER */
   .main-content-y {
-    @apply mt-[56px] sm:mt-[72px] 2k:mt-[90px] 2k3:mt-[120px];
+    @apply mt-56 sm:mt-[72px] 2k:mt-[90px] 2k3:mt-[120px];
   }
 
   .item-content-y {
-    @apply mt-[56px] sm:mt-[72px] md:mt-[110px] 2k3:mt-[120px];
+    @apply mt-56 sm:mt-[72px] md:mt-[110px] 2k3:mt-[120px];
   }
   /* OUTLINE */
   *:focus {
