@@ -103,6 +103,50 @@ module.exports = {
         brand: "Dancing\\ Script",
         sans: ["Inter", ...defaultTheme.fontFamily.sans],
       },
+      typography: {
+        sm: {
+          css: {
+            fontSize: '1.4rem',
+            // lineHeight: '1.7142857' or 24px
+            // use gap-[0.4rem] for simulating with flexbox columns
+          },
+        },
+        DEFAULT: {
+          css: {
+            fontSize: '1.6rem',
+            // lineHeight: '1.75' or 28px
+            // use gap-[0.4rem] for simulating with flexbox columns
+          },
+        },
+        base: {
+          css: {
+            fontSize: '1.6rem',
+            // lineHeight: '1.75' or 28px
+            // use gap-[0.4rem] for simulating with flexbox columns
+          },
+        },
+        lg: {
+          css: {
+            fontSize: '1.8rem',
+            // lineHeight: '1.7777778' or 32px
+            // use gap-[0.4rem] for simulating with flexbox columns
+          },
+        },
+        xl: {
+          css: {
+            fontSize: '2rem',
+            // lineHeight: '1.8' or 36px
+            // use gap-[0.8rem] for simulating with flexbox columns
+          },
+        },
+        '2xl': {
+          css: {
+            fontSize: '2.4rem',
+            // lineHeight: '1.6666667' or 40px
+            // use gap-[0.8rem] for simulating with flexbox columns
+          },
+        },
+      },
     },
   },
   plugins: [require("@tailwindcss/typography")],
