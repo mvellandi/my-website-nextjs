@@ -28,7 +28,14 @@ export default function Item({ data, as }) {
     }
   }, []);
 
-  const sectionHeadingStyle = "text-xl text-orange font-bold mb-2"
+  // Bottom margin is added for section headings to match the line spacing of the body text
+  const sectionHeadingStyle = "text-xl text-orange font-bold mb-[0.25rem] lg:mb-[0.4rem]"
+  // Tailwind's typography plugin's prose classes to style the body text
+  const sectionBodyStyle = "prose-lg lg:prose-xl"
+  // Flexbox gap classes match 'prose' class line spacing (visually measured & tested)
+  // However, line spacing between section headers and list-style sections remains unequal.
+  // This is corrected with top margin added.
+  const sectionListStyle = "flex flex-col gap-y-[0.4rem] mt-[0.4rem] lg:text-lg lg:gap-y-[0.85rem] lg:mt-[0.8rem]"
 
   return (
     <div className="flex flex-col items-center bg-white site-padding-x">
@@ -58,7 +65,7 @@ export default function Item({ data, as }) {
                   <h3 className={sectionHeadingStyle}>
                     Summary
                   </h3>
-                  <div className="prose-lg lg:prose-xl">
+                  <div className={sectionBodyStyle}>
                     <PortableText value={summary} />
                   </div>
                 </section>
@@ -71,7 +78,7 @@ export default function Item({ data, as }) {
                     <h3 className={sectionHeadingStyle}>
                       Features
                     </h3>
-                    <div className="prose-lg lg:prose-xl">
+                    <div className={sectionBodyStyle}>
                       <PortableText
                         value={features}
                         onMissingComponent={false}
@@ -86,7 +93,7 @@ export default function Item({ data, as }) {
                         <h3 className={sectionHeadingStyle}>
                           Tech / Design
                         </h3>
-                        <div className="flex flex-col lg:text-lg space-y-2">
+                        <div className={sectionListStyle}>
                           {structure.map(({ aspect, values }) => (
                             <div
                               key={aspect}
@@ -113,7 +120,7 @@ export default function Item({ data, as }) {
                         <h3 className={sectionHeadingStyle}>
                           Project Links
                         </h3>
-                        <ul className="space-y-2 lg:text-lg">
+                        <ul className={sectionListStyle}>
                           {links.map(({ _key, text, url }) => (
                             <li key={_key} className="text-link">
                               <Link href={url}>{text}</Link>
@@ -129,7 +136,7 @@ export default function Item({ data, as }) {
             {process && (
               <section className="max-w-[780px] xl:col-span-2">
                 <h3 className={sectionHeadingStyle}>Process</h3>
-                <div className="prose-lg lg:prose-xl">
+                <div className={sectionBodyStyle}>
                   {process.map(({ _key, _type, ...rest }) => {
                     switch (_type) {
                       case "richText":

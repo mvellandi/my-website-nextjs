@@ -1,13 +1,14 @@
 import cn from "classnames";
 import Link from "next/link";
+import Btn from '/components/elements/Btn';
 
 export default function Header({ as, layout, type }) {
   const Component = as || "div";
-  let rootStyle = "flex justify-center w-full bg-red site-padding-x pt-16 pb-10 sm:pt-24 fixed z-10 h-56 sm:h-[72px]";
-  let headStyle = "flex justify-between items-end w-full h-full";
+  let rootStyle = "site-padding-x flex justify-center items-center w-full bg-red fixed z-10 h-56 sm:h-[72px] sm:items-end sm:pb-12";
+  let headStyle = "flex justify-between items-center w-full sm:items-end";
   switch (type) {
     case "main":
-      rootStyle = cn(rootStyle, "xl:pt-0 2k:h-[90px] 2k3:h-[120px]");
+      rootStyle = cn(rootStyle, "lgtall:h-96 2k:h-[90px] 2k3:h-[120px]");
       headStyle = cn(headStyle, "max-w-screen-xl");
       break;
       case "project" || "article":
@@ -16,8 +17,8 @@ export default function Header({ as, layout, type }) {
     default:
       break;
   }
-  let linkListStyle = "hidden space-x-6 sm:flex md:space-x-12 lg:pt-0"
-  let linkItemStyle = "btn btn-md lg:btn-lg btn-link"
+  let linkListStyle = "hidden space-x-6 sm:flex md:gap-24 lg:pt-0"
+  let linkItemStyle = "btn btn-md md:btn-lg btn-link bord-blue"
   
   console.log("type:", type)
   return (
@@ -26,15 +27,17 @@ export default function Header({ as, layout, type }) {
       {/* HEADER CONTENT ROW: full width until large screen, h-centered children (logo and nav), space-between  */}
       <div className={headStyle}>
         {/* LOGO */}
-        <span className="inline text-3xl lg:text-4xl font-brand text-white drop-shadow">
+        <span className="text-3xl font-brand text-white drop-shadow md:h-min md:text-4xl">
           <Link href="/">Vellandi</Link>
         </span>
         {/* NAV GROUP */}
         <nav className="text-white">
           {/* MOBILE NAV BTN */}
-          <button className="btn btn-sm btn-primary btn-primary-bright sm:hidden">
-            menu
-          </button>
+          <div className="relative">
+            <button className="site-nav-menu">
+              menu
+            </button>
+          </div>
           {/* NAV LINKS  */}
           {type === "main" && (
             <ul className={linkListStyle}>
@@ -68,7 +71,7 @@ export default function Header({ as, layout, type }) {
                 About
               </a>
             </li>
-            <li className={linkItemStyle} style={{paddingBottom: 0, paddingRight: 0}}>
+            <li className={linkItemStyle} style={{paddingBottom: 0}}>
               <a href="/contact">
                 Contact
               </a>
