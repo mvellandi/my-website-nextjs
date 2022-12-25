@@ -51,30 +51,30 @@ export default function Header({ as, layout, type }) {
           <ul className={linkListStyle}>
             {(type !== "project") && 
               (<li className={linkItemStyle} style={{paddingBottom: 0}}>
-                <a href="/">
+                <Link href="/">
                   Projects
-                </a>
+                </Link>
               </li>)}
             {(type !== "article") && 
               (<li className={linkItemStyle} style={{paddingBottom: 0}}>
-                <a href="/articles">
+                <Link href="/articles">
                   Writing
-                </a>
+                </Link>
               </li>)}
             <li className={linkItemStyle} style={{paddingBottom: 0}}>
-              <a href="/play">
+              <Link href="/play">
                 Play
-              </a>
+              </Link>
             </li>
             <li className={linkItemStyle} style={{paddingBottom: 0}}>
-              <a href="/about">
+              <Link href="/about">
                 About
-              </a>
+              </Link>
             </li>
             <li className={linkItemStyle} style={{paddingBottom: 0}}>
-              <a href="/contact">
+              <Link href="/contact">
                 Contact
-              </a>
+              </Link>
             </li>
           </ul>)}
         </nav>
