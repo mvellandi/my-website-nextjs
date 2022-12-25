@@ -1,0 +1,10 @@
+@layer components {
+  .site-nav-menu {
+    @apply btn btn-sm btn-primary btn-primary-bright sm:hidden;
+  }
+  /* MINIMUM TARGET SIZING */
+  .site-nav-menu::after {
+    content: '';
+    @apply absolute h-48 w-full;
+  }
+}

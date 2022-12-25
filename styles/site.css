@@ -21,12 +21,12 @@
 
   /* PADDING X */
   .site-padding-x {
-    @apply px-20 sm:px-32 md:px-10 2xl:px-0;
+    @apply px-20 sm:px-32 md:px-40 2xl:px-0;
   }
 
   /* CONTENT POSITION ADJUSTMENT FOR STICKY HEADER */
   .main-content-y {
-    @apply mt-56 sm:mt-[72px] 2k:mt-[90px] 2k3:mt-[120px];
+    @apply mt-56 sm:mt-[72px] lgtall:mt-96 2k:mt-[90px] 2k3:mt-[120px];
   }
 
   .item-content-y {
@@ -37,4 +37,9 @@
     outline: none;
     @apply ring-4 ring-offset-2;
   }
+
+  /* .site-target-minh a, .site-target-minh button {
+    @apply min-h-[48px] min-w-[48px];
+    @apply inline-block h-48;
+  } */
 }
