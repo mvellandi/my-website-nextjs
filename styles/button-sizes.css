@@ -1,7 +1,7 @@
 /* COMMON */
 @layer components {
   .btn {
-    @apply inline-flex flex-wrap items-center justify-center font-medium rounded-lg select-none;
+    @apply inline-flex flex-wrap items-center justify-center font-medium rounded-xl select-none;
   }
 
   /* SIZE */
