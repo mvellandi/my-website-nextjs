@@ -20,7 +20,7 @@ export default function Card({
           )}
         </h2>
         {subtitle ? (
-          <h3 className="text-sm leading-[1.375] lg:text-base lg:leading-[1.3] 3xl:leading-[1.4]">
+          <h3 className="text-sm leading-[1.375] sm:text-[1.7rem] sm:leading-[1.337] lg:text-base lg:leading-[1.3] 3xl:leading-[1.4]">
             {subtitle}
           </h3>
         ) : null}
