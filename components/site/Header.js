@@ -20,7 +20,6 @@ export default function Header({ as, layout, type }) {
   let linkListStyle = "hidden space-x-6 sm:flex md:gap-24 lg:pt-0"
   let linkItemStyle = "btn btn-md md:btn-lg btn-link bord-blue"
   
-  console.log("type:", type)
   return (
     // HEADER BACKGROUND ROW: full width, h-centered child
     <Component className={rootStyle}>

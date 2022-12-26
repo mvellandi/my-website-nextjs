@@ -39,27 +39,21 @@ export default function SectionNav({
             type === "project" && "xl:max-w-screen-xl"
           }`}
         >
-          <Link href={sectionHomeRoute}>
-            <a className="-ml-8 text-[22px] text-[#293a6b] lg:text-2xl">
+          <Link href={sectionHomeRoute} className="-ml-8 text-[22px] text-[#293a6b] lg:text-2xl">
               <RiArrowLeftSLine className="inline mb-4 -mr-[2px]" />
               {title}
-            </a>
           </Link>
           <div className="flex gap-16 font-semibold text-base mr-16 sm:mr-0 lg:text-lg">
             {prev && (
-              <Link href={`${path}/${prev}`}>
-                <a className="text-link">
+              <Link href={`${path}/${prev}`} className="text-link">
                   previous
                   <span className="hidden md:inline">&nbsp;{type}</span>
-                </a>
               </Link>
             )}
             {prev && next && <span className="font-normal">|</span>}
             {next && (
-              <Link href={`${path}/${next}`}>
-                <a className="text-link">
+              <Link href={`${path}/${next}`} className="text-link">
                   next<span className="hidden md:inline">&nbsp;{type}</span>
-                </a>
               </Link>
             )}
           </div>
