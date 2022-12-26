@@ -45,8 +45,8 @@ export default function Nav({ active, as }) {
           }
           if (!isActive) {
             Element = (
-              <Link href={route}>
-                <a {...style}>{title}</a>
+              <Link href={route} {...style} >
+                {title}
               </Link>
             );
           }

@@ -1,4 +1,4 @@
-import Image from "next/future/image";
+import Image from "next/image";
 import portrait from "/public/mario-portrait-fall-225.jpg";
 
 const imageStyle = {
