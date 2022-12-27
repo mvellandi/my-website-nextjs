@@ -39,44 +39,45 @@ export default function Header({ as, layout, type }) {
               menu
             </button>
           {/* NAV LINKS  */}
-          {type === "main" && (
-            <ul className={listStyle}>
-              <li className={listItemStyle}>
-              <Link href="/contact" className={navItemStyle}>
-                Contact
-              </Link>
-            </li>
-            </ul>)}
-          {type !== "main" && (
           <ul className={listStyle}>
-            {(type !== "project") && 
-              (<li className={listItemStyle}>
-                <Link href="/" className={navItemStyle}>
-                  Projects
+            {type === "main" && (
+                <li className={listItemStyle}>
+                <Link href="/contact" className={navItemStyle}>
+                  Contact
                 </Link>
-              </li>)}
-            {(type !== "article") && 
-              (<li className={listItemStyle}>
-                <Link href="/articles" className={navItemStyle}>
-                  Writing
-                </Link>
-              </li>)}
-            <li className={listItemStyle}>
-              <Link href="/play" className={navItemStyle}>
-                Play
-              </Link>
-            </li>
-            <li className={listItemStyle}>
-              <Link href="/about" className={navItemStyle}>
-                About
-              </Link>
-            </li>
-            <li className={listItemStyle}>
-              <Link href="/contact" className={navItemStyle}>
-                Contact
-              </Link>
-            </li>
-          </ul>)}
+              </li>
+            )}
+            {type !== "main" && (
+              <>
+                {(type !== "project") && 
+                  (<li className={listItemStyle}>
+                    <Link href="/" className={navItemStyle}>
+                      Projects
+                    </Link>
+                  </li>)}
+                {(type !== "article") && 
+                  (<li className={listItemStyle}>
+                    <Link href="/articles" className={navItemStyle}>
+                      Writing
+                    </Link>
+                  </li>)}
+                <li className={listItemStyle}>
+                  <Link href="/play" className={navItemStyle}>
+                    Play
+                  </Link>
+                </li>
+                <li className={listItemStyle}>
+                  <Link href="/about" className={navItemStyle}>
+                    About
+                  </Link>
+                </li>
+                <li className={listItemStyle}>
+                  <Link href="/contact" className={navItemStyle}>
+                    Contact
+                  </Link>
+                </li>
+              </>)}
+          </ul>
         </nav>
       </div>
     </Component>
