@@ -17,9 +17,9 @@ export default function Header({ as, layout, type }) {
     default:
       break;
   }
-  let listStyle = "hidden space-x-6 sm:flex md:gap-24 lg:pt-0"
   let listItemStyle = "relative"
-  let navItemStyle = "target before:-mt-14 font-medium select-none text-[2rem] leading-[1] md:text-[2.4rem]"
+  // Calculate the click target's vertical offset negative margin: Divide visual rendered element height by 2
+  let navItemStyle = "target text-[2rem] leading-[1] before:-mt-12 select-none md:text-[2.4rem] md:before:-mt-14"
   
   return (
     // HEADER BACKGROUND ROW: full width, h-centered child
@@ -39,7 +39,7 @@ export default function Header({ as, layout, type }) {
               menu
             </button>
           {/* NAV LINKS  */}
-          <ul className={listStyle}>
+          <ul className="hidden sm:flex sm:gap-36 md:gap-52 lg:gap-64 xl:gap-[7.6rem]">
             {type === "main" && (
                 <li className={listItemStyle}>
                 <Link href="/contact" className={navItemStyle}>
@@ -62,7 +62,7 @@ export default function Header({ as, layout, type }) {
                     </Link>
                   </li>)}
                 <li className={listItemStyle}>
-                  <Link href="/play" className={navItemStyle}>
+                  <Link href="/play" className={cn(navItemStyle, "before:-ml-4 md:before:ml-0")}>
                     Play
                   </Link>
                 </li>
