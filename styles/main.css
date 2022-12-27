@@ -8,5 +8,8 @@
     -webkit-text-decoration-style: solid;
     -webkit-text-decoration-thickness: 3px;
     text-underline-offset: 6px;
+    @apply pl-[2rem] -ml-[2rem] py-[1.4rem];
+    @apply sm:pl-[2.4rem] sm:-ml-[2.4rem] sm:py-[1.2rem];
+    @apply lg:pl-[2.8rem] lg:-ml-[2.8rem] lg:py-[0.9rem];
   }
 }
