@@ -1,10 +1,21 @@
 @layer components {
-  .site-nav-menu {
-    @apply btn btn-sm btn-primary btn-primary-bright sm:hidden;
-  }
+  
   /* MINIMUM TARGET SIZING */
-  .site-nav-menu::after {
-    content: '';
-    @apply absolute h-48 w-full;
+  .target::before {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    min-width: 4.8rem;
+    height: 100%;
+    min-height: 4.8rem;
   }
+
+  /* TARGET VIEW TESTING */
+  /* a::before {
+    z-index: -1;
+    background-color: aqua;
+    opacity: 0.4;
+  } */
+
 }

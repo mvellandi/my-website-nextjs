@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link"
 import portrait from "/public/mario-portrait-fall-225.jpg";
 
 const imageStyle = {
@@ -14,11 +15,11 @@ export default function Hero({ as }) {
     <Component className="main-content-y flex justify-center w-full gap-16 site-padding-x pt-16 pb-24 sm:gap-48 md:pb-32 md:pt-8 lg:pt-0 lgtall:pt-20 lgtall:pb-40 2k:pb-48 2k:pt-16 bg-red text-white border-b-8 border-red-shade">
       {/* TEXT COLUMN */}
       <div className="flex flex-col justify-center gap-24 md:w-[380px] lg:w-[440px] lg:gap-48">
-        <h1 className="text-sm sm:text-lg lg:text-xl text-white order-2">
+        <h1 className="relative text-sm sm:text-lg lg:text-xl text-white order-2">
           {"\u2192"}{" "}
-          <span className="about-mario">
-            <a href="/about">about Mario Vellandi</a>
-          </span>
+          <Link className="about-mario" href="/about">
+            about Mario Vellandi
+          </Link>
         </h1>
         <h2 className="text-xl pmd:text-2xl -tracking-3 md:text-3xl md:leading-[1.22] lgtall:text-[4.2rem] font-light drop-shadow order-1">
           I research and produce digital media
