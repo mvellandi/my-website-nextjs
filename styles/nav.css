@@ -12,7 +12,7 @@
   }
 
   /* TARGET VIEW TESTING */
-  /* a::before {
+  /* button::before, a::before {
     z-index: -1;
     background-color: aqua;
     opacity: 0.4;
