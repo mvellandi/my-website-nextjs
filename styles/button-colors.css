@@ -1,5 +1,6 @@
 @layer components {
-  .btn-primary {
+  .btn-primary,
+  .btn-primary-bright {
     @apply bg-purple-400 border-purple-900 text-white;
     &:hover {
       @apply bg-purple-300 border-purple-700;

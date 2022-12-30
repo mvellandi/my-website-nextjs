@@ -1,6 +1,11 @@
 @layer components {
   /* MAIN */
-  .about-mario {
+  .main-about {
+    @apply text-[1.6rem] leading-[1] before:-mt-[1.2rem];
+    @apply sm:text-[2rem];
+    @apply lg:text-[2.4rem] lg:before:-mt-[0.9rem];
+  }
+  .main-about-text {
     text-decoration: solid underline #ffb54d;
     text-decoration-thickness: 3px;
     -webkit-text-decoration-line: underline;
@@ -8,8 +13,5 @@
     -webkit-text-decoration-style: solid;
     -webkit-text-decoration-thickness: 3px;
     text-underline-offset: 6px;
-    @apply pl-[2rem] -ml-[2rem] py-[1.4rem];
-    @apply sm:pl-[2.4rem] sm:-ml-[2.4rem] sm:py-[1.2rem];
-    @apply lg:pl-[2.8rem] lg:-ml-[2.8rem] lg:py-[0.9rem];
   }
 }

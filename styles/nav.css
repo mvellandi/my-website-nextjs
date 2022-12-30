@@ -1,5 +1,4 @@
 @layer components {
-  
   /* MINIMUM TARGET SIZING */
   .target::before {
     content: "";
@@ -12,10 +11,10 @@
   }
 
   /* TARGET VIEW TESTING */
-  /* button::before, a::before {
+  /* button::before, 
+  a::before {
     z-index: -1;
     background-color: aqua;
     opacity: 0.4;
   } */
-
 }

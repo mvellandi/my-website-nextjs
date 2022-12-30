@@ -1,88 +1,133 @@
 /* COMMON */
 @layer components {
   .btn {
-    @apply inline-flex flex-wrap items-center justify-center font-medium rounded-xl select-none;
+    @apply inline-flex flex-wrap items-center justify-center font-medium leading-none select-none;
   }
 
   /* SIZE */
   .btn-xs,
-  .btn-xs-wide {
-    @apply text-sm border-2 tracking-1 px-10 py-4;
+  .btn-xs-wide,
+  .btn-xs-round,
+  .btn-xs-wide-round {
+    @apply text-[1.6rem] font-normal tracking-1 border-2 rounded-[7px] px-8 py-6;
+  }
+
+  .btn-xs-round,
+  .btn-xs-wide-round {
+    @apply rounded-full px-[11px];
+  }
+
+  .btn-xs-multiline {
     line-height: 1.19;
   }
 
-  .btn-xs-wide {
+  .btn-xs-wide,
+  .btn-xs-wide-round {
     @apply px-16;
   }
 
   .btn-sm,
-  .btn-sm-wide {
-    @apply text-base border-3 px-12 py-6;
+  .btn-sm-wide,
+  .btn-sm-round,
+  .btn-sm-wide-round {
+    @apply text-[1.8rem] border-3 rounded-[9px] px-[9px] py-8;
+  }
+
+  .btn-sm-round,
+  .btn-sm-wide-round {
+    @apply rounded-full px-14;
+  }
+
+  .btn-sm-multiline {
     line-height: 1.22;
   }
 
-  .btn-sm-wide {
+  .btn-sm-wide,
+  .btn-sm-wide-round {
     @apply px-24;
   }
 
   .btn-md,
-  .btn-md-wide {
-    @apply text-lg border-4 px-12 py-[7px];
+  .btn-md-wide,
+  .btn-md-round,
+  .btn-md-wide-round {
+    @apply text-[2rem] border-4 rounded-[11px] px-[11px] py-10;
+  }
+
+  .btn-md-round,
+  .btn-md-wide-round {
+    @apply rounded-full px-16;
+  }
+
+  .btn-md-multiline {
     line-height: 1.21;
   }
 
-  .btn-md-wide {
+  .btn-md-wide,
+  .btn-md-wide-round {
     @apply px-28;
   }
 
   .btn-lg,
-  .btn-lg-wide {
-    @apply text-xl border-4 px-14 py-[7px];
+  .btn-lg-wide,
+  .btn-lg-round,
+  .btn-lg-wide-round {
+    @apply text-[2.4rem] border-5 rounded-[14px] px-16 py-[12px];
+  }
+
+  .btn-lg-round,
+  .btn-lg-wide-round {
+    @apply rounded-full px-[22px];
+  }
+
+  .btn-lg-multiline {
     line-height: 1.2;
   }
 
-  .btn-lg-wide {
+  .btn-lg-wide,
+  .btn-lg-wide-round {
     @apply px-32;
   }
 
   .btn-xl,
-  .btn-xl-wide {
-    @apply text-2xl border-5 px-18 py-[9px];
+  .btn-xl-wide,
+  .btn-xl-round,
+  .btn-xl-wide-round {
+    @apply text-[3rem] border-5 rounded-3xl px-[18px] py-16;
+  }
+
+  .btn-xl-round,
+  .btn-xl-wide-round {
+    @apply rounded-full px-[25px];
+  }
+
+  .btn-xl-multiline {
     line-height: 1.22;
   }
 
-  .btn-xl-wide {
+  .btn-xl-wide,
+  .btn-xl-wide-round {
     @apply px-40;
   }
 
   .btn-2xl,
-  .btn-2xl-wide {
-    @apply text-3xl border-5 px-[22px] py-12;
+  .btn-2xl-wide,
+  .btn-2xl-round,
+  .btn-2xl-wide-round {
+    @apply text-[3.6rem] border-5 rounded-3xl px-[21px] py-[18px];
+  }
+
+  .btn-2xl-round,
+  .btn-2xl-wide-round {
+    @apply rounded-full px-[30px];
+  }
+
+  .btn-2xl-multiline {
     line-height: 1.22;
   }
 
-  .btn-2xl-wide {
+  .btn-2xl-wide,
+  .btn-2xl-wide-round {
     @apply px-48;
   }
-
-  .btn-3xl,
-  .btn-3xl-wide {
-    @apply text-[44px] border-6 px-[27px] py-14;
-    line-height: 1.22;
-  }
-
-  .btn-3xl-wide {
-    @apply px-60;
-  }
-
-  .btn-4xl,
-  .btn-4xl-wide {
-    @apply text-[56px] border-6 px-[34px] py-[19px];
-    line-height: 1.22;
-  }
-
-  .btn-4xl-wide {
-    @apply px-[76px];
-  }
-
 }
