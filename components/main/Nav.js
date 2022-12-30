@@ -1,5 +1,7 @@
 import API from "/lib/api";
 import Link from "next/link";
+import Target from "/components/elements/Target";
+import cn from "classnames";
 
 export default function Nav({ active, as }) {
   const Component = as || "div";
@@ -32,22 +34,22 @@ export default function Nav({ active, as }) {
   return (
     // NAV BACKGROUND + CONTENT ROW: h-centered child at full-width
     <Component className="flex justify-center w-full border-b border-gray-400 bg-gray-25 lg:border-b-2">
-      <div className="flex justify-center py-16 gap-16 w-full max-w-screen-lg sm:gap-24 md:gap-28 md:py-20 lg:gap-32 xl:py-[18px] xl:gap-40 2k:py-24">
+      <div className="flex justify-center py-16 gap-16 w-full max-w-screen-lg sm:gap-24 md:gap-[30px] md:py-20 lg:gap-36 xl:py-[18px] xl:gap-48 2xl:gap-56 3xl:gap-64 2k:gap-[76px] 2k:py-24">
         {sections.map(({ title, route, navOrder, isActive }) => {
           let Element;
-          let style = {
-            className: `btn btn-sm sm:btn-md-wide lg:btn-lg-wide rounded-full ${
-              isActive ? "btn-primary-selected" : "btn-secondary"
-            }`,
-          };
+          let style = `btn btn-sm-round sm:btn-md-wide-round md:btn-lg-wide-round 2k:btn-xl-wide-round ${
+            isActive ? "btn-primary-selected" : "btn-secondary"
+          }`;
           if (isActive) {
-            Element = <h1 {...style}>{title}</h1>;
+            Element = <h1 className={style}>{title}</h1>;
           }
           if (!isActive) {
             Element = (
-              <Link href={route} {...style} >
-                {title}
-              </Link>
+              <Target>
+                <Link href={route} className={cn(style, "target")}>
+                  {title}
+                </Link>
+              </Target>
             );
           }
           return (
