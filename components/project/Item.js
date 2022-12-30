@@ -29,13 +29,15 @@ export default function Item({ data, as }) {
   }, []);
 
   // Bottom margin is added for section headings to match the line spacing of the body text
-  const sectionHeadingStyle = "text-xl text-orange font-bold mb-[0.25rem] lg:mb-[0.4rem]"
+  const sectionHeadingStyle =
+    "text-xl text-orange font-bold mb-[0.25rem] lg:mb-[0.4rem]";
   // Tailwind's typography plugin's prose classes to style the body text
-  const sectionBodyStyle = "prose-lg lg:prose-xl"
+  const sectionBodyStyle = "prose-lg lg:prose-xl";
   // Flexbox gap classes match 'prose' class line spacing (visually measured & tested)
   // However, line spacing between section headers and list-style sections remains unequal.
   // This is corrected with top margin added.
-  const sectionListStyle = "flex flex-col gap-y-[0.4rem] mt-[0.4rem] lg:text-lg lg:gap-y-[0.85rem] lg:mt-[0.8rem]"
+  const sectionListStyle =
+    "flex flex-col gap-y-[0.4rem] mt-[0.4rem] lg:text-lg lg:gap-y-[0.85rem] lg:mt-[0.8rem]";
 
   return (
     <div className="flex flex-col items-center bg-white site-padding-x">
@@ -62,9 +64,7 @@ export default function Item({ data, as }) {
             <div className="xl:col-span-2 xl:max-w-[780px]">
               {summary && (
                 <section>
-                  <h3 className={sectionHeadingStyle}>
-                    Summary
-                  </h3>
+                  <h3 className={sectionHeadingStyle}>Summary</h3>
                   <div className={sectionBodyStyle}>
                     <PortableText value={summary} />
                   </div>
@@ -75,9 +75,7 @@ export default function Item({ data, as }) {
               <div className="row-span-2 flex flex-col gap-40 md:gap-56">
                 {features && (
                   <section>
-                    <h3 className={sectionHeadingStyle}>
-                      Features
-                    </h3>
+                    <h3 className={sectionHeadingStyle}>Features</h3>
                     <div className={sectionBodyStyle}>
                       <PortableText
                         value={features}
@@ -90,9 +88,7 @@ export default function Item({ data, as }) {
                   <div className="flex flex-col gap-40 md:grid md:grid-cols-2 md:gap-20 xl:flex xl:flex-col xl:gap-56">
                     {structure && (
                       <section className="pr-20 xl:pr-0">
-                        <h3 className={sectionHeadingStyle}>
-                          Tech / Design
-                        </h3>
+                        <h3 className={sectionHeadingStyle}>Tech / Design</h3>
                         <div className={sectionListStyle}>
                           {structure.map(({ aspect, values }) => (
                             <div
@@ -117,9 +113,7 @@ export default function Item({ data, as }) {
                     )}
                     {links && (
                       <section>
-                        <h3 className={sectionHeadingStyle}>
-                          Project Links
-                        </h3>
+                        <h3 className={sectionHeadingStyle}>Project Links</h3>
                         <ul className={sectionListStyle}>
                           {links.map(({ _key, text, url }) => (
                             <li key={_key} className="text-link">
@@ -192,7 +186,7 @@ export default function Item({ data, as }) {
           <div id="backtotop" style={{ display: "none" }}>
             <div className="flex justify-center mt-8">
               <div
-                className="btn btn-secondary btn-sm rounded-full"
+                className="btn btn-sm-round btn-secondary"
                 onClick={() => window.scrollTo(0, 0)}
               >
                 <span className="text-xl inline-block">↑</span>&nbsp;Back to Top
