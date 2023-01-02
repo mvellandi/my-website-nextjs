@@ -5,24 +5,27 @@ import Target from "/components/elements/Target";
 export default function Header({ as, layout, type }) {
   const Component = as || "div";
   let rootStyle =
-    "site-padding-x flex justify-center items-center w-full bg-red fixed z-10 h-56 sm:h-[72px] sm:items-end sm:pb-12";
+    "site-padding-x flex justify-center items-center w-full bg-red fixed z-10 h-56 sm:h-[72px] sm:items-end";
+  // "site-padding-x flex justify-center items-center w-full bg-red fixed z-10 h-56 sm:h-[72px] sm:items-end sm:pb-12";
   let headStyle =
     "relative flex justify-between items-center w-full sm:items-end";
   switch (type) {
     case "main":
-      rootStyle = cn(rootStyle, "lgtall:h-96 2k:h-[90px] 2k3:h-[120px]");
+      rootStyle = cn(
+        rootStyle,
+        "sm:pb-6 lgtall:h-96 2k:h-[90px] 2k3:h-[120px]"
+      );
       headStyle = cn(headStyle, "max-w-screen-xl");
       break;
     case "project" || "article":
-      rootStyle = cn(rootStyle, "md:h-[110px] 2k3:h-[120px]");
+      rootStyle = cn(rootStyle, "sm:pb-12 md:h-[110px] 2k3:h-[120px]");
       headStyle = cn(headStyle, "max-w-[870px] xl:max-w-screen-xl");
     default:
       break;
   }
   let listItemStyle = "relative";
-  // Calculate the click target's vertical offset negative margin: Divide visual rendered element height by 2
   let navItemStyle =
-    "target text-[2rem] leading-[1] before:-mt-[1.2rem] select-none md:text-[2.4rem] md:before:-mt-[1.3rem]";
+    "target text-[2rem] leading-none before:-mt-[1.2rem] select-none md:text-[2.4rem] md:before:-mt-[1.3rem]";
 
   return (
     // HEADER BACKGROUND ROW: full width, h-centered child
@@ -48,7 +51,10 @@ export default function Header({ as, layout, type }) {
           <ul className="hidden sm:flex sm:gap-36 md:gap-52 lg:gap-64 xl:gap-[7.6rem]">
             {type === "main" && (
               <li className={listItemStyle}>
-                <Link href="/contact" className={navItemStyle}>
+                <Link
+                  href="/contact"
+                  className="target btn btn-md-round btn-primary-bright lg:btn-lg-round lg:py-[8px]"
+                >
                   Contact
                 </Link>
               </li>
