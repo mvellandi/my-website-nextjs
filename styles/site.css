@@ -38,8 +38,4 @@
     @apply ring-4 ring-offset-2;
   }
 
-  /* .site-target-minh a, .site-target-minh button {
-    @apply min-h-[48px] min-w-[48px];
-    @apply inline-block h-48;
-  } */
 }
