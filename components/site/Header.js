@@ -2,35 +2,47 @@ import cn from "classnames";
 import Link from "next/link";
 import Target from "/components/elements/Target";
 
+const pageTypeCheck = (type, list) => {
+  return list.includes(type);
+};
+
 export default function Header({ as, type }) {
   const Component = as || "div";
+
   let rootStyle =
     "site-padding-x flex justify-center items-center w-full bg-red fixed z-10 h-56 sm:h-[72px] sm:items-end";
   let headStyle =
     "relative flex justify-between items-center w-full sm:items-end";
+  let navListStyle = "sr-only sm:not-sr-only sm:flex";
+  let navListItemStyle = "relative";
+  let navLinkStyle =
+    "target text-[2rem] leading-none before:-mt-[1.2rem] select-none md:text-[2.4rem] md:before:-mt-[1.3rem]";
 
-  switch (type) {
-    case "main":
-      rootStyle = cn(
-        rootStyle,
-        "sm:pb-6 lgtall:h-96 2k:h-[90px] 2k3:h-[120px]"
-      );
-      headStyle = cn(headStyle, "max-w-screen-xl");
-      break;
-    case "project":
-    case "article":
-      rootStyle = cn(rootStyle, "sm:pb-12 md:h-[110px] 2k3:h-[120px]");
-      headStyle = cn(headStyle, "max-w-[870px] xl:max-w-screen-xl");
-    case "page":
-      rootStyle = cn(rootStyle, "sm:pb-12 md:h-[110px] 2k3:h-[120px]");
-      headStyle = cn(headStyle, "max-w-[870px] xl:max-w-screen-xl");
-    default:
-      break;
+  console.log(pageTypeCheck(type, ["page"]));
+
+  if (pageTypeCheck(type, ["main"])) {
+    rootStyle = cn(rootStyle, "sm:pb-6 lgtall:h-96 2k:h-[90px] 2k3:h-[120px]");
+    headStyle = cn(headStyle, "max-w-screen-xl");
   }
 
-  let listItemStyle = "relative";
-  let navItemStyle =
-    "target text-[2rem] leading-none before:-mt-[1.2rem] select-none md:text-[2.4rem] md:before:-mt-[1.3rem]";
+  if (pageTypeCheck(type, ["project", "article", "page"])) {
+    rootStyle = cn(rootStyle, "sm:pb-12 md:h-[110px] 2k3:h-[120px]");
+    headStyle = cn(headStyle, "max-w-[870px] xl:max-w-screen-xl");
+  }
+
+  if (pageTypeCheck(type, ["project", "article"])) {
+    navListStyle = cn(
+      navListStyle,
+      "sm:gap-36 md:gap-52 lg:gap-64 xl:gap-[7.6rem]"
+    );
+  }
+
+  if (pageTypeCheck(type, ["page"])) {
+    navListStyle = cn(
+      navListStyle,
+      "sm:gap-24 md:gap-52 lg:gap-64 xl:gap-[7.6rem]"
+    );
+  }
 
   return (
     // HEADER BACKGROUND ROW: full width, h-centered child
@@ -49,13 +61,16 @@ export default function Header({ as, type }) {
         {/* NAV GROUP */}
         <nav className="text-white relative">
           {/* MOBILE NAV BTN */}
-          <button className="target btn btn-sm btn-primary-bright sm:hidden">
+          <button
+            className="target btn btn-sm btn-primary-bright sm:hidden"
+            aria-hidden
+          >
             menu
           </button>
           {/* NAV LINKS  */}
-          <ul className="hidden sm:flex sm:gap-36 md:gap-52 lg:gap-64 xl:gap-[7.6rem]">
-            {type === "main" && (
-              <li className={listItemStyle}>
+          <ul className={navListStyle}>
+            {pageTypeCheck(type, ["main"]) && (
+              <li className={navListItemStyle}>
                 <Link
                   href="/contact"
                   className="target btn btn-md-round btn-primary-bright lg:btn-lg-round lg:py-[8px]"
@@ -64,37 +79,37 @@ export default function Header({ as, type }) {
                 </Link>
               </li>
             )}
-            {type !== "main" && (
+            {pageTypeCheck(type, ["project", "article", "page"]) && (
               <>
                 {type !== "project" && (
-                  <li className={listItemStyle}>
-                    <Link href="/" className={navItemStyle}>
+                  <li className={navListItemStyle}>
+                    <Link href="/" className={navLinkStyle}>
                       Projects
                     </Link>
                   </li>
                 )}
                 {type !== "article" && (
-                  <li className={listItemStyle}>
-                    <Link href="/articles" className={navItemStyle}>
+                  <li className={navListItemStyle}>
+                    <Link href="/articles" className={navLinkStyle}>
                       Writing
                     </Link>
                   </li>
                 )}
-                <li className={listItemStyle}>
+                <li className={navListItemStyle}>
                   <Link
                     href="/play"
-                    className={cn(navItemStyle, "before:-ml-4 md:before:ml-0")}
+                    className={cn(navLinkStyle, "before:-ml-4 md:before:ml-0")}
                   >
                     Play
                   </Link>
                 </li>
-                <li className={listItemStyle}>
-                  <Link href="/about" className={navItemStyle}>
+                <li className={navListItemStyle}>
+                  <Link href="/about" className={navLinkStyle}>
                     About
                   </Link>
                 </li>
-                <li className={listItemStyle}>
-                  <Link href="/contact" className={navItemStyle}>
+                <li className={navListItemStyle}>
+                  <Link href="/contact" className={navLinkStyle}>
                     Contact
                   </Link>
                 </li>
