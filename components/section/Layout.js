@@ -7,7 +7,7 @@ import Footer from "/components/site/Footer";
 export default function Layout({ type, nav, children }) {
   return (
     <Container>
-      <SiteHeader as="header" layout="item" type={type} />
+      <SiteHeader as="header" type={type} />
       <main className="item-content-y flex flex-col justify-center w-full">
         <SectionNav
           as="nav"
