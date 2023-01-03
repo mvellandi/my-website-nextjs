@@ -15,10 +15,7 @@ export default function Header({ as, type }) {
     "relative flex justify-between items-center w-full sm:items-end";
   let navListStyle = "sr-only sm:not-sr-only sm:flex";
   let navListItemStyle = "relative";
-  let navLinkStyle =
-    "target text-[2rem] leading-none before:-mt-[1.2rem] select-none md:text-[2.4rem] md:before:-mt-[1.3rem]";
-
-  console.log(pageTypeCheck(type, ["page"]));
+  let navLinkStyle = "target leading-none select-none";
 
   if (pageTypeCheck(type, ["main"])) {
     rootStyle = cn(rootStyle, "sm:pb-6 lgtall:h-96 2k:h-[90px] 2k3:h-[120px]");
@@ -35,12 +32,20 @@ export default function Header({ as, type }) {
       navListStyle,
       "sm:gap-36 md:gap-52 lg:gap-64 xl:gap-[7.6rem]"
     );
+    navLinkStyle = cn(
+      navLinkStyle,
+      "text-[2rem] before:-mt-[1.2rem] md:text-[2.4rem] md:before:-mt-[1.3rem]"
+    );
   }
 
   if (pageTypeCheck(type, ["page"])) {
     navListStyle = cn(
       navListStyle,
-      "sm:gap-24 md:gap-52 lg:gap-64 xl:gap-[7.6rem]"
+      "gap-24 md:gap-40 lg:gap-64 xl:gap-[7.6rem]"
+    );
+    navLinkStyle = cn(
+      navLinkStyle,
+      "text-[1.9rem] before:-mt-[1.1rem] md:text-[2.1rem] md:before:-mt-[1.2rem] lg:text-[2.4rem] lg:before:-mt-[1.3rem]"
     );
   }
 
