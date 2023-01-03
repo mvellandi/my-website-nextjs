@@ -2,13 +2,13 @@ import cn from "classnames";
 import Link from "next/link";
 import Target from "/components/elements/Target";
 
-export default function Header({ as, layout, type }) {
+export default function Header({ as, type }) {
   const Component = as || "div";
   let rootStyle =
     "site-padding-x flex justify-center items-center w-full bg-red fixed z-10 h-56 sm:h-[72px] sm:items-end";
-  // "site-padding-x flex justify-center items-center w-full bg-red fixed z-10 h-56 sm:h-[72px] sm:items-end sm:pb-12";
   let headStyle =
     "relative flex justify-between items-center w-full sm:items-end";
+
   switch (type) {
     case "main":
       rootStyle = cn(
@@ -17,12 +17,17 @@ export default function Header({ as, layout, type }) {
       );
       headStyle = cn(headStyle, "max-w-screen-xl");
       break;
-    case "project" || "article":
+    case "project":
+    case "article":
+      rootStyle = cn(rootStyle, "sm:pb-12 md:h-[110px] 2k3:h-[120px]");
+      headStyle = cn(headStyle, "max-w-[870px] xl:max-w-screen-xl");
+    case "page":
       rootStyle = cn(rootStyle, "sm:pb-12 md:h-[110px] 2k3:h-[120px]");
       headStyle = cn(headStyle, "max-w-[870px] xl:max-w-screen-xl");
     default:
       break;
   }
+
   let listItemStyle = "relative";
   let navItemStyle =
     "target text-[2rem] leading-none before:-mt-[1.2rem] select-none md:text-[2.4rem] md:before:-mt-[1.3rem]";
