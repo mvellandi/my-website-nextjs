@@ -18,8 +18,7 @@ export default function Header({ as, type }) {
   let rootStyle = `site-padding-x flex justify-center items-center w-full bg-red fixed z-10 sm:items-end ${headerHeight.base}`;
   let headStyle =
     "relative flex justify-between items-center w-full sm:items-end";
-  let navListStyle = "sr-only sm:not-sr-only sm:flex";
-  let navListItemStyle = "relative";
+  let navMenuStyle = "sr-only sm:not-sr-only sm:flex";
   let navLinkStyle = "target leading-none select-none";
 
   if (pageTypeCheck(type, ["main"])) {
@@ -33,8 +32,8 @@ export default function Header({ as, type }) {
   }
 
   if (pageTypeCheck(type, ["project", "article"])) {
-    navListStyle = cn(
-      navListStyle,
+    navMenuStyle = cn(
+      navMenuStyle,
       "sm:gap-36 md:gap-52 lg:gap-64 xl:gap-[7.6rem]"
     );
     navLinkStyle = cn(
@@ -44,8 +43,8 @@ export default function Header({ as, type }) {
   }
 
   if (pageTypeCheck(type, ["page"])) {
-    navListStyle = cn(
-      navListStyle,
+    navMenuStyle = cn(
+      navMenuStyle,
       "gap-24 md:gap-40 lg:gap-64 xl:gap-[7.6rem]"
     );
     navLinkStyle = cn(
@@ -69,63 +68,65 @@ export default function Header({ as, type }) {
           </Link>
         </Target>
         {/* NAV GROUP */}
-        <nav className="text-white relative">
+        <nav className="text-white">
           {/* MOBILE NAV BTN */}
-          <button
-            className="target btn btn-sm btn-primary-bright sm:hidden"
-            aria-hidden
-          >
-            menu
-          </button>
+          <Target>
+            <button
+              className="target btn btn-sm btn-primary-bright sm:hidden"
+              aria-hidden
+            >
+              menu
+            </button>
+          </Target>
           {/* NAV LINKS  */}
-          <ul className={navListStyle}>
+          <menu className={navMenuStyle}>
             {pageTypeCheck(type, ["main"]) && (
-              <li className={navListItemStyle}>
+              <Target>
                 <Link
                   href="/contact"
                   className="target btn btn-md-round btn-primary-bright lg:btn-lg-round lg:py-[8px]"
                 >
                   Contact
                 </Link>
-              </li>
+              </Target>
             )}
             {pageTypeCheck(type, ["project", "article", "page"]) && (
               <>
                 {type !== "project" && (
-                  <li className={navListItemStyle}>
+                  <Target>
                     <Link href="/" className={navLinkStyle}>
                       Projects
                     </Link>
-                  </li>
+                  </Target>
                 )}
                 {type !== "article" && (
-                  <li className={navListItemStyle}>
+                  <Target>
                     <Link href="/articles" className={navLinkStyle}>
                       Writing
                     </Link>
-                  </li>
+                  </Target>
                 )}
-                <li className={navListItemStyle}>
+                <Target>
                   <Link
                     href="/play"
                     className={cn(navLinkStyle, "before:-ml-4 md:before:ml-0")}
                   >
                     Play
                   </Link>
-                </li>
-                <li className={navListItemStyle}>
+                </Target>
+                <Target>
                   <Link href="/about" className={navLinkStyle}>
                     About
                   </Link>
-                </li>
-                <li className={navListItemStyle}>
+                </Target>
+                <Target>
                   <Link href="/contact" className={navLinkStyle}>
                     Contact
                   </Link>
-                </li>
+                </Target>
               </>
             )}
-          </ul>
+          </menu>
         </nav>
       </div>
     </Component>
