@@ -62,6 +62,7 @@ export default function Header({ as, type }) {
         <Target>
           <Link
             href="/"
+            aria-hidden
             className="target text-[3.6rem] leading-[1] before:-mt-[0.6rem] font-brand text-white drop-shadow select-none md:text-[4.8rem]"
           >
             Vellandi
@@ -72,8 +73,8 @@ export default function Header({ as, type }) {
           {/* MOBILE NAV BTN */}
           <Target>
             <button
-              className="target btn btn-sm btn-primary-bright sm:hidden"
               aria-hidden
+              className="target btn btn-sm btn-primary-bright sm:hidden"
             >
               menu
             </button>
@@ -106,6 +107,7 @@ export default function Header({ as, type }) {
                     </Link>
                   </Target>
                 )}
+                {/* reposition click target's x-position, as 'play' is a short word  */}
                 <Target>
                   <Link
                     href="/play"
