@@ -6,11 +6,16 @@ const pageTypeCheck = (type, list) => {
   return list.includes(type);
 };
 
+export const headerHeight = {
+  base: "h-56 sm:h-[72px]",
+  main: "lgtall:h-96 2k:h-[90px] 2k3:h-[120px]",
+  secondary: "md:h-[110px] 2k3:h-[120px]",
+};
+
 export default function Header({ as, type }) {
   const Component = as || "div";
 
-  let rootStyle =
-    "site-padding-x flex justify-center items-center w-full bg-red fixed z-10 h-56 sm:h-[72px] sm:items-end";
+  let rootStyle = `site-padding-x flex justify-center items-center w-full bg-red fixed z-10 sm:items-end ${headerHeight.base}`;
   let headStyle =
     "relative flex justify-between items-center w-full sm:items-end";
   let navListStyle = "sr-only sm:not-sr-only sm:flex";
@@ -18,12 +23,12 @@ export default function Header({ as, type }) {
   let navLinkStyle = "target leading-none select-none";
 
   if (pageTypeCheck(type, ["main"])) {
-    rootStyle = cn(rootStyle, "sm:pb-6 lgtall:h-96 2k:h-[90px] 2k3:h-[120px]");
+    rootStyle = cn(rootStyle, `sm:pb-6 ${headerHeight.main}`);
     headStyle = cn(headStyle, "max-w-screen-xl");
   }
 
   if (pageTypeCheck(type, ["project", "article", "page"])) {
-    rootStyle = cn(rootStyle, "sm:pb-12 md:h-[110px] 2k3:h-[120px]");
+    rootStyle = cn(rootStyle, `sm:pb-12 ${headerHeight.secondary}`);
     headStyle = cn(headStyle, "max-w-[870px] xl:max-w-screen-xl");
   }
 
