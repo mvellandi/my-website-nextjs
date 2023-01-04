@@ -37,16 +37,21 @@ export default function Nav({ active, as }) {
       <div className="flex justify-center py-16 gap-16 w-full max-w-screen-lg sm:gap-24 md:gap-[30px] md:py-20 lg:gap-36 xl:py-[18px] xl:gap-48 2xl:gap-56 3xl:gap-64 2k:gap-[76px] 2k:py-24">
         {sections.map(({ title, route, navOrder, isActive }) => {
           let Element;
-          let style = `btn btn-sm-round sm:btn-md-wide-round md:btn-lg-wide-round 2k:btn-xl-wide-round ${
-            isActive ? "btn-primary-selected" : "btn-secondary"
-          }`;
+          let style =
+            "btn btn-sm-round sm:btn-md-wide-round md:btn-lg-wide-round 2k:btn-xl-wide-round";
           if (isActive) {
-            Element = <h1 className={style}>{title}</h1>;
+            Element = (
+              <h1 className={cn(style, "btn-primary-selected")}>{title}</h1>
+            );
           }
           if (!isActive) {
             Element = (
               <Target>
-                <Link href={route} className={cn(style, "target")}>
+                <Link
+                  href={route}
+                  aria-hidden
+                  className={cn(style, "target btn-secondary")}
+                >
                   {title}
                 </Link>
               </Target>
