@@ -2,7 +2,7 @@
   :root {
     font-size: 0.625rem;
   }
-  
+
   html {
     overscroll-behavior: none;
   }
@@ -24,18 +24,9 @@
     @apply px-20 sm:px-32 md:px-40 2xl:px-0;
   }
 
-  /* CONTENT POSITION ADJUSTMENT FOR STICKY HEADER */
-  .main-content-y {
-    @apply mt-56 sm:mt-[72px] lgtall:mt-96 2k:mt-[90px] 2k3:mt-[120px];
-  }
-
-  .item-content-y {
-    @apply mt-56 sm:mt-[72px] md:mt-[110px] 2k3:mt-[120px];
-  }
   /* OUTLINE */
   *:focus {
     outline: none;
     @apply ring-4 ring-offset-2;
   }
-
 }
