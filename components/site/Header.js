@@ -12,9 +12,7 @@ export const headerHeight = {
   secondary: "md:h-[110px] 2k3:h-[120px]",
 };
 
-export default function Header({ as, type }) {
-  const Component = as || "div";
-
+export default function Header({ type }) {
   let rootStyle = `site-padding-x flex justify-center items-center w-full bg-red fixed z-10 sm:items-end ${headerHeight.base}`;
   let headStyle =
     "relative flex justify-between items-center w-full sm:items-end";
@@ -55,14 +53,15 @@ export default function Header({ as, type }) {
 
   return (
     // HEADER BACKGROUND ROW: full width, h-centered child
-    <Component className={rootStyle}>
+    // This is aria-hidden because its global navigation is incomplete and variable, depending on the page type and screen size.
+    // Screen readers instead should use the comprehensive mobile navigation
+    <div className={rootStyle} aria-hidden>
       {/* HEADER CONTENT ROW: full width until large screen, h-centered children (logo and nav), space-between  */}
       <div className={headStyle}>
         {/* LOGO */}
         <Target>
           <Link
             href="/"
-            aria-hidden
             className="target text-[3.6rem] leading-[1] before:-mt-[0.6rem] font-brand text-white drop-shadow select-none md:text-[4.8rem]"
           >
             Vellandi
@@ -72,10 +71,7 @@ export default function Header({ as, type }) {
         <nav className="text-white">
           {/* MOBILE NAV BTN */}
           <Target>
-            <button
-              aria-hidden
-              className="target btn btn-sm btn-primary-bright sm:hidden"
-            >
+            <button className="target btn btn-sm btn-primary-bright sm:hidden">
               menu
             </button>
           </Target>
@@ -131,6 +127,6 @@ export default function Header({ as, type }) {
           </menu>
         </nav>
       </div>
-    </Component>
+    </div>
   );
 }
