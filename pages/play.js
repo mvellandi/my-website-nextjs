@@ -2,6 +2,8 @@ import Meta from "/components/site/Meta";
 import MainLayout from "/components/main/Layout";
 import { getAllToyCards } from "/lib/toy";
 
+// TODO: Change the layout from MainLayout to a "section index" layout
+
 export default function Play({ data, preview }) {
   return (
     <>

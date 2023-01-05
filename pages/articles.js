@@ -2,6 +2,8 @@ import Meta from "/components/site/Meta";
 import MainLayout from "/components/main/Layout";
 import { getAllArticleCards } from "/lib/article";
 
+// TODO: Change the layout from MainLayout to a "articles index" layout
+
 export default function Articles({ data, preview }) {
   return (
     <>
