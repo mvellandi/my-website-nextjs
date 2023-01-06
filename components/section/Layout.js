@@ -35,7 +35,7 @@ export default function SectionLayout({ type, nav, children }) {
         prev={nav.prev}
         next={nav.next}
       />
-      <Footer />
+      <Footer type={type} />
     </>
   );
 }

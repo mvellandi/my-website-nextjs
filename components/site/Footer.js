@@ -1,9 +1,31 @@
+import cn from "classnames";
 import Link from "next/link";
 
-export default function Footer() {
+const pageTypeCheck = (type, list) => {
+  return list.includes(type);
+};
+
+export default function Footer({ type }) {
+  let footerContentStyle = "w-full site-padding-x text-white";
+
+  if (pageTypeCheck(type, ["main"])) {
+    footerContentStyle = cn(footerContentStyle, "max-w-screen-xl");
+  }
+
+  if (pageTypeCheck(type, ["project"])) {
+    footerContentStyle = cn(
+      footerContentStyle,
+      "max-w-[870px] xl:max-w-screen-xl"
+    );
+  }
+
+  if (pageTypeCheck(type, ["article", "page"])) {
+    footerContentStyle = cn(footerContentStyle, "max-w-[870px]");
+  }
+
   return (
     <footer className="flex justify-center items-start w-full h-full py-16 border-t-5 border-t-red-shade bg-red">
-      <div className="w-full max-w-screen-xl site-padding-x text-white">
+      <div className={footerContentStyle}>
         <span className="text-sm xl:text-base">
           &copy; {new Date().getFullYear()} - Mario Vellandi
         </span>

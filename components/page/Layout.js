@@ -10,7 +10,7 @@ export default function PageLayout({ children }) {
       <SiteHeader type="page" />
       <HeaderOffset type="page" />
       <ContentColumn>{children}</ContentColumn>
-      <Footer />
+      <Footer type="page" />
     </>
   );
 }

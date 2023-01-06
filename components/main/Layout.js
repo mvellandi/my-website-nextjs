@@ -17,7 +17,7 @@ export default function MainLayout({ data, children, preview }) {
       <Hero as="section" />
       <Nav active={data.name} />
       {children}
-      <Footer />
+      <Footer type="main" />
     </>
   );
 }
