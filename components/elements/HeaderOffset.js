@@ -1,4 +1,4 @@
-import { headerHeight } from "/components/site/Header";
+import { headerHeightStyle } from "/components/site/Header";
 
 const pageTypeCheck = (type, list) => {
   return list.includes(type);
@@ -12,5 +12,9 @@ export default function HeaderOffset({ type }) {
     extra = "secondary";
   }
 
-  return <div className={`${headerHeight.base} ${headerHeight[extra]}`}></div>;
+  return (
+    <div
+      className={`${headerHeightStyle.base} ${headerHeightStyle[extra]}`}
+    ></div>
+  );
 }
