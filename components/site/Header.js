@@ -13,26 +13,26 @@ export const headerHeightStyle = {
 };
 
 export default function Header({ type }) {
-  let rootStyle = `site-padding-x flex justify-center items-center w-full bg-red fixed z-10 sm:items-end ${headerHeightStyle.base}`;
-  let headStyle =
+  let headerStyle = `site-padding-x flex justify-center items-center w-full bg-red fixed z-10 sm:items-end ${headerHeightStyle.base}`;
+  let headerContentStyle =
     "relative flex justify-between items-center w-full sm:items-end";
   let navMenuStyle = "sr-only sm:not-sr-only sm:flex";
   let navLinkStyle = "target leading-none select-none";
 
   if (pageTypeCheck(type, ["main"])) {
-    rootStyle = cn(rootStyle, `sm:pb-6 ${headerHeightStyle.main}`);
-    headStyle = cn(headStyle, "max-w-screen-xl");
+    headerStyle = cn(headerStyle, `sm:pb-6 ${headerHeightStyle.main}`);
+    headerContentStyle = cn(headerContentStyle, "max-w-screen-xl");
   }
 
-  if (pageTypeCheck(type, ["project", "article", "page"])) {
-    rootStyle = cn(rootStyle, `sm:pb-12 ${headerHeightStyle.secondary}`);
-    headStyle = cn(headStyle, "max-w-[870px] xl:max-w-screen-xl");
-  }
-
-  if (pageTypeCheck(type, ["project", "article"])) {
+  if (pageTypeCheck(type, ["project"])) {
+    headerStyle = cn(headerStyle, `sm:pb-12 ${headerHeightStyle.secondary}`);
+    headerContentStyle = cn(
+      headerContentStyle,
+      "max-w-[870px] xl:max-w-screen-xl"
+    );
     navMenuStyle = cn(
       navMenuStyle,
-      "sm:gap-36 md:gap-52 lg:gap-64 xl:gap-[7.6rem]"
+      "sm:gap-36 md:gap-52 lg:gap-64 xl:gap-[7.2rem] 2xl:gap-[8.8rem]"
     );
     navLinkStyle = cn(
       navLinkStyle,
@@ -40,7 +40,9 @@ export default function Header({ type }) {
     );
   }
 
-  if (pageTypeCheck(type, ["page"])) {
+  if (pageTypeCheck(type, ["article", "page"])) {
+    headerStyle = cn(headerStyle, `sm:pb-12 ${headerHeightStyle.secondary}`);
+    headerContentStyle = cn(headerContentStyle, "max-w-[870px]");
     navMenuStyle = cn(
       navMenuStyle,
       "gap-24 md:gap-40 lg:gap-64 xl:gap-[7.6rem]"
@@ -55,9 +57,9 @@ export default function Header({ type }) {
     // HEADER BACKGROUND ROW: full width, h-centered child
     // This is aria-hidden because its global navigation is incomplete and variable, depending on the page type and screen size.
     // Screen readers instead should use the comprehensive mobile navigation
-    <div className={rootStyle} aria-hidden>
+    <div className={headerStyle} aria-hidden>
       {/* HEADER CONTENT ROW: full width until large screen, h-centered children (logo and nav), space-between  */}
-      <div className={headStyle}>
+      <div className={headerContentStyle}>
         {/* LOGO */}
         <Target>
           <Link
