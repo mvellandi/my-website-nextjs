@@ -6,26 +6,26 @@ const pageTypeCheck = (type, list) => {
   return list.includes(type);
 };
 
-export const headerHeight = {
+export const headerHeightStyle = {
   base: "h-56 sm:h-[72px]",
   main: "lgtall:h-96 2k:h-[90px] 2k3:h-[120px]",
   secondary: "md:h-[110px] 2k3:h-[120px]",
 };
 
 export default function Header({ type }) {
-  let rootStyle = `site-padding-x flex justify-center items-center w-full bg-red fixed z-10 sm:items-end ${headerHeight.base}`;
+  let rootStyle = `site-padding-x flex justify-center items-center w-full bg-red fixed z-10 sm:items-end ${headerHeightStyle.base}`;
   let headStyle =
     "relative flex justify-between items-center w-full sm:items-end";
   let navMenuStyle = "sr-only sm:not-sr-only sm:flex";
   let navLinkStyle = "target leading-none select-none";
 
   if (pageTypeCheck(type, ["main"])) {
-    rootStyle = cn(rootStyle, `sm:pb-6 ${headerHeight.main}`);
+    rootStyle = cn(rootStyle, `sm:pb-6 ${headerHeightStyle.main}`);
     headStyle = cn(headStyle, "max-w-screen-xl");
   }
 
   if (pageTypeCheck(type, ["project", "article", "page"])) {
-    rootStyle = cn(rootStyle, `sm:pb-12 ${headerHeight.secondary}`);
+    rootStyle = cn(rootStyle, `sm:pb-12 ${headerHeightStyle.secondary}`);
     headStyle = cn(headStyle, "max-w-[870px] xl:max-w-screen-xl");
   }
 
