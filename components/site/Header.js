@@ -12,6 +12,13 @@ export const headerHeightStyle = {
   secondary: "md:h-[110px] 2k3:h-[120px]",
 };
 
+export const headerContentWidthStyle = {
+  main: "max-w-screen-xl",
+  project: "max-w-[870px] xl:max-w-screen-xl",
+  article: "max-w-[870px]",
+  page: "max-w-[870px]",
+};
+
 export default function Header({ type }) {
   let headerStyle = `site-padding-x flex justify-center items-center w-full bg-red fixed z-10 sm:items-end ${headerHeightStyle.base}`;
   let headerContentStyle =
@@ -21,14 +28,14 @@ export default function Header({ type }) {
 
   if (pageTypeCheck(type, ["main"])) {
     headerStyle = cn(headerStyle, `sm:pb-6 ${headerHeightStyle.main}`);
-    headerContentStyle = cn(headerContentStyle, "max-w-screen-xl");
+    headerContentStyle = cn(headerContentStyle, headerContentWidthStyle.main);
   }
 
   if (pageTypeCheck(type, ["project"])) {
     headerStyle = cn(headerStyle, `sm:pb-12 ${headerHeightStyle.secondary}`);
     headerContentStyle = cn(
       headerContentStyle,
-      "max-w-[870px] xl:max-w-screen-xl"
+      headerContentWidthStyle.project
     );
     navMenuStyle = cn(
       navMenuStyle,
@@ -42,15 +49,24 @@ export default function Header({ type }) {
 
   if (pageTypeCheck(type, ["article", "page"])) {
     headerStyle = cn(headerStyle, `sm:pb-12 ${headerHeightStyle.secondary}`);
-    headerContentStyle = cn(headerContentStyle, "max-w-[870px]");
-    navMenuStyle = cn(
-      navMenuStyle,
-      "gap-24 md:gap-40 lg:gap-64 xl:gap-[7.6rem]"
+    headerContentStyle = cn(
+      headerContentStyle,
+      headerContentWidthStyle.article
     );
     navLinkStyle = cn(
       navLinkStyle,
-      "text-[1.9rem] before:-mt-[1.1rem] md:text-[2.1rem] md:before:-mt-[1.2rem] lg:text-[2.4rem] lg:before:-mt-[1.3rem]"
+      "before:-mt-[1.1rem] md:text-[2.1rem] md:before:-mt-[1.2rem] lg:text-[2.4rem] lg:before:-mt-[1.3rem]"
     );
+  }
+
+  if (pageTypeCheck(type, ["article"])) {
+    navMenuStyle = cn(navMenuStyle, "gap-24 sm:gap-[30px] md:gap-40 lg:gap-64");
+    navLinkStyle = cn(navLinkStyle, "text-[1.9rem]");
+  }
+
+  if (pageTypeCheck(type, ["page"])) {
+    navMenuStyle = cn(navMenuStyle, "gap-[26px] md:gap-40 lg:gap-[52px]");
+    navLinkStyle = cn(navLinkStyle, "text-[1.8rem]");
   }
 
   return (
