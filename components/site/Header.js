@@ -1,6 +1,7 @@
 import cn from "classnames";
 import Link from "next/link";
 import Target from "/components/elements/Target";
+import { elementContentWidthStyle as headerContentWidthStyle } from "/components/site/constants";
 
 const pageTypeCheck = (type, list) => {
   return list.includes(type);
@@ -12,31 +13,18 @@ export const headerHeightStyle = {
   secondary: "md:h-[110px] 2k3:h-[120px]",
 };
 
-export const headerContentWidthStyle = {
-  main: "max-w-screen-xl",
-  project: "max-w-[870px] xl:max-w-screen-xl",
-  article: "max-w-[870px]",
-  page: "max-w-[870px]",
-};
-
 export default function Header({ type }) {
   let headerStyle = `site-padding-x flex justify-center items-center w-full bg-red fixed z-10 sm:items-end ${headerHeightStyle.base}`;
-  let headerContentStyle =
-    "relative flex justify-between items-center w-full sm:items-end";
+  let headerContentStyle = `relative flex justify-between items-center w-full ${headerContentWidthStyle[type]} sm:items-end`;
   let navMenuStyle = "sr-only sm:not-sr-only sm:flex";
   let navLinkStyle = "target leading-none select-none";
 
   if (pageTypeCheck(type, ["main"])) {
     headerStyle = cn(headerStyle, `sm:pb-6 ${headerHeightStyle.main}`);
-    headerContentStyle = cn(headerContentStyle, headerContentWidthStyle.main);
   }
 
   if (pageTypeCheck(type, ["project"])) {
     headerStyle = cn(headerStyle, `sm:pb-12 ${headerHeightStyle.secondary}`);
-    headerContentStyle = cn(
-      headerContentStyle,
-      headerContentWidthStyle.project
-    );
     navMenuStyle = cn(
       navMenuStyle,
       "sm:gap-36 md:gap-52 lg:gap-64 xl:gap-[7.2rem] 2xl:gap-[8.8rem]"
@@ -49,10 +37,6 @@ export default function Header({ type }) {
 
   if (pageTypeCheck(type, ["article", "page"])) {
     headerStyle = cn(headerStyle, `sm:pb-12 ${headerHeightStyle.secondary}`);
-    headerContentStyle = cn(
-      headerContentStyle,
-      headerContentWidthStyle.article
-    );
     navLinkStyle = cn(
       navLinkStyle,
       "before:-mt-[1.1rem] md:text-[2.1rem] md:before:-mt-[1.2rem] lg:text-[2.4rem] lg:before:-mt-[1.3rem]"

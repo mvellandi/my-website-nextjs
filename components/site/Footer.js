@@ -1,6 +1,6 @@
 import cn from "classnames";
 import Link from "next/link";
-import { headerContentWidthStyle } from "./Header";
+import { elementContentWidthStyle as footerContentWidthStyle } from "/components/site/constants";
 
 const pageTypeCheck = (type, list) => {
   return list.includes(type);
@@ -10,25 +10,25 @@ export default function Footer({ type }) {
   let footerContentStyle = "w-full site-padding-x text-white";
 
   if (pageTypeCheck(type, ["main"])) {
-    footerContentStyle = cn(footerContentStyle, headerContentWidthStyle.main);
+    footerContentStyle = cn(footerContentStyle, footerContentWidthStyle.main);
   }
 
   if (pageTypeCheck(type, ["project"])) {
     footerContentStyle = cn(
       footerContentStyle,
-      headerContentWidthStyle.project
+      footerContentWidthStyle.project
     );
   }
 
   if (pageTypeCheck(type, ["article", "page"])) {
     footerContentStyle = cn(
       footerContentStyle,
-      headerContentWidthStyle.article
+      footerContentWidthStyle.article
     );
   }
 
   return (
-    <footer className="flex justify-center items-start w-full h-full py-16 border-t-5 border-t-red-shade bg-red">
+    <footer className="flex justify-center items-start w-full h-full py-16 bg-red">
       <div className={footerContentStyle}>
         <span className="text-sm xl:text-base">
           &copy; {new Date().getFullYear()} - Mario Vellandi
