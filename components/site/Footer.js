@@ -1,5 +1,6 @@
 import cn from "classnames";
 import Link from "next/link";
+import { headerContentWidthStyle } from "./Header";
 
 const pageTypeCheck = (type, list) => {
   return list.includes(type);
@@ -9,18 +10,21 @@ export default function Footer({ type }) {
   let footerContentStyle = "w-full site-padding-x text-white";
 
   if (pageTypeCheck(type, ["main"])) {
-    footerContentStyle = cn(footerContentStyle, "max-w-screen-xl");
+    footerContentStyle = cn(footerContentStyle, headerContentWidthStyle.main);
   }
 
   if (pageTypeCheck(type, ["project"])) {
     footerContentStyle = cn(
       footerContentStyle,
-      "max-w-[870px] xl:max-w-screen-xl"
+      headerContentWidthStyle.project
     );
   }
 
   if (pageTypeCheck(type, ["article", "page"])) {
-    footerContentStyle = cn(footerContentStyle, "max-w-[870px]");
+    footerContentStyle = cn(
+      footerContentStyle,
+      headerContentWidthStyle.article
+    );
   }
 
   return (
