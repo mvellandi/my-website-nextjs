@@ -19,16 +19,16 @@ export default function SectionNav({
   const Component = as || "div";
 
   let navStyle =
-    "flex justify-center w-full site-padding-x border-b border-gray-400 bg-gray-25";
+    "flex justify-center w-full site-padding-x border-gray-400 bg-gray-25";
   let navContentStyle = `flex justify-between items-center w-full py-12 ${navContentWidthStyle[type]}`;
   switch (place) {
     case "top":
-      navStyle = cn(navStyle, "lg:border-b-2");
-      navContentStyle = cn(navContentStyle, "lg:pt-44");
+      navStyle = cn(navStyle, "border-b lg:border-b-2");
+      navContentStyle = cn(navContentStyle, "md:pt-28 lg:pt-44");
       break;
     case "bottom":
-      navStyle = cn(navStyle, "lg:border-t-2");
-      navContentStyle = cn(navContentStyle, "lg:pb-44 lg:pt-24");
+      navStyle = cn(navStyle, "border-t lg:border-t-2");
+      navContentStyle = cn(navContentStyle, "md:pb-28 md:pt-24 lg:pb-44");
   }
 
   // Set homepage as index for projects
@@ -40,7 +40,7 @@ export default function SectionNav({
       <div className={navContentStyle}>
         <Link
           href={sectionHomeRoute}
-          className="-ml-28 text-[22px] text-[#293a6b] lg:text-2xl"
+          className="-ml-16 text-[22px] text-[#293a6b] lg:-ml-28 lg:text-2xl"
         >
           <RiArrowLeftSLine className="inline mb-4 -mr-[2px]" aria-hidden />
           {title}
