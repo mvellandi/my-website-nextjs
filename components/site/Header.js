@@ -13,11 +13,12 @@ export const headerHeightStyle = {
   secondary: "md:h-[110px] 2k3:h-[120px]",
 };
 
-export default function Header({ type }) {
+export default function Header({ type, page }) {
   let headerStyle = `site-padding-x flex justify-center items-center w-full bg-red fixed z-10 sm:items-end ${headerHeightStyle.base}`;
   let headerContentStyle = `relative flex justify-between items-center w-full ${headerContentWidthStyle[type]} sm:items-end`;
   let navMenuStyle = "sr-only sm:not-sr-only sm:flex";
-  let navLinkStyle = "target leading-none select-none";
+  let navLinkStyle =
+    "target leading-none select-none text-[2rem] before:-mt-[1.2rem] md:text-[2.4rem] md:before:-mt-[1.3rem]";
 
   if (pageTypeCheck(type, ["main"])) {
     headerStyle = cn(headerStyle, `sm:pb-6 ${headerHeightStyle.main}`);
@@ -29,28 +30,11 @@ export default function Header({ type }) {
       navMenuStyle,
       "sm:gap-36 md:gap-52 lg:gap-64 xl:gap-[7.2rem] 2xl:gap-[8.8rem]"
     );
-    navLinkStyle = cn(
-      navLinkStyle,
-      "text-[2rem] before:-mt-[1.2rem] md:text-[2.4rem] md:before:-mt-[1.3rem]"
-    );
   }
 
   if (pageTypeCheck(type, ["article", "page"])) {
     headerStyle = cn(headerStyle, `sm:pb-12 ${headerHeightStyle.secondary}`);
-    navLinkStyle = cn(
-      navLinkStyle,
-      "before:-mt-[1.1rem] md:text-[2.1rem] md:before:-mt-[1.2rem] lg:text-[2.4rem] lg:before:-mt-[1.3rem]"
-    );
-  }
-
-  if (pageTypeCheck(type, ["article"])) {
     navMenuStyle = cn(navMenuStyle, "gap-24 sm:gap-[30px] md:gap-40 lg:gap-64");
-    navLinkStyle = cn(navLinkStyle, "text-[1.9rem]");
-  }
-
-  if (pageTypeCheck(type, ["page"])) {
-    navMenuStyle = cn(navMenuStyle, "gap-[26px] md:gap-40 lg:gap-[52px]");
-    navLinkStyle = cn(navLinkStyle, "text-[1.8rem]");
   }
 
   return (
@@ -83,7 +67,7 @@ export default function Header({ type }) {
               <Target>
                 <Link
                   href="/contact"
-                  className="target btn btn-md-round btn-primary-bright lg:btn-lg-round lg:py-[8px]"
+                  className="target btn btn-md-round btn-primary-bright sm:-mr-16 lg:mr-0 lg:btn-lg-round lg:py-[8px]"
                 >
                   Contact
                 </Link>
@@ -114,16 +98,20 @@ export default function Header({ type }) {
                     Play
                   </Link>
                 </Target>
-                <Target>
-                  <Link href="/about" className={navLinkStyle}>
-                    About
-                  </Link>
-                </Target>
-                <Target>
-                  <Link href="/contact" className={navLinkStyle}>
-                    Contact
-                  </Link>
-                </Target>
+                {page !== "about" && (
+                  <Target>
+                    <Link href="/about" className={navLinkStyle}>
+                      About
+                    </Link>
+                  </Target>
+                )}
+                {page !== "contact" && (
+                  <Target>
+                    <Link href="/contact" className={navLinkStyle}>
+                      Contact
+                    </Link>
+                  </Target>
+                )}
               </>
             )}
           </menu>
