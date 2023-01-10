@@ -5,7 +5,6 @@ import { PortableText } from "@portabletext/react";
 
 export default function Item({ data }) {
   const { headline, body } = data;
-  //
 
   return (
     <>
