@@ -13,9 +13,9 @@ export default function Contact({ preview = false }) {
       </h1>
       <div className="prose-lg lg:prose-xl">
         <p>
-          Hi! I'm currently either walking the dog, closing a big media deal, or
-          eating a Döner sandwich. Please leave a message and I'll get back to
-          you soon........
+          Hi! I&rsquo;m currently either walking the dog, closing a big media
+          deal, or eating a Döner sandwich. Please leave a message and
+          I&rsquo;ll get back to you soon........
           <span className="text-xl lg:text-3xl">BEEEEEP!</span>
         </p>
       </div>
