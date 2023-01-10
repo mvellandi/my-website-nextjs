@@ -3,12 +3,12 @@ import PageLayout from "/components/page/Layout";
 export default function Contact({ preview = false }) {
   const labelStyle = "block mb-2 font-medium";
   const inputStyle =
-    "shadow-sm bg-[#fafafa] border border-gray-400 rounded-xl focus:ring-primary-500 focus:border-primary-500 block w-full py-4 px-12";
+    "shadow-sm bg-[#fafafa] border border-purple-900 rounded-xl focus:ring-primary-500 focus:border-primary-500 block w-full py-4 px-12";
   // original dark mode styles:
   // dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light
   return (
     <PageLayout page="contact">
-      <h1 className="text-[3.6rem] text-black font-light -tracking-1 leading-tight mb-32 lg:mb-40">
+      <h1 className="text-[3.6rem] text-black font-light -tracking-1 leading-tight mb-20 lg:mb-40">
         Contact
       </h1>
       <div className="prose-lg lg:prose-xl">
@@ -16,7 +16,7 @@ export default function Contact({ preview = false }) {
           Hi! I'm currently either walking the dog, closing a big media deal, or
           eating a Döner sandwich. Please leave a message and I'll get back to
           you soon........
-          <span className="text-3xl">BEEEEEP!</span>
+          <span className="text-xl lg:text-3xl">BEEEEEP!</span>
         </p>
       </div>
       <section className="bg-white mt-36">
