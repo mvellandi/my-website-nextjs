@@ -1,1 +1,1 @@
-This website demonstrates using Nextjs with Sanity CMS
+This website demonstrates using Nextjs with Sanity CMS.
