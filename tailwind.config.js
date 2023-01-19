@@ -13,7 +13,7 @@ module.exports = {
       sm: "600px",
       md: "768px",
       lg: "1024px",
-      "lgtall": {'raw': '(orientation: portrait) and (min-width: 1024px)'},
+      lgtall: { raw: "(orientation: portrait) and (min-width: 1024px)" },
       xl: "1280px",
       "2xl": "1536px",
       "3xl": "1920px",
@@ -106,42 +106,42 @@ module.exports = {
       typography: {
         sm: {
           css: {
-            fontSize: '1.4rem',
+            fontSize: "1.4rem",
             // lineHeight: '1.7142857' or 24px
             // use gap-[0.4rem] for simulating with flexbox columns
           },
         },
         DEFAULT: {
           css: {
-            fontSize: '1.6rem',
+            fontSize: "1.6rem",
             // lineHeight: '1.75' or 28px
             // use gap-[0.4rem] for simulating with flexbox columns
           },
         },
         base: {
           css: {
-            fontSize: '1.6rem',
+            fontSize: "1.6rem",
             // lineHeight: '1.75' or 28px
             // use gap-[0.4rem] for simulating with flexbox columns
           },
         },
         lg: {
           css: {
-            fontSize: '1.8rem',
+            fontSize: "1.8rem",
             // lineHeight: '1.7777778' or 32px
             // use gap-[0.4rem] for simulating with flexbox columns
           },
         },
         xl: {
           css: {
-            fontSize: '2rem',
+            fontSize: "2rem",
             // lineHeight: '1.8' or 36px
             // use gap-[0.8rem] for simulating with flexbox columns
           },
         },
-        '2xl': {
+        "2xl": {
           css: {
-            fontSize: '2.4rem',
+            fontSize: "2.4rem",
             // lineHeight: '1.6666667' or 40px
             // use gap-[0.8rem] for simulating with flexbox columns
           },
