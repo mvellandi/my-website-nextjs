@@ -29,3 +29,13 @@
 .bord-blue section {
   border: 1px solid blue;
 }
+
+/* TEMP STYLE LOCATION */
+.prose-lg ul,
+.prose-xl ul {
+  list-style: "–" outside;
+  padding-left: 12px;
+  & > li {
+    margin-top: 0;
+  }
+}
