@@ -3,8 +3,8 @@ import Link from "next/link";
 import { RiArrowLeftSLine } from "react-icons/ri";
 import { elementContentWidthStyle as navContentWidthStyle } from "/components/site/constants";
 
-const pageTypeCheck = (type, list) => {
-  return list.includes(type);
+export const navHeightStyle = {
+  base: "h-[58px] md:h-[75px] lg:h-96",
 };
 
 export default function SectionNav({
@@ -18,8 +18,7 @@ export default function SectionNav({
 }) {
   const Component = as || "div";
 
-  let navStyle =
-    "flex justify-center w-full site-padding-x border-gray-400 bg-gray-25";
+  let navStyle = `fixed flex justify-center w-full site-padding-x border-gray-400 bg-gray-25 ${navHeightStyle.base}`;
   let navContentStyle = `flex justify-between items-center w-full py-12 ${navContentWidthStyle[type]}`;
   switch (place) {
     case "top":
