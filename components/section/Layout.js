@@ -1,5 +1,6 @@
 import SiteHeader from "/components/site/Header";
-import HeaderOffset from "/components/elements/HeaderOffset";
+import FixedHeader from "/components/elements/FixedHeader";
+import FixedHeaderOffset from "/components/elements/FixedHeaderOffset";
 import SectionNav from "/components/section/Nav";
 import ProjectColumn from "/components/project/ContentColumn";
 import ContentColumn from "/components/elements/ContentColumn";
@@ -11,33 +12,25 @@ export default function SectionLayout({ type, nav, children }) {
 
   return (
     <>
-      <SiteHeader type={type} />
-      <HeaderOffset type={type} />
-      <SectionNav
-        aria-label={type}
-        as="nav"
-        place="top"
-        type={nav.type}
-        title={nav.title}
-        path={nav.path}
-        prev={nav.prev}
-        next={nav.next}
-      />
+      <FixedHeader>
+        <SiteHeader type={type} />
+        <SectionNav
+          aria-label={type}
+          as="nav"
+          place="top"
+          type={nav.type}
+          title={nav.title}
+          path={nav.path}
+          prev={nav.prev}
+          next={nav.next}
+        />
+      </FixedHeader>
+      <FixedHeaderOffset type={type} />
       <main>
         <Column type={type} as="article">
           {children}
         </Column>
       </main>
-      <SectionNav
-        aria-label={type}
-        as="nav"
-        place="bottom"
-        type={nav.type}
-        title={nav.title}
-        path={nav.path}
-        prev={nav.prev}
-        next={nav.next}
-      />
       <Footer type={type} />
     </>
   );
