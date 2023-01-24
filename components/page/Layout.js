@@ -1,5 +1,6 @@
 import SiteHeader from "/components/site/Header";
-import HeaderOffset from "/components/elements/HeaderOffset";
+import FixedHeader from "/components/elements/FixedHeader";
+import FixedHeaderOffset from "/components/elements/FixedHeaderOffset";
 import ContentColumn from "/components/elements/ContentColumn";
 import Footer from "/components/site/Footer";
 
@@ -7,8 +8,10 @@ import Footer from "/components/site/Footer";
 export default function PageLayout({ page, children }) {
   return (
     <>
-      <SiteHeader type="page" page={page} />
-      <HeaderOffset type="page" />
+      <FixedHeader>
+        <SiteHeader type="page" page={page} />
+      </FixedHeader>
+      <FixedHeaderOffset type="page" />
       <ContentColumn>{children}</ContentColumn>
       <Footer type="page" />
     </>

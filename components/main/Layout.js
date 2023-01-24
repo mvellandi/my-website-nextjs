@@ -1,5 +1,6 @@
+import FixedHeader from "../elements/FixedHeader";
 import SiteHeader from "/components/site/Header";
-import HeaderOffset from "/components/elements/HeaderOffset";
+import FixedHeaderOffset from "/components/elements/FixedHeaderOffset";
 import Hero from "/components/main/Hero";
 import Nav from "/components/main/Nav";
 import Footer from "/components/site/Footer";
@@ -12,8 +13,10 @@ export default function MainLayout({ data, children, preview }) {
       {/* SITE HEADER FOR MOBILE AND SCREEN READERS HERE; INCLUDING ALL NAV LINKS IN ONE PLACE */}
       {/* To avoid having adjacent navigation, consider moving SiteHeader above footer in code */}
       {/* then rearranging it visually using flexbox order */}
-      <SiteHeader type="main" />
-      <HeaderOffset type="main" />
+      <FixedHeader>
+        <SiteHeader type="main" />
+      </FixedHeader>
+      <FixedHeaderOffset type="main" />
       <Hero as="section" />
       <Nav active={data.name} />
       {children}
