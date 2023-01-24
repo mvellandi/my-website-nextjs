@@ -31,6 +31,7 @@ export default function Item({ data }) {
 
   return (
     <>
+      {/* HEADER */}
       <div className="w-full flex justify-between sm:justify-start sm:gap-36">
         <div className="flex flex-col gap-8 sm:order-2">
           <h1 className="text-3xl text-black font-light -tracking-1 leading-tight">
@@ -48,7 +49,9 @@ export default function Item({ data }) {
           className="w-[90px] h-[90px] lg:w-[100px] lg:h-[100px] order-1"
         />
       </div>
-      <div className="grid grid-col gap-40 md:gap-56 xl:grid xl:grid-cols-[2fr_1fr_2fr] xl:gap-x-[128px]">
+      {/* BODY (GRID) */}
+      <div className="grid grid-col gap-40 md:gap-56 xl:grid-cols-[2fr_1fr_2fr] xl:gap-x-[128px]">
+        {/* CELL ONE */}
         <div className="xl:col-span-2 xl:max-w-[780px]">
           {summary && (
             <section>
@@ -59,6 +62,7 @@ export default function Item({ data }) {
             </section>
           )}
         </div>
+        {/* CELL TWO */}
         {(features || structure || links) && (
           <div className="row-span-2 flex flex-col gap-40 md:gap-44">
             {features && (
@@ -114,62 +118,58 @@ export default function Item({ data }) {
             )}
           </div>
         )}
-        {process && (
-          <section className="max-w-[780px] xl:col-span-2">
-            <h3 className={sectionHeadingStyle}>Process</h3>
-            <div className={sectionBodyStyle}>
-              {process.map(({ _key, _type, ...rest }) => {
-                switch (_type) {
-                  case "richText":
-                    return (
-                      <PortableText
-                        key={_key}
-                        value={rest.body}
-                        onMissingComponent={false}
+        {/* CELL THREE */}
+        <div className="xl:col-span-2 xl:max-w-[780px]">
+          <div className="flex flex-col gap-40 md:gap-56">
+            {media && (
+              <section>
+                <h3 className={sectionHeadingStyle}>Media</h3>
+                <div className="grid gap-40 sm:justify-center md:grid-cols-2 md:gap-20 xl:grid-cols-3 xl:gap-64">
+                  {media.map(({ _key, ...rest }) => (
+                    <div key={_key}>
+                      <img
+                        src={urlForImage(rest.image).url()}
+                        alt="rest.alt"
+                        className="w-full max-w-[420px]"
                       />
-                    );
-                  case "headingRichText":
-                    return (
-                      <Fragment key={_key}>
-                        <h4 className="font-bold">{rest.heading}</h4>
-                        <PortableText
-                          key={_key}
-                          value={rest.body}
-                          onMissingComponent={false}
-                        />
-                      </Fragment>
-                    );
-                }
-              })}
-            </div>
-          </section>
-        )}
-      </div>
-      {media && (
-        <section>
-          <h3 className={sectionHeadingStyle}>Media</h3>
-          <div className="grid gap-40 sm:justify-center md:grid-cols-2 md:gap-20 xl:grid-cols-3 xl:gap-64">
-            {media.map(({ _key, ...rest }) => (
-              <div key={_key}>
-                <img
-                  src={urlForImage(rest.image).url()}
-                  alt="rest.alt"
-                  className="w-full max-w-[420px]"
-                />
-              </div>
-            ))}
-            {media.map(({ _key, ...rest }) => (
-              <div key={_key}>
-                <img
-                  src={urlForImage(rest.image).url()}
-                  alt="rest.alt"
-                  className="w-full max-w-[420px]"
-                />
-              </div>
-            ))}
+                    </div>
+                  ))}
+                </div>
+              </section>
+            )}
+            {process && (
+              <section className="max-w-[780px] xl:col-span-2">
+                <h3 className={sectionHeadingStyle}>Process</h3>
+                <div className={sectionBodyStyle}>
+                  {process.map(({ _key, _type, ...rest }) => {
+                    switch (_type) {
+                      case "richText":
+                        return (
+                          <PortableText
+                            key={_key}
+                            value={rest.body}
+                            onMissingComponent={false}
+                          />
+                        );
+                      case "headingRichText":
+                        return (
+                          <Fragment key={_key}>
+                            <h4 className="font-bold">{rest.heading}</h4>
+                            <PortableText
+                              key={_key}
+                              value={rest.body}
+                              onMissingComponent={false}
+                            />
+                          </Fragment>
+                        );
+                    }
+                  })}
+                </div>
+              </section>
+            )}
           </div>
-        </section>
-      )}
+        </div>
+      </div>
       <div id="backtotop" style={{ display: "none" }}>
         <div className="flex justify-center mt-8">
           <div
@@ -180,7 +180,7 @@ export default function Item({ data }) {
           </div>
         </div>
       </div>
-      <Script>
+      {/* <Script>
         {`
         const iw = window.innerWidth;
         const sh = document.getElementsByTagName("body")[0].scrollHeight;
@@ -190,7 +190,7 @@ export default function Item({ data }) {
           button.style.display = "block";
         }
         `}
-      </Script>
+      </Script> */}
     </>
   );
 }
