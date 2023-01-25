@@ -16,7 +16,7 @@ export const headerHeightStyle = {
 };
 
 export default function Header({ type, page }) {
-  let headerStyle = `site-padding-x flex justify-center items-center w-full bg-red z-10 sm:items-end ${headerHeightStyle.base}`;
+  let headerStyle = `site-padding-x flex justify-center items-center w-full bg-red sm:items-end ${headerHeightStyle.base}`;
   let headerContentStyle = `relative flex justify-between items-center w-full ${headerContentWidthStyle[type]} sm:items-end`;
   let navMenuStyle = "sr-only sm:not-sr-only sm:flex";
   let navLinkStyle =
