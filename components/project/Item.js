@@ -2,7 +2,8 @@
 import { urlForImage } from "/lib/sanity";
 import Link from "next/link";
 import { PortableText } from "@portabletext/react";
-import { useLayoutEffect, Fragment } from "react";
+import { Fragment, useState } from "react";
+import FsLightbox from "fslightbox-react";
 import Script from "next/script";
 
 export default function Item({ data }) {
@@ -28,6 +29,18 @@ export default function Item({ data }) {
   // This is corrected with top margin added.
   const sectionListStyle =
     "flex flex-col gap-y-[0.9rem] mt-[0.8rem] lg:text-lg lg:gap-y-[2rem] lg:mt-[1.6rem]";
+
+  const [lightboxController, setLightboxController] = useState({
+    toggler: false,
+    slide: 1,
+  });
+
+  function openLightboxOnSlide(number) {
+    setLightboxController({
+      toggler: !lightboxController.toggler,
+      slide: number,
+    });
+  }
 
   return (
     <>
@@ -125,16 +138,26 @@ export default function Item({ data }) {
               <section>
                 <h3 className={sectionHeadingStyle}>Media</h3>
                 <div className="grid gap-40 sm:justify-center md:grid-cols-2 md:gap-20 xl:grid-cols-3 xl:gap-64">
-                  {media.map(({ _key, ...rest }) => (
+                  {media.map(({ _key, ...rest }, n) => (
                     <div key={_key}>
-                      <img
-                        src={urlForImage(rest.image).url()}
-                        alt="rest.alt"
-                        className="w-full max-w-[420px]"
-                      />
+                      <a aria-hidden onClick={() => openLightboxOnSlide(n + 1)}>
+                        {console.log(rest)}
+                        <img
+                          src={urlForImage(rest.image).url()}
+                          alt="rest.alt"
+                          className="w-full max-w-[420px]"
+                        />
+                      </a>
                     </div>
                   ))}
                 </div>
+                <FsLightbox
+                  toggler={lightboxController.toggler}
+                  sources={media.map(
+                    ({ _key, ...rest }) => `${urlForImage(rest.image).url()}`
+                  )}
+                  slide={lightboxController.slide}
+                />
               </section>
             )}
             {process && (
