@@ -15,6 +15,7 @@
     "@tailwindcss/nesting": "^0.0.0-insiders.565cd3e",
     "classnames": "^2.3.2",
     "date-fns": "^2.29.3",
+    "fslightbox-react": "^1.6.3",
     "next": "^13.1.1",
     "next-sanity": "^1.0.0",
     "react": "^18.2.0",
