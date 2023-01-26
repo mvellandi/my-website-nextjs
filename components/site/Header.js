@@ -46,7 +46,7 @@ export default function Header({ type, page }) {
   return (
     <>
       <Nav
-        className={`absolute w-[300px] h-screen z-30 inset-y-0 left-0 transform ${
+        className={`absolute w-[300px] h-screen z-20 inset-y-0 left-0 transform ${
           navOpen ? "" : "-translate-x-full"
         } transition duration-200 ease-in-out`}
         toggleNav={toggleNav}
@@ -55,7 +55,7 @@ export default function Header({ type, page }) {
       <div
         className={`${
           navOpen
-            ? "absolute z-20 w-screen h-screen bg-red opacity-60"
+            ? "absolute z-10 w-screen h-screen bg-red opacity-60"
             : "hidden"
         }`}
         onClick={toggleNav}
