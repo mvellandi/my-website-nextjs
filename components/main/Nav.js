@@ -49,7 +49,7 @@ export default function Nav({ active, as }) {
               <h1 className={cn(style, "btn-primary-selected")}>{title}</h1>
             );
           }
-          // Hide inactive links from screen readers. Their full site navigation is available in the header.
+          // Hide inactive links from screen readers. Official site navigation is available in the header with a <nav> element.
           if (!isActive) {
             Element = (
               <Target>
