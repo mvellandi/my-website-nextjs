@@ -6,6 +6,10 @@ import { Fragment, useState } from "react";
 import FsLightbox from "fslightbox-react";
 import Script from "next/script";
 
+function idAnchor(string) {
+  return string.replace(/\s+/g, "-").toLowerCase();
+}
+
 export default function Item({ data }) {
   const {
     name,
@@ -19,6 +23,8 @@ export default function Item({ data }) {
     media,
   } = data;
 
+  // Gap between grid or flexbox items
+  const sectionRowGapStyle = "gap-[42px] md:gap-56";
   // Bottom margin is added for section headings to match the line spacing of the body text
   const sectionHeadingStyle =
     "text-xl text-orange font-bold mb-[0.25rem] lg:text-2xl lg:mb-[1.2rem]";
@@ -62,9 +68,12 @@ export default function Item({ data }) {
           className="w-[90px] h-[90px] lg:w-[100px] lg:h-[100px] order-1"
         />
       </div>
-      {/* BODY (GRID) */}
-      <div className="grid grid-col gap-40 md:gap-56 xl:grid-cols-[2fr_1fr_2fr] xl:gap-x-[128px]">
+      {/* BODY (GRID) START */}
+      <div
+        className={`grid grid-col ${sectionRowGapStyle} xl:grid-cols-[2fr_1fr_2fr] xl:gap-x-[128px]`}
+      >
         {/* CELL ONE */}
+        {/* SUMMARY */}
         <div className="xl:col-span-2 xl:max-w-[780px]">
           {summary && (
             <section>
@@ -76,8 +85,9 @@ export default function Item({ data }) {
           )}
         </div>
         {/* CELL TWO */}
+        {/* FEATURES, STRUCTURE, AND LINKS */}
         {(features || structure || links) && (
-          <div className="row-span-2 flex flex-col gap-40 md:gap-44">
+          <div className="mt-[5px] row-span-2 flex flex-col gap-[36px] md:gap-44">
             {features && (
               <section>
                 <h3 className={sectionHeadingStyle}>Features</h3>
@@ -116,7 +126,7 @@ export default function Item({ data }) {
                   </section>
                 )}
                 {links && (
-                  <section>
+                  <section className="mt-12 mb-6">
                     <h3 className={sectionHeadingStyle}>Project Links</h3>
                     <ul className={sectionListStyle}>
                       {links.map(({ _key, text, url }) => (
@@ -133,22 +143,29 @@ export default function Item({ data }) {
         )}
         {/* CELL THREE */}
         <div className="xl:col-span-2 xl:max-w-[780px]">
-          <div className="flex flex-col gap-40 md:gap-56">
+          {/* SINGLE COLUMN WITH MULTIPLE CONTENT AREAS */}
+          <div className={`flex flex-col ${sectionRowGapStyle}`}>
+            {/* MEDIA GALLERY WITH LIGHTBOX */}
             {media && (
               <section>
                 <h3 className={sectionHeadingStyle}>Media</h3>
-                <div className="grid gap-40 sm:justify-center md:grid-cols-2 md:gap-20 xl:grid-cols-3 xl:gap-64">
+                <div className="mt-20 grid grid-cols-2 gap-20 xl:grid-cols-3 xl:gap-64">
                   {media.map(({ _key, ...rest }, n) => (
-                    <div key={_key}>
-                      <a aria-hidden onClick={() => openLightboxOnSlide(n + 1)}>
-                        {console.log(rest)}
-                        <img
-                          src={urlForImage(rest.image).url()}
-                          alt="rest.alt"
-                          className="w-full max-w-[420px]"
-                        />
-                      </a>
-                    </div>
+                    <a
+                      key={_key}
+                      aria-hidden
+                      onClick={() => openLightboxOnSlide(n + 1)}
+                      className="rounded-xl overflow-hidden border border-[#d4e3fd] cursor-pointer shadow-md"
+                    >
+                      <img
+                        src={urlForImage(rest.image)
+                          .width(500)
+                          .sharpen(30)
+                          .url()}
+                        alt="rest.alt"
+                        className="w-full max-w-[420px]"
+                      />
+                    </a>
                   ))}
                 </div>
                 <FsLightbox
@@ -160,39 +177,74 @@ export default function Item({ data }) {
                 />
               </section>
             )}
+            {/* PROCESS */}
             {process && (
-              <section className="max-w-[780px] xl:col-span-2">
-                <h3 className={sectionHeadingStyle}>Process</h3>
-                <div className={sectionBodyStyle}>
-                  {process.map(({ _key, _type, ...rest }) => {
+              <>
+                {(() => {
+                  let outlineIncluded = false;
+                  return process.map(({ _key, _type, ...rest }, n) => {
                     switch (_type) {
+                      // 'PROCESS' HEADING WITH RICH TEXT
                       case "richText":
                         return (
-                          <PortableText
-                            key={_key}
-                            value={rest.body}
-                            onMissingComponent={false}
-                          />
+                          <section key={_key}>
+                            <h3 className={sectionHeadingStyle}>Process</h3>
+                            <div className={sectionBodyStyle}>
+                              <PortableText
+                                value={rest.body}
+                                onMissingComponent={false}
+                              />
+                            </div>
+                          </section>
                         );
+                      case "outline":
+                        outlineIncluded = true;
+                      // ONE OF FOLLOWING:CUSTOM HEADING WITH RICH TEXT
                       case "headingRichText":
+                      case "outline":
                         return (
-                          <Fragment key={_key}>
-                            <h4 className="font-bold">{rest.heading}</h4>
-                            <PortableText
-                              key={_key}
-                              value={rest.body}
-                              onMissingComponent={false}
-                            />
-                          </Fragment>
+                          <section key={_key}>
+                            <div className="sectionOutlineHeader flex justify-between items-baseline">
+                              <h3
+                                id={idAnchor(rest.heading)}
+                                className={`${sectionHeadingStyle} scroll-mt-[26rem]`}
+                              >
+                                {rest.heading}
+                              </h3>
+                              {outlineIncluded && _type !== "outline" && (
+                                <div
+                                  className="block pl-12 text-base text-gray-400"
+                                  aria-hidden
+                                >
+                                  [{" "}
+                                  <a href="#" className="text-link">
+                                    top
+                                  </a>{" "}
+                                  |{" "}
+                                  <a href="#outline" className="text-link">
+                                    outline
+                                  </a>{" "}
+                                  ]
+                                </div>
+                              )}
+                            </div>
+                            <div className={sectionBodyStyle}>
+                              <PortableText
+                                value={rest.body}
+                                onMissingComponent={false}
+                              />
+                            </div>
+                          </section>
                         );
                     }
-                  })}
-                </div>
-              </section>
+                  });
+                })()}
+              </>
             )}
           </div>
         </div>
       </div>
+      {/* BODY END */}
       <div id="backtotop" style={{ display: "none" }}>
         <div className="flex justify-center mt-8">
           <div
