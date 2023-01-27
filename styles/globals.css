@@ -31,11 +31,27 @@
 }
 
 /* TEMP STYLE LOCATION */
+/* MOVE TO TAILWIND CONFIG? */
 .prose-lg ul,
 .prose-xl ul {
-  list-style: "–" outside;
-  padding-left: 12px;
+  list-style: disc outside;
+  padding-left: 3.5rem;
   & > li {
     margin-top: 0;
   }
+}
+
+.prose-lg ol,
+.prose-xl ol {
+  list-style: decimal;
+  padding-left: 3.5rem;
+  & > li {
+    margin-top: 0;
+  }
+}
+
+.prose-lg a,
+.prose-xl a {
+  color: #2563eb;
+  text-decoration: underline;
 }
