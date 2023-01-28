@@ -182,7 +182,10 @@ export default function Item({ data }) {
               <>
                 {(() => {
                   let outlineIncluded = false;
+
                   return process.map(({ _key, _type, ...rest }, n) => {
+                    let componentProps = {};
+                    let Component = "section";
                     switch (_type) {
                       // 'PROCESS' HEADING WITH RICH TEXT
                       case "richText":
@@ -199,11 +202,15 @@ export default function Item({ data }) {
                         );
                       case "outline":
                         outlineIncluded = true;
+                        Component = "nav";
+                        componentProps = {
+                          "aria-label": "Project Outline",
+                        };
                       // ONE OF FOLLOWING:CUSTOM HEADING WITH RICH TEXT
                       case "headingRichText":
                       case "outline":
                         return (
-                          <section key={_key}>
+                          <Component key={_key} {...componentProps}>
                             <div className="sectionOutlineHeader flex justify-between items-baseline">
                               <h3
                                 id={idAnchor(rest.heading)}
@@ -236,7 +243,7 @@ export default function Item({ data }) {
                                 onMissingComponent={false}
                               />
                             </div>
-                          </section>
+                          </Component>
                         );
                     }
                   });
