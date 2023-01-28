@@ -47,6 +47,10 @@
   padding-left: 3.5rem;
   & > li {
     margin-top: 0;
+    font-weight: 500;
+    &:last-of-type {
+      margin-bottom: 0;
+    }
   }
 }
 
