@@ -2,7 +2,7 @@
 import { urlForImage } from "/lib/sanity";
 import Link from "next/link";
 import { PortableText } from "@portabletext/react";
-import { Fragment, useState } from "react";
+import { useState } from "react";
 import FsLightbox from "fslightbox-react";
 import Script from "next/script";
 
@@ -27,14 +27,14 @@ export default function Item({ data }) {
   const sectionRowGapStyle = "gap-[42px] md:gap-56";
   // Bottom margin is added for section headings to match the line spacing of the body text
   const sectionHeadingStyle =
-    "text-xl text-orange font-bold mb-[0.25rem] lg:text-2xl lg:mb-[1.2rem]";
+    "text-xl text-orange font-bold mb-[0.6rem] lg:text-2xl lg:mb-[1.2rem]";
   // Tailwind's typography plugin's prose classes to style the body text
   const sectionBodyStyle = "prose-lg lg:prose-xl";
   // Flexbox gap classes match 'prose' class line spacing (visually measured & tested)
   // However, line spacing between section headers and list-style sections remains unequal.
   // This is corrected with top margin added.
   const sectionListStyle =
-    "flex flex-col gap-y-[0.9rem] mt-[0.8rem] lg:text-lg lg:gap-y-[2rem] lg:mt-[1.6rem]";
+    "flex flex-col gap-y-[1.4rem] mt-[1rem] lg:text-lg lg:gap-y-[2rem] lg:mt-[1.6rem]";
 
   const [lightboxController, setLightboxController] = useState({
     toggler: false,
@@ -87,21 +87,21 @@ export default function Item({ data }) {
         {/* CELL TWO */}
         {/* FEATURES, STRUCTURE, AND LINKS */}
         {(features || structure || links) && (
-          <div className="mt-[5px] row-span-2 flex flex-col gap-[36px] md:gap-44">
+          <div className="mt-[5px] row-span-2 flex flex-col gap-[36px] md:gap-[52px] lg:mt-0">
             {features && (
               <section>
                 <h3 className={sectionHeadingStyle}>Features</h3>
-                <div className={sectionBodyStyle}>
+                <div className={`${sectionBodyStyle} mt-8`}>
                   <PortableText value={features} onMissingComponent={false} />
                 </div>
               </section>
             )}
             {(structure || links) && (
-              <div className="flex flex-col gap-44 md:grid md:grid-cols-2 xl:flex xl:flex-col xl:gap-[60px]">
+              <div className="flex flex-col gap-44 md:grid md:grid-cols-2 md:mb-10 xl:flex xl:flex-col xl:gap-[60px]">
                 {structure && (
                   <section className="pr-20 xl:pr-0">
                     <h3 className={sectionHeadingStyle}>Tech / Design</h3>
-                    <div className={sectionListStyle}>
+                    <div className={`${sectionListStyle}`}>
                       {structure.map(({ aspect, values }) => (
                         <div
                           key={aspect}
@@ -128,7 +128,7 @@ export default function Item({ data }) {
                 {links && (
                   <section className="mt-12 mb-6">
                     <h3 className={sectionHeadingStyle}>Project Links</h3>
-                    <ul className={sectionListStyle}>
+                    <ul className={`${sectionListStyle}`}>
                       {links.map(({ _key, text, url }) => (
                         <li key={_key} className="text-[#2563eb] font-semibold">
                           <Link href={url}>{text}</Link>
@@ -149,7 +149,7 @@ export default function Item({ data }) {
             {media && (
               <section>
                 <h3 className={sectionHeadingStyle}>Media</h3>
-                <div className="mt-20 grid grid-cols-2 gap-20 xl:grid-cols-3 xl:gap-64">
+                <div className="mt-16 grid grid-cols-2 gap-20 xl:grid-cols-3 xl:gap-64">
                   {media.map(({ _key, ...rest }, n) => (
                     <a
                       key={_key}
@@ -207,28 +207,30 @@ export default function Item({ data }) {
                             <div className="sectionOutlineHeader flex justify-between items-baseline">
                               <h3
                                 id={idAnchor(rest.heading)}
-                                className={`${sectionHeadingStyle} scroll-mt-[26rem]`}
+                                className={`${sectionHeadingStyle} scroll-mt-[15rem] sm:scroll-mt-[16.5rem] md:scroll-mt-[23rem] lg:scroll-mt-[26rem]`}
                               >
                                 {rest.heading}
                               </h3>
                               {outlineIncluded && _type !== "outline" && (
                                 <div
-                                  className="block pl-12 text-base text-gray-400"
+                                  className="block pl-20 text-sm text-gray-400 min-w-[120px]"
                                   aria-hidden
                                 >
-                                  [{" "}
                                   <a href="#" className="text-link">
                                     top
                                   </a>{" "}
                                   |{" "}
                                   <a href="#outline" className="text-link">
                                     outline
-                                  </a>{" "}
-                                  ]
+                                  </a>
                                 </div>
                               )}
                             </div>
-                            <div className={sectionBodyStyle}>
+                            <div
+                              className={`${sectionBodyStyle} mt-${
+                                _type === "outline" ? "4" : "3"
+                              }`}
+                            >
                               <PortableText
                                 value={rest.body}
                                 onMissingComponent={false}
