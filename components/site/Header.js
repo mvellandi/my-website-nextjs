@@ -46,6 +46,7 @@ export default function Header({ type, page }) {
   return (
     <>
       <Nav
+        aria-label="Primary"
         className={`absolute w-[300px] h-screen z-20 inset-y-0 left-0 transform ${
           navOpen ? "" : "-translate-x-full"
         } transition duration-200 ease-in-out`}
