@@ -39,7 +39,7 @@ export default function SectionNav({
       <div className={navContentStyle}>
         <Link
           href={sectionHomeRoute}
-          className="-ml-16 text-[22px] text-[#293a6b] lg:-ml-28 lg:text-2xl"
+          className="-ml-16 font-medium text-[22px] text-gray-700 lg:-ml-28 lg:text-2xl"
         >
           <RiArrowLeftSLine className="inline mb-4 -mr-[2px]" aria-hidden />
           {title}
