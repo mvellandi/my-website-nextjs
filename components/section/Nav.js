@@ -18,7 +18,9 @@ export default function SectionNav({
 }) {
   const Component = as || "div";
 
-  let navStyle = `fixed flex justify-center w-full site-padding-x border-gray-400 bg-gray-25 ${navHeightStyle.base}`;
+  let navShadowStyle = `shadow-[0_1px_4px_0_rgba(50,50,50,0.45),0_15px_8px_0_rgba(230,230,230,0.3)]`;
+
+  let navStyle = `flex justify-center w-full site-padding-x border-gray-400 bg-gray-25 ${navHeightStyle.base} ${navShadowStyle}`;
   let navContentStyle = `flex justify-between items-center w-full py-12 ${navContentWidthStyle[type]}`;
   switch (place) {
     case "top":
