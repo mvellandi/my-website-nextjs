@@ -178,82 +178,78 @@ export default function Item({ data }) {
               </section>
             )}
             {/* PROCESS */}
-            {process && (
-              <>
-                {(() => {
-                  let outlineIncluded = false;
+            {process &&
+              (() => {
+                let outlineIncluded = false;
 
-                  return process.map(({ _key, _type, ...rest }, n) => {
-                    let componentProps = {};
-                    let Component = "section";
-                    switch (_type) {
-                      // 'PROCESS' HEADING WITH RICH TEXT
-                      case "richText":
-                        return (
-                          <section key={_key}>
-                            <h3 className={sectionHeadingStyle}>Process</h3>
-                            <div className={sectionBodyStyle}>
-                              <PortableText
-                                value={rest.body}
-                                onMissingComponent={false}
-                              />
-                            </div>
-                          </section>
-                        );
-                      case "outline":
-                        outlineIncluded = true;
-                        Component = "nav";
-                        componentProps = {
-                          "aria-label": "Project Outline",
-                        };
-                      // ONE OF FOLLOWING:CUSTOM HEADING WITH RICH TEXT
-                      case "headingRichText":
-                      case "outline":
-                        return (
-                          <Component key={_key} {...componentProps}>
-                            <div className="sectionOutlineHeader flex justify-between items-baseline">
-                              <h3
-                                id={idAnchor(rest.heading)}
-                                className={`${sectionHeadingStyle} scroll-mt-[15rem] sm:scroll-mt-[16.5rem] md:scroll-mt-[23rem] lg:scroll-mt-[26rem]`}
-                              >
-                                {rest.heading}
-                              </h3>
-                              {outlineIncluded && _type !== "outline" && (
-                                <div
-                                  className="block pl-20 text-sm text-gray-400 min-w-[120px]"
-                                  aria-hidden
-                                >
-                                  <a href="#" className="text-link">
-                                    top
-                                  </a>{" "}
-                                  |{" "}
-                                  <a href="#outline" className="text-link">
-                                    outline
-                                  </a>
-                                </div>
-                              )}
-                            </div>
-                            <div
-                              className={`${sectionBodyStyle} mt-${
-                                _type === "outline" ? "4" : "3"
-                              }`}
+                return process.map(({ _key, _type, ...rest }, n) => {
+                  let componentProps = {};
+                  let Component = "section";
+                  switch (_type) {
+                    // 'PROCESS' HEADING WITH RICH TEXT
+                    case "richText":
+                      return (
+                        <section key={_key}>
+                          <h3 className={sectionHeadingStyle}>Process</h3>
+                          <div className={sectionBodyStyle}>
+                            <PortableText
+                              value={rest.body}
+                              onMissingComponent={false}
+                            />
+                          </div>
+                        </section>
+                      );
+                    case "outline":
+                      outlineIncluded = true;
+                      Component = "nav";
+                      componentProps = {
+                        "aria-label": "Project Outline",
+                      };
+                    // ONE OF FOLLOWING:CUSTOM HEADING WITH RICH TEXT
+                    case "headingRichText":
+                    case "outline":
+                      return (
+                        <Component key={_key} {...componentProps}>
+                          <div className="sectionOutlineHeader flex justify-between items-baseline">
+                            <h3
+                              id={idAnchor(rest.heading)}
+                              className={`${sectionHeadingStyle} scroll-mt-[15rem] sm:scroll-mt-[16.5rem] md:scroll-mt-[23rem] lg:scroll-mt-[26rem]`}
                             >
-                              <PortableText
-                                value={rest.body}
-                                onMissingComponent={false}
-                              />
-                            </div>
-                          </Component>
-                        );
-                    }
-                  });
-                })()}
-              </>
-            )}
+                              {rest.heading}
+                            </h3>
+                            {outlineIncluded && _type !== "outline" && (
+                              <div
+                                className="block pl-20 text-sm text-gray-400 min-w-[120px]"
+                                aria-hidden
+                              >
+                                <a href="#" className="text-link">
+                                  top
+                                </a>{" "}
+                                |{" "}
+                                <a href="#outline" className="text-link">
+                                  outline
+                                </a>
+                              </div>
+                            )}
+                          </div>
+                          <div
+                            className={`${sectionBodyStyle} mt-${
+                              _type === "outline" ? "4" : "3"
+                            }`}
+                          >
+                            <PortableText
+                              value={rest.body}
+                              onMissingComponent={false}
+                            />
+                          </div>
+                        </Component>
+                      );
+                  }
+                });
+              })()}
           </div>
         </div>
         {/* CELL FOUR */}
-        <div>&nbsp;</div>
       </div>
       {/* BODY END */}
       <div id="backtotop" style={{ display: "none" }}>
