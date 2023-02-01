@@ -70,7 +70,7 @@ export default function Item({ data }) {
       </div>
       {/* BODY (GRID) START */}
       <div
-        className={`grid grid-col ${sectionRowGapStyle} xl:grid-cols-[2fr_1fr_2fr] xl:gap-x-[128px]`}
+        className={`grid grid-col items-start ${sectionRowGapStyle} xl:grid-cols-[2fr_1fr_2fr] xl:gap-x-[128px]`}
       >
         {/* CELL ONE */}
         {/* SUMMARY */}
@@ -252,6 +252,8 @@ export default function Item({ data }) {
             )}
           </div>
         </div>
+        {/* CELL FOUR */}
+        <div>&nbsp;</div>
       </div>
       {/* BODY END */}
       <div id="backtotop" style={{ display: "none" }}>
