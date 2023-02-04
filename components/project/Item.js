@@ -149,13 +149,13 @@ export default function Item({ data }) {
             {media && (
               <section>
                 <h3 className={sectionHeadingStyle}>Media</h3>
-                <div className="mt-16 grid grid-cols-2 gap-20 xl:grid-cols-3 xl:gap-64">
+                <div className="mt-16 grid grid-cols-2 items-start gap-20 xl:grid-cols-3 xl:gap-64">
                   {media.map(({ _key, ...rest }, n) => (
                     <a
                       key={_key}
                       aria-hidden
                       onClick={() => openLightboxOnSlide(n + 1)}
-                      className="rounded-xl overflow-hidden border border-[#d4e3fd] cursor-pointer shadow-md"
+                      className="rounded-xl overflow-hidden border-2 border-[#d4e3fd] cursor-pointer shadow-md"
                     >
                       <img
                         src={urlForImage(rest.image)
@@ -163,7 +163,7 @@ export default function Item({ data }) {
                           .sharpen(30)
                           .url()}
                         alt="rest.alt"
-                        className="w-full max-w-[420px]"
+                        className="w-full max-h-[125px] object-cover"
                       />
                     </a>
                   ))}
