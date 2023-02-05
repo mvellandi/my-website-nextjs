@@ -107,10 +107,10 @@ export default function Item({ data }) {
                           key={aspect}
                           className="grid grid-cols-[100px_1fr]"
                         >
-                          <h4 className="inline-block">
+                          <h4>
                             <span className="border-b-2">{aspect}</span>:
                           </h4>
-                          <ul className="inline-flex">
+                          <ul className="flex flex-wrap">
                             {values.map((name, idx) => (
                               <li key={name} className="font-semibold">
                                 {name}
@@ -163,7 +163,7 @@ export default function Item({ data }) {
                           .sharpen(30)
                           .url()}
                         alt="rest.alt"
-                        className="w-full max-h-[125px] object-cover"
+                        className="w-full max-h-[115px] object-cover"
                       />
                     </a>
                   ))}
