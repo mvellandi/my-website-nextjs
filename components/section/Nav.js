@@ -46,7 +46,7 @@ export default function SectionNav({
           <RiArrowLeftSLine className="inline mb-4 -mr-[2px]" aria-hidden />
           {title}
         </Link>
-        <div className="flex gap-16 font-semibold text-base mr-16 sm:mr-0 lg:text-lg">
+        <div className="flex gap-16 font-semibold text-base mr-12 sm:mr-0 lg:text-lg">
           {prev && (
             <Link href={`${path}/${prev}`} className="text-link">
               previous
