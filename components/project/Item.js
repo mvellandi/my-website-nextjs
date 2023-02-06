@@ -131,7 +131,9 @@ export default function Item({ data }) {
                     <ul className={`${sectionListStyle}`}>
                       {links.map(({ _key, text, url }) => (
                         <li key={_key} className="text-[#2563eb] font-semibold">
-                          <Link href={url}>{text}</Link>
+                          <Link href={url} legacyBehavior>
+                            <a target="_blank">{text}</a>
+                          </Link>
                         </li>
                       ))}
                     </ul>
