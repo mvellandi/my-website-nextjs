@@ -1,5 +1,5 @@
 #project #features h3 {
-  @apply mt-0 mb-6 text-[2rem] lg:text-[2.2rem];
+  @apply font-bold underline mt-0 mb-6 text-[2rem] lg:text-[2.2rem];
 }
 #project #features p {
   @apply mb-4;
@@ -9,4 +9,7 @@
 }
 #project #features li {
   @apply mb-4;
+}
+#project #features div > *:last-child {
+  @apply mb-0;
 }
