@@ -1,0 +1,12 @@
+#project #features h3 {
+  @apply mt-0 mb-6 text-[2rem] lg:text-[2.2rem];
+}
+#project #features p {
+  @apply mb-4;
+}
+#project #features ul {
+  @apply mt-6 mb-28;
+}
+#project #features li {
+  @apply mb-4;
+}
