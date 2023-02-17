@@ -28,7 +28,7 @@ export default function Footer({ type }) {
   }
 
   return (
-    <footer className="flex justify-center items-start w-full h-full py-16 bg-red">
+    <footer className="flex justify-center items-start w-full h-full pt-16 pb-48 bg-red">
       <div className={footerContentStyle}>
         <span className="text-sm xl:text-base">
           &copy; {new Date().getFullYear()} - Mario Vellandi
