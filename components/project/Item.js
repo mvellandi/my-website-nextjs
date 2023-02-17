@@ -24,10 +24,10 @@ export default function Item({ data }) {
   } = data;
 
   // Gap between grid or flexbox items
-  const sectionRowGapStyle = "gap-[42px] md:gap-56";
+  const sectionRowGapStyle = "gap-28 md:gap-32 lg:gap-40 xl:gap-52";
   // Bottom margin is added for section headings to match the line spacing of the body text
   const sectionHeadingStyle =
-    "text-xl text-orange font-bold mb-[0.6rem] lg:text-2xl lg:mb-[1.2rem]";
+    "text-[2.6rem] text-orange font-bold mb-[0.2rem] lg:text-2xl lg:mb-[0.6rem] xl:mb-[0.8rem]";
   // Tailwind's typography plugin's prose classes to style the body text
   const sectionBodyStyle = "prose-lg lg:prose-xl";
   // Flexbox gap classes match 'prose' class line spacing (visually measured & tested)
@@ -51,7 +51,7 @@ export default function Item({ data }) {
   return (
     <>
       {/* HEADER */}
-      <div className="w-full flex justify-between sm:justify-start sm:gap-36">
+      <header className="w-full flex justify-between sm:justify-start sm:gap-36">
         <div className="flex flex-col gap-8 sm:order-2">
           <h1 className="text-3xl text-black font-light -tracking-1 leading-tight">
             {name}
@@ -67,17 +67,17 @@ export default function Item({ data }) {
           height={100}
           className="w-[90px] h-[90px] lg:w-[100px] lg:h-[100px] order-1"
         />
-      </div>
+      </header>
       {/* BODY (GRID) START */}
-      <div
-        className={`grid grid-col justify-start ${sectionRowGapStyle} xl:grid-cols-[2fr_1fr_2fr] xl:gap-x-[128px]`}
+      <article
+        className={`grid grid-col justify-start ${sectionRowGapStyle} xl:grid-cols-[2fr_1fr_2fr] xl:grid-rows-[minmax(0,auto)_auto] xl:gap-x-[128px]`}
       >
         {/* CELL ONE */}
         {/* SUMMARY */}
         <div className="xl:col-span-2 xl:max-w-[780px]">
           {summary && (
             <section>
-              <h3 className={sectionHeadingStyle}>Summary</h3>
+              <h2 className={sectionHeadingStyle}>Summary</h2>
               <div className={sectionBodyStyle}>
                 <PortableText value={summary} />
               </div>
@@ -89,9 +89,9 @@ export default function Item({ data }) {
         {(features || structure || links) && (
           <div className="mt-[5px] row-span-2 flex flex-col gap-[36px] md:gap-[52px] lg:mt-0">
             {features && (
-              <section>
-                <h3 className={sectionHeadingStyle}>Features</h3>
-                <div className={`${sectionBodyStyle} mt-8`}>
+              <section id="features">
+                <h2 className={sectionHeadingStyle}>Features</h2>
+                <div className={`${sectionBodyStyle} mt-8 xl:mt-0`}>
                   <PortableText value={features} onMissingComponent={false} />
                 </div>
               </section>
@@ -100,7 +100,7 @@ export default function Item({ data }) {
               <div className="flex flex-col gap-44 md:grid md:grid-cols-2 md:mb-10 xl:flex xl:flex-col xl:gap-[60px]">
                 {structure && (
                   <section className="pr-20 xl:pr-0">
-                    <h3 className={sectionHeadingStyle}>Tech / Design</h3>
+                    <h2 className={sectionHeadingStyle}>Tech / Design</h2>
                     <div className={`${sectionListStyle}`}>
                       {structure.map(({ aspect, values }) => (
                         <div
@@ -127,7 +127,7 @@ export default function Item({ data }) {
                 )}
                 {links && (
                   <section className="mt-12 mb-6">
-                    <h3 className={sectionHeadingStyle}>Project Links</h3>
+                    <h2 className={sectionHeadingStyle}>Project Links</h2>
                     <ul className={`${sectionListStyle}`}>
                       {links.map(({ _key, text, url }) => (
                         <li key={_key} className="text-[#2563eb] font-semibold">
@@ -150,7 +150,7 @@ export default function Item({ data }) {
             {/* MEDIA GALLERY WITH LIGHTBOX */}
             {media && (
               <section>
-                <h3 className={sectionHeadingStyle}>Media</h3>
+                <h2 className={sectionHeadingStyle}>Media</h2>
                 <div className="mt-16 grid grid-cols-2 items-start gap-20 xl:grid-cols-3 xl:gap-64">
                   {media.map(({ _key, ...rest }, n) => (
                     <a
@@ -192,7 +192,7 @@ export default function Item({ data }) {
                     case "richText":
                       return (
                         <section key={_key}>
-                          <h3 className={sectionHeadingStyle}>Process</h3>
+                          <h2 className={sectionHeadingStyle}>Process</h2>
                           <div className={sectionBodyStyle}>
                             <PortableText
                               value={rest.body}
@@ -213,12 +213,12 @@ export default function Item({ data }) {
                       return (
                         <Component key={_key} {...componentProps}>
                           <div className="sectionOutlineHeader flex justify-between items-baseline">
-                            <h3
+                            <h2
                               id={idAnchor(rest.heading)}
                               className={`${sectionHeadingStyle} scroll-mt-[15rem] sm:scroll-mt-[16.5rem] md:scroll-mt-[23rem] lg:scroll-mt-[26rem]`}
                             >
                               {rest.heading}
-                            </h3>
+                            </h2>
                             {outlineIncluded && _type !== "outline" && (
                               <div
                                 className="block pl-20 text-sm text-gray-400 min-w-[120px]"
@@ -252,9 +252,9 @@ export default function Item({ data }) {
           </div>
         </div>
         {/* CELL FOUR */}
-      </div>
+      </article>
       {/* BODY END */}
-      <div id="backtotop" style={{ display: "none" }}>
+      {/* <div id="backtotop" style={{ display: "none" }}>
         <div className="flex justify-center mt-8">
           <div
             className="btn btn-sm-round btn-secondary"
@@ -263,7 +263,7 @@ export default function Item({ data }) {
             <span className="text-xl inline-block">↑</span>&nbsp;Back to Top
           </div>
         </div>
-      </div>
+      </div> */}
       {/* <Script>
         {`
         const iw = window.innerWidth;
