@@ -9,7 +9,9 @@
 @import url(./card.css);
 @import url(./main.css);
 
+/* SECTION(S) */
 @import url(./section.css);
+@import url(./project.css);
 
 /* TAILWIND */
 @tailwind base;
