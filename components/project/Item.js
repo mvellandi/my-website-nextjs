@@ -27,14 +27,14 @@ export default function Item({ data }) {
   const sectionRowGapStyle = "gap-28 md:gap-32 lg:gap-40 xl:gap-52";
   // Bottom margin is added for section headings to match the line spacing of the body text
   const sectionHeadingStyle =
-    "text-[2.6rem] text-orange font-bold mb-[0.2rem] lg:text-2xl lg:mb-[0.6rem] xl:mb-[0.8rem]";
+    "text-[2.6rem] leading-[3rem] text-orange font-bold mb-2 lg:text-2xl lg:mb-6 xl:mb-8";
   // Tailwind's typography plugin's prose classes to style the body text
   const sectionBodyStyle = "prose-lg lg:prose-xl";
   // Flexbox gap classes match 'prose' class line spacing (visually measured & tested)
   // However, line spacing between section headers and list-style sections remains unequal.
   // This is corrected with top margin added.
   const sectionListStyle =
-    "flex flex-col gap-y-[1.4rem] mt-[1rem] lg:text-lg lg:gap-y-[2rem] lg:mt-[1.6rem]";
+    "flex flex-col gap-y-14 mt-10 lg:text-lg lg:gap-y-20 lg:mt-16";
 
   const [lightboxController, setLightboxController] = useState({
     toggler: false,
@@ -88,16 +88,18 @@ export default function Item({ data }) {
         {/* FEATURES, STRUCTURE, AND LINKS */}
         {(features || structure || links) && (
           <div className="mt-[5px] row-span-2 flex flex-col gap-[36px] md:gap-[52px] lg:mt-0">
+            {/* FEATURES */}
             {features && (
               <section id="features">
                 <h2 className={sectionHeadingStyle}>Features</h2>
-                <div className={`${sectionBodyStyle} mt-8 xl:mt-0`}>
+                <div className={`${sectionBodyStyle} mt-4 xl:mt-0`}>
                   <PortableText value={features} onMissingComponent={false} />
                 </div>
               </section>
             )}
             {(structure || links) && (
               <div className="flex flex-col gap-44 md:grid md:grid-cols-2 md:mb-10 xl:flex xl:flex-col xl:gap-[60px]">
+                {/* TECH / DESIGN */}
                 {structure && (
                   <section className="pr-20 xl:pr-0">
                     <h2 className={sectionHeadingStyle}>Tech / Design</h2>
@@ -125,8 +127,9 @@ export default function Item({ data }) {
                     </div>
                   </section>
                 )}
+                {/* PROJECT LINKS */}
                 {links && (
-                  <section className="mt-12 mb-6">
+                  <section className="mt-12 mb-6 md:my-0">
                     <h2 className={sectionHeadingStyle}>Project Links</h2>
                     <ul className={`${sectionListStyle}`}>
                       {links.map(({ _key, text, url }) => (
@@ -149,9 +152,9 @@ export default function Item({ data }) {
           <div className={`flex flex-col ${sectionRowGapStyle}`}>
             {/* MEDIA GALLERY WITH LIGHTBOX */}
             {media && (
-              <section>
+              <section className="mb-8">
                 <h2 className={sectionHeadingStyle}>Media</h2>
-                <div className="mt-16 grid grid-cols-2 items-start gap-20 xl:grid-cols-3 xl:gap-64">
+                <div className="mt-16 grid grid-cols-2 items-start gap-20 sm:grid-cols-3 md:grid-cols-4">
                   {media.map(({ _key, ...rest }, n) => (
                     <a
                       key={_key}
@@ -212,7 +215,7 @@ export default function Item({ data }) {
                     case "outline":
                       return (
                         <Component key={_key} {...componentProps}>
-                          <div className="sectionOutlineHeader flex justify-between items-baseline">
+                          <div className="sectionOutlineHeader flex justify-between items-start">
                             <h2
                               id={idAnchor(rest.heading)}
                               className={`${sectionHeadingStyle} scroll-mt-[15rem] sm:scroll-mt-[16.5rem] md:scroll-mt-[23rem] lg:scroll-mt-[26rem]`}
