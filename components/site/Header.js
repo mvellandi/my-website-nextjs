@@ -129,10 +129,10 @@ export default function Header({ type, page }) {
                       Play
                     </Link>
                   </Target>
-                  {page !== "about" && (
+                  {page !== "services" && (
                     <Target>
-                      <Link href="/about" className={navLinkStyle}>
-                        About
+                      <Link href="/services" className={navLinkStyle}>
+                        Services
                       </Link>
                     </Target>
                   )}

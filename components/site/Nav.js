@@ -39,8 +39,8 @@ export default function Nav({ className, toggleNav }) {
             </Link>
           </Target>
           <Target>
-            <Link href="/about" className="target">
-              About
+            <Link href="/services" className="target">
+              Services
             </Link>
           </Target>
           <Target>

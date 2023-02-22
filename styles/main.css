@@ -1,17 +1,13 @@
 @layer components {
   /* MAIN */
-  .main-about {
-    @apply text-[1.6rem] leading-[1] before:-mt-[1.2rem];
+  .main-services {
+    @apply text-[1.8rem] leading-[1] before:-mt-[1.2rem];
     @apply sm:text-[2rem];
     @apply lg:text-[2.4rem] lg:before:-mt-[0.9rem];
   }
-  .main-about-text {
-    text-decoration: solid underline #ffb54d;
-    text-decoration-thickness: 3px;
-    -webkit-text-decoration-line: underline;
-    -webkit-text-decoration-color: #ffb54d !important;
-    -webkit-text-decoration-style: solid;
-    -webkit-text-decoration-thickness: 3px;
-    text-underline-offset: 6px;
+  .main-services-text {
+    display: inline-block;
+    padding-bottom: 4px;
+    border-bottom: 5px solid #ffb54d;
   }
 }
