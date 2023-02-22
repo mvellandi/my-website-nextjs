@@ -7,7 +7,10 @@ import FsLightbox from "fslightbox-react";
 import Script from "next/script";
 
 function idAnchor(string) {
-  return string.replace(/\s+/g, "-").toLowerCase();
+  return string
+    .replace(/[^\w\s]/gi, "")
+    .replace(/\s+/g, "-")
+    .toLowerCase();
 }
 
 export default function Item({ data }) {
@@ -35,6 +38,10 @@ export default function Item({ data }) {
   // This is corrected with top margin added.
   const sectionListStyle =
     "flex flex-col gap-y-14 mt-10 lg:text-lg lg:gap-y-20 lg:mt-16";
+  // Body content, after header is split into two columns with a conditional second row if there's a media or process section
+  const bodyGridStyle = `grid grid-col justify-start ${sectionRowGapStyle} xl:grid-cols-[2fr_1fr_2fr] ${
+    (media || process) && `xl:grid-rows-[minmax(0,auto)_auto] xl:gap-52`
+  } xl:gap-x-[128px]`;
 
   const [lightboxController, setLightboxController] = useState({
     toggler: false,
@@ -69,9 +76,7 @@ export default function Item({ data }) {
         />
       </header>
       {/* BODY (GRID) START */}
-      <article
-        className={`grid grid-col justify-start ${sectionRowGapStyle} xl:grid-cols-[2fr_1fr_2fr] xl:grid-rows-[minmax(0,auto)_auto] xl:gap-x-[128px]`}
-      >
+      <article className={bodyGridStyle}>
         {/* CELL ONE */}
         {/* SUMMARY */}
         <div className="xl:col-span-2 xl:max-w-[780px]">
