@@ -16,9 +16,11 @@ export default function Hero({ as }) {
       {/* TEXT COLUMN */}
       <div className="flex flex-col justify-center gap-24 md:w-[380px] lg:w-[440px] lg:gap-48">
         <h1 className="relative w-fit order-2">
-          <Link className="target main-about" href="/about">
+          <Link className="target main-services" href="/services">
             <span aria-hidden>{"\u2192"} </span>
-            <span className="main-about-text">about Mario Vellandi</span>
+            <span className="main-services-text">
+              Let&rsquo;s work together
+            </span>
           </Link>
         </h1>
         <h2 className="text-xl -tracking-3 font-light drop-shadow order-1 pmd:text-2xl md:text-3xl md:leading-[1.22] lgtall:text-[4.2rem]">
