@@ -5,14 +5,14 @@ import ContentColumn from "/components/elements/ContentColumn";
 import Footer from "/components/site/Footer";
 
 // PAGES ARE FOR SINGLE-RECORD RESOURCES (e.g. /about) AND FOR STATIC PAGES (e.g. /contact)
-export default function PageLayout({ page, children }) {
+export default function PageLayout({ id, page, children }) {
   return (
     <>
       <FixedHeader>
         <SiteHeader type="page" page={page} />
       </FixedHeader>
       <FixedHeaderOffset type="page" />
-      <ContentColumn>{children}</ContentColumn>
+      <ContentColumn id={id}>{children}</ContentColumn>
       <Footer type="page" />
     </>
   );
