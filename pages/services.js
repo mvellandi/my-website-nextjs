@@ -1,6 +1,6 @@
 import PageLayout from "/components/page/Layout";
 // import { getAboutPage } from "/lib/about";
-import { PortableText } from "@portabletext/react";
+// import { PortableText } from "@portabletext/react";
 import Link from "next/link";
 
 export default function About({ data, preview = false }) {
@@ -17,7 +17,7 @@ export default function About({ data, preview = false }) {
           return <PortableText value={content} onMissingComponent={false} />;
         })()} */}
         {/* <p class="border-b border-gray-600">Here's how I can help you:</p> */}
-        <p>Here's how:</p>
+        <p>Here&rsquo;s how:</p>
         <div className="mt-18 flex flex-col gap-24 mb-32 md:gap-0 md:mt-28 md:flex-row md:justify-between">
           <div class="md:flex md:flex-col md:justify-around">
             <ul id="tasks">
@@ -25,7 +25,7 @@ export default function About({ data, preview = false }) {
               <li>Product Design & Development</li>
             </ul>
             <div class="button hidden md:inline-flex">
-              <Link href="/contact">Let's work together</Link>
+              <Link href="/contact">Let&rsquo;s work together</Link>
             </div>
           </div>
           <div>
@@ -70,7 +70,7 @@ export default function About({ data, preview = false }) {
           </div>
         </div>
         <div class="button inline-flex md:hidden">
-          <Link href="/contact">Let's work together</Link>
+          <Link href="/contact">Let&rsquo;s work together</Link>
         </div>
       </article>
     </PageLayout>
