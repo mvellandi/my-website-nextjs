@@ -13,6 +13,9 @@
 @import url(./section.css);
 @import url(./project.css);
 
+/* PAGES */
+@import url(./pages.css);
+
 /* TAILWIND */
 @tailwind base;
 @tailwind components;
