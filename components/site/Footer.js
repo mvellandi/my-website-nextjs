@@ -37,7 +37,14 @@ export default function Footer({ type }) {
               pageTypeCheck(type, ["article", "page"]) && "max-w-[400px]"
             }`}
           >
-            This website is handcrafted using Next.js with Tailwind{" "}
+            This website was{" "}
+            <a
+              className="text-link-inverse"
+              href="https://www.figma.com/file/fXYOUHrUhtQGYkS76dvOvC/_Vellandi.net?type=design&node-id=2665%3A41983&t=tihZwOVYhJiC2vR7-1"
+            >
+              designed
+            </a>{" "}
+            with Figma, built using Next.js with Tailwind{" "}
             <a
               className="text-link-inverse"
               href="https://github.com/mvellandi/vellandi.net-nextjs"
