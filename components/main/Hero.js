@@ -24,7 +24,7 @@ export default function Hero({ as }) {
           </Link>
         </h1>
         <h2 className="text-xl -tracking-3 font-light drop-shadow order-1 pmd:text-2xl md:text-3xl md:leading-[1.22] lgtall:text-[4.2rem]">
-          I research and produce digital media
+          I research and build digital products
         </h2>
       </div>
       {/* PHOTO */}
