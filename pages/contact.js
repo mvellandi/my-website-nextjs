@@ -13,13 +13,14 @@ export default function Contact({ preview = false }) {
       </h1>
       <div className="prose-lg lg:prose-xl">
         <p>
-          Hi! I&rsquo;m currently either walking the dog, closing a big media
-          deal, or eating a Döner sandwich. Please leave a message and
-          I&rsquo;ll get back to you soon........
-          <span className="text-xl lg:text-3xl">BEEEEEP!</span>
+          Let me know how I can help you. I am always open to new projects and
+          challenges.
+        </p>
+        <p>
+          <span class="obfuscate">ten.idnallev@vaoiram</span>
         </p>
       </div>
-      <section className="bg-white mt-36">
+      {/* <section className="bg-white mt-36">
         <form
           className="flex flex-col gap-28 max-w-[600px] lg:grid lg:grid-cols-2 lg:gap-40 lg:gap-y-28 lg:max-w-[800px]"
           method="POST"
@@ -64,7 +65,7 @@ export default function Contact({ preview = false }) {
             Send message
           </button>
         </form>
-      </section>
+      </section> */}
     </PageLayout>
   );
 }
