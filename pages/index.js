@@ -6,9 +6,15 @@ import { getAllProjectCards } from "/lib/project";
 // TODO: Change the layout to list all section items, in 3 separate lists
 
 export default function Home({ data, preview }) {
+  let meta = {
+    title: "Mario Vellandi: Digital Product Development and Content Strategy",
+    description:
+      "Portfolio, services offered, articles, and quick projects by Mario Vellandi.",
+    // image: "/images/og-image.png",
+  };
   return (
     <>
-      <Meta data={null} />
+      <Meta data={meta} />
       <MainLayout preview={preview} data={data}>
         <Items as="main" data={data} />
       </MainLayout>
