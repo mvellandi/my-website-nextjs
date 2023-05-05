@@ -1,6 +1,11 @@
 import Head from "next/head";
 
 export default function Meta({ data }) {
+  data = data || {
+    title: "Next.js Sample Webpage",
+    description:
+      "A statically generated blog example using Next.js and Sanity CMS",
+  };
   return (
     <Head>
       <link
