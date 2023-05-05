@@ -95,7 +95,7 @@ export default function Header({ type, page }) {
                 <Target>
                   <Link
                     href="/contact"
-                    className="target btn btn-md-round btn-primary-bright sm:-mr-16 lg:mr-0 lg:btn-lg-round lg:py-[8px]"
+                    className="target btn btn-md-round btn-primary-bright sm:-mr-16 lg:mr-0 lg:btn-lg-round"
                   >
                     Contact
                   </Link>
