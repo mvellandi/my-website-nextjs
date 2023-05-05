@@ -1,9 +1,9 @@
 import PageLayout from "/components/page/Layout";
 
 export default function Contact({ preview = false }) {
-  const labelStyle = "block mb-2 font-medium";
-  const inputStyle =
-    "shadow-sm bg-[#fafafa] border border-purple-900 rounded-xl focus:ring-primary-500 focus:border-primary-500 block w-full py-4 px-12";
+  // const labelStyle = "block mb-2 font-medium";
+  // const inputStyle =
+  //   "shadow-sm bg-[#fafafa] border border-purple-900 rounded-xl focus:ring-primary-500 focus:border-primary-500 block w-full py-4 px-12";
   // original dark mode styles:
   // dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light
   return (
