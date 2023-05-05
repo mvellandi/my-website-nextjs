@@ -43,7 +43,7 @@ export default function Nav({ active, as }) {
         {sections.map(({ title, route, navOrder, isActive }) => {
           let Element;
           let style =
-            "btn btn-sm-round sm:btn-md-wide-round lg:btn-lg-wide-round 2k:btn-xl-wide-round";
+            "btn btn-sm-round sm:btn-md-wide-round lg:btn-lg-wide-round";
           if (isActive) {
             Element = (
               <h1 className={cn(style, "btn-primary-selected")}>{title}</h1>
