@@ -36,6 +36,13 @@
   border: 1px solid blue;
 }
 
+/* CONTACT UTILS */
+.obfuscate {
+  unicode-bidi: bidi-override;
+  direction: rtl;
+  font-weight: 600;
+}
+
 /* TEMP STYLE LOCATION */
 /* MOVE TO TAILWIND CONFIG? */
 .prose-lg ul,
