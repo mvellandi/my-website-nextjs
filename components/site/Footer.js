@@ -30,10 +30,30 @@ export default function Footer({ type }) {
   return (
     <footer className="flex justify-center items-start w-full h-full pt-16 pb-48 bg-red">
       <div className={footerContentStyle}>
-        <span className="text-sm xl:text-base">
-          &copy; {new Date().getFullYear()} - Mario Vellandi
-        </span>
-        <div className="space-y-12 hidden">
+        <div className="flex flex-col gap-16 lg:flex-row lg:justify-between text-sm xl:text-base">
+          <p>&copy; {new Date().getFullYear()} - Mario Vellandi</p>
+          <p
+            className={`xl:text-right ${
+              pageTypeCheck(type, ["article", "page"]) && "max-w-[400px]"
+            }`}
+          >
+            This website is handcrafted using Next.js with Tailwind{" "}
+            <a
+              className="text-link-inverse"
+              href="https://github.com/mvellandi/vellandi.net-nextjs"
+            >
+              code
+            </a>{" "}
+            and Sanity CMS{" "}
+            <a
+              className="text-link-inverse"
+              href="https://github.com/mvellandi/vellandi.net-sanity"
+            >
+              code
+            </a>
+          </p>
+        </div>
+        {/* <div className="space-y-12 hidden">
           <div>
             <button className="btn btn-xs btn-primary-bright">menu xs</button>
           </div>
@@ -82,7 +102,7 @@ export default function Footer({ type }) {
               menu 2xl
             </button>
           </div>
-        </div>
+        </div> */}
       </div>
     </footer>
   );
