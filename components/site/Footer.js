@@ -44,7 +44,7 @@ export default function Footer({ type }) {
             >
               designed
             </a>{" "}
-            with Figma, built using Next.js with Tailwind{" "}
+            with Figma and built using Next.js with Tailwind{" "}
             <a
               className="text-link-inverse"
               href="https://github.com/mvellandi/vellandi.net-nextjs"
