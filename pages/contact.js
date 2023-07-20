@@ -17,7 +17,7 @@ export default function Contact({ preview = false }) {
           challenges.
         </p>
         <p>
-          <span class="obfuscate">ten.idnallev@vaoiram</span>
+          <span className="obfuscate">ten.idnallev@vaoiram</span>
         </p>
       </div>
       {/* <section className="bg-white mt-36">

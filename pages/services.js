@@ -19,15 +19,15 @@ export default function About({ data, preview = false }) {
           const content = bio_full.body;
           return <PortableText value={content} onMissingComponent={false} />;
         })()} */}
-        {/* <p class="border-b border-gray-600">Here's how I can help you:</p> */}
+        {/* <p className="border-b border-gray-600">Here's how I can help you:</p> */}
         {/* <p>Here&rsquo;s how:</p> */}
         {/* <div className="mt-18 flex flex-col gap-24 mb-32 md:gap-0 md:mt-28 md:flex-row md:justify-between">
-          <div class="md:flex md:flex-col md:justify-around">
+          <div className="md:flex md:flex-col md:justify-around">
             <ul id="tasks">
               <li>Content Strategy</li>
               <li>Product Design & Development</li>
             </ul>
-            <div class="button hidden md:inline-flex">
+            <div className="button hidden md:inline-flex">
               <Link href="/contact">Let&rsquo;s work together</Link>
             </div>
           </div>
@@ -72,7 +72,7 @@ export default function About({ data, preview = false }) {
             </ul>
           </div>
         </div>
-        <div class="button inline-flex md:hidden">
+        <div className="button inline-flex md:hidden">
           <Link href="/contact">Let&rsquo;s work together</Link>
         </div> */}
         {/* <div className="not-prose -mb-20">
@@ -105,7 +105,7 @@ export default function About({ data, preview = false }) {
           challenges.
         </p>
         <p>
-          <span class="obfuscate">ten.idnallev@vaoiram</span>
+          <span className="obfuscate">ten.idnallev@vaoiram</span>
         </p>
       </article>
     </PageLayout>
