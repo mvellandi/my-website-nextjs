@@ -1,6 +1,7 @@
 @layer base {
   :root {
-    font-size: 0.625rem;
+    /* font-size: 0.625rem; */
+    font-size: 62.5%;
   }
 
   html {
@@ -9,6 +10,7 @@
   /* TEXT AND COLOR */
   body {
     @apply text-gray-800 text-base bg-red;
+    font-size: 1.6rem;
   }
 
   .text-link {
