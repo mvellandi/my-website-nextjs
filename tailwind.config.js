@@ -60,12 +60,6 @@ module.exports = {
       "5xl": ["6rem", "1"],
       "6xl": ["7.2rem", "1"],
     },
-    letterSpacing: {
-      1: "0.02rem",
-      2: "0.04rem",
-      3: "0.06rem",
-      4: "0.08rem",
-    },
     spacing: {
       0: "0",
       1: "1px",
@@ -102,6 +96,12 @@ module.exports = {
       fontFamily: {
         brand: "Dancing\\ Script",
         sans: ["Inter", ...defaultTheme.fontFamily.sans],
+      },
+      letterSpacing: {
+        1: "0.02rem",
+        2: "0.04rem",
+        3: "0.06rem",
+        4: "0.08rem",
       },
       typography: {
         sm: {
