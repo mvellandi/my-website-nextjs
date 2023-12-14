@@ -9,13 +9,13 @@ const imageStyle = {
 };
 
 export default function Hero({ as }) {
-  const Component = as || "div";
+  const Component = as ?? "div";
   return (
     // SECTION BACKGROUND + CONTENT ROW: full-width, h-centered children
-    <Component className="flex justify-center w-full gap-16 site-padding-x pt-16 pb-24 sm:gap-48 md:pb-32 md:pt-8 lg:pt-0 lgtall:pt-20 lgtall:pb-40 2k:pb-48 2k:pt-16 bg-red text-white border-b-8 border-red-shade">
+    <Component className="flex justify-center w-full gap-16 pt-16 pb-24 text-white border-b-8 site-padding-x sm:gap-48 md:pb-32 md:pt-8 lg:pt-0 lgtall:pt-20 lgtall:pb-40 2k:pb-48 2k:pt-16 bg-red border-red-shade">
       {/* TEXT COLUMN */}
       <div className="flex flex-col justify-center gap-24 md:w-[380px] lg:w-[440px] lg:gap-48">
-        <h1 className="relative w-fit order-2">
+        <h1 className="relative order-2 w-fit">
           <Link className="target main-services" href="/services">
             <span aria-hidden>{"\u2192"} </span>
             <span className="main-services-text">

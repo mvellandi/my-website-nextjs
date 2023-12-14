@@ -4,7 +4,7 @@ import Target from "/components/elements/Target";
 import cn from "classnames";
 
 export default function Nav({ active, as }) {
-  const Component = as || "div";
+  const Component = as ?? "div";
 
   // Get all sections from API
   let sections = Object.values(API).map((v) => ({

@@ -16,7 +16,7 @@ export default function SectionNav({
   next,
   path,
 }) {
-  const Component = as || "div";
+  const Component = as ?? "div";
 
   let navShadowStyle = `shadow-[0_1px_4px_0_rgba(50,50,50,0.45),0_15px_8px_0_rgba(230,230,230,0.3)]`;
 
@@ -46,7 +46,7 @@ export default function SectionNav({
           <RiArrowLeftSLine className="inline mb-4 -mr-[2px]" aria-hidden />
           {title}
         </Link>
-        <div className="flex gap-16 font-semibold text-base mr-12 sm:mr-0 lg:text-lg">
+        <div className="flex gap-16 mr-12 text-base font-semibold sm:mr-0 lg:text-lg">
           {prev && (
             <Link href={`${path}/${prev}`} className="text-link">
               previous
