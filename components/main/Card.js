@@ -7,7 +7,7 @@ export default function Card({
   route,
   as,
 }) {
-  const Component = as || "div";
+  const Component = as ?? "div";
   return (
     <Component className="card">
       {/* Reordered to semantically prioritize titles, though image will visually appear first */}
