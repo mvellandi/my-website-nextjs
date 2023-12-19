@@ -7,19 +7,17 @@
 // --------------------------------------------------------------
 
 import { PortableText } from "@portabletext/react";
-import Section from "./Section";
+import Section, { sectionHeadingStyle } from "./Section";
+import ProcessOutline from "./ProcessOutline";
+import ProcessSection from "./ProcessSection";
 import { sectionGap } from "./Item";
 
 export default function Process({ process }) {
+  const processHeadingStyle = `${sectionHeadingStyle} scroll-mt-[15rem] sm:scroll-mt-[16.5rem] md:scroll-mt-[23rem] lg:scroll-mt-[26rem]`;
   return (
     <div className={`flex flex-col ${sectionGap}`}>
       {(() => {
         return process.map(({ _key, _type, ...rest }, n) => {
-          // Reset variables for each iteration
-          let isOutline = false;
-          let isOutlineSection = false;
-          let componentProps = {};
-
           if (_type === "richText") {
             return (
               <Section key={_key} title="Process">
@@ -29,25 +27,24 @@ export default function Process({ process }) {
           }
 
           if (_type === "outline") {
-            isOutline = true;
-            componentProps = {
-              "aria-label": "Project Outline",
-            };
-          } else if (_type === "headingRichText") {
-            isOutlineSection = true;
+            return (
+              <ProcessOutline
+                key={_key}
+                outline={rest}
+                headingStyle={processHeadingStyle}
+              />
+            );
           }
 
-          return (
-            <Section
-              key={_key}
-              isOutline={isOutline}
-              isOutlineSection={isOutlineSection}
-              title={rest.heading}
-              {...componentProps}
-            >
-              <PortableText value={rest.body} />
-            </Section>
-          );
+          if (_type === "headingRichText") {
+            return (
+              <ProcessSection
+                key={_key}
+                section={rest}
+                headingStyle={processHeadingStyle}
+              />
+            );
+          }
         });
       })()}
     </div>
