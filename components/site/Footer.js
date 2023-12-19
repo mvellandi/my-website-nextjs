@@ -1,6 +1,7 @@
 import cn from "classnames";
 import Link from "next/link";
 import { elementContentWidthStyle as footerContentWidthStyle } from "/components/site/constants";
+import HTMLComment from "react-html-comment";
 
 const pageTypeCheck = (type, list) => {
   return list.includes(type);
@@ -28,89 +29,44 @@ export default function Footer({ type }) {
   }
 
   return (
-    <footer className="flex justify-center items-start w-full h-full pt-16 pb-48 bg-red">
-      <div className={footerContentStyle}>
-        <div className="flex flex-col gap-16 lg:flex-row lg:justify-between text-sm xl:text-base">
-          <p>&copy; {new Date().getFullYear()} - Mario Vellandi</p>
-          <p
-            className={`xl:text-right ${
-              pageTypeCheck(type, ["article", "page"]) && "max-w-[400px]"
-            }`}
-          >
-            This website was{" "}
-            <a
-              className="text-link-inverse"
-              href="https://www.figma.com/file/fXYOUHrUhtQGYkS76dvOvC/_Vellandi.net?type=design&node-id=2665%3A41983&t=tihZwOVYhJiC2vR7-1"
+    <>
+      <HTMLComment text="FOOTER" />
+      <footer className="flex items-start justify-center w-full h-full pt-16 pb-48 bg-red md:justify-start lg:justify-center">
+        <div className={footerContentStyle}>
+          <div className="flex flex-col gap-0 text-sm lg:flex-row lg:justify-between xl:text-base">
+            <span className="inline-block pb-8">
+              &copy; {new Date().getFullYear()} - Mario Vellandi
+            </span>
+            <p
+              className={`xl:text-right ${
+                pageTypeCheck(type, ["article", "page"]) && "max-w-[85ch]"
+              }`}
             >
-              designed
-            </a>{" "}
-            with Figma and built using Next.js with Tailwind{" "}
-            <a
-              className="text-link-inverse"
-              href="https://github.com/mvellandi/vellandi.net-nextjs"
-            >
-              code
-            </a>{" "}
-            and Sanity CMS{" "}
-            <a
-              className="text-link-inverse"
-              href="https://github.com/mvellandi/vellandi.net-sanity"
-            >
-              code
-            </a>
-          </p>
+              This website was{" "}
+              <a
+                className="text-link-inverse"
+                href="https://www.figma.com/file/fXYOUHrUhtQGYkS76dvOvC/_Vellandi.net?type=design&node-id=2665%3A41983&t=tihZwOVYhJiC2vR7-1"
+              >
+                designed
+              </a>{" "}
+              with Figma and built using Next.js with Tailwind{" "}
+              <a
+                className="text-link-inverse"
+                href="https://github.com/mvellandi/vellandi.net-nextjs"
+              >
+                code
+              </a>{" "}
+              and Sanity CMS{" "}
+              <a
+                className="text-link-inverse"
+                href="https://github.com/mvellandi/vellandi.net-sanity"
+              >
+                code
+              </a>
+            </p>
+          </div>
         </div>
-        {/* <div className="space-y-12 hidden">
-          <div>
-            <button className="btn btn-xs btn-primary-bright">menu xs</button>
-          </div>
-          <div>
-            <button className="btn btn-xs-round btn-primary-bright">
-              menu xs
-            </button>
-          </div>
-          <div>
-            <button className="btn btn-sm btn-primary-bright">menu sm</button>
-          </div>
-          <div>
-            <button className="btn btn-sm-round btn-primary-bright">
-              menu sm
-            </button>
-          </div>
-          <div>
-            <button className="btn btn-md btn-primary-bright">menu md</button>
-          </div>
-          <div>
-            <button className="btn btn-md-round btn-primary-bright">
-              menu md
-            </button>
-          </div>
-          <div>
-            <button className="btn btn-lg btn-primary-bright">menu lg</button>
-          </div>
-          <div>
-            <button className="btn btn-lg-round btn-primary-bright">
-              menu lg
-            </button>
-          </div>
-          <div>
-            <button className="btn btn-xl btn-primary-bright">menu xl</button>
-          </div>
-          <div>
-            <button className="btn btn-xl-round btn-primary-bright">
-              menu xl
-            </button>
-          </div>
-          <div>
-            <button className="btn btn-2xl btn-primary-bright">menu 2xl</button>
-          </div>
-          <div>
-            <button className="btn btn-2xl-round btn-primary-bright">
-              menu 2xl
-            </button>
-          </div>
-        </div> */}
-      </div>
-    </footer>
+      </footer>
+    </>
   );
 }
