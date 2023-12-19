@@ -1,15 +1,25 @@
-#project #features h3 {
-  @apply font-bold underline mt-0 mb-6 text-[2rem] lg:text-[2.2rem];
-}
-#project #features p {
-  @apply mb-4;
-}
-#project #features ul {
-  @apply mt-6 mb-28;
-}
-#project #features li {
-  @apply mb-4;
-}
-#project #features div > *:last-child {
-  @apply mb-0;
+@layer components {
+  .project {
+    .section.standard {
+      ul {
+        @apply flex flex-col gap-16 mb-[1.8rem] md:gap-14;
+      }
+      ul li,
+      *:last-child {
+        @apply mb-0;
+      }
+      a {
+        @apply text-link;
+      }
+    }
+    .processOutline {
+      ol {
+        @apply flex flex-col gap-4 pt-4 md:gap-8;
+      }
+      li a {
+        @apply text-lg leading-[1.6] font-semibold md:text-[2.2rem];
+        color: var(--color-blue);
+      }
+    }
+  }
 }
