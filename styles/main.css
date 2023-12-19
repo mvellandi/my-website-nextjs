@@ -10,4 +10,9 @@
     padding-bottom: 4px;
     border-bottom: 5px solid #ffb54d;
   }
+  /* FOR JS-GENERATED ORDER CLASSES */
+  /* BELOW IS USED IN MAIN SECTION NAV */
+  .order-3 {
+    order: 3;
+  }
 }
