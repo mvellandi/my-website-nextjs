@@ -18,10 +18,8 @@ export default function MainLayout({ data, children, preview }) {
       </FixedHeader>
       <FixedHeaderOffset type="main" />
       <Hero as="section" />
-      <div>
-        <Nav active={data.name} />
-        {children}
-      </div>
+      <Nav active={data.name} />
+      {children}
       <Footer type="main" />
     </>
   );
