@@ -2,6 +2,7 @@ import cn from "classnames";
 import Link from "next/link";
 import { RiArrowLeftSLine } from "react-icons/ri";
 import { elementContentWidthStyle as navContentWidthStyle } from "/components/site/constants";
+import HTMLComment from "react-html-comment";
 
 export const navHeightStyle = {
   base: "h-[58px] md:h-[75px] lg:h-96",
@@ -36,31 +37,33 @@ export default function SectionNav({
   const sectionHomeRoute = path === "/projects" ? "/" : path;
 
   return (
-    // NAV BACKGROUND
-    <Component className={navStyle}>
-      <div className={navContentStyle}>
-        <Link
-          href={sectionHomeRoute}
-          className="-ml-16 font-medium text-[22px] text-gray-700 lg:-ml-28 lg:text-2xl"
-        >
-          <RiArrowLeftSLine className="inline mb-4 -mr-[2px]" aria-hidden />
-          {title}
-        </Link>
-        <div className="flex gap-16 mr-12 text-base font-semibold sm:mr-0 lg:text-lg">
-          {prev && (
-            <Link href={`${path}/${prev}`} className="text-link">
-              previous
-              <span className="hidden md:inline">&nbsp;{type}</span>
-            </Link>
-          )}
-          {prev && next && <span className="font-normal">|</span>}
-          {next && (
-            <Link href={`${path}/${next}`} className="text-link">
-              next<span className="hidden md:inline">&nbsp;{type}</span>
-            </Link>
-          )}
+    <>
+      <HTMLComment text="PROJECT / SECTION NAVIGATION" />
+      <Component className={navStyle}>
+        <div className={navContentStyle}>
+          <Link
+            href={sectionHomeRoute}
+            className="-ml-16 font-medium text-[22px] text-gray-700 lg:-ml-28 lg:text-2xl"
+          >
+            <RiArrowLeftSLine className="inline mb-4 -mr-[2px]" aria-hidden />
+            {title}
+          </Link>
+          <div className="flex gap-16 mr-12 text-base font-semibold sm:mr-0 lg:text-lg">
+            {prev && (
+              <Link href={`${path}/${prev}`} className="text-link">
+                previous
+                <span className="hidden md:inline">&nbsp;{type}</span>
+              </Link>
+            )}
+            {prev && next && <span className="font-normal">|</span>}
+            {next && (
+              <Link href={`${path}/${next}`} className="text-link">
+                next<span className="hidden md:inline">&nbsp;{type}</span>
+              </Link>
+            )}
+          </div>
         </div>
-      </div>
-    </Component>
+      </Component>
+    </>
   );
 }

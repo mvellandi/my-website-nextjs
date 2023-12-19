@@ -1,3 +1,10 @@
+import HTMLComment from "react-html-comment";
+
 export default function FixedHeader({ children }) {
-  return <div className="fixed w-full z-20">{children}</div>;
+  return (
+    <>
+      <HTMLComment text="FIXED HEADER AND NAVIGATION" />
+      <div className="fixed z-20 w-full">{children}</div>
+    </>
+  );
 }

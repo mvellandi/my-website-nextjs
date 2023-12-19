@@ -5,6 +5,7 @@ import SectionNav from "/components/section/Nav";
 import ProjectColumn from "/components/project/ContentColumn";
 import ContentColumn from "/components/elements/ContentColumn";
 import Footer from "/components/site/Footer";
+import HTMLComment from "react-html-comment";
 
 // SECTIONS ARE FOR MULTI-RECORD RESOURCES
 export default function SectionLayout({ type, nav, children }) {
@@ -26,6 +27,7 @@ export default function SectionLayout({ type, nav, children }) {
         />
       </FixedHeader>
       <FixedHeaderOffset type={type} />
+      <HTMLComment text="MAIN CONTENT" />
       <main>
         <Column type={type} as="article">
           {children}
