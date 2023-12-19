@@ -1,74 +1,16 @@
-/* SITE */
-@import url(./site.css);
-@import url(./nav.css);
-@import url(./fonts.css);
-@import url(./button-sizes.css);
-@import url(./button-colors.css);
+/* GLOBAL STYLES */
+:root {
+  /* font-size: 0.625rem; */
+  font-size: 62.5%;
 
-/* MAIN */
-@import url(./card.css);
-@import url(./main.css);
-
-/* SECTION(S) */
-@import url(./section.css);
-@import url(./project.css);
-
-/* PAGES */
-@import url(./pages.css);
-
-/* TAILWIND */
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-/* FOR JS-GENERATED ORDER CLASSES */
-/* BELOW IS USED IN MAIN SECTION NAV */
-.order-3 {
-  order: 3;
+  /* COLORS */
+  --color-blue: #2563eb;
 }
 
-/* DEV UTILS */
-.bord-blue,
-.bord-blue div,
-.bord-blue article,
-.bord-blue li,
-.bord-blue section {
-  border: 1px solid blue;
+html {
+  overscroll-behavior: none;
 }
 
-/* CONTACT UTILS */
-.obfuscate {
-  unicode-bidi: bidi-override;
-  direction: rtl;
-  font-weight: 600;
-}
-
-/* TEMP STYLE LOCATION */
-/* MOVE TO TAILWIND CONFIG? */
-.prose-lg ul,
-.prose-xl ul {
-  list-style: disc outside;
-  padding-left: 3.5rem;
-  & > li {
-    margin-top: 0;
-  }
-}
-
-.prose-lg ol,
-.prose-xl ol {
-  list-style: decimal;
-  padding-left: 3.5rem;
-  & > li {
-    margin-top: 0;
-    font-weight: 500;
-    &:last-of-type {
-      margin-bottom: 0;
-    }
-  }
-}
-
-.prose-lg a,
-.prose-xl a {
-  color: #2563eb;
-  text-decoration: underline;
+body {
+  @apply bg-red;
 }
