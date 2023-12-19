@@ -6,7 +6,7 @@ export default function Nav({ className, toggleNav }) {
   return (
     <div className={className}>
       <nav className="pl-20 pr-12 pt-24 w-[80vw] min-h-screen max-w-[300px] bg-red border-r-6 border-red-shade text-white">
-        <div className="flex justify-between items-center w-full mb-48">
+        <div className="flex items-center justify-between w-full mb-48">
           <Target>
             <Link
               href="/"
@@ -16,13 +16,13 @@ export default function Nav({ className, toggleNav }) {
             </Link>
           </Target>
           <Target>
-            <button className="target block" onClick={toggleNav} aria-hidden>
+            <button className="block target" onClick={toggleNav} aria-hidden>
               <span className="sr-only">Close Menu</span>
               <MdClose className="w-44 h-44" />
             </button>
           </Target>
         </div>
-        <div className="flex flex-col gap-32 font-semibold text-[3.6rem] tracking-3">
+        <div className="flex flex-col gap-32 font-semibold text-[3.6rem] tracking-1">
           <Target>
             <Link href="/projects" className="target">
               Projects
