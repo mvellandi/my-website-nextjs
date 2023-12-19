@@ -1,4 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
+import HTMLComment from "react-html-comment";
 import Header from "./Header";
 import Media from "./Media";
 import Links from "./Links";
@@ -9,7 +10,7 @@ import Script from "next/script";
 import Section from "./Section";
 
 // Gap between grid or flexbox items
-export const sectionGap = "gap-28 md:gap-44";
+export const sectionGap = "gap-28 md:gap-40";
 // Bottom margin is added for section headings to match the line spacing of the body text
 export const sectionHeadingStyle =
   "text-xl text-orange font-bold mb-4 lg:text-xl lg:mb-6";
@@ -29,27 +30,23 @@ export default function Item({ data }) {
 
   return (
     <>
-      {/* HEADER */}
+      <HTMLComment text="PROJECT HEADER" />
       <Header name={name} sector={sector} coverImage={coverImage} />
-      <article className={`flex flex-col ${sectionGap}`}>
-        {/* SINGLE COLUMN LAYOUT (MOBILE TO LG SIZES) */}
+      {/*  */}
+      <HTMLComment text="PROJECT ASPECTS" />
+      <main>
+        {/*  */}
+        <HTMLComment text="SINGLE COLUMN LAYOUT (MOBILE TO LG SIZES)" />
+        {/*  */}
         <div className={`flex flex-col ${sectionGap} xl:hidden`}>
           {/* SUMMARY */}
           <Section title="Summary">
             <PortableText value={summary} />
           </Section>
           {/* MEDIA */}
-          {media && (
-            <Section title="Media">
-              <Media media={media} />
-            </Section>
-          )}
+          {media && <Media media={media} />}
           {/* LINKS */}
-          {links && (
-            <Section title="Project Links">
-              <Links links={links} />
-            </Section>
-          )}
+          {links && <Links links={links} />}
           {/* FEATURES */}
           {features && (
             <Section title="Features">
@@ -57,46 +54,37 @@ export default function Item({ data }) {
             </Section>
           )}
           {/* STRUCTURE */}
-          {structure && (
-            <Section title="Design / Tech">
-              <Structure structure={structure} />
-            </Section>
-          )}
+          {structure && <Structure structure={structure} />}
           {/* PROCESS */}
           {process && <Process process={process} />}
         </div>
-        {/* TWO COLUMN LAYOUT (XL SIZES) */}
+        {/*  */}
+        <HTMLComment text="TWO COLUMN LAYOUT (XL SIZES)" />
+        {/*  */}
         <div
           className={`hidden xl:grid xl:grid-cols-[1fr_1fr] xl:gap-x-[100px]`}
         >
-          {/* COLUMN 1 */}
+          {/*  */}
+          <HTMLComment text="COLUMN 1" />
+          {/*  */}
           <div className={`flex flex-col ${sectionGap}`}>
             {/* SUMMARY */}
             <Section title="Summary">
               <PortableText value={summary} />
             </Section>
             {/* LINKS */}
-            {links && (features || structure) && (
-              <Section title="Project Links">
-                <Links links={links} />
-              </Section>
-            )}
+            {links && (features || structure) && <Links links={links} />}
             {/* PROCESS */}
             {process && <Process process={process} />}
           </div>
-          {/* COLUMN 2 */}
+          {/*  */}
+          <HTMLComment text="COLUMN 2" />
+          {/*  */}
           <div className={`flex flex-col ${sectionGap}`}>
             {/* MEDIA */}
-            {media && (
-              <Section title="Media">
-                <Media media={media} />
-              </Section>
-            )}
-            {links && (!features || !structure) && (
-              <Section title="Project Links">
-                <Links links={links} />
-              </Section>
-            )}
+            {media && <Media media={media} />}
+            {/* LINKS */}
+            {links && (!features || !structure) && <Links links={links} />}
             {/* FEATURES */}
             {features && (
               <Section title="Features">
@@ -104,14 +92,10 @@ export default function Item({ data }) {
               </Section>
             )}
             {/* STRUCTURE */}
-            {structure && (
-              <Section title="Design / Tech">
-                <Structure structure={structure} />
-              </Section>
-            )}
+            {structure && <Structure structure={structure} />}
           </div>
         </div>
-      </article>
+      </main>
       {/* BODY END */}
       {/* <div id="backtotop" style={{ display: "none" }}>
         <div className="flex justify-center mt-8">
