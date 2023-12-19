@@ -1,3 +1,4 @@
+import Section from "./Section";
 import { urlForImage } from "/lib/sanity";
 import FsLightbox from "fslightbox-react";
 import { useState } from "react";
@@ -16,8 +17,8 @@ export default function Media({ media }) {
   }
 
   return (
-    <>
-      <div className="grid items-start grid-cols-2 gap-20 pt-6 pb-8 sm:grid-cols-3 md:grid-cols-4">
+    <Section title="Media" className="media">
+      <div className="grid items-start grid-cols-2 pt-4 pb-8 gap-28 sm:grid-cols-3 md:grid-cols-4">
         {media.map(({ _key, ...rest }, n) => (
           <a
             key={_key}
@@ -40,6 +41,6 @@ export default function Media({ media }) {
         )}
         slide={lightboxController.slide}
       />
-    </>
+    </Section>
   );
 }
