@@ -22,6 +22,18 @@ export const headerHeightStyle = {
   secondary: `md:h-[${headerHeight.secondary.md}px] 2k3:h-[${headerHeight.secondary["2k3"]}px]`,
 };
 
+// export const headerHeightStyle_old = {
+//   base: `h-${headerHeight.base["default"]} sm:h-${headerHeight.base["sm"]}`,
+//   main: `lg:h-[${headerHeight.main["lg"]}px] lgtall:h-${headerHeight.main["lgtall"]} 2k3:h-[${headerHeight.main["2k3"]}px]`,
+//   secondary: `md:h-[${headerHeight.secondary["md"]}px] 2k3:h-[${headerHeight.secondary["2k3"]}px]`,
+// };
+
+// export const headerHeightStyle = {
+//   base: `h-64 sm:h-72`,
+//   main: `lg:h-[90px] lgtall:h-96 2k3:h-[120px]`,
+//   secondary: `md:h-[110px] 2k3:h-[120px]`,
+// };
+
 export default function Header({ type, page }) {
   let headerStyle = `site-padding-x flex justify-center items-center w-full bg-red ${headerHeightStyle.base} sm:items-end`;
   let headerContentStyle = `relative flex justify-between items-center w-full ${headerContentWidthStyle[type]} sm:items-end`;
