@@ -2,10 +2,11 @@ import Head from "next/head";
 
 export default function Meta({ data }) {
   data = data || {
-    title: "Next.js Sample Webpage",
+    title: "Mario Vellandi: Digital Product Development and Content Strategy",
     description:
-      "A statically generated blog example using Next.js and Sanity CMS",
+      "Portfolio, services offered, articles, and quick projects by Mario Vellandi",
   };
+
   return (
     <Head>
       <link
@@ -25,21 +26,35 @@ export default function Meta({ data }) {
         sizes="16x16"
         href="/meta/favicon-16x16.png"
       />
-      <link rel="manifest" href="/meta/site.webmanifest" />
-      {/* this sets the color of url bar */}
+      {/* SET URL BAR AREA COLOR */}
+      {/* WORKS EVERYWHERE, THOUGH APPLE ONLY ALLOWS FOR WEB APPS */}
       <meta name="theme-color" content="#c93b53" />
-      {/* sets the color of url bar in Apple phones */}
-      <meta name="apple-mobile-web-app-status-bar" content="#90cdf4" />
-      {/* <link
-        rel="mask-icon"
-        href="/meta/safari-pinned-tab.svg"
-        color="#000000"
+      {/*  */}
+      {/* WEB APP SETTINGS */}
+      {/* allow fullscreen for android and ios */}
+      <meta name="mobile-web-app-capable" content="yes" />
+      <meta name="apple-mobile-web-app-capable" content="yes" />
+      {/* OTHER SETTINGS */}
+      {/* --- APPLE */}
+      <meta
+        name="apple-mobile-web-app-status-bar-style"
+        content="black-translucent"
       />
-      <meta name="msapplication-TileColor" content="#000000" />
-      <meta name="msapplication-config" content="/meta/browserconfig.xml" />
-      <meta name="theme-color" content="#000" />
-    <link rel="alternate" type="application/rss+xml" href="/feed.xml" />
-      <meta property="og:image" content={HOME_OG_IMAGE_URL} /> */}
+      <meta name="apple-mobile-web-app-title" content="Vellandi" />
+      {/* --- ANDROID */}
+      <link rel="manifest" href="/meta/site.webmanifest" />
+      {/*  */}
+      {/* MS Edge */}
+      {/* browser pinned sites */}
+      <meta name="msapplication-TileColor" content="#c93b53" />
+      {/* other Edge settings */}
+      {/* <meta name="msapplication-config" content="/meta/browserconfig.xml" /> */}
+      {/*  */}
+      {/* RSS FEED */}
+      {/* <link rel="alternate" type="application/rss+xml" href="/feed.xml" /> */}
+      {/* OPEN GRAPH IMAGE URL */}
+      {/* can be dynamically set by the host? */}
+      {/* <meta property="og:image" content={HOME_OG_IMAGE_URL} /> */}
       <title>{data.title}</title>
       <meta name="description" content={data.description} />
       <link rel="shortcut icon" href="/meta/favicon.ico" />
