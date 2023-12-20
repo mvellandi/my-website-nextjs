@@ -17,42 +17,30 @@ export const headerHeight = {
 };
 
 export const headerHeightStyle = {
-  base: `h-${headerHeight.base.default} sm:h-${headerHeight.base.sm}`,
-  main: `lg:h-[${headerHeight.main.lg}px] lgtall:h-${headerHeight.main.lgtall} 2k3:h-[${headerHeight.main["2k3"]}px]`,
-  secondary: `md:h-[${headerHeight.secondary.md}px] 2k3:h-[${headerHeight.secondary["2k3"]}px]`,
+  base: `h-${headerHeight["base"]["default"]} sm:h-${headerHeight["base"]["sm"]}`,
+  main: `lg:h-[${headerHeight["main"]["lg"]}px] lgtall:h-${headerHeight["main"]["lgtall"]} 2k3:h-[${headerHeight["main"]["2k3"]}px]`,
+  secondary: `md:h-[${headerHeight["secondary"]["md"]}px] 2k3:h-[${headerHeight["secondary"]["2k3"]}px]`,
 };
 
-// export const headerHeightStyle_old = {
-//   base: `h-${headerHeight.base["default"]} sm:h-${headerHeight.base["sm"]}`,
-//   main: `lg:h-[${headerHeight.main["lg"]}px] lgtall:h-${headerHeight.main["lgtall"]} 2k3:h-[${headerHeight.main["2k3"]}px]`,
-//   secondary: `md:h-[${headerHeight.secondary["md"]}px] 2k3:h-[${headerHeight.secondary["2k3"]}px]`,
-// };
-
-// export const headerHeightStyle = {
-//   base: `h-64 sm:h-72`,
-//   main: `lg:h-[90px] lgtall:h-96 2k3:h-[120px]`,
-//   secondary: `md:h-[110px] 2k3:h-[120px]`,
-// };
-
 export default function Header({ type, page }) {
-  let headerStyle = `site-padding-x flex justify-center items-center w-full bg-red ${headerHeightStyle.base} sm:items-end`;
+  let headerStyle = `site-padding-x flex justify-center items-center w-full bg-red ${headerHeightStyle["base"]} sm:items-end`;
   let headerContentStyle = `relative flex justify-between items-center w-full ${headerContentWidthStyle[type]} sm:items-end`;
   let navMenuStyle = "sr-only sm:not-sr-only sm:flex";
   let navLinkStyle =
     "target leading-none select-none text-[2rem] before:-mt-[1.2rem] md:text-[2.4rem] md:before:-mt-[1.3rem]";
 
   if (pageTypeCheck(type, ["main"])) {
-    headerStyle = cn(headerStyle, `sm:pb-10 ${headerHeightStyle.main}`);
+    headerStyle = cn(headerStyle, `sm:pb-10 ${headerHeightStyle["main"]}`);
   }
   if (pageTypeCheck(type, ["project"])) {
-    headerStyle = cn(headerStyle, `sm:pb-12 ${headerHeightStyle.secondary}`);
+    headerStyle = cn(headerStyle, `sm:pb-12 ${headerHeightStyle["secondary"]}`);
     navMenuStyle = cn(
       navMenuStyle,
       "sm:gap-36 md:gap-52 lg:gap-64 xl:gap-[7.2rem] 2xl:gap-[8.8rem]"
     );
   }
   if (pageTypeCheck(type, ["article", "page"])) {
-    headerStyle = cn(headerStyle, `sm:pb-12 ${headerHeightStyle.secondary}`);
+    headerStyle = cn(headerStyle, `sm:pb-12 ${headerHeightStyle["secondary"]}`);
     navMenuStyle = cn(navMenuStyle, "gap-24 sm:gap-[30px] md:gap-40 lg:gap-64");
   }
 
