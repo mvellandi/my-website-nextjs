@@ -1,18 +1,26 @@
 @layer components {
   /* MAIN */
-  .main-services {
-    @apply text-[1.8rem] leading-[1] before:-mt-[1.2rem];
-    @apply sm:text-[2rem];
-    @apply lg:text-[2.4rem] lg:before:-mt-[0.9rem];
-  }
-  .main-services-text {
-    display: inline-block;
-    padding-bottom: 4px;
-    border-bottom: 5px solid #ffb54d;
-  }
-  /* FOR JS-GENERATED ORDER CLASSES */
-  /* BELOW IS USED IN MAIN SECTION NAV */
-  .order-3 {
-    order: 3;
+  .main {
+    .hero {
+      .cta {
+        @apply text-[1.8rem] leading-[1] before:-mt-[1.2rem];
+        @apply sm:text-[2rem];
+        @apply lg:text-[2.4rem] lg:before:-mt-[0.9rem];
+        > .text {
+          display: inline-block;
+          padding-bottom: 4px;
+          border-bottom: 5px solid #ffb54d;
+        }
+      }
+    }
+    .nav {
+      position: sticky;
+
+      /* FOR JS-GENERATED ORDER CLASSES */
+      /* BELOW IS USED IN MAIN SECTION NAV */
+      .order-3 {
+        order: 3;
+      }
+    }
   }
 }
