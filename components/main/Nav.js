@@ -6,8 +6,6 @@ import cn from "classnames";
 import HTMLComment from "react-html-comment";
 
 export default function Nav({ active, as }) {
-  const Component = as ?? "div";
-
   // Get all sections from API
   let sections = Object.values(API).map((v) => ({
     ...v,
@@ -33,14 +31,13 @@ export default function Nav({ active, as }) {
   sections.splice(activeIdx, 1);
   sections.push(activeSection);
 
-  const stickyStyle = `sticky z-10 top-${hh.base.default} sm:top-${hh.base.sm} lg:top-[${hh.main.lg}px] lgtall:top-${hh.main.lgtall} 2k3:top-[${hh.main["2k3"]}px]`;
+  const stickyStyle = `z-10 top-${hh.base.default} sm:top-${hh.base.sm} lg:top-[${hh.main.lg}px] lgtall:top-${hh.main.lgtall} 2k3:top-[${hh.main["2k3"]}px]`;
 
   return (
     <>
-      <HTMLComment text="CONTENT TYPE NAVIGATION" />
       {/* NAV BACKGROUND + CONTENT ROW: h-centered child at full-width */}
-      <Component
-        className={`${stickyStyle} flex justify-center w-full border-b border-gray-400 bg-gray-25 lg:border-b-2`}
+      <nav
+        className={`nav ${stickyStyle} flex justify-center w-full border-b border-gray-400 bg-gray-25 lg:border-b-2`}
       >
         <div className="flex justify-center py-16 gap-16 w-full max-w-screen-lg sm:gap-24 md:gap-36 md:py-20 lg:gap-36 xl:py-[18px] xl:gap-48 2xl:gap-56 3xl:gap-64 2k:gap-[76px] 2k:py-24">
           {sections.map(({ title, route, navOrder, isActive }) => {
@@ -73,7 +70,7 @@ export default function Nav({ active, as }) {
             );
           })}
         </div>
-      </Component>
+      </nav>
     </>
   );
 }
