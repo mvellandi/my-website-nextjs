@@ -13,8 +13,8 @@
         }
       }
     }
-    .nav {
-      position: sticky;
+    nav.content {
+      @apply sticky z-10 top-64 sm:top-72 lg:top-[90px] lgtall:top-96 2k3:top-[120px];
 
       /* FOR JS-GENERATED ORDER CLASSES */
       /* BELOW IS USED IN MAIN SECTION NAV */
