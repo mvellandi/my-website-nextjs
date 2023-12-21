@@ -12,7 +12,9 @@ import ProcessOutline from "./ProcessOutline";
 import ProcessSection from "./ProcessSection";
 import { sectionGap } from "./Item";
 
-export default function Process({ process }) {
+export default function Process({ process, iteration }) {
+  // NOTE: Because the parent Project component has a single column layout for mobile to lg sizes, and a two column layout for xl sizes, and the markup is duplicated. If there are anchor outline links to any of the process sections, the anchor links will be duplicated, and the links will point to the hidden sections and not work as intended. To fix this, we need to modify the markup for links and ids. We can do this by adding an iteration prop to the Process component, and then adding the iteration number to the id and href attributes. This will ensure that the links and ids are unique, and will work on both layouts.
+
   const processHeadingStyle = `${sectionHeadingStyle} scroll-mt-[15rem] sm:scroll-mt-[16.5rem] md:scroll-mt-[23rem] lg:scroll-mt-[26rem]`;
   return (
     <div className={`flex flex-col ${sectionGap}`}>
@@ -32,6 +34,7 @@ export default function Process({ process }) {
                 key={_key}
                 outline={rest}
                 headingStyle={processHeadingStyle}
+                iteration={iteration}
               />
             );
           }
@@ -42,6 +45,7 @@ export default function Process({ process }) {
                 key={_key}
                 section={rest}
                 headingStyle={processHeadingStyle}
+                iteration={iteration}
               />
             );
           }

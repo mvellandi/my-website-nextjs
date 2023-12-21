@@ -56,7 +56,7 @@ export default function Item({ data }) {
           {/* STRUCTURE */}
           {structure && <Structure structure={structure} />}
           {/* PROCESS */}
-          {process && <Process process={process} />}
+          {process && <Process process={process} iteration="1" />}
         </div>
         {/*  */}
         <HTMLComment text="TWO COLUMN LAYOUT (XL SIZES)" />
@@ -75,7 +75,7 @@ export default function Item({ data }) {
             {/* LINKS */}
             {links && (features || structure) && <Links links={links} />}
             {/* PROCESS */}
-            {process && <Process process={process} />}
+            {process && <Process process={process} iteration="2" />}
           </div>
           {/*  */}
           <HTMLComment text="COLUMN 2" />
