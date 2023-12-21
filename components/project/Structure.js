@@ -3,7 +3,7 @@ import Section from "./Section";
 export default function Structure({ structure }) {
   return (
     <Section title="Design / Tech" className="structure">
-      <div className="flex flex-col mt-10 tracking-tight gap-y-6 lg:gap-y-20 lg:mt-12 xl:gap-y-6">
+      <div className="flex flex-col mt-10 tracking-tight gap-y-6 lg:gap-y-10 lg:mt-12 xl:gap-y-6">
         {structure.map(({ aspect, values }) => (
           <div key={aspect} className="grid grid-cols-[80px_1fr]">
             <h4>
