@@ -27,7 +27,7 @@ export default function ProcessSection({ section, headingStyle, iteration }) {
               top
             </a>{" "}
             |{" "}
-            <a href="#outline" className="text-link">
+            <a href={`#outline-${iteration}`} className="text-link">
               outline
             </a>
           </div>
