@@ -8,7 +8,7 @@ export default function Item({ data }) {
 
   return (
     <>
-      <h1 className="text-3xl text-black font-light -tracking-1 leading-tight mb-20 lg:mb-40">
+      <h1 className="mb-20 text-3xl font-light leading-tight text-black text-balance -tracking-1 lg:mb-40">
         {headline}
       </h1>
       <div className="prose-lg lg:prose-xl">
