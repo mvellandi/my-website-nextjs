@@ -12,7 +12,7 @@ export default function Card({
     <Component className="card">
       {/* Reordered to semantically prioritize titles, though image will visually appear first */}
       <div className="flex flex-col gap-[5px] order-2">
-        <h2 className="card-title text-gray-900 font-bold -tracking-1 leading-[1.22] text-base lg:text-lg lg:leading-[1.2] 2k:leading-[1.4]">
+        <h2 className="card-link text-balance text-gray-900 font-bold -tracking-1 leading-[1.22] text-base lg:text-lg lg:leading-[1.2] 2k:leading-[1.4]">
           {url ? (
             <Link href={url} target="_blank" rel="noopener noreferrer">
               {title}
