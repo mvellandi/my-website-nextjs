@@ -5,7 +5,7 @@
     @apply hover:bg-gray-1;
   }
 
-  .card-title a::before {
+  .card-link a::before {
     /* @apply after:absolute after:top-0 after:right-0 after:bottom-0 after:left-0 */
     content: "";
     position: absolute;
@@ -16,17 +16,17 @@
     z-index: 1;
   }
 
-  .card-title a {
+  .card-link a {
     cursor: pointer;
   }
 
-  .card-title a:focus {
+  .card-link a:focus {
     outline: none;
     @apply ring-0 ring-offset-0;
   }
 
-  /* .card-title a:hover::before, */
-  .card-title a:focus::before {
+  /* .card-link a:hover::before, */
+  .card-link a:focus::before {
     @apply ring-4 ring-offset-2;
   }
 }
