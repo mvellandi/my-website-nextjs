@@ -18,7 +18,7 @@
     "@tailwindcss/nesting": "^0.0.0-insiders.565cd3e",
     "classnames": "^2.3.2",
     "date-fns": "^2.29.3",
-    "fslightbox-react": "./fslightbox-react-pro-1.7.8.tgz",
+    "fslightbox-react": "./node_modules/fslightbox-react-pro-1.7.8.tgz",
     "next": "^13.1.1",
     "next-sanity": "^1.0.0",
     "prop-types": "^15.8.1",
