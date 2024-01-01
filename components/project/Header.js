@@ -5,17 +5,15 @@ export default function Header({ name, sector, coverImage }) {
     return text.length > 30 ? "text-2xl" : "text-3xl";
   }
 
+  const nameStyle = `${cn(
+    smallerText(name),
+    "text-balance font-light leading-[1.3] text-black -tracking-1 sm:text-3xl"
+  )}`;
+
   return (
     <header className="flex justify-between w-full gap-24 sm:justify-start sm:gap-36">
       <div className="flex flex-col gap-8 sm:order-2">
-        <h1
-          className={cn(
-            smallerText(name),
-            "font-light leading-[1.3] text-black -tracking-1 sm:text-3xl"
-          )}
-        >
-          {name}
-        </h1>
+        <h1 className={nameStyle}>{name}</h1>
         <p className="text-sm font-bold text-gray-700 uppercase tracking-3">
           {sector}
         </p>
