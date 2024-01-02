@@ -27,8 +27,8 @@ importers:
         specifier: ^2.29.3
         version: 2.30.0
       fslightbox-react:
-        specifier: ./node_modules/fslightbox-react-pro-1.7.8.tgz
-        version: file:node_modules/fslightbox-react-pro-1.7.8.tgz(prop-types@15.8.1)(react-dom@18.2.0)(react@18.2.0)
+        specifier: file:components/fslightbox.tgz
+        version: file:components/fslightbox.tgz(prop-types@15.8.1)(react-dom@18.2.0)(react@18.2.0)
       next:
         specifier: ^13.1.1
         version: 13.3.4(react-dom@18.2.0)(react@18.2.0)
@@ -3217,9 +3217,9 @@ packages:
     engines: {node: '>= 14'}
     dev: true
 
-  file:node_modules/fslightbox-react-pro-1.7.8.tgz(prop-types@15.8.1)(react-dom@18.2.0)(react@18.2.0):
-    resolution: {integrity: sha512-QwbGv7byxXcAg52kt3lgAgYDEzvZk5OT4BsDeDyShKOjTKwuv7FX1UOEafI+E9271lD7+iDnEV92i5u7bWidcA==, tarball: file:node_modules/fslightbox-react-pro-1.7.8.tgz}
-    id: file:node_modules/fslightbox-react-pro-1.7.8.tgz
+  file:components/fslightbox.tgz(prop-types@15.8.1)(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-QwbGv7byxXcAg52kt3lgAgYDEzvZk5OT4BsDeDyShKOjTKwuv7FX1UOEafI+E9271lD7+iDnEV92i5u7bWidcA==, tarball: file:components/fslightbox.tgz}
+    id: file:components/fslightbox.tgz
     name: fslightbox-react
     version: 1.7.8
     peerDependencies:
