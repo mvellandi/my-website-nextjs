@@ -17,7 +17,7 @@
         @apply flex flex-col gap-4 pt-4 md:gap-8;
       }
       li a {
-        @apply text-lg leading-[1.6] font-semibold md:text-[2.2rem];
+        @apply text-[1.9rem] leading-[1.6] font-semibold md:text-[2rem];
         color: var(--color-blue);
       }
     }
