@@ -35,63 +35,46 @@ export default function Item({ data }) {
       {/*  */}
       <HTMLComment text="PROJECT ASPECTS" />
       <main>
-        {/*  */}
         <HTMLComment text="SINGLE COLUMN LAYOUT (MOBILE TO LG SIZES)" />
         {/*  */}
         <div className={`flex flex-col ${sectionGap} xl:hidden`}>
-          {/* SUMMARY */}
           <Section title="Summary">
             <PortableText value={summary} />
           </Section>
-          {/* MEDIA */}
           {media && <Media media={media} />}
-          {/* LINKS */}
           {links && <Links links={links} />}
-          {/* FEATURES */}
           {features && (
             <Section title="Features">
               <PortableText value={features} />
             </Section>
           )}
-          {/* STRUCTURE */}
           {structure && <Structure structure={structure} />}
-          {/* PROCESS */}
           {process && <Process process={process} iteration="1" />}
         </div>
-        {/*  */}
         <HTMLComment text="TWO COLUMN LAYOUT (XL SIZES)" />
         {/*  */}
         <div
           className={`hidden xl:grid xl:grid-cols-[1fr_1fr] xl:gap-x-[100px]`}
         >
-          {/*  */}
           <HTMLComment text="COLUMN 1" />
           {/*  */}
           <div className={`flex flex-col ${sectionGap}`}>
-            {/* SUMMARY */}
             <Section title="Summary">
               <PortableText value={summary} />
             </Section>
-            {/* LINKS */}
             {links && (features || structure) && <Links links={links} />}
-            {/* PROCESS */}
             {process && <Process process={process} iteration="2" />}
           </div>
-          {/*  */}
           <HTMLComment text="COLUMN 2" />
           {/*  */}
           <div className={`flex flex-col ${sectionGap}`}>
-            {/* MEDIA */}
             {media && <Media media={media} />}
-            {/* LINKS */}
             {links && (!features || !structure) && <Links links={links} />}
-            {/* FEATURES */}
             {features && (
               <Section title="Features">
                 <PortableText value={features} />
               </Section>
             )}
-            {/* STRUCTURE */}
             {structure && <Structure structure={structure} />}
           </div>
         </div>
