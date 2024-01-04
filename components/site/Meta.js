@@ -57,7 +57,7 @@ export default function Meta({ data }) {
       {/* <meta property="og:image" content={HOME_OG_IMAGE_URL} /> */}
       <title>{data.title}</title>
       <meta name="description" content={data.description} />
-      <link rel="shortcut icon" href="/meta/favicon.ico" />
+      <link rel="shortcut icon" href="/favicon.ico" />
     </Head>
   );
 }
