@@ -10,7 +10,7 @@ import Script from "next/script";
 import Section from "./Section";
 
 // Gap between grid or flexbox items
-export const sectionGap = "gap-28 md:gap-40";
+export const sectionGap = "gap-28 md:gap-40 xl:gap-54";
 // Bottom margin is added for section headings to match the line spacing of the body text
 export const sectionHeadingStyle =
   "text-xl text-orange font-bold mb-4 lg:text-xl lg:mb-6";
