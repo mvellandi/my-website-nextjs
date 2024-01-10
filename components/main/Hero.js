@@ -2,6 +2,11 @@ import Image from "next/image";
 import Link from "next/link";
 import portrait from "/public/mario-portrait-fall-225.jpg";
 import HTMLComment from "react-html-comment";
+import localFont from "next/font/local";
+
+// const lora = localFont({
+//   src: "../../fonts/lora/Lora-VariableFont_wght.ttf"
+// });
 
 const imageStyle = {
   borderRadius: "9999px",
@@ -12,32 +17,54 @@ const imageStyle = {
 export default function Hero({ as }) {
   const Component = as ?? "div";
   return (
-    <>
+    <div className="relative flex justify-center w-full border-b-8 bg-red border-red-shade site-padding-x">
       {/* SECTION BACKGROUND + CONTENT ROW: full-width, h-centered children */}
-      <Component className="flex justify-center w-full gap-16 pt-16 pb-24 text-white border-b-8 hero site-padding-x sm:gap-48 md:pb-32 md:pt-8 lg:pt-0 lgtall:pt-20 lgtall:pb-40 2k:pb-48 2k:pt-16 bg-red border-red-shade">
-        {/*  */}
-        <HTMLComment text="HERO TEXT" />
-        <div className="flex flex-col justify-center gap-24 md:w-[380px] lg:w-[440px] lg:gap-48">
-          <h1 className="relative order-2 w-fit">
-            <Link className="target cta" href="/services">
-              <span aria-hidden>{"\u2192"} </span>
-              <span className="text">Let&rsquo;s work together</span>
-            </Link>
-          </h1>
-          <h2 className="text-xl -tracking-3 font-light drop-shadow order-1 pmd:text-2xl md:text-3xl md:leading-[1.22] lgtall:text-[4.2rem]">
-            I research and build digital products
-          </h2>
-        </div>
-        {/*  */}
-        <HTMLComment text="HERO IMAGE" />
-        <div className="min-w-[112px] pmd:min-w-[140px] md:w-[200px] lgtall:w-[225px] xl:w-[180px] 2k:w-[225px]">
-          <Image
-            src={portrait}
-            style={imageStyle}
-            alt="photo: mario vellandi"
-          />
-        </div>
-      </Component>
-    </>
+      <div className="flex flex-col w-full max-w-screen-xl gap-24 bord-blue">
+        <Component className="relative flex justify-center w-full max-w-screen-xl gap-16 pt-48 pb-24 text-white hero sm:gap-48 md:pb-32 md:pt-28 lg:pt-28 lgtall:pt-28 lgtall:pb-40 xl:gap-52 2k:pb-48 2k:pt-28">
+          <HTMLComment text="HERO TEXT" />
+          <div className="w-full flex flex-col justify-center gap-24 md:w-[380px] md:gap-44 lg:w-[330px] lg:gap-48">
+            <div className="md:pt-24">
+              <h1
+                className={`text-[3.2rem] leading-[1.1] pb-4 tracking-tight drop-shadow md:text-4xl md:tracking-normal md:leading-none lgtall:text-[4.2rem] xl:text-[4.2rem] name`}
+              >
+                Mario Vellandi
+              </h1>
+              <h2 className="text-[2rem] tracking-tight md:text-[2.4rem] font-light lg:text-xl text-balance">
+                Web developer for Elixir, JavaScript, and CSS
+              </h2>
+            </div>
+            <div className="flex w-full gap-32">
+              <Link className="cta" href="/about">
+                <span className="text">about me</span>
+              </Link>
+              <Link className="cta" href="/contact">
+                <span className="text">contact</span>
+              </Link>
+            </div>
+          </div>
+          <HTMLComment text="HERO IMAGE" />
+          <div className="w-full max-w-[120px] md:max-w-[200px] lgtall:max-w-[225px] xl:max-w-[180px] 2k:max-w-[225px]">
+            <Image
+              src={portrait}
+              style={imageStyle}
+              alt="photo: mario vellandi"
+            />
+          </div>
+          <nav className="right-0 flex-col hidden gap-24 sm:absolute sm:flex">
+            <ul>
+              <li>
+                <Link href="/about">GitHub</Link>
+              </li>
+              <li>
+                <Link href="/about">LinkedIn</Link>
+              </li>
+              <li>
+                <Link href="/about">Twitter</Link>
+              </li>
+            </ul>
+          </nav>
+        </Component>
+      </div>
+    </div>
   );
 }
