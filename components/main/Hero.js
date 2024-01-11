@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import portrait from "/public/mario-portrait-fall-225.jpg";
 import HTMLComment from "react-html-comment";
-import localFont from "next/font/local";
+import Social from "../site/Social";
 
 // const lora = localFont({
 //   src: "../../fonts/lora/Lora-VariableFont_wght.ttf"
@@ -17,54 +17,47 @@ const imageStyle = {
 export default function Hero({ as }) {
   const Component = as ?? "div";
   return (
-    <div className="relative flex justify-center w-full border-b-8 bg-red border-red-shade site-padding-x">
+    <div className="flex justify-center border-b-[16px] bg-red border-red-shade site-padding-x">
       {/* SECTION BACKGROUND + CONTENT ROW: full-width, h-centered children */}
-      <div className="flex flex-col w-full max-w-screen-xl gap-24 bord-blue">
-        <Component className="relative flex justify-center w-full max-w-screen-xl gap-16 pt-48 pb-24 text-white hero sm:gap-48 md:pb-32 md:pt-28 lg:pt-28 lgtall:pt-28 lgtall:pb-40 xl:gap-52 2k:pb-48 2k:pt-28">
-          <HTMLComment text="HERO TEXT" />
-          <div className="w-full flex flex-col justify-center gap-24 md:w-[380px] md:gap-44 lg:w-[330px] lg:gap-48">
-            <div className="md:pt-24">
-              <h1
-                className={`text-[3.2rem] leading-[1.1] pb-4 tracking-tight drop-shadow md:text-4xl md:tracking-normal md:leading-none lgtall:text-[4.2rem] xl:text-[4.2rem] name`}
-              >
-                Mario Vellandi
-              </h1>
-              <h2 className="text-[2rem] tracking-tight md:text-[2.4rem] font-light lg:text-xl text-balance">
-                Web developer for Elixir, JavaScript, and CSS
-              </h2>
-            </div>
-            <div className="flex w-full gap-32">
-              <Link className="cta" href="/about">
-                <span className="text">about me</span>
-              </Link>
-              <Link className="cta" href="/contact">
-                <span className="text">contact</span>
-              </Link>
-            </div>
-          </div>
-          <HTMLComment text="HERO IMAGE" />
-          <div className="w-full max-w-[120px] md:max-w-[200px] lgtall:max-w-[225px] xl:max-w-[180px] 2k:max-w-[225px]">
-            <Image
-              src={portrait}
-              style={imageStyle}
-              alt="photo: mario vellandi"
-            />
-          </div>
-          <nav className="right-0 flex-col hidden gap-24 sm:absolute sm:flex">
-            <ul>
+      <Component className="relative flex justify-center w-full max-w-screen-xl pt-48 pb-24 text-white gap-28 hero sm:gap-48 md:pb-32 md:pt-28 lg:pt-28 lgtall:pt-28 lgtall:pb-40 xl:gap-52 2k:pb-48 2k:pt-72">
+        <HTMLComment text="HERO TEXT" />
+        <div className="flex flex-col items-end justify-center w-full max-w-[500px] text-right md:pt-28 sm:pl-24">
+          <h1
+            className={`-mr-4 text-[3.6rem] leading-[1.2] pb-4 tracking-tight drop-shadow md:text-[4.2rem] md:tracking-normal md:leading-none lgtall:text-[4.2rem] xl:text-[4.2rem] font-slab`}
+          >
+            Mario Vellandi
+          </h1>
+          <h2 className="text-[2.1rem] leading-none sm:leading-[1.3] tracking-tight md:text-[2.2rem] md:leading-[1.3] font-light text-balance">
+            Web developer{" "}
+            <span className="hidden sm:inline">
+              for Elixir, JavaScript, and CSS
+            </span>
+          </h2>
+          <nav>
+            <ul className="-mr-14 flex gap-16 pt-24 text-[2.1rem] leading-[1] md:pt-32 lg:text-[2.2rem]">
               <li>
-                <Link href="/about">GitHub</Link>
+                <Link href="/about">
+                  → <span className="cta">about me</span>
+                </Link>
               </li>
-              <li>
-                <Link href="/about">LinkedIn</Link>
-              </li>
-              <li>
-                <Link href="/about">Twitter</Link>
+              <li className="hidden sm:block">
+                <Link href="/contact">
+                  → <span className="cta">contact</span>
+                </Link>
               </li>
             </ul>
           </nav>
-        </Component>
-      </div>
+        </div>
+        <HTMLComment text="HERO IMAGE" />
+        <div className="w-full max-w-[170px] md:max-w-[220px] md:pr-24 lgtall:max-w-[225px] 2k:max-w-[225px]">
+          <Image
+            src={portrait}
+            style={imageStyle}
+            alt="photo: mario vellandi"
+          />
+        </div>
+        <Social type="hero" />
+      </Component>
     </div>
   );
 }
