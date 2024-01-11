@@ -20,6 +20,13 @@ module.exports = {
       "2k": "2000px",
       "2k3": "2300px",
     },
+    fontWeight: {
+      light: "350",
+      normal: "450",
+      medium: "550",
+      semibold: "650",
+      bold: "750",
+    },
     colors: {
       current: "currentColor",
       transparent: "transparent",
@@ -96,7 +103,8 @@ module.exports = {
       },
       fontFamily: {
         brand: "Dancing\\ Script",
-        sans: ["Inter", ...defaultTheme.fontFamily.sans],
+        slab: ["Slabo\\ 13px", ...defaultTheme.fontFamily.serif],
+        sans: ["Nunito", ...defaultTheme.fontFamily.sans],
       },
       letterSpacing: {
         1: "0.02rem",
