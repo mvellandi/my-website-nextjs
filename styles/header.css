@@ -1,0 +1,9 @@
+@layer components {
+  .full_header {
+    @apply flex items-center justify-center w-full site-padding-x bg-red sm:items-end sm:pb-12;
+    @apply h-64 sm:h-72 md:h-[110px] 2k3:h-[120px];
+  }
+  .full_header_offset {
+    @apply h-64 sm:h-72 md:h-[110px] 2k3:h-[120px];
+  }
+}
