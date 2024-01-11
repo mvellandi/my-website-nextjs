@@ -1,7 +1,9 @@
 /* GLOBAL STYLES */
 :root {
-  /* font-size: 0.625rem; */
-  font-size: 62.5%;
+  /* font-size: 62.5%; for standard fonts */
+  /* Adjusted for Nunito base font */
+  font-size: 66.3%;
+  font-weight: 450;
 
   /* COLORS */
   --color-blue: #2563eb;
