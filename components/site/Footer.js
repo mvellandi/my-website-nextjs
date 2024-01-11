@@ -2,6 +2,7 @@ import cn from "classnames";
 import Link from "next/link";
 import { elementContentWidthStyle as footerContentWidthStyle } from "/components/site/constants";
 import HTMLComment from "react-html-comment";
+import Social from "../site/Social";
 
 const pageTypeCheck = (type, list) => {
   return list.includes(type);
@@ -30,6 +31,8 @@ export default function Footer({ type }) {
 
   return (
     <>
+      <HTMLComment text="SOCIAL LINKS" />
+      <Social type="footer" />
       <HTMLComment text="FOOTER" />
       <footer className="flex items-start justify-center w-full h-full pt-16 pb-48 bg-red md:justify-start lg:justify-center">
         <div className={footerContentStyle}>
