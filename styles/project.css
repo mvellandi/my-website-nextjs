@@ -5,10 +5,16 @@
     }
     .section {
       .heading {
-        @apply mb-4 text-xl font-bold text-orange lg:text-xl lg:mb-6;
+        @apply mb-4 text-xl font-bold text-orange lg:mb-6;
       }
     }
     .section.standard {
+      h3 {
+        @apply text-lg font-bold;
+      }
+      h4 {
+        @apply text-base font-semibold underline;
+      }
       ul,
       ol {
         @apply flex flex-col gap-16 list-outside ml-24 pl-[2rem] mb-[1.8rem] md:gap-14;
