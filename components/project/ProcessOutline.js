@@ -19,10 +19,10 @@ function processOutlineLinks(body, iteration) {
     });
 }
 
-export default function ProcessOutline({ outline, headingStyle, iteration }) {
+export default function ProcessOutline({ outline, iteration }) {
   return (
-    <nav className="nav processOutline" aria-label="Process Outline">
-      <h2 className={headingStyle}>{outline.heading}</h2>
+    <nav className="section process_outline" aria-label="Process Outline">
+      <h2 className="heading">{outline.heading}</h2>
       <PortableText value={processOutlineLinks(outline.body, iteration)} />
     </nav>
   );

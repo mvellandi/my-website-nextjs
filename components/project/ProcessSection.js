@@ -7,14 +7,14 @@ function idAnchor(string) {
     .toLowerCase();
 }
 
-export default function ProcessSection({ section, headingStyle, iteration }) {
+export default function ProcessSection({ section, iteration }) {
   return (
     <section className="section standard">
       {/* HEADING WITH QUICK NAVIGATION FOR SMALLER SCREENS */}
       <div className={`flex items-start justify-between`}>
         <h2
           id={`${idAnchor(section.heading)}-${iteration}`}
-          className={headingStyle}
+          className="heading scroll_margin"
         >
           {section.heading}
         </h2>

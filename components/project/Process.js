@@ -18,11 +18,10 @@ const scrollMargin =
 export default function Process({ process, iteration }) {
   // NOTE: Because the parent Project component has a single column layout for mobile to lg sizes, and a two column layout for xl sizes, and the markup is duplicated. If there are anchor outline links to any of the process sections, the anchor links will be duplicated, and the links will point to the hidden sections and not work as intended. To fix this, we need to modify the markup for links and ids. We can do this by adding an iteration prop to the Process component, and then adding the iteration number to the id and href attributes. This will ensure that the links and ids are unique, and will work on both layouts.
 
-  const processHeadingStyle = `${sectionHeadingStyle} ${scrollMargin}`;
   return (
     <div
       id={`outline-${iteration}`}
-      className={`flex flex-col ${sectionGap} ${scrollMargin}`}
+      className={`flex flex-col ${sectionGap} scroll_margin`}
     >
       {(() => {
         return process.map(({ _key, _type, ...rest }, n) => {
@@ -36,23 +35,13 @@ export default function Process({ process, iteration }) {
 
           if (_type === "outline") {
             return (
-              <ProcessOutline
-                key={_key}
-                outline={rest}
-                headingStyle={processHeadingStyle}
-                iteration={iteration}
-              />
+              <ProcessOutline key={_key} outline={rest} iteration={iteration} />
             );
           }
 
           if (_type === "headingRichText") {
             return (
-              <ProcessSection
-                key={_key}
-                section={rest}
-                headingStyle={processHeadingStyle}
-                iteration={iteration}
-              />
+              <ProcessSection key={_key} section={rest} iteration={iteration} />
             );
           }
         });

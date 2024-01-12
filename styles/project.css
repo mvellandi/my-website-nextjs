@@ -1,15 +1,23 @@
 @layer components {
   .project {
+    .scroll_margin {
+      @apply scroll-mt-[15rem] sm:scroll-mt-[16.5rem] md:scroll-mt-[23rem] lg:scroll-mt-[26rem];
+    }
+    .section {
+      .heading {
+        @apply mb-4 text-xl font-bold text-orange lg:text-xl lg:mb-6;
+      }
+    }
     .section.standard {
       ul,
       ol {
-        @apply flex flex-col gap-16 list-outside ml-24 mb-[1.8rem] md:gap-14;
+        @apply flex flex-col gap-16 list-outside ml-24 pl-[2rem] mb-[1.8rem] md:gap-14;
       }
       ul {
-        @apply list-disc pl-[2rem];
+        @apply list-disc;
       }
       ol {
-        @apply list-decimal pl-[2rem];
+        @apply list-decimal;
       }
       *:last-child {
         @apply mb-0;
@@ -18,7 +26,7 @@
         @apply text-link;
       }
     }
-    .processOutline {
+    .section.process_outline {
       ol {
         @apply flex flex-col gap-4 list-outside list-decimal ml-24 pl-[1rem] md:gap-8;
       }
