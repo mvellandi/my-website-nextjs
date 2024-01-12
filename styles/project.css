@@ -1,10 +1,16 @@
 @layer components {
   .project {
     .section.standard {
-      ul {
-        @apply flex flex-col gap-16 mb-[1.8rem] md:gap-14;
+      ul,
+      ol {
+        @apply flex flex-col gap-16 list-outside ml-24 mb-[1.8rem] md:gap-14;
       }
-      ul li,
+      ul {
+        @apply list-disc pl-[2rem];
+      }
+      ol {
+        @apply list-decimal pl-[2rem];
+      }
       *:last-child {
         @apply mb-0;
       }
@@ -14,7 +20,7 @@
     }
     .processOutline {
       ol {
-        @apply flex flex-col gap-4 pt-4 md:gap-8;
+        @apply flex flex-col gap-4 list-outside list-decimal ml-24 pl-[1rem] md:gap-8;
       }
       li a {
         @apply text-[1.9rem] leading-[1.6] font-semibold md:text-[2rem];
