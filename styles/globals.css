@@ -1,17 +1,29 @@
-/* GLOBAL STYLES */
-:root {
-  /* font-size: 0.625rem; */
-  font-size: 62.5%;
+/* INIT */
+@import url(./init.css);
 
-  /* COLORS */
-  --color-blue: #2563eb;
-  --color-red: #c93b53;
-}
+/* SITE */
+@import url(./site.css);
+@import url(./header.css);
+@import url(./nav.css);
+@import url(./fonts.css);
+@import url(./button-sizes.css);
+@import url(./button-colors.css);
 
-html {
-  overscroll-behavior: none;
-}
+/* MAIN */
+@import url(./card.css);
+@import url(./main.css);
 
-body {
-  @apply bg-red;
-}
+/* SECTION(S) */
+@import url(./project.css);
+
+/* PAGES */
+@import url(./services.css);
+
+/* UTILITIES */
+@import url(./utils.css);
+@import url(./typography.css);
+
+/* TAILWIND */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;

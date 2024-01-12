@@ -1,4 +1,13 @@
 @layer utilities {
+  /* GLOBAL */
+  .cta {
+    display: inline-block;
+    padding-bottom: 4px;
+    border-bottom: 4px solid #ffb54d;
+    filter: drop-shadow(0 6px 6px rgb(0 0 0 / 0.08))
+      drop-shadow(0 3px 2px rgb(0 0 0 / 0.1));
+  }
+
   /* CONTACT PAGE */
   .obfuscate {
     unicode-bidi: bidi-override;
@@ -7,11 +16,7 @@
   }
 
   /* DEV UTILS */
-  .bord-blue,
-  .bord-blue div,
-  .bord-blue article,
-  .bord-blue li,
-  .bord-blue section {
+  .bord-blue * {
     border: 1px solid blue;
   }
 }

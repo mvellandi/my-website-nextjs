@@ -10,37 +10,20 @@ const pageTypeCheck = (type, list) => {
   return list.includes(type);
 };
 
-export const headerHeight = {
-  base: { default: 64, sm: 72 },
-  main: { lg: 90, lgtall: 96, "2k3": 120 },
-  secondary: { md: 110, "2k3": 120 },
-};
-
-export const headerHeightStyle = {
-  base: `h-${headerHeight["base"]["default"]} sm:h-${headerHeight["base"]["sm"]}`,
-  main: `lg:h-[${headerHeight["main"]["lg"]}px] lgtall:h-${headerHeight["main"]["lgtall"]} 2k3:h-[${headerHeight["main"]["2k3"]}px]`,
-  secondary: `md:h-[${headerHeight["secondary"]["md"]}px] 2k3:h-[${headerHeight["secondary"]["2k3"]}px]`,
-};
-
 export default function Header({ type, page }) {
-  let headerStyle = `site-padding-x flex justify-center items-center w-full bg-red ${headerHeightStyle["base"]} sm:items-end`;
   let headerContentStyle = `relative flex justify-between items-center w-full ${headerContentWidthStyle[type]} sm:items-end`;
   let navMenuStyle = "sr-only sm:not-sr-only sm:flex";
   let navLinkStyle =
     "target leading-none select-none text-[2rem] before:-mt-[1.2rem] md:text-[2.4rem] md:before:-mt-[1.3rem]";
+  let logoStyle = "pt-6";
 
-  if (pageTypeCheck(type, ["main"])) {
-    headerStyle = cn(headerStyle, `sm:pb-10 ${headerHeightStyle["main"]}`);
-  }
   if (pageTypeCheck(type, ["project"])) {
-    headerStyle = cn(headerStyle, `sm:pb-12 ${headerHeightStyle["secondary"]}`);
     navMenuStyle = cn(
       navMenuStyle,
       "sm:gap-36 md:gap-52 lg:gap-64 xl:gap-[7.2rem] 2xl:gap-[8.8rem]"
     );
   }
   if (pageTypeCheck(type, ["article", "page"])) {
-    headerStyle = cn(headerStyle, `sm:pb-12 ${headerHeightStyle["secondary"]}`);
     navMenuStyle = cn(navMenuStyle, "gap-24 sm:gap-[30px] md:gap-40 lg:gap-64");
   }
 
@@ -50,9 +33,20 @@ export default function Header({ type, page }) {
     setNav((open) => !open);
   };
 
+  const props = {
+    navOpen,
+    toggleNav,
+    type,
+    page,
+    logoStyle,
+    headerContentStyle,
+    navMenuStyle,
+    navLinkStyle,
+  };
+
   return (
     <>
-      <HTMLComment text="MOBILE: NAV DRAWER; SCREEN READER HEADER" />
+      <HTMLComment text="SITE NAVIGATION FOR SCREEN READERS AND MOBILE SIDELOADED MENU ON SELECT PAGE TYPES" />
       <Nav
         aria-label="Primary"
         className={`absolute w-[300px] h-screen z-20 inset-y-0 left-0 transform ${
@@ -60,7 +54,19 @@ export default function Header({ type, page }) {
         } transition duration-200 ease-in-out`}
         toggleNav={toggleNav}
       />
-      {/*  */}
+      {!pageTypeCheck(type, ["main"]) ? (
+        <>
+          <SideNavBackground navOpen={navOpen} toggleNav={toggleNav} />
+          <FullHeader props={props} />
+        </>
+      ) : null}
+    </>
+  );
+}
+
+function SideNavBackground({ navOpen, toggleNav }) {
+  return (
+    <>
       <HTMLComment text="MOBILE: HEADER BACKGROUND" />
       <div
         className={`${
@@ -70,14 +76,21 @@ export default function Header({ type, page }) {
         }`}
         onClick={toggleNav}
       ></div>
-      {/*  */}
-      <HTMLComment text="FULL RESPONSIVE SITE HEADER / NON-SCREEN READER" />
-      <div className={headerStyle} aria-hidden>
+    </>
+  );
+}
+
+function FullHeader({ props }) {
+  const headerStyle = `${props.headerStyle} full_header`;
+  return (
+    <>
+      <HTMLComment text="FULL HEADER / NON-SCREEN READERS" />
+      <div className="full_header" aria-hidden>
         {/* HEADER CONTENT ROW */}
-        <div className={headerContentStyle}>
+        <div className={props.headerContentStyle}>
           {/*  */}
           <HTMLComment text="LOGO" />
-          <Target className="pt-6">
+          <Target className={props.logoStyle}>
             <Link
               href="/"
               className="target text-[3.6rem] leading-[1] before:-mt-[0.6rem] font-brand text-white drop-shadow select-none md:text-[4.8rem]"
@@ -93,38 +106,28 @@ export default function Header({ type, page }) {
             <Target>
               <button
                 className={`target btn btn-sm btn-primary-bright sm:hidden ${
-                  navOpen ? "hidden" : ""
+                  props.navOpen ? "hidden" : ""
                 }`}
-                onClick={toggleNav}
+                onClick={props.toggleNav}
               >
                 menu
               </button>
             </Target>
             {/*  */}
             <HTMLComment text="TABLET / DESKTOP: NAVIGATION" />
-            <menu className={navMenuStyle}>
-              {pageTypeCheck(type, ["main"]) && (
-                <Target>
-                  <Link
-                    href="/contact"
-                    className="target btn btn-md-round btn-primary-bright sm:-mr-16 lg:mr-0 lg:btn-lg-round"
-                  >
-                    Contact
-                  </Link>
-                </Target>
-              )}
-              {pageTypeCheck(type, ["project", "article", "page"]) && (
+            <menu className={props.navMenuStyle}>
+              {pageTypeCheck(props.type, ["project", "article", "page"]) && (
                 <>
-                  {type !== "project" && (
+                  {props.type !== "project" && (
                     <Target>
-                      <Link href="/" className={navLinkStyle}>
+                      <Link href="/" className={props.navLinkStyle}>
                         Projects
                       </Link>
                     </Target>
                   )}
-                  {type !== "article" && (
+                  {props.type !== "article" && (
                     <Target>
-                      <Link href="/articles" className={navLinkStyle}>
+                      <Link href="/articles" className={props.navLinkStyle}>
                         Writing
                       </Link>
                     </Target>
@@ -134,23 +137,23 @@ export default function Header({ type, page }) {
                     <Link
                       href="/play"
                       className={cn(
-                        navLinkStyle,
+                        props.navLinkStyle,
                         "before:-ml-4 md:before:ml-0"
                       )}
                     >
                       Play
                     </Link>
                   </Target>
-                  {page !== "services" && (
+                  {props.page !== "services" && (
                     <Target>
-                      <Link href="/services" className={navLinkStyle}>
+                      <Link href="/services" className={props.navLinkStyle}>
                         Services
                       </Link>
                     </Target>
                   )}
-                  {page !== "contact" && (
+                  {props.page !== "contact" && (
                     <Target>
-                      <Link href="/contact" className={navLinkStyle}>
+                      <Link href="/contact" className={props.navLinkStyle}>
                         Contact
                       </Link>
                     </Target>

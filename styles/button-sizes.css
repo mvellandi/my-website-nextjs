@@ -1,7 +1,7 @@
 /* COMMON */
 @layer components {
   .btn {
-    @apply inline-flex flex-wrap items-center justify-center font-medium leading-none select-none;
+    @apply inline-flex flex-wrap items-center justify-center font-semibold leading-none select-none;
   }
 
   /* SIZE */
@@ -56,7 +56,7 @@
 
   .btn-md-round,
   .btn-md-wide-round {
-    @apply rounded-full px-16;
+    @apply px-16 rounded-full;
   }
 
   .btn-md-multiline {
@@ -72,21 +72,16 @@
   .btn-lg-wide,
   .btn-lg-round,
   .btn-lg-wide-round {
-    @apply text-[2.4rem] border-5 rounded-[14px] px-16 py-12;
+    @apply text-[2.3rem] border-4 rounded-[14px] px-12 py-10;
   }
 
   .btn-lg-round,
   .btn-lg-wide-round {
-    @apply rounded-full px-[22px];
+    @apply px-24 rounded-full;
   }
 
   .btn-lg-multiline {
     line-height: 1.2;
-  }
-
-  .btn-lg-wide,
-  .btn-lg-wide-round {
-    @apply px-32;
   }
 
   .btn-xl,
