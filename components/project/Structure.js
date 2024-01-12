@@ -7,7 +7,7 @@ export default function Structure({ structure }) {
         {structure.map(({ aspect, values }) => (
           <div key={aspect} className="grid grid-cols-[80px_1fr]">
             <h4>
-              <span className="font-semibold">{aspect}</span>:
+              <span className="font-bold">{aspect}</span>:
             </h4>
             <ul className="flex flex-row list-none">
               {values.map((name, idx) => (
