@@ -1,35 +1,15 @@
 @layer components {
-  #services article p {
-    @apply mt-0 md:mb-8;
-  }
-  #services article ul {
-    @apply pl-0 m-0 list-none;
-  }
-  #services article ul li {
-    @apply pl-0 mb-0;
-  }
-  #services #tasks {
-    @apply flex flex-col gap-0 font-semibold text-[2.2rem] -tracking-2 md:text-[2.3rem] lg:text-[2.8rem] md:justify-between;
-  }
-  #services #tasks li {
-    @apply mb-0 leading-[1.5] md:leading-[1.5];
-  }
-  #services #skills {
-    @apply flex flex-col gap-0;
-  }
-  #services #skills li {
-    /* @apply flex flex-col gap-0; */
-  }
+    #about .skills {
+        @apply block pt-12 text-base lg:text-lg;
 
-  #services .button {
-    @apply flex-wrap items-center justify-center rounded-xl border-2 border-purple-700 bg-[#f3e8ff] bg-gradient-to-r from-[#6366f1] via-[#a855f7] to-[#ec4899] shadow-md;
-    @apply py-16 w-full max-w-[400px];
-    @apply text-[2.2rem] font-semibold leading-none select-none md:text-[2.6rem];
-    text-shadow: 1px 1px 1px red, 0 0 0.2em blue;
-    border-radius: 15px;
-  }
-  #services a {
-    color: white;
-    text-decoration: none;
-  }
+        td {
+            padding: 5px 0;
+        }
+
+        tr td:first-child {
+            width: 170px;
+            font-weight: bold;
+            text-decoration: underline;
+        }
+    }
 }
