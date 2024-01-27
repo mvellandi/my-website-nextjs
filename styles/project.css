@@ -5,15 +5,15 @@
     }
     .section {
       .heading {
-        @apply mb-4 text-xl font-bold text-orange lg:mb-6;
+        @apply mb-4 text-xl font-bold text-orange lg:mb-6 xl:text-[2.7rem];
       }
     }
     .section.standard {
       h3 {
-        @apply text-lg font-bold;
+        @apply text-lg font-bold pt-6 xl:text-[2.2rem];
       }
       h4 {
-        @apply text-base font-semibold underline;
+        @apply text-[1.9rem] font-semibold underline xl:text-[1.9rem];
       }
       ul,
       ol {
