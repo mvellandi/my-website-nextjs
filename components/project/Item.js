@@ -54,7 +54,7 @@ export default function Item({ data }) {
         <HTMLComment text="TWO COLUMN LAYOUT (XL SIZES)" />
         {/*  */}
         <div
-          className={`hidden xl:grid xl:grid-cols-[1fr_1fr] xl:gap-x-[100px]`}
+          className={`hidden xl:grid xl:grid-cols-[1fr_1px_1fr] xl:gap-x-[50px]`}
         >
           <HTMLComment text="COLUMN 1" />
           {/*  */}
@@ -65,6 +65,7 @@ export default function Item({ data }) {
             {links && (features || structure) && <Links links={links} />}
             {process && <Process process={process} iteration="2" />}
           </div>
+          <div className="border-r border-[#fcfcfc]"></div>
           <HTMLComment text="COLUMN 2" />
           {/*  */}
           <div className={`flex flex-col ${sectionGap}`}>
