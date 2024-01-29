@@ -11,10 +11,9 @@ export default function About({ data, preview = false }) {
                 <p>
                     Hi! I&apos;m a web developer with a strong orientation
                     toward product development and UX design. In the last few
-                    years, I&apos;ve built up a portfolio at
-                    http://vellandi.net, helped a professional client, and
-                    recently finished Dockyard Academy, a 3-month training for
-                    software development.
+                    years, I&apos;ve built up a portfolio, helped a professional
+                    client, and recently finished Dockyard Academy, a 3-month
+                    training for software development.
                 </p>
                 <p>
                     Back in my university days, I loved business and marketing.
