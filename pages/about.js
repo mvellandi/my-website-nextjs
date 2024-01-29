@@ -9,7 +9,7 @@ export default function About({ data, preview = false }) {
             </h1>
             <article className="prose-lg lg:prose-xl">
                 <p>
-                    Hi! I&apos;m a web developer with a strong orientation
+                    Hi! I&apos;m a software engineer with a strong orientation
                     toward product development and UX design. In the last few
                     years, I&apos;ve built up a portfolio, helped a professional
                     client, and recently finished Dockyard Academy, a 3-month
