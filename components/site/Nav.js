@@ -38,8 +38,8 @@ export default function Nav({ className, toggleNav }) {
                         </Link>
                     </Target>
                     <Target>
-                        <Link href="/play" className="target">
-                            Play
+                        <Link href="/demo" className="target">
+                            Demo
                         </Link>
                     </Target>
                     <Target>

@@ -151,13 +151,13 @@ function FullHeader({ props }) {
                                     {/* reposition click target's x-position, as 'play' is a short word  */}
                                     <Target>
                                         <Link
-                                            href="/play"
+                                            href="/demo"
                                             className={cn(
                                                 props.navLinkStyle,
                                                 'before:-ml-4 md:before:ml-0'
                                             )}
                                         >
-                                            Play
+                                            Demo
                                         </Link>
                                     </Target>
                                     {props.page !== 'about' && (
