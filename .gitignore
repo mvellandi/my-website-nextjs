@@ -15,6 +15,9 @@
 # production
 /build
 
+# non-production assets
+/assets
+
 # misc
 .DS_Store
 *.pem
