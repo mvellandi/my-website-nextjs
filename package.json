@@ -1,40 +1,37 @@
 {
-  "name": "vellandi",
-  "version": "0.1.0",
-  "pnpm": {
-    "useWorkspaces": true
-  },
-  "private": true,
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
-  },
-  "dependencies": {
-    "@portabletext/react": "^2.0.3",
-    "@sanity/client": "^3.4.1",
-    "@sanity/image-url": "^1.0.2",
-    "@tailwindcss/nesting": "0.0.0-insiders.565cd3e",
-    "classnames": "^2.5.1",
-    "date-fns": "^2.30.0",
-    "fslightbox-react": "file:components/fslightbox.tgz",
-    "next": "^14.2.5",
-    "next-sanity": "^1.1.0",
-    "prop-types": "^15.8.1",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-html-comment": "^2.0.16",
-    "react-icons": "^4.12.0"
-  },
-  "devDependencies": {
-    "@tailwindcss/typography": "^0.5.10",
-    "autoprefixer": "^10.4.16",
-    "eslint": "8.19.0",
-    "eslint-config-next": "^13.5.6",
-    "postcss": "^8.4.33",
-    "prettier": "^3.2.4",
-    "prettier-plugin-tailwindcss": "^0.5.11",
-    "tailwindcss": "^3.4.1"
-  }
+    "name": "vellandi",
+    "version": "0.1.0",
+    "private": true,
+    "scripts": {
+        "dev": "next dev",
+        "build": "next build",
+        "start": "next start",
+        "lint": "next lint"
+    },
+    "dependencies": {
+        "@portabletext/react": "^2.0.3",
+        "@sanity/client": "^3.4.1",
+        "@sanity/image-url": "^1.0.2",
+        "@tailwindcss/nesting": "0.0.0-insiders.565cd3e",
+        "classnames": "^2.5.1",
+        "date-fns": "^2.30.0",
+        "fslightbox-react": "file:components/fslightbox.tgz",
+        "next": "^14.2.5",
+        "next-sanity": "^1.1.0",
+        "prop-types": "^15.8.1",
+        "react": "^18.2.0",
+        "react-dom": "^18.2.0",
+        "react-html-comment": "^2.0.16",
+        "react-icons": "^4.12.0"
+    },
+    "devDependencies": {
+        "@tailwindcss/typography": "^0.5.10",
+        "autoprefixer": "^10.4.16",
+        "eslint": "8.19.0",
+        "eslint-config-next": "^13.5.6",
+        "postcss": "^8.4.33",
+        "prettier": "^3.2.4",
+        "prettier-plugin-tailwindcss": "^0.5.11",
+        "tailwindcss": "^3.4.1"
+    }
 }
