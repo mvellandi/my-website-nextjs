@@ -12,8 +12,8 @@ export default function About({ data, preview = false }) {
                     Hi! I&apos;m a software engineer with a strong orientation
                     toward product development and UX design. In the last few
                     years, I&apos;ve built up a portfolio, helped a professional
-                    client, and recently finished Dockyard Academy, a 3-month
-                    training for software development.
+                    client, and completed a 3-month training for software
+                    development.
                 </p>
                 <p>
                     Back in my university days, I loved business and marketing.
@@ -27,21 +27,18 @@ export default function About({ data, preview = false }) {
                 </p>
                 <p>
                     I found clients, made them websites, and helped them use
-                    social media to put their brand out there. This was very
-                    important for a business media company&apos;s early days
-                    when I was hired as their community manager. After moving to
-                    New York City, I led the digital communications for an
-                    influential nonprofit where I had the good fortune to
-                    implement a CRM system while working with various
-                    departments to build webpages, newsletters, campaigns, and
-                    more. After a few years of advising clients, I took a break
-                    and traveled the world.
+                    social media to put their brand out there. A business media
+                    company then hired me as their community manager and video
+                    producer for conferences, interviews, and webinars. But I
+                    needed new challenges and a fresh environment. So I moved to
+                    New York City and led the digital communications for an
+                    influential nonprofit where I implemented a CRM system and
+                    built webpages, newsletters, campaigns, and more.
                 </p>
                 <p>
-                    Misfortune then took a family member too early. Through a
-                    pharmaceutical company&apos;s compensation, I became a
-                    public markets investor. I also met my partner and moved to
-                    Bremen, Germany.
+                    After a few years of advising clients, I took a break and
+                    traveled the world, eventually moving to Bremen, Germany
+                    with my partner where I became an investor.
                 </p>
                 <p>
                     My itch for tech though would not rest. I casually learned
@@ -54,11 +51,11 @@ export default function About({ data, preview = false }) {
                 <h2>How can I help you?</h2>
                 <p>
                     My goal is happy customers, reduced expenses, and increased
-                    revenue. Aside from the tech skills below that I&apos;m most
-                    confident with, I carry forward project management and
-                    writing skills from my previous career. Please{' '}
-                    <Link href="/contact">contact me</Link> if you&apos;d like
-                    to chat about your project or just want to say hello.
+                    revenue. Aside from the tech skills below, I can quickly
+                    learn and apply new ones. Lastly, I carry forward project
+                    management and writing skills from my previous career.
+                    Please <Link href="/contact">contact me</Link> if you&apos;d
+                    like to chat about your project or just want to say hello.
                 </p>
                 <table className="skills">
                     <tbody>
