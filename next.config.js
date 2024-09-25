@@ -1,9 +1,18 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  reactStrictMode: true,
-  images: {
-    domains: ["cdn.sanity.io", "source.unsplash.com"],
-  },
-};
+    reactStrictMode: true,
+    images: {
+        remotePatterns: [
+            {
+                protocol: 'https',
+                hostname: 'cdn.sanity.io',
+            },
+            {
+                protocol: 'https',
+                hostname: 'source.unsplash.com',
+            },
+        ],
+    },
+}
 
-module.exports = nextConfig;
+module.exports = nextConfig
