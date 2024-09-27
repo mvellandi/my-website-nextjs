@@ -1,26 +1,20 @@
-import PageLayout from "/components/page/Layout";
+import PageLayout from '/components/page/Layout'
 
 export default function Contact({ preview = false }) {
-  // const labelStyle = "block mb-2 font-medium";
-  // const inputStyle =
-  //   "shadow-sm bg-[#fafafa] border border-purple-900 rounded-xl focus:ring-primary-500 focus:border-primary-500 block w-full py-4 px-12";
-  // original dark mode styles:
-  // dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light
-  return (
-    <PageLayout page="contact">
-      <h1 className="text-[3.6rem] text-black font-light -tracking-1 leading-tight mb-20 lg:mb-40">
-        Contact
-      </h1>
-      <div className="prose-lg lg:prose-xl">
-        <p>
-          Let me know how I can help you. I am always open to new projects and
-          challenges.
-        </p>
-        <p>
-          <span className="obfuscate">ten.idnallev@vaoiram</span>
-        </p>
-      </div>
-      {/* <section className="bg-white mt-36">
+    return (
+        <PageLayout id="contact" page="contact">
+            {/* <h1 className="mb-20 text-[3.6rem] font-light leading-tight -tracking-1 text-black lg:mb-40"> */}
+            <h1>Contact</h1>
+            <div className="prose-lg lg:prose-xl">
+                <p>
+                    Let me know how I can help you. I am always open to new
+                    projects and challenges.
+                </p>
+                <p>
+                    <span className="obfuscate">ten.idnallev@vaoiram</span>
+                </p>
+            </div>
+            {/* <section className="bg-white mt-36">
         <form
           className="flex flex-col gap-28 max-w-[600px] lg:grid lg:grid-cols-2 lg:gap-40 lg:gap-y-28 lg:max-w-[800px]"
           method="POST"
@@ -66,14 +60,14 @@ export default function Contact({ preview = false }) {
           </button>
         </form>
       </section> */}
-    </PageLayout>
-  );
+        </PageLayout>
+    )
 }
 
 export async function getServerSideProps({ params, preview = false }) {
-  return {
-    props: {
-      preview,
-    },
-  };
+    return {
+        props: {
+            preview,
+        },
+    }
 }
