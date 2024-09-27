@@ -1,0 +1,22 @@
+/* SITE */
+@import url(./site/site.css);
+@import url(./site/fonts.css);
+@import url(./site/typography.css);
+@import url(./site/utils.css);
+
+/* COMPONENTS */
+@import url(./components/header.css);
+@import url(./components/nav.css);
+@import url(./components/card.css);
+@import url(./components/button-sizes.css);
+@import url(./components/button-colors.css);
+
+/* PAGES */
+@import url(./pages/main.css);
+@import url(./pages/project.css);
+@import url(./pages/page.css);
+
+/* TAILWIND */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;

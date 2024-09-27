@@ -1,0 +1,51 @@
+/* GLOBAL STYLES */
+:root {
+    /* font-size: 62.5%; for standard fonts */
+    /* Adjusted for Nunito base font */
+    font-size: 66.3%;
+    font-weight: 450;
+
+    /* COLORS */
+    --color-blue: #2563eb;
+    --color-red: #c93b53;
+}
+
+html {
+    overscroll-behavior: none;
+}
+
+body {
+    @apply bg-red;
+}
+
+@layer base {
+    /* LINKS */
+    .text-link,
+    .prose-lg a,
+    .prose-xl a {
+        color: var(--color-blue);
+        text-decoration: underline;
+    }
+
+    .text-link-inverse {
+        display: inline-block;
+        padding: 0 0.2rem;
+        background-color: #4b74cee2;
+        text-decoration: underline;
+    }
+
+    .btn-link {
+        border: none;
+    }
+
+    /* PADDING X */
+    .site-padding-x {
+        @apply px-20 sm:px-32 md:px-40 2xl:px-0;
+    }
+
+    /* OUTLINE */
+    *:focus {
+        outline: none;
+        @apply ring-4 ring-offset-2;
+    }
+}

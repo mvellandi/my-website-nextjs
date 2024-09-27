@@ -1,0 +1,24 @@
+@layer components {
+    #contact,
+    #about {
+        h1 {
+            @apply mb-12 text-[3.6rem] font-light leading-tight -tracking-1 text-black lg:mb-16 lg:text-[3.8rem] lg:font-[450];
+        }
+    }
+    #about .skills {
+        @apply block pt-12 text-base lg:text-lg;
+
+        td {
+            padding: 5px 0;
+        }
+
+        tr td:first-child {
+            width: 170px;
+            font-weight: bold;
+            text-decoration: underline;
+        }
+    }
+    /* #about article h2 {
+        @apply mb-8 mt-0 lg:mb-8 lg:mt-44;
+    } */
+}
