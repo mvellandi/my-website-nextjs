@@ -7,12 +7,12 @@ export default function About({ data, preview = false }) {
             <h1>About Me</h1>
             <article className="prose-lg lg:prose-xl">
                 <p>
-                    I care about are happy customers and lean operations. Why?
-                    Because that&apos;s what drives word-of-mouth (the best
-                    marketing tool) and keeps a high-performing business alive.
-                    I&apos;ll use a combination of software engineering, content
-                    strategy, CRM, and UX design to continuously ship small
-                    improvements and do strategic R&D.
+                    I care about are happy customers and lean operations.
+                    That&apos;s what drives word-of-mouth (the best marketing
+                    tool) and keeps a high-performing business alive. I&apos;ll
+                    use a combination of software engineering, content strategy,
+                    CRM, and UX design to continuously ship small improvements
+                    and do strategic R&D.
                     <br />
                     For a full list of my skills,{' '}
                     <Link href="https://docs.google.com/document/d/1BJ20tDzvEymV5GrYedyGAdM_Rp-H80hoCbTN2loUCGQ/pub">
