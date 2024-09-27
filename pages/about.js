@@ -60,9 +60,16 @@ export default function About({ data, preview = false }) {
                     CRM. But after a few years, something was missing. I really
                     missed digital and wanted to give it a second go. So I found
                     clients, made them websites with a partner, and helped them
-                    use social media to put their brand out there. A business
-                    media company then hired me as their community manager and
-                    video producer for conferences, interviews, and webinars.
+                    use social media to put their brand out there.
+                </p>
+                <p>
+                    A business media company then hired me as their community
+                    manager and video producer for conferences, interviews, and
+                    webinars. This entailed a lot of content marketing,
+                    copywriting, some journalism, and constant social media
+                    engagement including highlighting partners, community
+                    members, and network players in the larger business
+                    ecosystem.
                 </p>
                 <p>
                     But I needed new challenges and a fresh environment. So I
