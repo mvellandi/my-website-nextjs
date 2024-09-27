@@ -34,7 +34,7 @@ export default function Nav({ className, toggleNav }) {
                     </Target>
                     <Target>
                         <Link href="/articles" className="target">
-                            Writing
+                            Media
                         </Link>
                     </Target>
                     <Target>

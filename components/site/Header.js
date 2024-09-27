@@ -144,7 +144,7 @@ function FullHeader({ props }) {
                                                 href="/articles"
                                                 className={props.navLinkStyle}
                                             >
-                                                Writing
+                                                Media
                                             </Link>
                                         </Target>
                                     )}
