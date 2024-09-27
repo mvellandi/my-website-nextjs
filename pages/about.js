@@ -4,36 +4,75 @@ import Link from 'next/link'
 export default function About({ data, preview = false }) {
     return (
         <PageLayout id="about" page="about">
-            <h1 className="mb-20 text-[3.6rem] font-light leading-tight -tracking-1 text-black lg:mb-40">
-                About Me
-            </h1>
+            <h1>About Me</h1>
             <article className="prose-lg lg:prose-xl">
                 <p>
-                    Hi! I&apos;m a software engineer with a strong orientation
-                    toward product development and UX design. In the last few
-                    years, I&apos;ve built up a portfolio, helped a professional
-                    client, and completed a 3-month training for software
-                    development.
+                    I care about are happy customers and lean operations. Why?
+                    Because that&apos;s what drives word-of-mouth (the best
+                    marketing tool) and keeps a high-performing business alive.
+                    I&apos;ll use a combination of software engineering, content
+                    strategy, CRM, and UX design to continuously ship small
+                    improvements and do strategic R&D.
+                    <br />
+                    For a full list of my skills,{' '}
+                    <Link href="https://docs.google.com/document/d/1BJ20tDzvEymV5GrYedyGAdM_Rp-H80hoCbTN2loUCGQ/pub">
+                        click here
+                    </Link>
+                    .
                 </p>
+                <h2 className="mb-12 mt-36 lg:mb-16">Backstory</h2>
                 <p>
-                    Back in my university days, I loved business and marketing.
-                    The ability to make products people loved while running a
-                    tight operational ship was fascinating. And so was the web!
-                    I learned HTML/CSS and started making student websites and
+                    In my university days, I loved business and marketing. The
+                    ability to make products people loved while running a tight
+                    operational ship was fascinating. And so was the web! I
+                    learned HTML/CSS and started making student websites and
                     Flash multimedia while doing a Bachelors in International
-                    Business. After working in sales for a few product
-                    manufacturers, I gave it a second go and got back into
-                    digital.
+                    Business.
                 </p>
                 <p>
-                    I found clients, made them websites, and helped them use
-                    social media to put their brand out there. A business media
-                    company then hired me as their community manager and video
-                    producer for conferences, interviews, and webinars. But I
-                    needed new challenges and a fresh environment. So I moved to
-                    New York City and led the digital communications for an
-                    influential nonprofit where I implemented a CRM system and
-                    built webpages, newsletters, campaigns, and more.
+                    In my last two years of Uni, I focused on supply chain
+                    management and logistics, doing an internship at an ocean
+                    carrier in Germany where I booked containers and allotted
+                    vessel space, and another internship with a freight
+                    forwarder and customs broker. One of my favorite books back
+                    then was <em>The Goal</em> by Eliyahu Goldratt, which taught
+                    me that since making money is the end goal, then maximizing
+                    production throughput and minimizing inventory is the way.
+                    Another influential book was <em>Lean Thinking</em> by
+                    Womack and Jones which explained the Toyota Production
+                    System and how applying continuous improvement to product
+                    quality, process time, eliminating waste, and empowering
+                    employees to take corrective action leads to operational
+                    excellence.
+                </p>
+                <p>
+                    In retrospect, these formative experiences were incredibly
+                    valuable because they instilled systems thinking in me and
+                    influenced how I prioritized work and searched for
+                    productivity gains, particularly when working with multiple
+                    departments to deliver shared goals.
+                </p>
+                <p>
+                    I then went on to do sales for a few home decor
+                    manufacturers where I loved working with sales agents across
+                    the country, creating custom products for retailers like
+                    Walgreens and Kroger, and pushing to adopt Salesforce as a
+                    CRM. But after a few years, something was missing. I really
+                    missed digital and wanted to give it a second go. So I found
+                    clients, made them websites with a partner, and helped them
+                    use social media to put their brand out there. A business
+                    media company then hired me as their community manager and
+                    video producer for conferences, interviews, and webinars.
+                </p>
+                <p>
+                    But I needed new challenges and a fresh environment. So I
+                    moved to New York City and led the digital communications
+                    for an influential nonprofit where I implemented a CRM
+                    system and built webpages, newsletters, campaigns, event
+                    registrations, and more. This included all digital aspects
+                    of customer experience design in terms of automated emails,
+                    authentication, and helping customers manage their
+                    preferences.
                 </p>
                 <p>
                     After a few years of advising clients, I took a break and
@@ -48,47 +87,7 @@ export default function About({ data, preview = false }) {
                     learned to sharpen my operational and communication skills
                     to where I am today.
                 </p>
-                <h2>How can I help you?</h2>
-                <p>
-                    My goal is happy customers, reduced expenses, and increased
-                    revenue. Aside from the tech skills below, I can quickly
-                    learn and apply new ones. Lastly, I carry forward project
-                    management and writing skills from my previous career.
-                    Please <Link href="/contact">contact me</Link> if you&apos;d
-                    like to chat about your project or just want to say hello.
-                </p>
-                <table className="skills">
-                    <tbody>
-                        <tr>
-                            <td>Code:</td>
-                            <td>JavaScript, Elixir, CSS, HTML</td>
-                        </tr>
-                        <tr>
-                            <td>Frameworks:</td>
-                            <td>Next.js, Phoenix</td>
-                        </tr>
-                        <tr>
-                            <td>Frontend:</td>
-                            <td>React, LiveView, Tailwind</td>
-                        </tr>
-                        <tr>
-                            <td>CMS:</td>
-                            <td>Sanity</td>
-                        </tr>
-                        <tr>
-                            <td>Design:</td>
-                            <td>Figma, Illustrator</td>
-                        </tr>
-                        <tr>
-                            <td>Testing:</td>
-                            <td>Sizzy</td>
-                        </tr>
-                    </tbody>
-                </table>
             </article>
-            {/* <div className="inline-flex button md:hidden">
-                  <Link href="/contact">Let&rsquo;s work together</Link>
-              </div> */}
         </PageLayout>
     )
 }
