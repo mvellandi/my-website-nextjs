@@ -22,11 +22,12 @@ export default function Item({ data }) {
     const { headline, body } = data
 
     return (
-        <>
-            <h1 className="mb-20 text-balance text-3xl font-light leading-tight -tracking-1 text-black lg:mb-40">
+        <div className="article">
+            <h1 className="mb-20 text-balance text-3xl font-light leading-tight -tracking-1 text-black lg:mb-28">
                 {headline}
             </h1>
-            <div className="prose-lg lg:prose-xl">
+            <div className="prose-lg">
+                {/* <div className="prose-lg lg:prose-xl"> */}
                 {(() => {
                     const [_type, content] = [body._type, body.body]
                     return (
@@ -42,6 +43,6 @@ export default function Item({ data }) {
                     )
                 })()}
             </div>
-        </>
+        </div>
     )
 }
