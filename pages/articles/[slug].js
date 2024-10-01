@@ -27,9 +27,9 @@ export async function getStaticProps({ params, preview = false }) {
 
 // Get all article paths to generate
 export async function getStaticPaths() {
-    const paths = await getAllArticleSlugs()
+    const slugs = await getAllArticleSlugs()
     return {
-        paths: paths || [],
+        paths: slugs || [],
         fallback: false,
     }
 }
