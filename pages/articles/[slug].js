@@ -15,6 +15,7 @@ export async function getStaticProps({ params, preview = false }) {
         slug: params.slug,
         preview,
     })
+
     return {
         props: {
             nav: data.nav,
