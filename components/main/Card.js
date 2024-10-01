@@ -3,7 +3,7 @@ import { urlForImage } from '/lib/sanity'
 import Link from 'next/link'
 
 export default function Card({
-    data: { _id, title, subtitle, slug, url, coverImage, local },
+    data: { _id, title, subtitle, slug, url, coverImage, isLocalImage },
     route,
     as,
 }) {
@@ -34,7 +34,7 @@ export default function Card({
                 ) : null}
             </div>
             <Image
-                src={local ? coverImage : urlForImage(coverImage).url()}
+                src={isLocalImage ? coverImage : urlForImage(coverImage).url()}
                 alt="altText"
                 width={100}
                 height={100}
