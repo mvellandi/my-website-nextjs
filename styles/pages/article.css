@@ -1,5 +1,8 @@
 @layer components {
     article {
+        h1 {
+            @apply mb-20 text-balance text-3xl font-light leading-tight -tracking-1 text-black lg:mb-28 3xl:text-[4rem] 3xl:font-[450];
+        }
         .prose-lg {
             h2 {
                 @apply mb-8 mt-32;
