@@ -21,7 +21,6 @@ export async function getStaticProps({ preview = false }) {
     const data = await getAllArticleCards({ preview })
     data.value = [...firstArticles, ...data.value, ...lastArticles]
 
-    // console.log('data: ', data)
     return {
         props: {
             data,
