@@ -5,7 +5,7 @@
 
 export const firstArticles = [
     {
-        isLocalImage: true,
+        isCMSImage: false,
         _id: '14528482166013190',
         slug: 'writing-collection',
         coverImage: '/media/writing-collection.jpg',
@@ -16,7 +16,7 @@ export const firstArticles = [
 
 export const lastArticles = [
     {
-        isLocalImage: true,
+        isCMSImage: false,
         _id: '14528482166013191',
         url: 'https://old-journal.vellandi.net',
         coverImage: '/media/wordpress-logo.svg',
