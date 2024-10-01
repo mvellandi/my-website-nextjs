@@ -1,4 +1,4 @@
-import { getArticleAndNavData, getAllArticlesWithSlug } from '/lib/article'
+import { getArticleAndNavData, getAllArticleSlugs } from '/lib/article'
 import SectionLayout from '/components/section/Layout'
 import ArticleItem from '/components/article/Item'
 
@@ -25,16 +25,11 @@ export async function getStaticProps({ params, preview = false }) {
     }
 }
 
-// For each article, compute the previous/next article slugs and pass them to each
+// Get all article paths to generate
 export async function getStaticPaths() {
-    const allArticles = await getAllArticlesWithSlug()
+    const paths = await getAllArticleSlugs()
     return {
-        paths:
-            allArticles?.map((article) => ({
-                params: {
-                    slug: article.slug,
-                },
-            })) || [],
+        paths: paths || [],
         fallback: false,
     }
 }
