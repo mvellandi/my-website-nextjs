@@ -5,7 +5,7 @@ import ArticleItem from '/components/article/Item'
 export default function Article({ nav, article, preview = false }) {
     return (
         <SectionLayout type="article" nav={nav}>
-            <ArticleItem data={article} className="article" />
+            <ArticleItem data={article} />
         </SectionLayout>
     )
 }
@@ -25,7 +25,7 @@ export async function getStaticProps({ params, preview = false }) {
     }
 }
 
-// For each project, compute the previous/next project slugs and pass them to each
+// For each article, compute the previous/next article slugs and pass them to each
 export async function getStaticPaths() {
     const allArticles = await getAllArticlesWithSlug()
     return {
