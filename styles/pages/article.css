@@ -1,10 +1,5 @@
 @layer components {
-    .article {
-        /* a {
-            word-break: break-all;
-            word-wrap: break-word;
-            white-space: pre-wrap;
-        } */
+    article {
         .prose-lg {
             h2 {
                 @apply mb-8 mt-32;
@@ -24,7 +19,7 @@
                 @apply mb-4;
             }
             p {
-                @apply my-16 leading-[1.4];
+                @apply my-24 leading-[1.4];
             }
         }
     }
