@@ -26,8 +26,7 @@ export default function Item({ data }) {
             <h1 className="mb-20 text-balance text-3xl font-light leading-tight -tracking-1 text-black lg:mb-28">
                 {headline}
             </h1>
-            <div className="prose-lg">
-                {/* <div className="prose-lg lg:prose-xl"> */}
+            <div className="prose-lg 3xl:prose-xl">
                 {(() => {
                     const [_type, content] = [body._type, body.body]
                     return (
