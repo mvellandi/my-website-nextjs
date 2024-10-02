@@ -18,6 +18,18 @@ body {
     @apply bg-red;
 }
 
+summary::-webkit-details-marker {
+    display: none;
+}
+
+summary {
+    list-style: none;
+}
+
+summary::-moz-list-bullet {
+    list-style: none;
+}
+
 @layer base {
     /* LINKS */
     .text-link,
