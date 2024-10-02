@@ -25,6 +25,27 @@
                 @apply my-24 leading-[1.4];
             }
         }
+        .prose-area {
+            @apply prose-lg 3xl:prose-xl;
+            li {
+                @apply list-disc leading-[1.3] md:list-none;
+            }
+        }
+        details {
+            ul.item-list {
+                @apply prose-area mb-24 mt-16 pl-36 md:pl-0 lg:mt-16;
+
+                li {
+                    @apply -ml-12 mb-6 pl-0 md:ml-0 md:pl-0;
+                }
+            }
+            h3 {
+                @apply font-bold;
+            }
+            h3 + ul.item-list {
+                @apply mt-2;
+            }
+        }
     }
     /* .scroll_margin {
       @apply scroll-mt-[15rem] sm:scroll-mt-[16.5rem] md:scroll-mt-[23rem] lg:scroll-mt-[26rem];
