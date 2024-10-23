@@ -12,12 +12,20 @@ export const firstArticles = [
         title: 'Written Works',
         subtitle: 'Journalism, interviews, and copywriting, oh my!',
     },
+    {
+        isCMSImage: false,
+        _id: '14528482166013191',
+        slug: 'rich-media-collection',
+        coverImage: '/images/rich-media.jpg',
+        title: 'Rich Media Collection',
+        subtitle: 'Videos, audio, infographics, and multimedia',
+    },
 ]
 
 export const lastArticles = [
     {
         isCMSImage: false,
-        _id: '14528482166013191',
+        _id: '14528482166013192',
         url: 'https://old-journal.vellandi.net',
         coverImage: '/images/wordpress-logo.svg',
         title: 'Blog Archive 2006-2016',
