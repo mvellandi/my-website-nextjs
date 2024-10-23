@@ -57,6 +57,9 @@ export default function Header({ type, page }) {
                 } transition duration-200 ease-in-out`}
                 toggleNav={toggleNav}
             />
+            <div id="pagetop" className="h-0 scroll-mt-[12rem]">
+                {' '}
+            </div>
             {!pageTypeCheck(type, ['main']) ? (
                 <>
                     <SideNavBackground
@@ -64,6 +67,9 @@ export default function Header({ type, page }) {
                         toggleNav={toggleNav}
                     />
                     <FullHeader props={props} />
+                    <div id="pagetop" className="h-0 scroll-mt-[12rem]">
+                        {' '}
+                    </div>
                 </>
             ) : null}
         </>
