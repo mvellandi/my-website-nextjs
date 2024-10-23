@@ -33,16 +33,20 @@
         }
         details {
             ul.item-list {
-                @apply prose-area mb-24 mt-16 pl-36 md:pl-0 lg:mt-16;
+                @apply prose-area mb-24 mt-16 pl-36 md:pl-0;
 
                 li {
                     @apply -ml-12 mb-12 pl-0 md:ml-0 md:pl-0 lg:mb-6;
                 }
             }
             h3 {
-                @apply font-[750];
+                @apply mt-16 font-[750];
             }
-            h3 + ul.item-list {
+            h4 {
+                @apply font-semibold text-gray-700;
+            }
+            h3 + ul.item-list,
+            h4 + ul.item-list {
                 @apply mt-2;
             }
         }
