@@ -26,20 +26,21 @@ export default function WritingCollection({ nav, preview = false }) {
                 <h1 style={{ marginBottom: '1.8rem' }}>Rich Media</h1>
 
                 <Details summary="Video">
-                    <h3 className="not-prose">Sustainable Brands (164):</h3>
                     <p>
-                        While most videos are paywalled, below are a few
-                        samples.
-                        <br />
+                        My early career videos were produced for business media
+                        companies like Sustainable Brands and Gravity Summit, in
+                        addition to consultants, nonprofits, and my blog. While
+                        most videos are either paywalled or unarchived, below
+                        are a few samples.{' '}
                         <a
                             href="https://docs.google.com/spreadsheets/d/1xFa-HlEXkyEiG10tYzrBAnRBcreJyJF_gytCKU8CADc/edit?usp=sharing"
                             target="_blank"
                         >
-                            See the archive
+                            See this directory
                         </a>{' '}
                         for a complete list.
                     </p>
-                    <h4 className="not-prose">Stage Presentations</h4>
+                    <h3 className="not-prose">Stage Presentations (112):</h3>
                     <p>
                         <a
                             href="https://www.youtube.com/watch?v=NQZ2QMDdxVY"
@@ -49,30 +50,31 @@ export default function WritingCollection({ nav, preview = false }) {
                             Rayne Oakes
                         </a>
                     </p>
-                    <h4 className="not-prose">Webinars</h4>
+                    <h3 className="not-prose">Webinars (25)</h3>
                     <p>
-                        Produced, marketed, and edited 25 premium training
-                        videos.
+                        For Sustainable Brands, I produced premium training
+                        videos which included planning, speaker outreach,
+                        hosting, marketing, and video editing.
                     </p>
-                    <h4 className="not-prose">Interviews</h4>
+                    <h3 className="not-prose">Interviews (58)</h3>
                     <p>
                         <a
                             href="https://www.youtube.com/watch?v=0stOKdMQReI"
                             target="_blank"
                         >
                             Ford Motor Company&apos;s Sustainability Strategy -
-                            John Viera{' '}
+                            John Viera
                         </a>
                     </p>
                 </Details>
                 <Details summary="Audio Interviews">
-                    <p>
-                        <a href="https://www.youtube.com/playlist?list=PLpSojh5lPEF5KwxC0ZBBDAJlVptLq4-G8">
-                            Full archive here
-                        </a>
-                    </p>
                     <h3 className="not-prose">Personal (5):</h3>
-                    <h4 className="not-prose">Igniting Change Series</h4>
+                    <h4 className="not-prose">
+                        Igniting Change{' '}
+                        <a href="https://www.youtube.com/playlist?list=PLpSojh5lPEF5KwxC0ZBBDAJlVptLq4-G8">
+                            [Link]
+                        </a>
+                    </h4>
                     <p>
                         <a href="https://www.youtube.com/watch?v=TT7lnJZjuHc">
                             Community Management and Marketing Justin Isaf,
@@ -118,8 +120,10 @@ export default function WritingCollection({ nav, preview = false }) {
                         slide={lightboxController.slide}
                     />
                 </Details>
-                <Details summary="Flash Multimedia">
-                    <h3 className="not-prose">CBYX Student Exchange Guide </h3>
+                <Details summary="Multimedia">
+                    <h3 className="not-prose mt-24">
+                        CBYX Student Exchange Guide{' '}
+                    </h3>
                     <p>
                         I created this website for fellow participants in the
                         19th Congress Bundestag Youth Exchange, where students
@@ -152,7 +156,7 @@ export default function WritingCollection({ nav, preview = false }) {
                         src="https://player.vimeo.com/api/player.js"
                         strategy="lazyOnload"
                     />
-                    <h3 className="not-prose">
+                    <h3 className="not-prose mt-36">
                         Axelion Student Resource Guide
                     </h3>
                     <p>
