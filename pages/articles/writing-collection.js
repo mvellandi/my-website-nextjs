@@ -25,7 +25,7 @@ export default function WritingCollection({ nav, preview = false }) {
                 <h1 style={{ marginBottom: '1.8rem' }}>Written Works</h1>
 
                 <Details summary="Articles">
-                    <h3 className="not-prose">Personal Blog (618 posts):</h3>
+                    <h3 className="not-prose">Personal Blog (618):</h3>
                     <ul className="item-list">
                         <li>
                             <a
