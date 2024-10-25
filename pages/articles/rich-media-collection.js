@@ -40,7 +40,7 @@ export default function WritingCollection({ nav, preview = false }) {
                         </a>{' '}
                         for a complete list.
                     </p>
-                    <h3 className="not-prose">Stage Presentations (112):</h3>
+                    <h3 className="not-prose">Stage Presentations (107):</h3>
                     <p>
                         <a
                             href="https://www.youtube.com/watch?v=NQZ2QMDdxVY"
