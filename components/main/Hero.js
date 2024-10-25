@@ -15,7 +15,7 @@ export default function Hero({ as }) {
     return (
         <div className="site-padding-x flex justify-center border-b-[16px] border-red-shade bg-red">
             {/* SECTION BACKGROUND + CONTENT ROW: full-width, h-centered children */}
-            <Component className="hero relative flex w-full max-w-screen-xl justify-center gap-28 pb-24 pt-48 text-white sm:gap-48 md:pb-32 md:pt-28 lg:pt-28 lgtall:pb-40 lgtall:pt-28 xl:gap-52 2k:pb-48 2k:pt-72">
+            <Component className="hero relative flex w-full max-w-screen-xl justify-center gap-28 pb-24 pt-48 text-white sm:gap-48 md:pb-24 md:pt-24 lgtall:pt-28 xl:gap-52 2k:pb-48 2k:pt-72">
                 <HTMLComment text="HERO TEXT" />
                 <div className="flex w-full max-w-[500px] flex-col items-end justify-center text-right sm:pl-24 md:pt-28">
                     <h1
@@ -27,7 +27,7 @@ export default function Hero({ as }) {
                         Marketer, Developer
                     </h2>
                     <nav>
-                        <ul className="-mr-14 flex gap-16 pt-24 text-[2.1rem] leading-[1] md:pt-32 lg:text-[2.2rem]">
+                        <ul className="-mr-14 flex gap-16 pt-24 text-[2.1rem] leading-[1] md:pt-32">
                             <li>
                                 <Link href="/about">
                                     → <span className="cta">about me</span>
@@ -42,7 +42,7 @@ export default function Hero({ as }) {
                     </nav>
                 </div>
                 <HTMLComment text="HERO IMAGE" />
-                <div className="w-full max-w-[170px] md:max-w-[220px] md:pr-24 lgtall:max-w-[225px] 2k:max-w-[225px]">
+                <div className="w-full max-w-[170px] md:max-w-[210px] md:pr-24 lgtall:max-w-[215px] 2k:max-w-[215px]">
                     <Image
                         src={portrait}
                         style={imageStyle}

@@ -12,7 +12,7 @@ export default function Card({
         <Component className="card">
             {/* Though the card image will visually appear first, the code prioritizes the h2 title */}
             <div className="order-2 -mt-2 flex flex-col gap-[2px]">
-                <h2 className="card-link text-balance text-base font-bold leading-[1.22] -tracking-1 text-gray-900 lg:text-lg lg:leading-[1.2] 2k:leading-[1.4]">
+                <h2 className="card-link text-balance text-base font-bold leading-[1.22] -tracking-1 text-gray-900">
                     {/* Cards might point to an external URL (if available) */}
                     {/* OTHERWISE to an internal static page or an asset-page (if URL is not available) */}
                     {url ? (
@@ -28,7 +28,7 @@ export default function Card({
                     )}
                 </h2>
                 {subtitle ? (
-                    <h3 className="text-sm leading-[1.375] sm:text-[1.7rem] sm:leading-[1.337] lg:text-base lg:leading-[1.3] 3xl:leading-[1.4]">
+                    <h3 className="text-sm leading-[1.375] sm:text-[1.7rem] sm:leading-[1.337]">
                         {subtitle}
                     </h3>
                 ) : null}
@@ -38,7 +38,7 @@ export default function Card({
                 alt="altText"
                 width={100}
                 height={100}
-                className="order-1 h-[90px] w-[90px] lg:h-[100px] lg:w-[100px]"
+                className="order-1 h-[90px] w-[90px]"
             />
         </Component>
     )

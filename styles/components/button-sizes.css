@@ -1,128 +1,128 @@
 /* COMMON */
 @layer components {
-  .btn {
-    @apply inline-flex flex-wrap items-center justify-center font-semibold leading-none select-none;
-  }
+    .btn {
+        @apply inline-flex select-none flex-wrap items-center justify-center font-semibold leading-none;
+    }
 
-  /* SIZE */
-  .btn-xs,
-  .btn-xs-wide,
-  .btn-xs-round,
-  .btn-xs-wide-round {
-    @apply text-[1.6rem] font-normal tracking-1 border-2 rounded-[7px] px-8 py-6;
-  }
+    /* SIZE */
+    .btn-xs,
+    .btn-xs-wide,
+    .btn-xs-round,
+    .btn-xs-wide-round {
+        @apply rounded-[7px] border-2 px-8 py-6 text-[1.6rem] font-normal tracking-1;
+    }
 
-  .btn-xs-round,
-  .btn-xs-wide-round {
-    @apply rounded-full px-[11px];
-  }
+    .btn-xs-round,
+    .btn-xs-wide-round {
+        @apply rounded-full px-[11px];
+    }
 
-  .btn-xs-multiline {
-    line-height: 1.19;
-  }
+    .btn-xs-multiline {
+        line-height: 1.19;
+    }
 
-  .btn-xs-wide,
-  .btn-xs-wide-round {
-    @apply px-16;
-  }
+    .btn-xs-wide,
+    .btn-xs-wide-round {
+        @apply px-16;
+    }
 
-  .btn-sm,
-  .btn-sm-wide,
-  .btn-sm-round,
-  .btn-sm-wide-round {
-    @apply text-[1.8rem] border-3 rounded-[9px] px-[9px] py-8;
-  }
+    .btn-sm,
+    .btn-sm-wide,
+    .btn-sm-round,
+    .btn-sm-wide-round {
+        @apply rounded-[9px] border-3 px-[9px] py-8 text-[1.8rem];
+    }
 
-  .btn-sm-round,
-  .btn-sm-wide-round {
-    @apply rounded-full px-14;
-  }
+    .btn-sm-round,
+    .btn-sm-wide-round {
+        @apply rounded-full px-14;
+    }
 
-  .btn-sm-multiline {
-    line-height: 1.22;
-  }
+    .btn-sm-multiline {
+        line-height: 1.22;
+    }
 
-  .btn-sm-wide,
-  .btn-sm-wide-round {
-    @apply px-24;
-  }
+    .btn-sm-wide,
+    .btn-sm-wide-round {
+        @apply px-24;
+    }
 
-  .btn-md,
-  .btn-md-wide,
-  .btn-md-round,
-  .btn-md-wide-round {
-    @apply text-[2rem] border-4 rounded-[11px] px-[11px] py-10;
-  }
+    .btn-md,
+    .btn-md-wide,
+    .btn-md-round,
+    .btn-md-wide-round {
+        @apply rounded-[11px] border-4 px-[11px] py-10 text-[2rem];
+    }
 
-  .btn-md-round,
-  .btn-md-wide-round {
-    @apply px-16 rounded-full;
-  }
+    .btn-md-round,
+    .btn-md-wide-round {
+        @apply rounded-full px-16;
+    }
 
-  .btn-md-multiline {
-    line-height: 1.21;
-  }
+    .btn-md-multiline {
+        line-height: 1.21;
+    }
 
-  .btn-md-wide,
-  .btn-md-wide-round {
-    @apply px-28;
-  }
+    .btn-md-wide,
+    .btn-md-wide-round {
+        @apply px-28;
+    }
 
-  .btn-lg,
-  .btn-lg-wide,
-  .btn-lg-round,
-  .btn-lg-wide-round {
-    @apply text-[2.3rem] border-4 rounded-[14px] px-12 py-10;
-  }
+    .btn-lg,
+    .btn-lg-wide,
+    .btn-lg-round,
+    .btn-lg-wide-round {
+        @apply rounded-[14px] border-4 px-12 py-10 text-[2.3rem];
+    }
 
-  .btn-lg-round,
-  .btn-lg-wide-round {
-    @apply px-24 rounded-full;
-  }
+    .btn-lg-round,
+    .btn-lg-wide-round {
+        @apply rounded-full px-24;
+    }
 
-  .btn-lg-multiline {
-    line-height: 1.2;
-  }
+    .btn-lg-multiline {
+        line-height: 1.2;
+    }
 
-  .btn-xl,
-  .btn-xl-wide,
-  .btn-xl-round,
-  .btn-xl-wide-round {
-    @apply text-[3rem] border-5 rounded-3xl px-[18px] py-16;
-  }
+    .btn-xl,
+    .btn-xl-wide,
+    .btn-xl-round,
+    .btn-xl-wide-round {
+        @apply rounded-3xl border-5 px-[18px] py-16 text-[3rem];
+    }
 
-  .btn-xl-round,
-  .btn-xl-wide-round {
-    @apply rounded-full px-[25px];
-  }
+    .btn-xl-round,
+    .btn-xl-wide-round {
+        @apply rounded-full px-[25px];
+    }
 
-  .btn-xl-multiline {
-    line-height: 1.22;
-  }
+    .btn-xl-multiline {
+        line-height: 1.22;
+    }
 
-  .btn-xl-wide,
-  .btn-xl-wide-round {
-    @apply px-40;
-  }
+    .btn-xl-wide,
+    .btn-xl-wide-round {
+        @apply px-40;
+    }
 
-  .btn-2xl,
-  .btn-2xl-wide,
-  .btn-2xl-round,
-  .btn-2xl-wide-round {
-    @apply text-[3.6rem] border-5 rounded-3xl px-[21px] py-[18px];
-  }
+    .btn-2xl,
+    .btn-2xl-wide,
+    .btn-2xl-round,
+    .btn-2xl-wide-round {
+        @apply rounded-3xl border-5 px-[21px] py-[18px] text-[3.6rem];
+    }
 
-  .btn-2xl-round,
-  .btn-2xl-wide-round {
-    @apply rounded-full px-[30px];
-  }
+    .btn-2xl-round,
+    .btn-2xl-wide-round {
+        @apply rounded-full px-[30px];
+    }
 
-  .btn-2xl-multiline {
-    line-height: 1.22;
-  }
+    .btn-2xl-multiline {
+        line-height: 1.22;
+    }
 
-  .btn-2xl-wide,
-  .btn-2xl-wide-round {
-    @apply px-48;
-  }
+    .btn-2xl-wide,
+    .btn-2xl-wide-round {
+        @apply px-48;
+    }
 }
