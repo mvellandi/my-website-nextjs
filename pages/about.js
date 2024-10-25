@@ -15,7 +15,7 @@ export default function About({ data, preview = false }) {
                     and do strategic R&D.
                     <br />
                     For a full list of my skills,{' '}
-                    <Link href="https://docs.google.com/document/d/1BJ20tDzvEymV5GrYedyGAdM_Rp-H80hoCbTN2loUCGQ/pub">
+                    <Link href="https://modern-art-670.notion.site/Mario-s-Skill-Chart-e895b545dd6547f5bcc62ccafede2365">
                         click here
                     </Link>
                     .
