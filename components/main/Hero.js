@@ -4,10 +4,6 @@ import portrait from '/public/mario-portrait-fall-225.jpg'
 import HTMLComment from 'react-html-comment'
 import Social from '../site/Social'
 
-// const lora = localFont({
-//   src: "../../fonts/lora/Lora-VariableFont_wght.ttf"
-// });
-
 const imageStyle = {
     borderRadius: '9999px',
     border: '1px solid #980F0F',
@@ -28,10 +24,7 @@ export default function Hero({ as }) {
                         Mario Vellandi
                     </h1>
                     <h2 className="text-balance text-[2.1rem] font-light leading-none tracking-tight sm:leading-[1.3] md:text-[2.2rem] md:leading-[1.3]">
-                        Software Engineer{' '}
-                        <span className="hidden sm:inline">
-                            for Elixir, JavaScript, and CSS
-                        </span>
+                        Marketer, Developer
                     </h2>
                     <nav>
                         <ul className="-mr-14 flex gap-16 pt-24 text-[2.1rem] leading-[1] md:pt-32 lg:text-[2.2rem]">
