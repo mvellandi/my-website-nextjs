@@ -37,16 +37,16 @@ export default function About({ data, preview = false }) {
                     management and logistics, doing an internship at an ocean
                     carrier in Germany where I booked containers and allotted
                     vessel space, and another internship with a freight
-                    forwarder and customs broker. One of my favorite books back
-                    then was <em>The Goal</em> by Eliyahu Goldratt, which taught
-                    me that since making money is the end goal, then maximizing
-                    production throughput and minimizing inventory is the way.
-                    Another influential book was <em>Lean Thinking</em> by
-                    Womack and Jones which explained the Toyota Production
-                    System and how applying continuous improvement to product
-                    quality, process time, eliminating waste, and empowering
-                    employees to take corrective action leads to operational
-                    excellence.
+                    forwarder and customs broker. One of my favorite operations
+                    books back then was <em>The Goal</em> by Eliyahu Goldratt,
+                    which taught me that since profitability is a primary
+                    business goal, then maximizing production throughput and
+                    minimizing inventory, is the way. Another influential book
+                    was <em>Lean Thinking</em> by Womack and Jones which
+                    explained the Toyota Production System and how applying
+                    continuous improvement to product quality, process time,
+                    eliminating waste, and empowering employees to take
+                    corrective action leads to operational excellence.
                 </p>
                 <p>
                     In retrospect, these formative experiences were incredibly
@@ -59,7 +59,7 @@ export default function About({ data, preview = false }) {
                     I then went on to do sales for a few home decor
                     manufacturers where I loved working with sales agents across
                     the country, creating custom products for retailers like
-                    Walgreens and Kroger, and pushing to adopt Salesforce as a
+                    Walgreens and Target, and pushing to adopt Salesforce as a
                     CRM. But after a few years, something was missing. I really
                     missed digital and wanted to give it a second go. So I found
                     clients, made them websites with a partner, and helped them
@@ -76,18 +76,20 @@ export default function About({ data, preview = false }) {
                 </p>
                 <p>
                     But I needed new challenges and a fresh environment. So I
-                    moved to New York City and led the digital communications
-                    for an influential nonprofit where I implemented a CRM
-                    system and built webpages, newsletters, campaigns, event
-                    registrations, and more. This included all digital aspects
-                    of customer experience design in terms of automated emails,
-                    authentication, and helping customers manage their
-                    preferences.
+                    moved to New York City and led the digital operations for an
+                    influential nonprofit where I implemented a CRM system and
+                    built webpages, newsletters, campaigns, event registrations,
+                    and more. This included all digital aspects of experience
+                    design across multiple touchpoints, within the marketing
+                    funnel, and throughout the customer lifecycle.
                 </p>
                 <p>
-                    After a few years of advising clients, I took a break and
-                    traveled the world, eventually moving to Bremen, Germany
-                    with my partner where I became an investor.
+                    Afterwards, I started a meetup group for content strategy,
+                    and helped the School of Visual Arts, a local nonprofit, and
+                    two manufacturers. Needing time to recharge, I travelled the
+                    world and in the last hostel on the road, I met my life
+                    partner. After weeks of phone calls and a few airline
+                    flights, I took a jump and moved to Bremen, Germany.
                 </p>
                 <p>
                     My itch for tech though would not rest. I casually learned
@@ -96,6 +98,14 @@ export default function About({ data, preview = false }) {
                     led me to my first client and to Dockyard Academy where I
                     learned to sharpen my operational and communication skills
                     to where I am today.
+                </p>
+                <p>
+                    With a passion for great products and happy customers,
+                    I&apos;m looking to help brands through marketing, creative
+                    development, and operations.
+                </p>
+                <p>
+                    Interested? <Link href="/contact">Let&apos;s talk</Link>.
                 </p>
             </article>
         </PageLayout>
