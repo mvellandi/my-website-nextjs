@@ -38,7 +38,7 @@ export default function Social({ type, pageType }) {
                 <li>
                     <Link
                         className={style[type].item}
-                        href="https://twitter.com/servusmario"
+                        href="https://twitter.com/triforcekid7"
                         target="_blank"
                     >
                         Twitter
