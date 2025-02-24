@@ -36,7 +36,7 @@ export default function About({ data, preview = false }) {
                     In my last two years of Uni, I focused on supply chain
                     management and logistics, doing an internship at an ocean
                     carrier in Germany where I booked containers and allotted
-                    vessel space, and another internship with a freight
+                    vessel space, followed by another internship with a freight
                     forwarder and customs broker. One of my favorite operations
                     books back then was <em>The Goal</em> by Eliyahu Goldratt,
                     which taught me that since profitability is a primary
@@ -49,21 +49,27 @@ export default function About({ data, preview = false }) {
                     corrective action leads to operational excellence.
                 </p>
                 <p>
-                    In retrospect, these formative experiences were incredibly
+                    In retrospect, these experiences and books were incredibly
                     valuable because they instilled systems thinking in me and
                     influenced how I prioritized work and searched for
                     productivity gains, particularly when working with multiple
-                    departments to deliver shared goals.
+                    departments to deliver shared goals. Secondly, it taught me
+                    that to make <b>ANY</b> product idea profitable, it first
+                    has to be operationally feasible. Through research and
+                    continuous improvement, reduced unit-costs and higher
+                    quality will -- given stable marketing costs -- yield more
+                    profitability with higher customer retention.
                 </p>
                 <p>
                     I then went on to do sales for a few home decor
                     manufacturers where I loved working with sales agents across
                     the country, creating custom products for retailers like
-                    Walgreens and Target, and pushing to adopt Salesforce as a
-                    CRM. But after a few years, something was missing. I really
-                    missed digital and wanted to give it a second go. So I found
-                    clients, made them websites with a partner, and helped them
-                    use social media to put their brand out there.
+                    Walgreens and Target, and convincing management to adopt
+                    Salesforce as a CRM. But after a few years, something was
+                    missing. I really missed digital and wanted to give it a
+                    second go. So I found clients, made them websites with a
+                    partner, and helped them use social media to put their brand
+                    out there.
                 </p>
                 <p>
                     A business media company then hired me as their community
@@ -75,13 +81,14 @@ export default function About({ data, preview = false }) {
                     ecosystem.
                 </p>
                 <p>
-                    But I needed new challenges and a fresh environment. So I
-                    moved to New York City and led the digital operations for an
-                    influential nonprofit where I implemented a CRM system and
+                    Needing new challenges and a fresh environment, I moved to
+                    New York City and led the digital operations for an
+                    influential nonprofit. Here I implemented a CRM system and
                     built webpages, newsletters, campaigns, event registrations,
-                    and more. This included all digital aspects of experience
-                    design across multiple touchpoints, within the marketing
-                    funnel, and throughout the customer lifecycle.
+                    and more for multiple stakeholders. This included all
+                    digital aspects of experience design across multiple
+                    touchpoints, within the marketing funnel, and throughout the
+                    customer lifecycle.
                 </p>
                 <p>
                     Afterwards, I started a meetup group for content strategy,
