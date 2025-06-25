@@ -10,14 +10,14 @@ export default function Nav({ className, toggleNav }) {
                     <Target>
                         <Link
                             href="/"
-                            className="target select-none font-brand text-[4.8rem] leading-[1] text-white drop-shadow before:-mt-[0.6rem]"
+                            className="select-none font-brand text-[4.8rem] leading-[1] text-white drop-shadow before:-mt-[0.6rem]"
                         >
                             Vellandi
                         </Link>
                     </Target>
                     <Target>
                         <button
-                            className="target block"
+                            className="block"
                             onClick={toggleNav}
                             aria-hidden
                         >
@@ -28,27 +28,27 @@ export default function Nav({ className, toggleNav }) {
                 </div>
                 <div className="flex flex-col gap-32 text-[3.6rem] font-semibold tracking-1">
                     <Target>
-                        <Link href="/" className="target">
+                        <Link href="/">
                             Projects
                         </Link>
                     </Target>
                     <Target>
-                        <Link href="/articles" className="target">
+                        <Link href="/articles">
                             Media
                         </Link>
                     </Target>
                     <Target>
-                        <Link href="/demo" className="target">
+                        <Link href="/demo">
                             Demo
                         </Link>
                     </Target>
                     <Target>
-                        <Link href="/about" className="target">
+                        <Link href="/about">
                             About Me
                         </Link>
                     </Target>
                     <Target>
-                        <Link href="/contact" className="target">
+                        <Link href="/contact">
                             Contact
                         </Link>
                     </Target>

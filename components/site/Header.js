@@ -14,7 +14,7 @@ export default function Header({ type, page }) {
     let headerContentStyle = `relative flex justify-between items-center w-full ${headerContentWidthStyle[type]} sm:items-end`
     let navMenuStyle = 'sr-only sm:not-sr-only sm:flex'
     let navLinkStyle =
-        'target leading-none select-none text-[2rem] before:-mt-[1.2rem] md:text-[2.4rem] md:before:-mt-[1.3rem]'
+        'leading-none select-none text-[2rem] before:-mt-[1.2rem] md:text-[2.4rem] md:before:-mt-[1.3rem]'
     let logoStyle = 'pt-6'
 
     if (pageTypeCheck(type, ['project'])) {
@@ -105,7 +105,7 @@ function FullHeader({ props }) {
                     <Target className={props.logoStyle}>
                         <Link
                             href="/"
-                            className="target select-none font-brand text-[3.6rem] leading-[1] text-white drop-shadow before:-mt-[0.6rem] md:text-[4.8rem]"
+                            className="select-none font-brand text-[3.6rem] leading-[1] text-white drop-shadow before:-mt-[0.6rem] md:text-[4.8rem]"
                         >
                             Vellandi
                         </Link>
@@ -117,7 +117,7 @@ function FullHeader({ props }) {
                         <HTMLComment text="MOBILE: BUTTON TO OPEN NAV DRAWER" />
                         <Target>
                             <button
-                                className={`target btn btn-sm btn-primary-bright sm:hidden ${
+                                className={`btn btn-sm btn-primary-bright sm:hidden ${
                                     props.navOpen ? 'hidden' : ''
                                 }`}
                                 onClick={props.toggleNav}

@@ -1,19 +1,30 @@
 @layer components {
-  /* MINIMUM TARGET SIZING */
-  .target::before {
-    content: "";
-    position: absolute;
-    z-index: 1;
-    width: 100%;
+  /* MINIMUM TARGET SIZING - Applied to Target component wrapper */
+  .target-wrapper {
     min-width: 4.8rem;
-    height: 100%;
     min-height: 4.8rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* Ensure child elements fill the target area for better clickability */
+  /* BUT respect existing button classes which already have proper sizing */
+  .target-wrapper > *:not(.btn) {
+    min-width: 4.8rem;
+    min-height: 4.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* For buttons, just ensure they're centered but keep their size */
+  .target-wrapper > .btn {
+    /* Let buttons keep their natural size, just center them in the touch area */
   }
 
   /* TARGET VIEW TESTING */
-  /* button::before, 
-  a::before {
-    z-index: -1;
+  /* .target-wrapper {
     background-color: aqua;
     opacity: 0.4;
   } */

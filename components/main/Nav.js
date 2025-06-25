@@ -53,9 +53,11 @@ const NavItem = ({ section }) => {
         // Active section: non-clickable h1 with selected styling
         return (
             <div key={title} className={`order-${navOrder}`}>
-                <h1 className={cn(baseStyle, 'btn-primary-selected')}>
-                    {title}
-                </h1>
+                <Target>
+                    <h1 className={cn(baseStyle, 'btn-primary-selected')}>
+                        {title}
+                    </h1>
+                </Target>
             </div>
         )
     }
@@ -68,7 +70,7 @@ const NavItem = ({ section }) => {
                 <Link
                     href={route}
                     aria-hidden
-                    className={cn(baseStyle, 'target btn-secondary')}
+                    className={cn(baseStyle, 'btn-secondary')}
                 >
                     {title}
                 </Link>
