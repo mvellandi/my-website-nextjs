@@ -3,8 +3,6 @@ import MainLayout from '/components/main/Layout'
 import Items from '/components/main/Items'
 import { getAllProjectCards } from '/lib/project'
 
-// TODO: Change the layout to list all section items, in 3 separate lists
-
 export default function Home({ data, preview }) {
     let meta = {
         title: 'Mario Vellandi: Software Engineer and Product Developer for Elixir, JS, and CSS',

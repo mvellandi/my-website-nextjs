@@ -1,28 +1,17 @@
-import Meta from "/components/site/Meta";
-import MainLayout from "/components/main/Layout";
-import Items from "/components/main/Items";
-import { getAllProjectCards } from "/lib/project";
+import { useEffect } from 'react'
+import { useRouter } from 'next/router'
 
-// TODO: Change the layout to list all section items, in 3 separate lists
-
-export default function Projects({ data, preview }) {
-  return (
-    <>
-      <Meta data={null} />
-      <MainLayout preview={preview} data={data}>
-        <Items as="main" data={data} />
-      </MainLayout>
-    </>
-  );
+// Redirect page for /projects to maintain backward compatibility
+// This handles any existing bookmarks or inbound links to /projects
+export default function ProjectsRedirect() {
+    const router = useRouter()
+    
+    useEffect(() => {
+        router.replace('/')
+    }, [router])
+    
+    // Return null while redirecting
+    return null
 }
 
-export async function getStaticProps({ preview = false }) {
-  const data = await getAllProjectCards({ preview });
-  return {
-    props: {
-      data,
-      preview,
-    },
-    revalidate: 1,
-  };
-}
+// No getStaticProps needed since this is just a redirect

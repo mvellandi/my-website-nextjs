@@ -28,7 +28,7 @@ export default function Nav({ className, toggleNav }) {
                 </div>
                 <div className="flex flex-col gap-32 text-[3.6rem] font-semibold tracking-1">
                     <Target>
-                        <Link href="/projects" className="target">
+                        <Link href="/" className="target">
                             Projects
                         </Link>
                     </Target>
