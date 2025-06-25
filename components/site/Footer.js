@@ -1,36 +1,9 @@
-import cn from 'classnames'
-import Link from 'next/link'
-import { elementContentWidthStyle as footerContentWidthStyle } from '/components/site/constants'
+import { pageTypeCheck, getFooterContentStyle } from '/components/site/constants'
 import HTMLComment from 'react-html-comment'
 import Social from '../site/Social'
 
-const pageTypeCheck = (type, list) => {
-    return list.includes(type)
-}
-
 export default function Footer({ type }) {
-    let footerContentStyle = 'w-full site-padding-x text-white'
-
-    if (pageTypeCheck(type, ['main'])) {
-        footerContentStyle = cn(
-            footerContentStyle,
-            footerContentWidthStyle.main
-        )
-    }
-
-    if (pageTypeCheck(type, ['project'])) {
-        footerContentStyle = cn(
-            footerContentStyle,
-            footerContentWidthStyle.project
-        )
-    }
-
-    if (pageTypeCheck(type, ['article', 'page'])) {
-        footerContentStyle = cn(
-            footerContentStyle,
-            footerContentWidthStyle.article
-        )
-    }
+    const footerContentStyle = getFooterContentStyle(type)
 
     return (
         <>

@@ -1,34 +1,21 @@
 import cn from 'classnames'
 import Link from 'next/link'
 import Target from '/components/elements/Target'
-import { elementContentWidthStyle as headerContentWidthStyle } from '/components/site/constants'
+import {
+    elementContentWidthStyle as headerContentWidthStyle,
+    pageTypeCheck,
+    getNavMenuStyle,
+    navLinkStyle,
+} from '/components/site/constants'
 import Nav from '/components/site/Nav'
 import { useState } from 'react'
 import HTMLComment from 'react-html-comment'
 
-const pageTypeCheck = (type, list) => {
-    return list.includes(type)
-}
-
 export default function Header({ type, page }) {
     let headerContentStyle = `relative flex justify-between items-center w-full ${headerContentWidthStyle[type]} sm:items-end`
-    let navMenuStyle = 'sr-only sm:not-sr-only sm:flex'
-    let navLinkStyle =
-        'leading-none select-none text-[2rem] before:-mt-[1.2rem] md:text-[2.4rem] md:before:-mt-[1.3rem]'
     let logoStyle = 'pt-6'
 
-    if (pageTypeCheck(type, ['project'])) {
-        navMenuStyle = cn(
-            navMenuStyle,
-            'sm:gap-36 md:gap-52 lg:gap-64 xl:gap-[7.2rem] 2xl:gap-[8.8rem]'
-        )
-    }
-    if (pageTypeCheck(type, ['article', 'page'])) {
-        navMenuStyle = cn(
-            navMenuStyle,
-            'gap-24 sm:gap-[30px] md:gap-40 lg:gap-64'
-        )
-    }
+    const navMenuStyle = getNavMenuStyle(type)
 
     const [navOpen, setNav] = useState(false)
 
@@ -138,7 +125,7 @@ function FullHeader({ props }) {
                                         <Target>
                                             <Link
                                                 href="/"
-                                                className={props.navLinkStyle}
+                                                className={navLinkStyle}
                                             >
                                                 Projects
                                             </Link>
@@ -148,7 +135,7 @@ function FullHeader({ props }) {
                                         <Target>
                                             <Link
                                                 href="/articles"
-                                                className={props.navLinkStyle}
+                                                className={navLinkStyle}
                                             >
                                                 Media
                                             </Link>
@@ -159,7 +146,7 @@ function FullHeader({ props }) {
                                         <Link
                                             href="/demo"
                                             className={cn(
-                                                props.navLinkStyle,
+                                                navLinkStyle,
                                                 'before:-ml-4 md:before:ml-0'
                                             )}
                                         >
@@ -170,7 +157,7 @@ function FullHeader({ props }) {
                                         <Target>
                                             <Link
                                                 href="/about"
-                                                className={props.navLinkStyle}
+                                                className={navLinkStyle}
                                             >
                                                 About Me
                                             </Link>
@@ -180,7 +167,7 @@ function FullHeader({ props }) {
                                         <Target>
                                             <Link
                                                 href="/contact"
-                                                className={props.navLinkStyle}
+                                                className={navLinkStyle}
                                             >
                                                 Contact
                                             </Link>

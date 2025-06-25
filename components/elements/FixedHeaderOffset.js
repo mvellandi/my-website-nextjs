@@ -1,9 +1,5 @@
-import { navHeightStyle as sectionNav } from "/components/section/Nav";
+import { navHeightStyle, pageTypeCheck } from "/components/site/constants";
 import HTMLComment from "react-html-comment";
-
-const pageTypeCheck = (type, list) => {
-  return list.includes(type);
-};
 
 export default function FixedHeaderOffset({ type }) {
   return (
@@ -14,7 +10,7 @@ export default function FixedHeaderOffset({ type }) {
         <div className="full_header_offset"></div>
         <HTMLComment text="PROJECT/SECTION NAV" />
         {pageTypeCheck(type, ["project", "article"]) && (
-          <div className={`${sectionNav.base}`}></div>
+          <div className={`${navHeightStyle.base}`}></div>
         )}
       </div>
     </>
