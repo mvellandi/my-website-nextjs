@@ -1,5 +1,5 @@
 const item = {
-    image: 'mario-portrait-fall-200.jpg',
+    image: 'test-square.jpg',
     imageAlt: 'Adventure Snack logo',
     heading: 'Adventure Snack',
     subheading: 'Story page design for an interactive fiction publication',
@@ -7,7 +7,7 @@ const item = {
 }
 
 const article = {
-    image: 'mario-portrait-fall-200.jpg',
+    image: 'test-square.jpg',
     imageAlt: 'photo of Mario Vellandi',
     heading: 'Headline Elixirem Tailwinda Beer Sanity',
     subheading: '',
