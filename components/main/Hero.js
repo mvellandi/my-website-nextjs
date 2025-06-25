@@ -1,8 +1,10 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import portrait from '/public/mario-portrait-fall-225.jpg'
 import HTMLComment from 'react-html-comment'
 import Social from '../site/Social'
+import { urlForImage } from '/lib/sanity'
+
+const portraitImageRef = 'image-71d8cc18df547fbc9fbf3606d46b980ec44aa4f1-225x225-jpg'
 
 const imageStyle = {
     borderRadius: '9999px',
@@ -44,7 +46,9 @@ export default function Hero({ as }) {
                 <HTMLComment text="HERO IMAGE" />
                 <div className="w-full max-w-[170px] md:max-w-[210px] md:pr-24 lgtall:max-w-[215px] 2k:max-w-[215px]">
                     <Image
-                        src={portrait}
+                        src={urlForImage(portraitImageRef).url()}
+                        width={225}
+                        height={225}
                         style={imageStyle}
                         alt="photo: mario vellandi"
                     />
