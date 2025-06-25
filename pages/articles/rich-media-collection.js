@@ -6,6 +6,7 @@ import Details from '/components/elements/Details'
 import { useState } from 'react'
 import Script from 'next/script'
 import { infographics } from '/data/media'
+import { urlForImage } from '/lib/sanity'
 
 export default function WritingCollection({ nav, preview = false }) {
     const [lightboxController, setLightboxController] = useState({
@@ -18,6 +19,14 @@ export default function WritingCollection({ nav, preview = false }) {
             toggler: !lightboxController.toggler,
             slide: number,
         })
+    }
+
+    function getImageSrc(item) {
+        if (item.isCMSImage) {
+            const imageRef = item.coverImage || item.src
+            return urlForImage(imageRef).url()
+        }
+        return item.src || item.coverImage
     }
 
     return (
@@ -98,25 +107,25 @@ export default function WritingCollection({ nav, preview = false }) {
                         </a>
                     </p>
                     <div className="mt-16 grid grid-cols-2 items-start gap-28 pb-8 pt-4 sm:grid-cols-3 md:grid-cols-4">
-                        {infographics.map(({ title, src }, n) => (
+                        {infographics.map((item, n) => (
                             <div
                                 key={n}
                                 onClick={() => openLightboxOnSlide(n + 1)}
                                 className="h-[120px] w-[150px] cursor-pointer overflow-hidden rounded-xl border-2 border-[#d4e3fd] shadow-md"
                                 style={{
-                                    backgroundImage: `url(${src})`,
+                                    backgroundImage: `url(${getImageSrc(item)})`,
                                     backgroundPosition: 'left top',
                                     backgroundSize: 'cover',
                                     backgroundRepeat: 'no-repeat',
                                 }}
-                                aria-label={title}
+                                aria-label={item.title}
                                 role="img"
                             />
                         ))}
                     </div>
                     <FsLightbox
                         toggler={lightboxController.toggler}
-                        sources={infographics.map(({ title, src }) => src)}
+                        sources={infographics.map((item) => getImageSrc(item))}
                         slide={lightboxController.slide}
                     />
                 </Details>
