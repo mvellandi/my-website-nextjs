@@ -1,24 +1,9 @@
-// import { useEffect, useState } from 'react'
-// import dynamic from 'next/dynamic'
 import SectionLayout from '/components/section/Layout'
 import Link from 'next/link'
 import { getArticleAndNavData } from '/lib/article'
 import Details from '/components/elements/Details'
 
-// const DynamicAccordion = dynamic(
-//     () => import('/components/elements/DynamicAccordion'),
-//     {
-//         ssr: false,
-//     }
-// )
-
 export default function WritingCollection({ nav, preview = false }) {
-    // const [isMounted, setIsMounted] = useState(false)
-
-    // useEffect(() => {
-    //     setIsMounted(true)
-    // }, [])
-
     return (
         <SectionLayout type="article" nav={nav}>
             <>
@@ -458,10 +443,5 @@ export async function getStaticProps({ preview = false }) {
         preview,
     })
 
-    return {
-        props: {
-            nav: data.nav,
-            preview,
-        },
-    }
+    return { props: { nav: data.nav, preview } }
 }
