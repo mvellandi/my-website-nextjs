@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-This is a Next.js 15 portfolio website integrated with Sanity CMS v3 for Mario Vellandi. The site showcases articles, projects, and demos using a dynamic content management system.
+This is a Next.js 15 portfolio website integrated with Sanity CMS v3 for Mario Vellandi. The site showcases articles, projects, and demos using a dynamic content management system. The codebase has been recently modernized with centralized styling, consolidated routing, and full Sanity CDN migration.
 
 ## Development Commands
 
@@ -41,17 +41,36 @@ npm run lint
 - **Hybrid Approach**: Tailwind CSS + Styled Components + custom CSS files
 - **Custom Configuration**: Extensive Tailwind config with custom breakpoints, colors, and typography
 - **Component-based CSS**: Styles organized in `/styles/components/`, `/styles/pages/`, `/styles/site/`
+- **Centralized Style Coordination**: `components/site/constants.js` provides centralized styling system for consistent responsive behavior across components
 
-### Dynamic Routing
+### Dynamic Routing (Recently Consolidated)
+- **Unified Page System**: `pages/[type].js` handles all content type listing pages (articles, demo)
 - **Content Types**: Configured in `lib/contentTypes.js` with metadata, data fetchers, and routes
-- **Page Generation**: `pages/[type].js` handles content type listing pages
+- **Centralized API**: All data fetching consolidated through `lib/contentBase.js` with type-specific modules
 - **Item Pages**: `pages/[type]/[slug].js` for individual content items
 - **Static Generation**: Uses ISR (Incremental Static Regeneration)
+- **Legacy Pages**: Individual pages (articles.js, demo.js) have been consolidated into the dynamic system
 
 ### Environment Variables Required
 - `NEXT_PUBLIC_SANITY_PROJECT_ID`: Sanity project ID
 - `NEXT_PUBLIC_SANITY_DATASET`: Sanity dataset (defaults to 'production')
 - `SANITY_API_TOKEN`: For preview functionality
+
+## Recent Architectural Improvements
+
+This branch includes significant modernization and consolidation efforts:
+
+### Dependencies & Framework
+- **Next.js 15.3.4**: Upgraded from previous version with React 19.1.0
+
+### Code Consolidation & Refactoring
+- **Target Component**: Refactored to be sole responsibility for touch target sizing and consistent wrapper patterns
+- **Navigation Simplification**: Removed complexity from main navigation component with error handling improvements
+
+### Performance & Organization
+- **API Consolidation**: Centralized data fetching patterns across all content types
+- **Route Unification**: Consolidated individual page types into dynamic routing system
+- **Static Asset Migration**: Moved all images to CDN for better performance and management
 
 ## Key Patterns
 
@@ -65,8 +84,26 @@ npm run lint
 - Feature-specific components organized by content type
 - Site-wide components in `/components/site/`
 
+### Centralized Styling System
+- **`components/site/constants.js`** is the single source of truth for:
+  - Content width styles by page type (`elementContentWidthStyle`)
+  - Navigation heights, gaps, and responsive breakpoints
+  - Page type checking utility (`pageTypeCheck`)
+  - Style generator functions (`getNavMenuStyle`, `getFooterContentStyle`)
+- **All layout components** import from constants for consistency
+- **Page-type-specific styling** is coordinated across Header, Nav, Footer, and FixedHeaderOffset components
+
 ### Styling Conventions
 - Use Tailwind utilities first
+- Import responsive styles from `components/site/constants.js` for layout components
 - Custom CSS in appropriate `/styles/` subdirectory
 - Styled Components for complex component-specific styling
 - 4-space indentation, single quotes, no semicolons (Prettier config)
+
+### Image Handling (Recently Migrated to Sanity CDN)
+- **Full CDN Migration**: All static images have been moved from `/public/images/` to Sanity CDN
+- **Sanity CDN Images**: Use `urlForImage(imageRef).url()` from `/lib/sanity` for CMS images
+- **Conditional Image Sources**: Check `isCMSImage` flag to determine whether to resolve via Sanity or use direct URLs
+- **Pattern**: `isCMSImage ? urlForImage(coverImage).url() : coverImage`
+- **Data Updates**: `data/media.js` and `data/articles.js` updated with Sanity image references
+- **Component Updates**: Hero component and rich-media collection updated to use CDN images
