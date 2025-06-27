@@ -5,7 +5,8 @@ import Social from '../site/Social'
 import { urlForImage } from '../../lib/sanity'
 import type { ElementType, CSSProperties } from 'react'
 
-const portraitImageRef = 'image-71d8cc18df547fbc9fbf3606d46b980ec44aa4f1-225x225-jpg'
+const portraitImageRef =
+    'image-56fef097c41d648112e1f5d1393f7844ab7c8d30-500x500-webp'
 
 const imageStyle: CSSProperties = {
     borderRadius: '9999px',
@@ -14,7 +15,7 @@ const imageStyle: CSSProperties = {
 }
 
 interface HeroProps {
-    as?: ElementType;
+    as?: ElementType
 }
 
 export default function Hero({ as }: HeroProps) {

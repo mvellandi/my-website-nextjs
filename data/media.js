@@ -2,73 +2,73 @@ export const infographics = [
     {
         title: 'Word of Mouth Marketing Visualized',
         coverImage:
-            'image-5ba24dd8545f07832bde813ec7c97b8bed01d2ce-1248x1079-jpg',
+            'image-5afded44606cf39d145314a2d78fceb368130690-1248x1079-webp',
         isCMSImage: true,
     },
     {
         title: 'Himmel User Flow',
         coverImage:
-            'image-9e2392cdca51722f915ea7eef1b59993164aef12-1892x1738-jpg',
+            'image-69795f04e38b11a5800057064034e116f4fa48f5-1892x1738-webp',
         isCMSImage: true,
     },
     {
         title: 'Greater Than Yourself',
         coverImage:
-            'image-a61ada0c45c895acc95093a057a5447a04241bfe-500x400-jpg',
+            'image-e5ade684878f4825954b905f5b226320133a5b2c-500x400-webp',
         isCMSImage: true,
     },
     {
         title: 'Janesberry Author Node',
         coverImage:
-            'image-b478a0530c09ee68902dd7acf17e155e9f0ead75-2640x1544-jpg',
+            'image-02ddd5bd68fa5117ace22ea6c3788faaa7837a95-2640x1544-webp',
         isCMSImage: true,
     },
     {
         title: 'UX Honeycomb',
         coverImage:
-            'image-0dd2f60681770062a9121d989f9c47a3cc64e0e7-500x550-jpg',
+            'image-51c9bb587b650a33f3e15cf8cfabf9d88eb6dbcc-500x550-webp',
         isCMSImage: true,
     },
     {
         title: 'Design Thinking Ladder',
         coverImage:
-            'image-1af44201c917734b74dcfcfdba8e7dc541ba55dd-500x500-jpg',
+            'image-686fd56497b64a668a85b35ce2d62140a42f171d-500x500-webp',
         isCMSImage: true,
     },
     {
         title: 'Green Marketing Pie',
         coverImage:
-            'image-8a0513b8ffdde65b7275df8ccd58471e1ed47d85-500x597-jpg',
+            'image-2457acab8a019d786ab6db134918f26fa14db965-500x597-webp',
         isCMSImage: true,
     },
     {
         title: 'Janesberry Short Term Goals',
         coverImage:
-            'image-19dfa33588892c7041df31ab45122a928b0ac30f-1964x1212-jpg',
+            'image-04e258feb6877a8686021eb05b697b54f04918f4-1964x1212-webp',
         isCMSImage: true,
     },
     {
         title: 'Think, Concept, Build',
         coverImage:
-            'image-a3980be9ebba743b9ac7217f6d2f1591fba140bd-550x475-jpg',
+            'image-fab6972f0f61405039248817937cad70011f8f7f-550x475-webp',
         isCMSImage: true,
     },
     {
         title: 'Stage Gate',
         coverImage:
-            'image-9f9e590a148925f93876484f7901288f6dead268-500x269-jpg',
+            'image-16503063ec2004e9fe81976f90ee39a792fc0778-500x269-webp',
         isCMSImage: true,
     },
     {
         title: 'Tao of Communications',
         coverImage:
-            'image-1d7821ce0868d62aaf516d7a81f8af77b04f7ad3-500x275-jpg',
+            'image-826ce9413d7b192a684ded1bddc2838e407edc88-500x275-webp',
         isCMSImage: true,
     },
     {
         title: 'Innovator Traits',
         coverImage:
-            'image-f10a8fafb9e224dd7e70f32e575abc610c67becf-500x700-jpg',
+            'image-e8938661ab19b533a61d13e9592b207a8d1c99f4-500x700-webp',
         isCMSImage: true,
     },
 ]

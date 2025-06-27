@@ -6,18 +6,20 @@
 
 export const firstArticles = [
     {
-        isCMSImage: true,  // Now using Sanity CDN
+        isCMSImage: true, // Now using Sanity CDN
         _id: '14528482166013190',
         slug: 'writing-collection',
-        coverImage: 'image-73e2fc62705846524ee55c2f86482c41f277d091-500x500-jpg',
+        coverImage:
+            'image-f3a9274ae5a7de99bc81211e83bd006c824b92ed-500x500-webp',
         title: 'Written Works',
         subtitle: 'Journalism, interviews, and copywriting, oh my!',
     },
     {
-        isCMSImage: true,  // Now using Sanity CDN
+        isCMSImage: true, // Now using Sanity CDN
         _id: '14528482166013191',
         slug: 'rich-media-collection',
-        coverImage: 'image-6412cb7f53cd387c5b92f963b0b0d302287792c6-500x500-jpg',
+        coverImage:
+            'image-eb7f12585b4bd51e319add0adb092d95312277eb-500x500-webp',
         title: 'Rich Media Collection',
         subtitle: 'Videos, audio, infographics, and multimedia',
     },
@@ -25,10 +27,11 @@ export const firstArticles = [
 
 export const lastArticles = [
     {
-        isCMSImage: true,  // Now using Sanity CDN
+        isCMSImage: true, // Now using Sanity CDN
         _id: '14528482166013192',
         url: 'https://old-journal.vellandi.net',
-        coverImage: 'image-a12cbcb37e5c176e1bc47c242e205a4c3e432cd7-123x123-svg',
+        coverImage:
+            'image-a12cbcb37e5c176e1bc47c242e205a4c3e432cd7-123x123-svg',
         title: 'Blog Archive 2006-2016',
         subtitle:
             '618 posts on marketing, design, product development, and sustainability',
