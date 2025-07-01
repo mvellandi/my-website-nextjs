@@ -1,22 +1,22 @@
 @layer utilities {
-  /* GLOBAL */
-  .cta {
-    display: inline-block;
-    padding-bottom: 4px;
-    border-bottom: 4px solid #ffb54d;
-    filter: drop-shadow(0 6px 6px rgb(0 0 0 / 0.08))
-      drop-shadow(0 3px 2px rgb(0 0 0 / 0.1));
-  }
+    /* GLOBAL */
+    .cta {
+        display: inline-block;
+        padding-bottom: 4px;
+        border-bottom: 4px solid #ffb54d;
+        filter: drop-shadow(0 6px 6px rgb(0 0 0 / 0.08))
+            drop-shadow(0 3px 2px rgb(0 0 0 / 0.1));
+    }
 
-  /* CONTACT PAGE */
-  .obfuscate {
-    unicode-bidi: bidi-override;
-    direction: rtl;
-    font-weight: 600;
-  }
+    /* CONTACT PAGE */
+    .obfuscate {
+        unicode-bidi: bidi-override;
+        direction: rtl;
+        font-weight: 600;
+    }
 
-  /* DEV UTILS */
-  .bord-blue * {
-    border: 1px solid blue;
-  }
+    /* DEV UTILS */
+    .bord-blue * {
+        border: 1px solid blue;
+    }
 }

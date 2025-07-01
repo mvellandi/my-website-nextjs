@@ -1,30 +1,30 @@
 @layer components {
-  /* MINIMUM TARGET SIZING - Applied to Target component wrapper */
-  .target-wrapper {
-    min-width: 4.8rem;
-    min-height: 4.8rem;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-  }
+    /* MINIMUM TARGET SIZING - Applied to Target component wrapper */
+    .target-wrapper {
+        min-width: 3rem;
+        min-height: 3rem;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+    }
 
-  /* Ensure child elements fill the target area for better clickability */
-  /* BUT respect existing button classes which already have proper sizing */
-  .target-wrapper > *:not(.btn) {
-    min-width: 4.8rem;
-    min-height: 4.8rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
+    /* Ensure child elements fill the target area for better clickability */
+    /* BUT respect existing button classes which already have proper sizing */
+    .target-wrapper > *:not(.btn) {
+        min-width: 3rem;
+        min-height: 3rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
 
-  /* For buttons, just ensure they're centered but keep their size */
-  .target-wrapper > .btn {
-    /* Let buttons keep their natural size, just center them in the touch area */
-  }
+    /* For buttons, just ensure they're centered but keep their size */
+    .target-wrapper > .btn {
+        /* Let buttons keep their natural size, just center them in the touch area */
+    }
 
-  /* TARGET VIEW TESTING */
-  /* .target-wrapper {
+    /* TARGET VIEW TESTING */
+    /* .target-wrapper {
     background-color: aqua;
     opacity: 0.4;
   } */

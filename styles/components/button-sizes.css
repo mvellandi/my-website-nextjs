@@ -30,7 +30,7 @@
     .btn-sm-wide,
     .btn-sm-round,
     .btn-sm-wide-round {
-        @apply rounded-[9px] border-3 px-[9px] py-8 text-[1.8rem];
+        @apply rounded-[9px] border-3 px-[9px] py-8 text-[1.1rem];
     }
 
     .btn-sm-round,
@@ -42,16 +42,11 @@
         line-height: 1.22;
     }
 
-    .btn-sm-wide,
-    .btn-sm-wide-round {
-        @apply px-24;
-    }
-
     .btn-md,
     .btn-md-wide,
     .btn-md-round,
     .btn-md-wide-round {
-        @apply rounded-[11px] border-4 px-[11px] py-10 text-[2rem];
+        @apply rounded-[11px] border-3 px-[11px] py-8 text-[1.15rem];
     }
 
     .btn-md-round,
@@ -61,11 +56,6 @@
 
     .btn-md-multiline {
         line-height: 1.21;
-    }
-
-    .btn-md-wide,
-    .btn-md-wide-round {
-        @apply px-28;
     }
 
     .btn-lg,
@@ -100,11 +90,6 @@
         line-height: 1.22;
     }
 
-    .btn-xl-wide,
-    .btn-xl-wide-round {
-        @apply px-40;
-    }
-
     .btn-2xl,
     .btn-2xl-wide,
     .btn-2xl-round,
@@ -119,10 +104,5 @@
 
     .btn-2xl-multiline {
         line-height: 1.22;
-    }
-
-    .btn-2xl-wide,
-    .btn-2xl-wide-round {
-        @apply px-48;
     }
 }

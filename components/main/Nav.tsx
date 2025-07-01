@@ -4,11 +4,11 @@ import Target from '../elements/Target'
 import cn from 'classnames'
 
 interface Section {
-    name: string;
-    title: string;
-    route: string;
-    navOrder: number;
-    isActive: boolean;
+    name: string
+    title: string
+    route: string
+    navOrder: number
+    isActive: boolean
 }
 
 /**
@@ -27,7 +27,7 @@ const getRouteForSection = (section: any): string => {
  */
 const prepareSections = (active: string): Section[] => {
     const sections = Object.values(API)
-    
+
     return sections.map((section: any) => ({
         ...section,
         route: getRouteForSection(section),
@@ -37,17 +37,15 @@ const prepareSections = (active: string): Section[] => {
 
 /**
  * Order sections for semantic HTML structure:
- * - Inactive sections first (as navigation links)  
+ * - Inactive sections first (as navigation links)
  * - Active section last (as h1 for page hierarchy)
  */
 const orderSectionsForSemantics = (sections: Section[]): Section[] => {
-    const inactiveSections = sections.filter(section => !section.isActive)
-    const activeSection = sections.find(section => section.isActive)
-    
+    const inactiveSections = sections.filter((section) => !section.isActive)
+    const activeSection = sections.find((section) => section.isActive)
+
     // Return all sections with active section at the end for semantic hierarchy
-    return activeSection 
-        ? [...inactiveSections, activeSection]
-        : sections
+    return activeSection ? [...inactiveSections, activeSection] : sections
 }
 
 /**
@@ -55,8 +53,8 @@ const orderSectionsForSemantics = (sections: Section[]): Section[] => {
  */
 const NavItem = ({ section }: { section: Section }) => {
     const { title, route, navOrder, isActive } = section
-    const baseStyle = 'btn btn-sm-round sm:btn-md-wide-round'
-    
+    const baseStyle = 'btn btn-sm-round lg:btn-md-wide-round'
+
     if (isActive) {
         // Active section: non-clickable h1 with selected styling
         return (
@@ -69,7 +67,7 @@ const NavItem = ({ section }: { section: Section }) => {
             </div>
         )
     }
-    
+
     // Inactive section: clickable link with secondary styling
     // Hidden from screen readers as main navigation is in header
     return (
@@ -88,7 +86,7 @@ const NavItem = ({ section }: { section: Section }) => {
 }
 
 interface NavProps {
-    active: string;
+    active: string
 }
 
 export default function Nav({ active }: NavProps) {
@@ -97,22 +95,24 @@ export default function Nav({ active }: NavProps) {
         console.warn('Nav component: no active section provided')
         return null
     }
-    
+
     // Prepare sections with routing and active state
     const sections = prepareSections(active)
-    
+
     // Check if active section exists
-    const hasActiveSection = sections.some(section => section.isActive)
+    const hasActiveSection = sections.some((section) => section.isActive)
     if (!hasActiveSection) {
-        console.warn(`Nav component: active section "${active}" not found in API`)
+        console.warn(
+            `Nav component: active section "${active}" not found in API`
+        )
     }
-    
+
     // Order sections for semantic HTML structure
     const orderedSections = orderSectionsForSemantics(sections)
-    
+
     return (
         <nav className="nav-content sticky top-0 z-10 flex w-full justify-center border-b border-gray-400 bg-gray-25 lg:border-b-2">
-            <div className="flex w-full max-w-screen-lg justify-center gap-16 py-16 sm:gap-24 md:gap-36 md:py-16 lg:gap-36 xl:gap-48 2xl:gap-56 3xl:gap-64 2k:gap-[76px] 2k:py-24">
+            <div className="flex w-full max-w-screen-lg justify-center gap-16 py-8 sm:gap-24 md:gap-36 lg:gap-36 xl:gap-48 2xl:gap-56 3xl:gap-64 3xl:py-12">
                 {orderedSections.map((section) => (
                     <NavItem key={section.name} section={section} />
                 ))}

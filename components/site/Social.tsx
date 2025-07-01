@@ -1,31 +1,31 @@
 import Link from 'next/link'
 
 interface SocialProps {
-    type: 'hero' | 'footer';
-    pageType?: string;
+    type: 'hero' | 'footer'
+    pageType?: string
 }
 
 interface SocialStyle {
-    nav: string;
-    list: string;
-    item: string;
+    nav: string
+    list: string
+    item: string
 }
 
 interface SocialStyles {
-    hero: SocialStyle;
-    footer: SocialStyle;
+    hero: SocialStyle
+    footer: SocialStyle
 }
 
 export default function Social({ type, pageType }: SocialProps) {
     const style: SocialStyles = {
         hero: {
             nav: 'right-0 hidden lg:absolute lg:block',
-            list: 'flex flex-col gap-24 text-[2.1rem] font-semibold tracking-wide leading-none',
-            item: 'cta',
+            list: 'flex flex-col pt-8 gap-24 text-[1.15rem] -mr-16 font-semibold tracking-wide leading-none text-right 3xl:text-[1.4rem] 2k3:text-[1.25rem] 2k3:pt-16',
+            item: 'cta text-right',
         },
         footer: {
-            nav: `flex justify-center w-full py-24 text-white text-lg bg-gray-700 ${pageType === 'main' && 'lg:hidden'}`,
-            list: 'flex flex-row gap-36',
+            nav: `flex justify-center w-full py-16 text-white text-lg bg-gray-700 leading-[0.9] ${pageType === 'main' && 'lg:hidden'}`,
+            list: 'flex flex-row gap-40 md:gap-56',
             item: 'cta',
         },
     }
