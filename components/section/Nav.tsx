@@ -1,23 +1,23 @@
 import cn from 'classnames'
 import Link from 'next/link'
 import { RiArrowLeftSLine } from 'react-icons/ri'
-import { 
+import {
     elementContentWidthStyle as navContentWidthStyle,
     navHeightStyle,
-    shadowStyle
+    shadowStyle,
 } from '../site/constants'
 import HTMLComment from 'react-html-comment'
 import type { ElementType } from 'react'
 
 interface SectionNavProps {
-    place: 'top' | 'bottom';
-    as?: ElementType;
-    title: string;
-    type: string;
-    prev?: string;
-    next?: string;
-    path: string;
-    'aria-label'?: string;
+    place: 'top' | 'bottom'
+    as?: ElementType
+    title: string
+    type: string
+    prev?: string
+    next?: string
+    path: string
+    'aria-label'?: string
 }
 
 export default function SectionNav({
@@ -55,7 +55,7 @@ export default function SectionNav({
                 <div className={navContentStyle}>
                     <Link
                         href={sectionHomeRoute}
-                        className="-ml-16 text-[22px] font-medium text-gray-700 lg:-ml-28 lg:text-2xl"
+                        className="-ml-16 text-[1.5rem] font-medium text-gray-700 md:text-[1.7rem] lg:-ml-28 lg:text-2xl"
                     >
                         <RiArrowLeftSLine
                             className="-mr-[2px] mb-4 inline"

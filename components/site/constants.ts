@@ -30,7 +30,7 @@ export const navMenuGapStyle: NavMenuStyles = {
 }
 
 // Navigation link styles
-export const navLinkStyle = 'leading-none select-none text-[1.25rem] before:-mt-12 md:text-[1.5rem] md:before:-mt-[13px]'
+export const navLinkStyle = 'leading-none select-none text-[1.25rem] before:-mt-12 md:text-[1.5rem] md:before:-mt-[13px] pt-16'
 
 // Shadow styles
 export const shadowStyle: StyleConfig = {

@@ -166,7 +166,6 @@ function FullHeader({ props }: FullHeaderProps) {
                                             </Link>
                                         </Target>
                                     )}
-                                    {/* reposition click target's x-position, as 'play' is a short word  */}
                                     <Target>
                                         <Link
                                             href="/demo"

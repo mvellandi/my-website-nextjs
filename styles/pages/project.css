@@ -18,7 +18,7 @@
             }
             ul,
             ol {
-                @apply mb-[20px] ml-24 flex list-outside flex-col gap-16 leading-[1.15] md:gap-16;
+                @apply mb-[20px] ml-24 flex list-outside flex-col gap-16 leading-[1.15] sm:leading-[1.2] md:gap-16;
             }
             ul {
                 @apply list-disc;
