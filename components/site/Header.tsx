@@ -13,28 +13,28 @@ import HTMLComment from 'react-html-comment'
 import type { MouseEvent } from 'react'
 
 interface HeaderProps {
-    type: string;
-    page?: string;
+    type: string
+    page?: string
 }
 
 interface SideNavBackgroundProps {
-    navOpen: boolean;
-    toggleNav: (event: MouseEvent) => void;
+    navOpen: boolean
+    toggleNav: (event: MouseEvent) => void
 }
 
 interface HeaderComponentProps {
-    navOpen: boolean;
-    toggleNav: (event: MouseEvent) => void;
-    type: string;
-    page?: string;
-    logoStyle: string;
-    headerContentStyle: string;
-    navMenuStyle: string;
-    navLinkStyle: string;
+    navOpen: boolean
+    toggleNav: (event: MouseEvent) => void
+    type: string
+    page?: string
+    logoStyle: string
+    headerContentStyle: string
+    navMenuStyle: string
+    navLinkStyle: string
 }
 
 interface FullHeaderProps {
-    props: HeaderComponentProps;
+    props: HeaderComponentProps
 }
 
 export default function Header({ type, page }: HeaderProps) {
@@ -70,7 +70,7 @@ export default function Header({ type, page }: HeaderProps) {
                 } transition duration-200 ease-in-out`}
                 toggleNav={toggleNav}
             />
-            <div id="pagetop" className="h-0 scroll-mt-[12rem]">
+            <div id="pagetop" className="h-0 scroll-mt-[7.5rem]">
                 {' '}
             </div>
             {!pageTypeCheck(type, ['main']) ? (
@@ -80,7 +80,7 @@ export default function Header({ type, page }: HeaderProps) {
                         toggleNav={toggleNav}
                     />
                     <FullHeader props={props} />
-                    <div id="pagetop" className="h-0 scroll-mt-[12rem]">
+                    <div id="pagetop" className="h-0 scroll-mt-[7.5rem]">
                         {' '}
                     </div>
                 </>
@@ -117,7 +117,7 @@ function FullHeader({ props }: FullHeaderProps) {
                     <Target className={props.logoStyle}>
                         <Link
                             href="/"
-                            className="select-none font-brand text-[3.6rem] leading-[1] text-white drop-shadow before:-mt-[0.6rem] md:text-[4.8rem]"
+                            className="select-none font-brand text-[2.25rem] leading-[1] text-white drop-shadow before:-mt-6 md:text-[3rem]"
                         >
                             Vellandi
                         </Link>

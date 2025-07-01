@@ -4,9 +4,9 @@ import { MdClose } from 'react-icons/md'
 import type { MouseEvent } from 'react'
 
 interface NavProps {
-    className?: string;
-    toggleNav: (event: MouseEvent) => void;
-    'aria-label'?: string;
+    className?: string
+    toggleNav: (event: MouseEvent) => void
+    'aria-label'?: string
 }
 
 export default function Nav({ className, toggleNav, ...ariaProps }: NavProps) {
@@ -17,7 +17,7 @@ export default function Nav({ className, toggleNav, ...ariaProps }: NavProps) {
                     <Target>
                         <Link
                             href="/"
-                            className="select-none font-brand text-[4.8rem] leading-[1] text-white drop-shadow before:-mt-[0.6rem]"
+                            className="select-none font-brand text-[3rem] leading-[1] text-white drop-shadow before:-mt-[0.6rem]"
                         >
                             Vellandi
                         </Link>
@@ -33,31 +33,21 @@ export default function Nav({ className, toggleNav, ...ariaProps }: NavProps) {
                         </button>
                     </Target>
                 </div>
-                <div className="flex flex-col gap-32 text-[3.6rem] font-semibold tracking-1">
+                <div className="flex flex-col gap-32 text-[2.25rem] font-semibold tracking-1">
                     <Target>
-                        <Link href="/">
-                            Projects
-                        </Link>
+                        <Link href="/">Projects</Link>
                     </Target>
                     <Target>
-                        <Link href="/articles">
-                            Media
-                        </Link>
+                        <Link href="/articles">Media</Link>
                     </Target>
                     <Target>
-                        <Link href="/demo">
-                            Demo
-                        </Link>
+                        <Link href="/demo">Demo</Link>
                     </Target>
                     <Target>
-                        <Link href="/about">
-                            About Me
-                        </Link>
+                        <Link href="/about">About Me</Link>
                     </Target>
                     <Target>
-                        <Link href="/contact">
-                            Contact
-                        </Link>
+                        <Link href="/contact">Contact</Link>
                     </Target>
                 </div>
             </nav>

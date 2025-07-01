@@ -24,13 +24,13 @@ export const navHeightStyle: NavStyles = {
 
 // Navigation menu gap styles by page type
 export const navMenuGapStyle: NavMenuStyles = {
-    project: 'sm:gap-36 md:gap-52 lg:gap-64 xl:gap-[7.2rem] 2xl:gap-[8.8rem]',
+    project: 'sm:gap-36 md:gap-52 lg:gap-64 xl:gap-[4.5rem] 2xl:gap-[5.5rem]',
     article: 'gap-24 sm:gap-[30px] md:gap-40 lg:gap-64',
     page: 'gap-24 sm:gap-[30px] md:gap-40 lg:gap-64',
 }
 
 // Navigation link styles
-export const navLinkStyle = 'leading-none select-none text-[2rem] before:-mt-[1.2rem] md:text-[2.4rem] md:before:-mt-[1.3rem]'
+export const navLinkStyle = 'leading-none select-none text-[1.25rem] before:-mt-12 md:text-[1.5rem] md:before:-mt-[13px]'
 
 // Shadow styles
 export const shadowStyle: StyleConfig = {

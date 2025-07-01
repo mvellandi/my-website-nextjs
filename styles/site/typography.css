@@ -1,16 +1,16 @@
 @layer base {
     body {
-        @apply text-base text-gray-800 xl:leading-[1.7];
+        @apply text-base text-gray-800 xl:leading-[1.5];
     }
 
     p {
-        @apply mb-[1.8rem];
+        @apply mb-[18px];
     }
 
     .prose-lg ul,
     .prose-xl ul {
         list-style: disc outside;
-        padding-left: 3.5rem;
+        padding-left: 2.1875rem;
         > li {
             margin-top: 0;
             &:last-of-type {
@@ -22,7 +22,7 @@
     .prose-lg ol,
     .prose-xl ol {
         list-style: decimal;
-        padding-left: 3.5rem;
+        padding-left: 2.1875rem;
         > li {
             margin-top: 0;
             font-weight: 500;
@@ -30,8 +30,5 @@
                 margin-bottom: 0;
             }
         }
-    }
-
-    h1 {
     }
 }
