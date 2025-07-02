@@ -18,7 +18,7 @@
             }
             ul,
             ol {
-                @apply mb-[20px] ml-24 flex list-outside flex-col gap-16 leading-[1.15] sm:leading-[1.2] md:gap-16;
+                @apply mb-[20px] ml-24 flex list-outside flex-col gap-8 leading-[1.15] sm:leading-[1.2] md:gap-8;
             }
             ul {
                 @apply list-disc;
@@ -53,7 +53,7 @@
                 @apply ml-24 flex list-outside list-decimal flex-col gap-1 pl-[10px] md:gap-4;
             }
             li a {
-                @apply text-[1.1875rem] font-semibold leading-[1.6] md:text-[1.25rem];
+                @apply text-link text-[1.1875rem] font-semibold leading-[1.6] md:text-[1.25rem];
                 color: var(--color-blue);
             }
         }

@@ -1,7 +1,7 @@
 @layer components {
     article {
         h1 {
-            @apply mb-20 text-balance text-3xl font-light leading-tight -tracking-1 text-black lg:mb-28 3xl:text-[2.5rem] 3xl:font-[450];
+            @apply mb-20 text-balance text-3xl font-light leading-[1.1] -tracking-1 text-black sm:leading-[1.15] lg:mb-28 3xl:text-[2.5rem] 3xl:font-[450];
         }
         .prose,
         .prose-lg {
@@ -23,7 +23,7 @@
                 @apply mb-4;
             }
             p {
-                @apply my-24 leading-[1.4];
+                @apply my-24;
             }
         }
         .prose-area {

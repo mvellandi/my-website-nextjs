@@ -43,7 +43,7 @@ export default function Item({ data }: ItemProps) {
     return (
         <>
             <h1>{headline}</h1>
-            <div className="prose lg:prose-lg">
+            <div className="prose-lg leading-[1.3] 2xl:leading-[1.4]">
                 {(() => {
                     const [_type, content] = [body._type, body.body]
                     return (
