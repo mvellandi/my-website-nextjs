@@ -4,25 +4,25 @@ import { getImageDimensions } from '@sanity/asset-utils'
 import { PortableText } from '@portabletext/react'
 
 interface ImageNode {
-    alt?: string;
+    alt?: string
     asset: {
-        _ref: string;
-        _type: string;
-    };
-    _type: string;
-    [key: string]: any;
+        _ref: string
+        _type: string
+    }
+    _type: string
+    [key: string]: any
 }
 
 interface ArticleData {
-    headline: string;
+    headline: string
     body: {
-        _type: string;
-        body: any[];
-    };
+        _type: string
+        body: any[]
+    }
 }
 
 interface ItemProps {
-    data: ArticleData;
+    data: ArticleData
 }
 
 const ImageComponent = ({ value }: { value: ImageNode }) => {
@@ -43,7 +43,7 @@ export default function Item({ data }: ItemProps) {
     return (
         <>
             <h1>{headline}</h1>
-            <div className="prose-lg 3xl:prose-xl">
+            <div className="prose lg:prose-lg">
                 {(() => {
                     const [_type, content] = [body._type, body.body]
                     return (

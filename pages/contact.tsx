@@ -10,7 +10,7 @@ export default function Contact({ preview = false }: ContactPageProps) {
         <PageLayout id="contact" page="contact">
             {/* <h1 className="mb-20 text-[3.6rem] font-light leading-tight -tracking-1 text-black lg:mb-40"> */}
             <h1>Contact</h1>
-            <div className="prose-lg lg:prose-xl">
+            <div className="prose-lg">
                 <p>
                     Let me know how I can help you. I am always open to new
                     projects and challenges.
@@ -69,7 +69,10 @@ export default function Contact({ preview = false }: ContactPageProps) {
     )
 }
 
-export const getServerSideProps: GetServerSideProps<ContactPageProps> = async ({ params, preview = false }) => {
+export const getServerSideProps: GetServerSideProps<ContactPageProps> = async ({
+    params,
+    preview = false,
+}) => {
     return {
         props: {
             preview,

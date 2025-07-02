@@ -115,42 +115,42 @@ module.exports = {
             typography: {
                 sm: {
                     css: {
-                        fontSize: '1.4rem',
+                        fontSize: '0.875rem',
                         // lineHeight: '1.7142857' or 24px
                         // use gap-[0.4rem] for simulating with flexbox columns
                     },
                 },
                 DEFAULT: {
                     css: {
-                        fontSize: '1.6rem',
+                        fontSize: '1rem',
                         // lineHeight: '1.75' or 28px
                         // use gap-[0.4rem] for simulating with flexbox columns
                     },
                 },
                 base: {
                     css: {
-                        fontSize: '1.6rem',
+                        fontSize: '1rem',
                         // lineHeight: '1.75' or 28px
                         // use gap-[0.4rem] for simulating with flexbox columns
                     },
                 },
                 lg: {
                     css: {
-                        fontSize: '1.8rem',
+                        fontSize: '1.125rem',
                         lineHeight: '1.55',
                         // use gap-[0.4rem] for simulating with flexbox columns
                     },
                 },
                 xl: {
                     css: {
-                        fontSize: '2rem',
+                        fontSize: '1.25rem',
                         lineHeight: '1.55',
                         // use gap-[0.8rem] for simulating with flexbox columns
                     },
                 },
                 '2xl': {
                     css: {
-                        fontSize: '2.4rem',
+                        fontSize: '1.5rem',
                         // lineHeight: '1.6666667' or 40px
                         // use gap-[0.8rem] for simulating with flexbox columns
                     },

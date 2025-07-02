@@ -7,6 +7,7 @@
         @apply mb-[18px];
     }
 
+    .prose ul,
     .prose-lg ul,
     .prose-xl ul {
         list-style: disc outside;
@@ -18,7 +19,7 @@
             }
         }
     }
-
+    .prose ol,
     .prose-lg ol,
     .prose-xl ol {
         list-style: decimal;

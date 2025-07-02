@@ -31,6 +31,7 @@ summary::-moz-list-bullet {
 @layer base {
     /* LINKS */
     .text-link,
+    .prose a,
     .prose-lg a,
     .prose-xl a {
         color: var(--color-blue);

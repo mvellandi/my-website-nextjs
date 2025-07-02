@@ -2,23 +2,23 @@
     #contact,
     #about {
         h1 {
-            @apply mb-12 text-[3.6rem] font-light leading-tight -tracking-1 text-black lg:mb-16 lg:text-[3.8rem] lg:font-[450];
+            @apply mb-12 text-[2.25rem] font-light leading-tight -tracking-1 text-black lg:mb-16 lg:text-[2.375rem] lg:font-[450];
+        }
+        h2 {
+            @apply m-0 sm:mb-4;
+        }
+        h3 {
+            @apply m-0;
+        }
+        h4 {
+            @apply m-0 text-[1.25rem] font-bold;
+        }
+        ul {
+            @apply mt-4;
+
+            li {
+                @apply mb-0 leading-[1.4];
+            }
         }
     }
-    #about .skills {
-        @apply block pt-12 text-base lg:text-lg;
-
-        td {
-            padding: 5px 0;
-        }
-
-        tr td:first-child {
-            width: 170px;
-            font-weight: bold;
-            text-decoration: underline;
-        }
-    }
-    /* #about article h2 {
-        @apply mb-8 mt-0 lg:mb-8 lg:mt-44;
-    } */
 }
