@@ -36,7 +36,7 @@ export default function Card({
                     )}
                 </h2>
                 {subtitle ? (
-                    <h3 className="text-sm leading-[1.2]">{subtitle}</h3>
+                    <h3 className="text-sm leading-[1.1]">{subtitle}</h3>
                 ) : null}
             </div>
             <Image
