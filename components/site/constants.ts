@@ -19,7 +19,7 @@ export const elementContentWidthStyle: StyleConfig = (function () {
 
 // Navigation height styles
 export const navHeightStyle: NavStyles = {
-    base: 'h-[58px] md:h-[75px] lg:h-96',
+    base: 'h-[58px] md:h-[75px] xl:h-96',
 }
 
 // Navigation menu gap styles by page type
