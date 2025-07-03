@@ -12,7 +12,7 @@ export const firstArticles = [
         coverImage:
             'image-f3a9274ae5a7de99bc81211e83bd006c824b92ed-500x500-webp',
         title: 'Written Works',
-        subtitle: 'Journalism, interviews, and copywriting, oh my!',
+        subtitle: 'Articles, interviews, and copywriting',
     },
     {
         isCMSImage: true, // Now using Sanity CDN
@@ -21,7 +21,7 @@ export const firstArticles = [
         coverImage:
             'image-eb7f12585b4bd51e319add0adb092d95312277eb-500x500-webp',
         title: 'Rich Media Collection',
-        subtitle: 'Videos, audio, infographics, and multimedia',
+        subtitle: 'Videos, infographics, and multimedia',
     },
 ]
 
@@ -33,7 +33,6 @@ export const lastArticles = [
         coverImage:
             'image-a12cbcb37e5c176e1bc47c242e205a4c3e432cd7-123x123-svg',
         title: 'Blog Archive 2006-2016',
-        subtitle:
-            '618 posts on marketing, design, product development, and sustainability',
+        subtitle: '618 posts on marketing, product development, and more',
     },
 ]
