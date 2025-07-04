@@ -34,7 +34,7 @@ export default function SectionNav({
 
     let navStyle = `flex justify-center w-full site-padding-x border-gray-400 bg-gray-25 ${navHeightStyle.base} ${shadowStyle.nav}`
 
-    let navContentStyle = `flex justify-between items-center w-full py-12 ${navContentWidthStyle[type]}  lg:pt-16 lg:pb-0`
+    let navContentStyle = `flex justify-between items-center w-full py-12 ${navContentWidthStyle[type]}  lg:pt-8 lg:pb-0`
     switch (place) {
         case 'top':
             navStyle = cn(navStyle, 'border-b lg:border-b-2')
