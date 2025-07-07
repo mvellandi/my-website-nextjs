@@ -27,11 +27,15 @@ interface RichMediaPageProps {
     preview?: boolean
 }
 
-export default function WritingCollection({ nav, preview = false }: RichMediaPageProps) {
-    const [lightboxController, setLightboxController] = useState<LightboxController>({
-        toggler: false,
-        slide: 1,
-    })
+export default function WritingCollection({
+    nav,
+    preview = false,
+}: RichMediaPageProps) {
+    const [lightboxController, setLightboxController] =
+        useState<LightboxController>({
+            toggler: false,
+            slide: 1,
+        })
 
     function openLightboxOnSlide(number: number) {
         setLightboxController({
@@ -54,12 +58,33 @@ export default function WritingCollection({ nav, preview = false }: RichMediaPag
                 <h1 style={{ marginBottom: '1.8rem' }}>Rich Media</h1>
 
                 <Details summary="Video">
+                    <h3 className="not-prose">Promotional</h3>
                     <p>
-                        My early career videos were produced for business media
-                        companies like Sustainable Brands and Gravity Summit, in
-                        addition to consultants, nonprofits, and my blog. While
-                        most videos are either paywalled or unarchived, below
-                        are a few samples.{' '}
+                        <a href="http://boot.rocks" target="_blank">
+                            Boot.Rocks
+                        </a>{' '}
+                        campaign for a tech education platform, plus{' '}
+                        <a
+                            href="https://www.youtube.com/playlist?list=PL9ojmHdC8ix0iJqNwMCs-9NxubxmcxjLM"
+                            target="_blank"
+                        >
+                            10 social shorts
+                        </a>
+                    </p>
+                    <h3 className="not-prose">Storytelling</h3>
+                    <p>
+                        <a
+                            href="https://www.youtube.com/watch?v=lqUNdlZV0yQ"
+                            target="_blank"
+                        >
+                            My Personal and Professional Story
+                        </a>
+                    </p>
+                    <div className="bottom-1 border-t border-gray-400"></div>
+                    <p>
+                        My early career are mostly paywalled or unarchived.
+                        <br />
+                        Below are a few samples.{' '}
                         <a
                             href="https://docs.google.com/spreadsheets/d/1xFa-HlEXkyEiG10tYzrBAnRBcreJyJF_gytCKU8CADc/edit?usp=sharing"
                             target="_blank"
@@ -68,7 +93,7 @@ export default function WritingCollection({ nav, preview = false }: RichMediaPag
                         </a>{' '}
                         for a complete list.
                     </p>
-                    <h3 className="not-prose">Stage Presentations (107):</h3>
+                    <h3 className="not-prose">Stage Presentations (107)</h3>
                     <p>
                         <a
                             href="https://www.youtube.com/watch?v=NQZ2QMDdxVY"
@@ -219,7 +244,9 @@ export default function WritingCollection({ nav, preview = false }: RichMediaPag
     )
 }
 
-export const getStaticProps: GetStaticProps<RichMediaPageProps> = async ({ preview = false }) => {
+export const getStaticProps: GetStaticProps<RichMediaPageProps> = async ({
+    preview = false,
+}) => {
     const data = await getArticleAndNavData({
         slug: 'rich-media-collection',
         preview,
