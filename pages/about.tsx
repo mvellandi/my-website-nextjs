@@ -12,7 +12,7 @@ export default function About({ preview = false }: AboutPageProps) {
             <h1>About Me</h1>
             <article className="prose-lg leading-[1.3] 2xl:leading-[1.4]">
                 <h4>Resourceful and helpful to others.</h4>
-                <p className="mb-8">
+                <p className="mb-10">
                     I&apos;m a multiclass adventurer bringing marketing,
                     software engineering, and media production to the table. I
                     would like to better serve customers through communications
@@ -46,6 +46,22 @@ export default function About({ preview = false }: AboutPageProps) {
                         </Link>
                     </li>
                 </ul>
+                <p>
+                    Currently, I&apos;m finishing a{' '}
+                    <Link
+                        href="https://www.boot.dev/tracks/backend-python-typescript"
+                        target="_blank"
+                    >
+                        backend dev training
+                    </Link>{' '}
+                    with TypeScript, learning AI engineering, and reading{' '}
+                    <Link
+                        href="https://charlesduhigg.com/supercommunicators/"
+                        target="_blank"
+                    >
+                        Supercommunicators
+                    </Link>
+                </p>
                 <h2>CV</h2>
                 <h3>Upbringing</h3>
                 <p>
