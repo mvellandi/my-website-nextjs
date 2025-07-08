@@ -47,14 +47,14 @@ export default function About({ preview = false }: AboutPageProps) {
                     </li>
                 </ul>
                 <p>
-                    Currently, I&apos; building mini projects and learning AI
+                    Currently, I&apos;m building mini projects and learning AI
                     engineering, training at{' '}
                     <Link
                         href="https://www.boot.dev/tracks/backend-python-typescript"
                         target="_blank"
                     >
                         Boot.dev
-                    </Link>{' '}
+                    </Link>
                     , and reading{' '}
                     <Link
                         href="https://charlesduhigg.com/supercommunicators/"
