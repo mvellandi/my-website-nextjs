@@ -42,7 +42,7 @@ export default function About({ preview = false }: AboutPageProps) {
                             href="https://modern-art-670.notion.site/Mario-s-Skill-Chart-e895b545dd6547f5bcc62ccafede2365"
                             target="_blank"
                         >
-                            List of skills
+                            Skill Chart
                         </Link>
                     </li>
                 </ul>
