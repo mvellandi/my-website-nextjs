@@ -47,14 +47,15 @@ export default function About({ preview = false }: AboutPageProps) {
                     </li>
                 </ul>
                 <p>
-                    Currently, I&apos;m finishing a{' '}
+                    Currently, I&apos; building mini projects and learning AI
+                    engineering, training at{' '}
                     <Link
                         href="https://www.boot.dev/tracks/backend-python-typescript"
                         target="_blank"
                     >
-                        backend dev training
+                        Boot.dev
                     </Link>{' '}
-                    with TypeScript, learning AI engineering, and reading{' '}
+                    , and reading{' '}
                     <Link
                         href="https://charlesduhigg.com/supercommunicators/"
                         target="_blank"
