@@ -9,16 +9,16 @@
         "lint": "next lint"
     },
     "dependencies": {
-        "@portabletext/react": "^3.1.0",
+        "@portabletext/react": "^3.2.4",
         "@sanity/asset-utils": "^2.2.1",
         "@sanity/client": "^7.6.0",
-        "@sanity/image-url": "^1.0.2",
+        "@sanity/image-url": "^1.2.0",
         "@tailwindcss/nesting": "0.0.0-insiders.565cd3e",
         "classnames": "^2.5.1",
         "date-fns": "^3.6.0",
         "fslightbox-react": "file:components/fslightbox.tgz",
-        "next": "^15.3.4",
-        "next-sanity": "^9.12.0",
+        "next": "^15.5.7",
+        "next-sanity": "^9.12.3",
         "prop-types": "^15.8.1",
         "react": "^19.1.0",
         "react-dom": "^19.1.0",
@@ -28,7 +28,7 @@
         "styled-components": "^6.1.19"
     },
     "engines": {
-        "node": "22.x"
+        "node": "24.x"
     },
     "devDependencies": {
         "@tailwindcss/typography": "^0.5.13",
@@ -36,13 +36,13 @@
         "@types/react": "^19.1.8",
         "@types/react-dom": "^19.1.6",
         "autoprefixer": "^10.4.20",
-        "eslint": "8.0.0",
-        "eslint-config-next": "^15.3.4",
+        "eslint": "^8.57.0",
+        "eslint-config-next": "^15.5.7",
         "postcss": "^8.4.40",
         "postcss-import": "^16.1.1",
         "prettier": "^3.3.3",
-        "prettier-plugin-tailwindcss": "^0.6.5",
-        "tailwindcss": "^3.4.7",
+        "prettier-plugin-tailwindcss": "^0.6.14",
+        "tailwindcss": "^3.4.18",
         "typescript": "^5.8.3"
     }
 }
