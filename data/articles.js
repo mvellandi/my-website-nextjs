@@ -20,7 +20,7 @@ export const firstArticles = [
         slug: 'rich-media-collection',
         coverImage:
             'image-eb7f12585b4bd51e319add0adb092d95312277eb-500x500-webp',
-        title: 'Rich Media Collection',
+        title: 'Rich Media',
         subtitle: 'Videos, infographics, and multimedia',
     },
 ]
