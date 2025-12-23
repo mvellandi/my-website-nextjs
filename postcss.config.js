@@ -1,6 +1,5 @@
-// The 'nesting' plugin by tailwind adapts the 'postcss-nesting' plugin and CSS Nesting Module Draft specification:
-// https://github.com/csstools/postcss-plugins/tree/main/plugins/postcss-nesting
-// https://www.w3.org/TR/css-nesting-1/
+// PostCSS configuration
+// Note: Keeping tailwindcss/nesting for now due to nested @apply usage in codebase
 
 module.exports = {
   plugins: {
