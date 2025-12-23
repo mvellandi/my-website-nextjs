@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-This is a Next.js 15 portfolio website integrated with Sanity CMS v3 for Mario Vellandi. The site showcases articles, projects, and demos using a dynamic content management system. The codebase has been recently modernized with centralized styling, consolidated routing, and full Sanity CDN migration.
+This is a Next.js 16 portfolio website integrated with Sanity CMS v3 for Mario Vellandi. The site showcases articles, projects, and demos using a dynamic content management system. The codebase has been recently modernized with centralized styling, consolidated routing, and full Sanity CDN migration.
 
 ## Development Commands
 
@@ -58,11 +58,15 @@ npm run lint
 
 ## Recent Architectural Improvements
 
-This branch includes significant modernization and consolidation efforts:
+### Major Dependency Updates (December 2023)
 
-### Dependencies & Framework
-- **Next.js 15.3.4**: Upgraded from previous version with React 19.1.0
+- **Next.js 16.1.1**: Upgraded from v15 with Turbopack bundler for faster builds
+- **React 19.1.0**: Latest stable release with improved performance
+- **ESLint 9**: Migrated to flat config system (eslint.config.js)
+- **Sanity Ecosystem**: Fully updated (@sanity/client v7, next-sanity v12, @sanity/image-url v2)
+- **PortableText v6**: Major update for rich text rendering
 - **TypeScript**: Complete migration with comprehensive type safety and enhanced developer experience
+- **Zero Vulnerabilities**: All security issues resolved
 
 ### Code Consolidation & Refactoring
 - **Target Component**: Refactored to be sole responsibility for touch target sizing and consistent wrapper patterns
@@ -72,6 +76,7 @@ This branch includes significant modernization and consolidation efforts:
 - **API Consolidation**: Centralized data fetching patterns across all content types
 - **Route Unification**: Consolidated individual page types into dynamic routing system
 - **Static Asset Migration**: Moved all images to CDN for better performance and management
+- **Turbopack**: Next.js 16 uses new bundler for significantly faster builds
 
 ## TypeScript Migration: ✅ COMPLETE
 
@@ -117,6 +122,8 @@ The codebase has been fully migrated from JavaScript to TypeScript with comprehe
 - Custom CSS in appropriate `/styles/` subdirectory
 - Styled Components for complex component-specific styling
 - 4-space indentation, single quotes, no semicolons (Prettier config)
+
+**Note on Tailwind v4**: Migration to Tailwind CSS v4 has been deferred to a future branch. See `docs/TAILWIND_V4_MIGRATION.md` for the planned migration strategy. Current version: Tailwind CSS 3.4.19.
 
 ### Image Handling (Recently Migrated to Sanity CDN)
 - **Full CDN Migration**: All static images have been moved from `/public/images/` to Sanity CDN
