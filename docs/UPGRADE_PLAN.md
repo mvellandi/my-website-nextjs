@@ -3,7 +3,24 @@
 ## Overview
 Conservative phased approach to update all major dependencies with individual commits and testing between each phase. Updates include Next.js 16, Tailwind v4, ESLint v9, Sanity ecosystem, and removal of unused dependencies.
 
-**Visual Testing**: Using [Tidewave.ai](https://tidewave.ai) for AI-powered visual testing and feedback throughout the entire update process.
+## Testing & Inspection Strategy
+
+**Automated Browser Inspection**: Using **Puppeteer MCP** for comprehensive browser-level testing and visual inspection throughout the entire update process. Claude Code can directly inspect:
+- ✅ Rendered HTML and DOM structure
+- ✅ Computed CSS styles (actual values applied to elements)
+- ✅ Element properties, attributes, and classes
+- ✅ Responsive behavior at different viewports
+- ✅ JavaScript execution and console output
+- ✅ Full-page screenshots for visual comparison
+
+**Code Intelligence**: Using **Tidewave MCP** for TypeScript/JavaScript code analysis:
+- ✅ Type signatures and documentation
+- ✅ Symbol definitions and source locations
+- ✅ Code evaluation in project context
+
+**Manual Visual Testing**: Using **Tidewave Web/Desktop App** for human inspection when needed.
+
+**Key Benefit**: Claude Code can autonomously verify visual changes, detect CSS regressions, and validate responsive behavior without manual intervention.
 
 ## Update Scope
 
@@ -86,41 +103,59 @@ export const config = {
 **instrumentation.ts:**
 ```typescript
 export async function register() {
+  // Tidewave integration - disabled for now due to OpenTelemetry bundling issues
+  // The API handler at pages/api/tidewave.ts provides the Tidewave endpoint
   if (process.env.NODE_ENV === 'development') {
-    const { NodeSDK } = await import('@opentelemetry/sdk-node');
-    const { TidewaveSpanProcessor, TidewaveLogRecordProcessor } = await import('tidewave');
-
-    const sdk = new NodeSDK({
-      spanProcessor: new TidewaveSpanProcessor(),
-      logRecordProcessor: new TidewaveLogRecordProcessor(),
-    });
-
-    sdk.start();
+    console.log('[Tidewave] Handler available at /tidewave endpoint');
   }
 }
 ```
 
+**Additional Changes:**
+- Update `tsconfig.json`: Set `moduleResolution: "bundler"` for Tidewave compatibility
+- Create `docs/TIDEWAVE_MCP.md`: Comprehensive documentation of Tidewave integration
+- Configure `~/.claude.json`: Add Tidewave MCP server for Claude Code integration
+
 **Testing:**
-- Run `npm run build`
-- Run `npm run dev`
-- Verify Tidewave endpoint is accessible at `/tidewave` (development only)
-- Launch Tidewave desktop app and connect to local dev server
-- Verify visual testing capabilities work
+- ✅ Run `npm run build` - Build succeeds
+- ✅ Run `npm run dev` - Dev server starts successfully
+- ✅ Verify Tidewave endpoint is accessible at `/tidewave` (development only)
+- ✅ Tidewave MCP connected to Claude Code (code intelligence tools available)
+- ✅ Puppeteer MCP can inspect browser: DOM, computed styles, screenshots
+
+**Automated Testing Capabilities Verified:**
+Using Puppeteer MCP, Claude Code can now:
+- Inspect rendered HTML and full DOM structure
+- Get computed CSS styles for any element
+- Execute JavaScript in browser context
+- Capture full-page screenshots
+- Test responsive behavior at different viewports
+- Verify visual consistency before/after updates
 
 **Commit message:**
 ```
-chore: add Tidewave for AI-powered visual testing
+chore: add Tidewave and Puppeteer for testing and code intelligence
 
-Install and configure Tidewave.ai for visual regression testing
-and AI agent feedback during dependency updates.
+Install and configure development tools:
+- Tidewave for code intelligence via MCP (get_docs, get_source_location, project_eval)
+- Tidewave Web/Desktop app for manual visual testing
+- Puppeteer MCP for automated browser inspection (already configured)
 
-Development-only integration with OpenTelemetry.
+Changes:
+- Install tidewave and OpenTelemetry dependencies
+- Create API handler at /tidewave endpoint (development only)
+- Add middleware to route /tidewave requests
+- Add instrumentation hook for logging
+- Update tsconfig moduleResolution to 'bundler'
+- Add comprehensive documentation in docs/TIDEWAVE_MCP.md
+
+Testing infrastructure enables Claude Code to autonomously verify
+visual changes, detect CSS regressions, and validate responsive
+behavior throughout the dependency upgrade process.
 
 🤖 Generated with Claude Code
 Co-Authored-By: Claude Sonnet 4.5 <noreply@anthropic.com>
 ```
-
-**Note:** After Next.js 16 update (Commit 7), we'll need to update `middleware.ts` to use the new `proxy.ts` pattern for Next.js 16.
 
 ---
 
@@ -607,16 +642,45 @@ npm install
 
 ## Testing Checklist (After Each Commit)
 
+### Build & Runtime Checks
+
 - [ ] `npm run build` succeeds
 - [ ] `npm run dev` starts successfully
 - [ ] `npm run lint` passes (after ESLint update)
+- [ ] No console errors or warnings
+
+### Functional Testing
+
 - [ ] Homepage loads without errors
 - [ ] Dynamic routes work (/articles, /demo, /projects)
 - [ ] Individual item pages render (/articles/[slug], etc.)
 - [ ] Images load from Sanity CDN
 - [ ] Rich text content renders correctly (after PortableText update)
-- [ ] Responsive design works at all breakpoints (after Tailwind update)
-- [ ] No console errors or warnings
+
+### Automated Visual Inspection (via Puppeteer MCP)
+
+Claude Code will automatically verify:
+
+- [ ] **DOM Structure**: Inspect rendered HTML for key pages
+- [ ] **Computed Styles**: Verify CSS values match expectations
+  - Background colors, fonts, spacing, layout
+  - Custom Tailwind classes render correctly
+- [ ] **Responsive Behavior**: Test at multiple viewports
+  - Custom breakpoints: plg (450px), lgtall, 2k, 2k3
+  - Standard breakpoints: sm, md, lg, xl, 2xl, 3xl
+- [ ] **Element Properties**: Check classes, attributes, visibility
+- [ ] **Screenshots**: Capture before/after comparisons for visual regression
+- [ ] **JavaScript Execution**: Verify interactive elements work
+
+### Critical Visual Checks (Especially for Tailwind v4)
+
+- [ ] Custom color palette renders (purple-25 through purple-950, gray shades)
+- [ ] Custom font weights display (350, 450, 550, 650, 750)
+- [ ] Custom spacing values work correctly
+- [ ] Typography plugin styles apply
+- [ ] Navigation responsive behavior at all breakpoints
+- [ ] Hero section layout and styling preserved
+- [ ] Card components maintain design consistency
 
 ---
 
