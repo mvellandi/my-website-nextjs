@@ -11,9 +11,9 @@
     "dependencies": {
         "@opentelemetry/sdk-node": "^0.208.0",
         "@portabletext/react": "^3.2.4",
-        "@sanity/asset-utils": "^2.2.1",
+        "@sanity/asset-utils": "^2.3.0",
         "@sanity/client": "^7.6.0",
-        "@sanity/image-url": "^1.2.0",
+        "@sanity/image-url": "^2.0.2",
         "@tailwindcss/nesting": "0.0.0-insiders.565cd3e",
         "classnames": "^2.5.1",
         "fslightbox-react": "file:components/fslightbox.tgz",
