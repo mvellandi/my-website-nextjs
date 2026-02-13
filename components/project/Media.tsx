@@ -34,7 +34,7 @@ export default function Media({ media }: MediaProps) {
 
     return (
         <Section title="Media" className="media">
-            <div className="grid grid-cols-3 items-start gap-20 pb-8 pt-4 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-6 lg:gap-28 xl:grid-cols-4">
+            <div className="grid grid-cols-3 items-start gap-20 pb-8 pt-4 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-6 lg:gap-28 xl:grid-cols-5 xl:gap-16">
                 {media.map(({ _key, ...rest }, n) => (
                     <a
                         key={_key}
@@ -48,7 +48,7 @@ export default function Media({ media }: MediaProps) {
                                 .sharpen(30)
                                 .url()}
                             alt="rest.alt"
-                            className="h-[90px] w-full object-cover"
+                            className="h-[70px] w-full object-cover"
                         />
                     </a>
                 ))}
