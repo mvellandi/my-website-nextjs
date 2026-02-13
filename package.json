@@ -26,7 +26,7 @@
         "react-is": "^19.1.0"
     },
     "engines": {
-        "node": "24.x"
+        "node": ">=24"
     },
     "devDependencies": {
         "@opentelemetry/sdk-logs": "^0.208.0",
