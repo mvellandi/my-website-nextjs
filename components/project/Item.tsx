@@ -102,7 +102,7 @@ export default function Item({ data }: ItemProps) {
           {/*  */}
           <div className={`flex flex-col ${sectionGap}`}>
             {media && <Media media={media} />}
-            {links && (!features || !structure) && <Links links={links} />}
+            {links && !features && !structure && <Links links={links} />}
             {features && (
               <Section title="Features">
                 <PortableText value={features} />
