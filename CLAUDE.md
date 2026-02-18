@@ -10,16 +10,16 @@ This is a Next.js 16 portfolio website integrated with Sanity CMS v3 for Mario V
 
 ```bash
 # Development server
-npm run dev
+pnpm dev
 
 # Production build
-npm run build
+pnpm build
 
 # Production server
-npm start
+pnpm start
 
 # Linting
-npm run lint
+pnpm lint
 ```
 
 ## Architecture Overview

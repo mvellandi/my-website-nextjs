@@ -28,6 +28,9 @@
     "engines": {
         "node": ">=24"
     },
+    "pnpm": {
+        "onlyBuiltDependencies": ["esbuild", "protobufjs", "sharp", "unrs-resolver"]
+    },
     "devDependencies": {
         "@opentelemetry/sdk-logs": "^0.208.0",
         "@opentelemetry/sdk-trace-base": "^2.2.0",
