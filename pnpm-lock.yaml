@@ -27,8 +27,8 @@ importers:
         specifier: ^2.5.1
         version: 2.5.1
       fslightbox-react:
-        specifier: file:components/fslightbox.tgz
-        version: file:components/fslightbox.tgz(prop-types@15.8.1)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
+        specifier: file:packages/fslightbox-react-pro-2.0.4.tgz
+        version: file:packages/fslightbox-react-pro-2.0.4.tgz(prop-types@15.8.1)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
       next:
         specifier: ^16.1.0
         version: 16.1.6(@babel/core@7.29.0)(@opentelemetry/api@1.9.0)(babel-plugin-react-compiler@1.0.0)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
@@ -3964,9 +3964,9 @@ packages:
     engines: {node: ^8.16.0 || ^10.6.0 || >=11.0.0}
     os: [darwin]
 
-  fslightbox-react@file:components/fslightbox.tgz:
-    resolution: {integrity: sha512-QwbGv7byxXcAg52kt3lgAgYDEzvZk5OT4BsDeDyShKOjTKwuv7FX1UOEafI+E9271lD7+iDnEV92i5u7bWidcA==, tarball: file:components/fslightbox.tgz}
-    version: 1.7.8
+  fslightbox-react@file:packages/fslightbox-react-pro-2.0.4.tgz:
+    resolution: {integrity: sha512-RWDRCYpGdXz31GvIIVRbBq508r9Q5yJY7zpYmoj2ewSL2VSj4LOu2vidbOlKQ/SVeNhIyyc8LbNn3WKoT/68YA==, tarball: file:packages/fslightbox-react-pro-2.0.4.tgz}
+    version: 2.0.4
     peerDependencies:
       prop-types: '>=15.6.2'
       react: '>=16.8.0'
@@ -9448,8 +9448,8 @@ snapshots:
 
   '@typescript-eslint/project-service@8.46.4(typescript@5.9.3)':
     dependencies:
-      '@typescript-eslint/tsconfig-utils': 8.46.4(typescript@5.9.3)
-      '@typescript-eslint/types': 8.46.4
+      '@typescript-eslint/tsconfig-utils': 8.56.0(typescript@5.9.3)
+      '@typescript-eslint/types': 8.56.0
       debug: 4.4.3(supports-color@8.1.1)
       typescript: 5.9.3
     transitivePeerDependencies:
@@ -11188,7 +11188,7 @@ snapshots:
   fsevents@2.3.3:
     optional: true
 
-  fslightbox-react@file:components/fslightbox.tgz(prop-types@15.8.1)(react-dom@19.2.4(react@19.2.4))(react@19.2.4):
+  fslightbox-react@file:packages/fslightbox-react-pro-2.0.4.tgz(prop-types@15.8.1)(react-dom@19.2.4(react@19.2.4))(react@19.2.4):
     dependencies:
       prop-types: 15.8.1
       react: 19.2.4
