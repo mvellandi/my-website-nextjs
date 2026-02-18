@@ -24,7 +24,7 @@ export default function Social({ type, pageType }: SocialProps) {
             item: 'cta text-right',
         },
         footer: {
-            nav: `flex justify-center w-full py-16 text-white text-lg bg-gray-700 leading-[0.9] ${pageType === 'main' && 'lg:hidden'}`,
+            nav: `flex justify-center w-full py-16 text-white text-lg bg-gray-700 leading-[0.9] lg:py-24 ${pageType === 'main' && 'lg:hidden'}`,
             list: 'flex flex-row gap-40 md:gap-56',
             item: 'cta',
         },
