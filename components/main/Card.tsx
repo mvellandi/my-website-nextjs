@@ -40,7 +40,7 @@ export default function Card({
                 ) : null}
             </div>
             <Image
-                src={isCMSImage ? urlForImage(coverImage).url() : coverImage}
+                src={isCMSImage && coverImage ? urlForImage(coverImage).url() : coverImage ?? '/images/placeholder.png'}
                 alt="altText"
                 width={60}
                 height={60}
