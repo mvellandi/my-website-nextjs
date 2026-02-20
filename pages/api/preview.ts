@@ -3,7 +3,7 @@ import type { NextApiRequest, NextApiResponse } from 'next'
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const { secret, slug } = req.query
 
-  if (secret !== process.env.SANITY_API_TOKEN) {
+  if (secret !== process.env.SANITY_STUDIO_PREVIEW_SECRET) {
     return res.status(401).json({ message: 'Invalid token' })
   }
 
