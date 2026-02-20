@@ -16,7 +16,7 @@ export default function Footer({ type }: FooterProps) {
             <HTMLComment text="FOOTER" />
             <footer className="flex h-full w-full items-start justify-center bg-red pb-48 pt-16 md:justify-start lg:justify-center">
                 <div className={footerContentStyle}>
-                    <div className="flex flex-col gap-4 text-sm lg:flex-row lg:justify-between xl:text-base">
+                    <div className="flex flex-col gap-4 text-sm lg:flex-row lg:justify-between lg:gap-72 xl:text-base">
                         <div className="min-w-fit">
                             &copy; {new Date().getFullYear()} - Mario Vellandi
                         </div>

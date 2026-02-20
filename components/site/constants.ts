@@ -10,7 +10,7 @@ export const elementContentWidthStyle: StyleConfig = (function () {
   const md = "max-w-[870px]";
   const xl = "max-w-screen-xl";
   return {
-    main: xl,
+    main: "max-w-[900px]",
     project: `${md} xl:${xl}`,
     article: md,
     page: md,
@@ -50,7 +50,7 @@ export const getNavMenuStyle: StyleGenerator = (type) => {
 }
 
 export const getFooterContentStyle: StyleGenerator = (type) => {
-    const baseStyle = 'w-full site-padding-x text-white'
+    const baseStyle = 'w-full mx-auto px-20 lg:px-0 text-white'
     if (pageTypeCheck(type, ['main'])) {
         return `${baseStyle} ${elementContentWidthStyle.main}`
     }
