@@ -1,16 +1,19 @@
 import type { GetStaticProps } from 'next'
-import Meta from '../components/site/Meta'
+import type { ReactElement } from 'react'
+
 import MainLayout from '../components/main/Layout'
 import Items from '../components/main/Items'
+import Meta from '../components/site/Meta'
 import { getAllProjectCards } from '../lib/project'
 import type { ContentApiResponse } from '../types'
+import type { NextPageWithLayout } from './_app'
 
 interface HomePageProps {
     data: ContentApiResponse
     preview: boolean
 }
 
-export default function Home({ data, preview }: HomePageProps) {
+const Home: NextPageWithLayout<HomePageProps> = ({ data }) => {
     let meta = {
         title: 'Mario Vellandi: Software Engineer and Product Developer for Elixir, JS, and CSS',
         description:
@@ -20,12 +23,21 @@ export default function Home({ data, preview }: HomePageProps) {
     return (
         <>
             <Meta data={meta} />
-            <MainLayout preview={preview} data={data}>
-                <Items as="main" data={data} />
-            </MainLayout>
+            <Items as="main" data={data} />
         </>
     )
 }
+
+Home.getLayout = (page: ReactElement, pageProps: Record<string, unknown>) => {
+    const { data, preview } = pageProps as unknown as HomePageProps
+    return (
+        <MainLayout data={data} preview={preview}>
+            {page}
+        </MainLayout>
+    )
+}
+
+export default Home
 
 export const getStaticProps: GetStaticProps<HomePageProps> = async ({ preview = false }) => {
     const data = await getAllProjectCards({ preview })

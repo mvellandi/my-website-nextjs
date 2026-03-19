@@ -1,9 +1,12 @@
 import type { GetStaticPaths, GetStaticProps } from 'next'
-import Meta from '../components/site/Meta'
+import type { ReactElement } from 'react'
+
 import MainLayout from '../components/main/Layout'
 import Items from '../components/main/Items'
+import Meta from '../components/site/Meta'
 import { getContentTypeConfig, getContentTypePaths } from '../lib/contentTypes'
 import type { ContentApiResponse } from '../types'
+import type { NextPageWithLayout } from './_app'
 
 interface ContentPageProps {
     contentType: string
@@ -11,19 +14,28 @@ interface ContentPageProps {
     preview: boolean
 }
 
-export default function ContentPage({ contentType, data, preview }: ContentPageProps) {
+const ContentPage: NextPageWithLayout<ContentPageProps> = ({ contentType, data }) => {
     const config = getContentTypeConfig(contentType)
     const meta = config?.meta || null
-    
+
     return (
         <>
             <Meta data={meta} />
-            <MainLayout preview={preview} data={data}>
-                <Items as="main" data={data} />
-            </MainLayout>
+            <Items as="main" data={data} />
         </>
     )
 }
+
+ContentPage.getLayout = (page: ReactElement, pageProps: Record<string, unknown>) => {
+    const { data, preview } = pageProps as unknown as ContentPageProps
+    return (
+        <MainLayout data={data} preview={preview}>
+            {page}
+        </MainLayout>
+    )
+}
+
+export default ContentPage
 
 export const getStaticPaths: GetStaticPaths = async () => {
     const paths = getContentTypePaths()
