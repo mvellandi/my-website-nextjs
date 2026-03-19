@@ -43,6 +43,7 @@ export default function Header({ name, sector, coverImage }: HeaderProps) {
             </div>
             <div className="min-w-[100px] max-w-[120px] pt-6 lg:pt-8">
                 <img
+                    key={coverImage}
                     src={coverImage}
                     alt="altText"
                     width={120}
