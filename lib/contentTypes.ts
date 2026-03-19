@@ -1,9 +1,21 @@
 import { getAllArticleCards } from './article'
 import { getAllDemoCards } from './demo'
+import { getAllProjectCards } from './project'
 import type { ContentTypes, ContentTypeConfig } from '../types'
 
-// Content type configurations for dynamic routing (excluding projects which is handled by index.js)
+// Content type configurations for dynamic routing
 export const contentTypes: ContentTypes = {
+    projects: {
+        name: 'project',
+        title: 'Projects',
+        route: '/projects',
+        navOrder: 1,
+        dataFetcher: getAllProjectCards,
+        meta: {
+            title: 'Mario Vellandi: Software Engineer and Product Developer for Elixir, JS, and CSS',
+            description: 'Portfolio, services offered, articles, and quick projects by Mario Vellandi.',
+        }
+    },
     articles: {
         name: 'article', 
         title: 'Media',

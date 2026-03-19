@@ -13,6 +13,14 @@ const nextConfig = {
             },
         ],
     },
+    async rewrites() {
+        return [
+            {
+                source: '/',
+                destination: '/projects',
+            },
+        ]
+    },
 }
 
 module.exports = nextConfig
