@@ -73,7 +73,7 @@ export default function Item({ data }: ItemProps) {
           <Section title="Summary">
             <PortableText value={summary} />
           </Section>
-          {media && <Media media={media} />}
+          {media && <Media key={name} media={media} />}
           {links && <Links links={links} />}
           {features && (
             <Section title="Features">
@@ -101,7 +101,7 @@ export default function Item({ data }: ItemProps) {
           <HTMLComment text="COLUMN 2" />
           {/*  */}
           <div className={`flex flex-col ${sectionGap}`}>
-            {media && <Media media={media} />}
+            {media && <Media key={name} media={media} />}
             {links && !features && !structure && <Links links={links} />}
             {features && (
               <Section title="Features">
