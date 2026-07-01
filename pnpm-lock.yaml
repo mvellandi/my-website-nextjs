@@ -85,8 +85,8 @@ importers:
         specifier: ^3.4.18
         version: 3.4.19(tsx@4.22.4)(yaml@2.9.0)
       tidewave:
-        specifier: ^0.6.0
-        version: 0.6.0(typescript@6.0.3)
+        specifier: ^0.7.0
+        version: 0.7.0(typescript@6.0.3)
       typescript:
         specifier: ^6.0.3
         version: 6.0.3
@@ -2483,8 +2483,8 @@ packages:
   through2@4.0.2:
     resolution: {integrity: sha512-iOqSav00cVxEEICeD7TjLB1sueEL+81Wpzp2bY17uZjZN0pWZPuo4suZ/61VujxmqSGFfgOcNuTZ85QJwNZQpw==}
 
-  tidewave@0.6.0:
-    resolution: {integrity: sha512-87ZUvHGad1QIsZUz9PQ0S0b5YhrVnUolbzz5qT7oOHpggPt4cJ/toj8B727F6ZiSla3B8RilCDu5PK3zdGIC3Q==}
+  tidewave@0.7.0:
+    resolution: {integrity: sha512-JnFheTWgrGyA4UeD19HYJKpPgEL7rQ9/yOvFQds5W2MsNEU1n0TbqWiAIGlly4xsWFibJSBw0mUclzer2Oh8ow==}
     engines: {bun: '>=1.0.0', node: '>=18.0.0'}
     hasBin: true
     peerDependencies:
@@ -5182,7 +5182,7 @@ snapshots:
     dependencies:
       readable-stream: 3.6.2
 
-  tidewave@0.6.0(typescript@6.0.3):
+  tidewave@0.7.0(typescript@6.0.3):
     dependencies:
       '@modelcontextprotocol/sdk': 1.26.0(zod@3.25.76)
       body-parser: 2.2.2
