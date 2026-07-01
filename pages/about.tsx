@@ -14,13 +14,13 @@ export default function About({ preview = false }: AboutPageProps) {
                 <p>
                     I love helping customers. Whether it be through market
                     research, R&D, promoting new products or just helping them
-                    out with little things. It's about consistently giving great
+                    out with little things. It&apos;s about consistently giving great
                     service and real value. I learned this from my parents who
-                    ran a motel by Disneyland, and I've tackled whatever needed
+                    ran a motel by Disneyland, and I&apos;ve tackled whatever needed
                     to be done to serve customers exceptionally well.
                 </p>
                 <p>
-                    That's included product manufacturers, media, nonprofits, a
+                    That&apos;s included product manufacturers, media, nonprofits, a
                     game writer, and a computer vision company.
                     <br /> How can I help you?
                 </p>

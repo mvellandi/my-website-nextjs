@@ -1,4 +1,3 @@
-/* eslint-disable @next/next/no-img-element */
 import { imageBuilder } from '../../lib/sanity'
 import { getImageDimensions } from '@sanity/asset-utils'
 import { PortableText } from '@portabletext/react'

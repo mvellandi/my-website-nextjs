@@ -14,7 +14,7 @@ export default function About({ preview = false }: AboutPageProps) {
                 <h4>Resourceful and helpful to others.</h4>
                 <p className="mb-10">
                     I like helping customers through communications and product
-                    development. To the table, I'll bring marketing, software
+                    development. To the table, I&apos;ll bring marketing, software
                     engineering, and media production skills. In addition to a
                     brief CV below, you can see:
                 </p>

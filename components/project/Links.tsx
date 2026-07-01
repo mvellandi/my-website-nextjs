@@ -45,6 +45,7 @@ function TextLinkWithIcon({ text, url }: TextLinkWithIconProps) {
     const words = text.split(' ')
     const icon = emojiRegex.test(words[0]) ? words[0] : null
     const linkText = icon ? words.slice(1).join(' ') : text
+    const isExternal = /^(https?:)?\/\//.test(url)
 
     return (
         <>
@@ -53,11 +54,20 @@ function TextLinkWithIcon({ text, url }: TextLinkWithIconProps) {
                     {icon}
                 </div>
             )}
-            <Link href={url} legacyBehavior>
-                <a target="_blank" className="text-link no-underline">
+            {isExternal ? (
+                <a
+                    href={url}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="text-link no-underline"
+                >
                     {linkText}
                 </a>
-            </Link>
+            ) : (
+                <Link href={url} className="text-link no-underline">
+                    {linkText}
+                </Link>
+            )}
         </>
     )
 }

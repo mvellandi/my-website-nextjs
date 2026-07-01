@@ -1,4 +1,3 @@
-/* eslint-disable @next/next/no-img-element */
 import type { ReactNode } from 'react';
 import HTMLComment from "react-html-comment";
 import Header from "./Header";
